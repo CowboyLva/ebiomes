@@ -19,7 +19,9 @@ Dry grasslands - Found between grasslands and deserts
 Warm grassland - Intended as a transition biome
 Steppes - Between Grassland and Snowy Grassland
 
-Note - there is a hurful bush in game which can only be cut with bronze or a better sword.
+Notes 
+There is a hurful bush in game which can only be cut with bronze or a better sword.
+Do not use mapgen v6
 
 Things lacking - Fireflies on the mods biomes, dungeon loot for various overworld additions(berries, peas etc.)
 
