@@ -11,7 +11,7 @@ Copyright (c) 2018 TenPlus1
 
 
 #######Assets########
-Minetest Game derrivatives
+Minetest Game derrivatives(Non-derrivatives listed further)
 License
 --------
 Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
