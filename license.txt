@@ -1,0 +1,191 @@
+########Code########
+
+Copyright (C) 2021-2022: CowboyLv - GPLv3 (GNU GENERAL PUBLIC LICENSE)
+
+runs - cool_trees (code used as a template for sapling functions)
+License: GPLv3
+
+TenPlus1 - pigiron (code used for templating stairs)
+The MIT License (MIT)
+Copyright (c) 2018 TenPlus1
+
+
+#######Assets########
+
+##Lightly to heavily edited mtg(minetest_game) Textures##
+
+List (displayed without mod prefix)
+
+Minor edits - alder_tree, alder_wood, ash_leaves, ash_tree, ash_wood,
+birch leaves, birch_tree_top, birch_wood, blackcurrant_bush_leaves,
+blackcurrant_overlay, blackcurrants, bucket_peas, bucket_swamp_water,
+bush_leaves_warm, bush_sapling_warm, bush_stem_warm, chestnut_tree,
+chestnut_tree_top, chestnut_wood, chrysanthemum_yellow, cypress_leaves,
+cypress_tree, cypress_tree_top, cypress_wood, cowberry_bush_leaves, cowberries,
+fence_alder_wood, fence_ash_wood, fence_birch_wood, fence_chestnut_wood,
+fence_cypress_wood, fence_hornbeam_wood, fence_olive_wood, fence_pear_wood,
+fence_quince_wood, fence_rail_alder_wood, fence_rail_ash_wood,
+fence_rail_birch_wood, fence_rail_chestnut_wood, fence_rail_cypress_wood,
+fence_rail_hornbeam_wood, fence_rail_olive_wood, fence_rail_pear_wood,
+fence_rail_quince_wood, fence_rail_willow_wood, fence_willow_wood, gooseberries,
+grass_arid, grass_arid_1, grass_arid_2, grass_arid_3, grass_arid_4, grass_arid_5,
+grass_arid_cool, grass_ardi_cool_1, grass_arid_cool_2, grass_arid_cool_3,
+grass_arid_cool_4, grass_arid_cool_5, grass_arid_cool_side, grass_arid_side,
+grass_cold, grass_cold_1, grass_cold_2, grass_cold_3, grass_cold_4, grass_cold_5,
+grass_cold_side, grass_med, grass_med_1, grass_med_2, grass_med_3, grass_med_4,
+grass_med_5, grass_med_side, grass_steppe, grass_steppe_1, grass_steppe_2,
+grass_steppe_3, grasssteppe_4, grass_steppe_5, grass_steppe_cold,
+grass_steppe_cold_1, grass_steppe_cold_2, grass_steppe_cold_3, grass_steppe_cold_4,
+grass_steppe_cold_5, grass_steppe_cold_sidem grass_steppe_side, grass_steppe_warm,
+grass_steppe_warm_1, grass_steppe_warm_2, grass_steppe_warm_3, grass_steppe_warm_4,
+grass_steppe_warm_5, grass_steppe_warm_side, grass_swamp, grass_swamp_1,
+grass_swamp_2, grass_swamp_3, grass_swamp_4, grass_swamp_5, grass_swamp_side,
+grass_warm, grass_warm_1, grass_warm_2, grass_warm_3, grass_warm_4, grass_warm_5,
+grass_warm_side, hardy_bush_leaves, hardy_bush_stem, hornbeam_leaves,
+hornbeam_tree, hornbeam_tree_top, hornbeam_wood, olive_leaves, olive_tree,
+olive_tree_top, olive_wood, pear_leaves, pear_tree, pear_tree_top, pear_wood,
+peas_cooked, peashrub_peas, quince_leaves, quince_tree, quince_tree_top,
+quince_wood, redcurrant_bush_leaves, redcurrants, swamp_water,
+swamp_water_flowing_animated, swamp_water_source_animated, willow_leaves,
+willow_leaves_simple, willow_tree, willow_tree_top, willow_wood
+
+Moderate edits - alder_leaves, alder_leaves_simple, alder_tree_top,
+ash_leaves_simple, ash_tree_top, birch_leaves_simple, birch_tree,
+gooseberry_bush_leaves, hardy_bush_sapling, pear_sapling?, thorn_bush_sapling
+
+Minor elements remaining - alder_sapling, ash_sapling, birch_sapling, hornbeam_sapling, olive_sapling, peashrub_sapling, quince_sapling, redcurrant_overlay, willow_sapling
+
+License
+--------
+Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+Copyright (C) 2021-2022: CowboyLv
+
+You are free to:
+Share — copy and redistribute the material in any medium or format.
+Adapt — remix, transform, and build upon the material for any purpose, even commercially.
+The licensor cannot revoke these freedoms as long as you follow the license terms.
+
+Under the following terms:
+
+Attribution — You must give appropriate credit, provide a link to the license, and
+indicate if changes were made. You may do so in any reasonable manner, but not in any way
+that suggests the licensor endorses you or your use.
+
+ShareAlike — If you remix, transform, or build upon the material, you must distribute
+your contributions under the same license as the original.
+
+No additional restrictions — You may not apply legal terms or technological measures that
+legally restrict others from doing anything the license permits.
+
+Notices:
+
+You do not have to comply with the license for elements of the material in the public
+domain or where your use is permitted by an applicable exception or limitation.
+No warranties are given. The license may not give you all of the permissions necessary
+for your intended use. For example, other rights such as publicity, privacy, or moral
+rights may limit how you use the material.
+
+For more details:
+http://creativecommons.org/licenses/by-sa/3.0/
+
+----------------------------------------------------
+
+##Original textures##
+
+List(without mod prefix)
+
+Altai tulip, blackcurrant_bush_sapling, black_iris, blue_allium, blue_allium_puple, buttercup_persian, chestnut_leaves, chestnuts, chestnut_sapling,
+chestnuts_peeled, chestnuts_roasted, cypress_sapling, cladanthus, cowberry_bush_sapling, cowberry_overlay, cranberries, cranberry_patch, dried_quince_pieces,
+gooseberry_bush_sapling, gooseberry_overlay, larkspur sundew, marsh_marigold, mountain_lily, olives, pear, peashrub_leaves, peashrub_overlay, quince,
+redcurrant_bush_sapling, russian_iris, savory, siberian_lily, staehelina, sundew, thorn_bush_leaves, 
+
+License
+-------
+
+Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+
+You are free to:
+Share — copy and redistribute the material in any medium or format
+Adapt — remix, transform, and build upon the material
+for any purpose, even commercially.
+
+The licensor cannot revoke these freedoms as long as you follow the license terms.
+
+Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+
+ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+
+No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+
+You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation.
+
+No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.
+
+
+
+########Credits########
+
+
+Asset developers for minetest game
+
+Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+Copyright (C) 2010-2018:
+
+  celeron55, Perttu Ahola <celeron55@gmail.com>
+  Cisoun
+  G4JC
+  VanessaE
+  RealBadAngel
+  Calinou
+  MirceaKitsune
+  Jordach
+  PilzAdam
+  jojoa1997
+  InfinityProject
+  Splizard
+  Zeg9
+  paramat
+  BlockMen
+  sofar
+  Neuromancer
+  Gambit
+  asl97
+  KevDoy
+  Mito551
+  GreenXenith
+  kaeza
+  kilbith
+  tobyplowy
+  CloudyProton
+  TumeniNodes
+  Mossmanikin
+  random-geek
+  Extex101
+  An0n3m0us
+
+ 
+Attribution 3.0 Unported (CC BY 3.0)
+
+Copyright (C) 2009 cmusounddesign
+Copyright (C) 2010 Tomlija
+Copyright (C) 2010 lsprice
+Copyright (C) 2014 sonictechtonic
+Copyright (C) 2015 yadronoff
+Copyright (C) 2007 HerbertBoland
+Copyright (C) 2006 AGFX
+
+
+CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+
+Iwan Gabovitch
+Ottomaani138
+Ogrebane
+blukotek
+Sevin7
+Yoyodaman234
+Ryding
+
+########Special thanks########
+
+TenPlus1 - for the multitude of optional mods
+Many others - For advice
