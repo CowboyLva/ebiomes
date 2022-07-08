@@ -101,7 +101,7 @@ end
 			end
 		end,
 
-		after_place_node = after_place_leaves,
+		after_place_node = default.after_place_leaves,
 	})
 	
 
@@ -614,7 +614,7 @@ end
 			end
 		end,
 
-		after_place_node = after_place_leaves,
+		after_place_node = default.after_place_leaves,
 	})
 
 	minetest.register_node("ebiomes:blackcurrant_bush_sapling", {
@@ -741,7 +741,7 @@ end
 			end
 		end,
 
-		after_place_node = after_place_leaves,
+		after_place_node = default.after_place_leaves,
 	})
 
 	minetest.register_node("ebiomes:redcurrant_bush_sapling", {
@@ -870,7 +870,7 @@ end
 			end
 		end,
 
-		after_place_node = after_place_leaves,
+		after_place_node = default.after_place_leaves,
 	})
 
 	minetest.register_node("ebiomes:gooseberry_bush_sapling", {
@@ -1296,7 +1296,7 @@ end
 		},
 		sounds = default.node_sound_leaves_defaults(),
 
-		after_place_node = after_place_leaves,
+		after_place_node = default.after_place_leaves,
 	})
 
 	minetest.register_node("ebiomes:bush_sapling_warm", {
@@ -1308,7 +1308,7 @@ end
 		paramtype = "light",
 		sunlight_propagates = true,
 		walkable = false,
-		on_timer = grow_sapling,
+		on_timer = default.grow_sapling,
 		selection_box = {
 			type = "fixed",
 			fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 2 / 16, 4 / 16}
@@ -1425,7 +1425,7 @@ end
 		},
 		sounds = default.node_sound_leaves_defaults(),
 
-		after_place_node = after_place_leaves,
+		after_place_node = default.after_place_leaves,
 	})
 
 	minetest.register_node("ebiomes:hardy_bush_sapling", {
@@ -1437,7 +1437,7 @@ end
 		paramtype = "light",
 		sunlight_propagates = true,
 		walkable = false,
-		on_timer = grow_sapling,
+		on_timer = default.grow_sapling,
 		selection_box = {
 			type = "fixed",
 			fixed = {-3 / 16, -0.5, -3 / 16, 3 / 16, -2 / 16, 3 / 16}
@@ -1541,7 +1541,7 @@ end
 		},
 		sounds = default.node_sound_leaves_defaults(),
 
-		after_place_node = after_place_leaves,
+		after_place_node = default.after_place_leaves,
 	})
 
 	minetest.register_node("ebiomes:thorn_bush_sapling", {
@@ -2050,7 +2050,7 @@ end
 			end
 		end,
 
-		after_place_node = after_place_leaves,
+		after_place_node = default.after_place_leaves,
 	})
 	
 	default.register_leafdecay({
