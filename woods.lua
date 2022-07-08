@@ -184,7 +184,7 @@ local mg_name = minetest.get_mapgen_setting("mg_name")
 		},
 		sounds = default.node_sound_leaves_defaults(),
 
-		after_place_node = after_place_leaves,
+		after_place_node = default.after_place_leaves,
 	})
 	
 	default.register_leafdecay({
@@ -400,7 +400,7 @@ end
 		},
 		sounds = default.node_sound_leaves_defaults(),
 
-		after_place_node = after_place_leaves,
+		after_place_node = default.after_place_leaves,
 	})
 	
 	default.register_leafdecay({
@@ -600,7 +600,7 @@ end
 		},
 		sounds = default.node_sound_leaves_defaults(),
 
-		after_place_node = after_place_leaves,
+		after_place_node = default.after_place_leaves,
 	})
 	
 	default.register_leafdecay({
@@ -800,7 +800,7 @@ end
 		},
 		sounds = default.node_sound_leaves_defaults(),
 
-		after_place_node = after_place_leaves,
+		after_place_node = default.after_place_leaves,
 	})
 	
 	default.register_leafdecay({
@@ -1007,7 +1007,7 @@ end
 		},
 		sounds = default.node_sound_leaves_defaults(),
 
-		after_place_node = after_place_leaves,
+		after_place_node = default.after_place_leaves,
 	})
 	
 	default.register_leafdecay({
@@ -1209,7 +1209,7 @@ end
 		},
 		sounds = default.node_sound_leaves_defaults(),
 
-		after_place_node = after_place_leaves,
+		after_place_node = default.after_place_leaves,
 	})
 	
 	minetest.register_node("ebiomes:olives", {
@@ -1681,7 +1681,7 @@ end
 		},
 		sounds = default.node_sound_leaves_defaults(),
 
-		after_place_node = after_place_leaves,
+		after_place_node = default.after_place_leaves,
 	})
 	
 	default.register_leafdecay({
@@ -1951,7 +1951,7 @@ end
 		},
 		sounds = default.node_sound_leaves_defaults(),
 
-		after_place_node = after_place_leaves,
+		after_place_node = default.after_place_leaves,
 	})
 	
 	default.register_leafdecay({
@@ -2238,7 +2238,7 @@ end
 		},
 		sounds = default.node_sound_leaves_defaults(),
 
-		after_place_node = after_place_leaves,
+		after_place_node = default.after_place_leaves,
 	})
 	
 	default.register_leafdecay({
@@ -2535,7 +2535,7 @@ end
 		},
 		sounds = default.node_sound_leaves_defaults(),
 
-		after_place_node = after_place_leaves,
+		after_place_node = default.after_place_leaves,
 	})
 	
 	default.register_leafdecay({
