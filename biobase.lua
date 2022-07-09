@@ -1852,7 +1852,7 @@ minetest.register_biome({
 			{name = "default_dry_dirt.png^ebiomes_grass_arid_side.png",
 				tileable_vertical = false}},
 		groups = {crumbly = 3, soil = 1, spreading_dirt_type = 1},
-		drop = "default:dirt",
+		drop = "default:dry_dirt",
 		sounds = default.node_sound_dirt_defaults({
 			footstep = {name = "default_grass_footstep", gain = 0.25},
 		}),
@@ -1864,7 +1864,7 @@ minetest.register_biome({
 			{name = "default_dry_dirt.png^ebiomes_grass_arid_side.png",
 				tileable_vertical = false}},
 		groups = {crumbly = 3, soil = 1, not_in_creative_inventory = 1},
-		drop = "default:dirt",
+		drop = "default:dry_dirt",
 		sounds = default.node_sound_dirt_defaults({
 			footstep = {name = "default_grass_footstep", gain = 0.25},
 		}),
@@ -2027,7 +2027,7 @@ end
 			{name = "default_dry_dirt.png^ebiomes_grass_arid_cool_side.png",
 				tileable_vertical = false}},
 		groups = {crumbly = 3, soil = 1, spreading_dirt_type = 1},
-		drop = "default:dirt",
+		drop = "default:dry_dirt",
 		sounds = default.node_sound_dirt_defaults({
 			footstep = {name = "default_grass_footstep", gain = 0.25},
 		}),
@@ -2039,7 +2039,7 @@ end
 			{name = "default_dry_dirt.png^ebiomes_grass_arid_cool_side.png",
 				tileable_vertical = false}},
 		groups = {crumbly = 3, soil = 1, not_in_creative_inventory = 1},
-		drop = "default:dirt",
+		drop = "default:dry_dirt",
 		sounds = default.node_sound_dirt_defaults({
 			footstep = {name = "default_grass_footstep", gain = 0.25},
 		}),
