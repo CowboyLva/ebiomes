@@ -1,5 +1,7 @@
 --Vanilla mods besides default
 
+-- Fireflies
+
 if minetest.get_mapgen_setting("mg_name") == "v6" then
 
 	minetest.register_decoration({
@@ -27,7 +29,7 @@ if minetest.get_mapgen_setting("mg_name") == "v6" then
 	})
 
 else
---Some baking done from bugs.lua
+
 	minetest.register_decoration({
 		name = "fireflies:firefly_low",
 		deco_type = "simple",
@@ -35,10 +37,7 @@ else
 			"default:dirt_with_grass",
 			"default:dirt_with_coniferous_litter",
 			"default:dirt_with_rainforest_litter",
-			"default:dirt",
-			"ebiomes:dirt_with_grass_cold",
-			"ebiomes:dirt_with_grass_swamp",
-			"ebiomes:dirt_with_grass_warm"
+			"default:dirt"
 		},
 		place_offset_y = 2,
 		sidelen = 80,
@@ -47,13 +46,7 @@ else
 			"deciduous_forest",
 			"coniferous_forest",
 			"rainforest",
-			"rainforest_swamp",
-			"cold_deciduous",
-			"swamp",
-			"deciduous_forest_humid",
-			"rainforest_humid",
-			"rainforest_humid_swamp",
-			"deciduous_forest_warm"
+			"rainforest_swamp"
 		},
 		y_max = 31000,
 		y_min = -1,
@@ -67,10 +60,7 @@ else
 			"default:dirt_with_grass",
 			"default:dirt_with_coniferous_litter",
 			"default:dirt_with_rainforest_litter",
-			"default:dirt",
-			"ebiomes:dirt_with_grass_cold",
-			"ebiomes:dirt_with_grass_swamp",
-			"ebiomes:dirt_with_grass_warm"
+			"default:dirt"
 		},
 		place_offset_y = 3,
 		sidelen = 80,
@@ -79,18 +69,14 @@ else
 			"deciduous_forest",
 			"coniferous_forest",
 			"rainforest",
-			"rainforest_swamp",
-			"cold_deciduous",
-			"swamp",
-			"deciduous_forest_humid",
-			"rainforest_humid",
-			"rainforest_humid_swamp",
-			"deciduous_forest_warm"
+			"rainforest_swamp"
 		},
 		y_max = 31000,
 		y_min = -1,
 		decoration = "fireflies:hidden_firefly",
 	})
+
+end
 	
 	minetest.register_decoration({
 		name = "butterflies:butterfly",
@@ -130,5 +116,4 @@ else
 		decoration = "farming:cotton_wild",
 	})
 
-end
 

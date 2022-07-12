@@ -24,7 +24,7 @@ local S = minetest.get_translator("ebiomes")
 			octaves = 1,
 			persist = 0.0
 		},
-		biomes = {"cold_deciduous", "cold_deciduous_shore", "rainforest_humid", "rainforest_humid_swamp", "deciduous_forest_humid", "deciduous_forest_humid_shore", "deciduous_forest_warm", "deciduous_forest_warm_shore"}
+		biomes = {"deciduous_forest_cold", "deciduous_forest_cold_shore", "rainforest_humid", "rainforest_humid_swamp", "deciduous_forest_humid", "deciduous_forest_humid_shore", "deciduous_forest_warm", "deciduous_forest_warm_shore"}
 	})
 
 	-- Dirt
@@ -47,7 +47,7 @@ local S = minetest.get_translator("ebiomes")
 			persist = 0.0
 		},
 		-- Only where default:dirt is present as surface material
-		biomes = {"cold_deciduous", "meditarranean", "warm_steppe", "steppe", "cold_steppe", "deciduous_forest_humid", "deciduous_forest_humid_shore", "deciduous_forest_warm", "deciduous_forest_warm_shore"}
+		biomes = {"deciduous_forest_cold", "meditarranean", "warm_steppe", "steppe", "cold_steppe", "deciduous_forest_humid", "deciduous_forest_humid_shore", "deciduous_forest_warm", "deciduous_forest_warm_shore"}
 	})
 
 
@@ -2290,3 +2290,4 @@ end
 		heat_point = 40,
 		humidity_point = 15,
 	})
+	

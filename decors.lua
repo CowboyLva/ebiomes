@@ -182,7 +182,7 @@ end
 			octaves = 3,
 			persist = 0.7,
 		},
-		biomes = {"warm_steppe", "cold_deciduous", "deciduous_forest_humid", "deciduous_forest_warm", "grassland_warm"},
+		biomes = {"warm_steppe", "deciduous_forest_cold", "deciduous_forest_humid", "deciduous_forest_warm", "grassland_warm"},
 		y_max = 31000,
 		y_min = 1,
 		schematic = minetest.get_modpath("default") .. "/schematics/bush.mts",
@@ -202,7 +202,7 @@ end
 			octaves = 3,
 			persist = 0.7,
 		},
-		biomes = {"steppe", "cold_steppe", "cold_deciduous"},
+		biomes = {"steppe", "cold_steppe", "deciduous_forest_cold"},
 		y_max = 31000,
 		y_min = 4,
 		schematic = minetest.get_modpath("default") .. "/schematics/pine_bush.mts",
@@ -284,7 +284,7 @@ end
 			octaves = 3,
 			persist = 0.05
 		},
-		biomes = {"warm_steppe", "cold_deciduous", "deciduous_forest_humid", "deciduous_forest_warm", "grassland_warm"},
+		biomes = {"warm_steppe", "deciduous_forest_cold", "deciduous_forest_humid", "deciduous_forest_warm", "grassland_warm"},
 		y_max = 31000,
 		y_min = 1,
 		decoration = "flowers:dandelion_yellow",
@@ -303,7 +303,7 @@ end
 			octaves = 3,
 			persist = 0.05
 		},
-		biomes = {"warm_steppe", "cold_deciduous", "deciduous_forest_humid", "deciduous_forest_warm", "grassland_warm"},
+		biomes = {"warm_steppe", "deciduous_forest_cold", "deciduous_forest_humid", "deciduous_forest_warm", "grassland_warm"},
 		y_max = 31000,
 		y_min = 1,
 		decoration = "flowers:dandelion_white",
@@ -323,7 +323,7 @@ end
 			octaves = 3,
 			persist = 0.05
 		},
-		biomes = {"cold_deciduous", "deciduous_forest_humid", "deciduous_forest_warm"},
+		biomes = {"deciduous_forest_cold", "deciduous_forest_humid", "deciduous_forest_warm"},
 		y_max = 31000,
 		y_min = 1,
 		decoration = "flowers:tulip",
@@ -343,7 +343,7 @@ end
 			octaves = 3,
 			persist = 0.05
 		},
-		biomes = {"cold_deciduous", "deciduous_forest_humid"},
+		biomes = {"deciduous_forest_cold", "deciduous_forest_humid"},
 		y_max = 31000,
 		y_min = 1,
 		decoration = "flowers:tulip_black",
@@ -381,7 +381,7 @@ end
 			octaves = 3,
 			persist = 0.05
 		},
-		biomes = {"cold_deciduous", "deciduous_forest_humid", "deciduous_forest_warm"},
+		biomes = {"deciduous_forest_cold", "deciduous_forest_humid", "deciduous_forest_warm"},
 		y_max = 31000,
 		y_min = 1,
 		decoration = "flowers:chrysanthemum_green",
@@ -421,7 +421,7 @@ end
 			octaves = 3,
 			persist = 0.7
 		},
-		biomes = {"cold_deciduous_shore", "swamp_shore", "deciduous_forest_humid_shore", "deciduous_forest_warm_shore"},
+		biomes = {"deciduous_forest_cold_shore", "swamp_shore", "deciduous_forest_humid_shore", "deciduous_forest_warm_shore"},
 		y_max = 0,
 		y_min = 0,
 		decoration = "flowers:waterlily_waving",
@@ -445,7 +445,7 @@ end
 			octaves = 3,
 			persist = 0.66
 		},
-		biomes = {"cold_deciduous", "deciduous_forest_humid", "deciduous_forest_warm"},
+		biomes = {"deciduous_forest_cold", "deciduous_forest_humid", "deciduous_forest_warm"},
 		y_max = 31000,
 		y_min = 1,
 		decoration = "flowers:mushroom_brown",
@@ -464,7 +464,7 @@ end
 			octaves = 3,
 			persist = 0.66
 		},
-		biomes = {"cold_deciduous", "deciduous_forest_humid", "deciduous_forest_warm"},
+		biomes = {"deciduous_forest_cold", "deciduous_forest_humid", "deciduous_forest_warm"},
 		y_max = 31000,
 		y_min = 1,
 		decoration = "flowers:mushroom_brown",
@@ -487,7 +487,7 @@ end
 			persist = 0.7
 		},
 		biomes = {
-			"cold_deciduous_ocean",
+			"deciduous_forest_cold_ocean",
 			"cold_steppe_ocean",
 			"steppe_ocean",
 			"warm_steppe_ocean",
@@ -521,7 +521,7 @@ end
 			persist = 0.0,
 			flags = "absvalue, eased"
 		},
-		biomes = {"cold_deciduous_shore", "cold_steppe_dunes", "steppe_dunes", "warm_steppe_dunes"},
+		biomes = {"deciduous_forest_cold_shore", "cold_steppe_dunes", "steppe_dunes", "warm_steppe_dunes"},
 		y_max = 6,
 		y_min = 4,
 		decoration = {
@@ -665,7 +665,7 @@ end
 			octaves = 3,
 			persist = 0.7,
 		},
-		biomes = {"cold_deciduous"},
+		biomes = {"deciduous_forest_cold"},
 		y_max = 31000,
 		y_min = 1,
 		place_offset_y = 1,
@@ -792,7 +792,7 @@ end
 			octaves = 3,
 			persist = 0.7,
 		},
-		biomes = {"cold_deciduous"},
+		biomes = {"deciduous_forest_cold"},
 		y_max = 31000,
 		y_min = 1,
 		place_offset_y = 1,
@@ -921,7 +921,7 @@ end
 			octaves = 3,
 			persist = 0.7,
 		},
-		biomes = {"cold_deciduous"},
+		biomes = {"deciduous_forest_cold"},
 		y_max = 31000,
 		y_min = 1,
 		place_offset_y = 1,
