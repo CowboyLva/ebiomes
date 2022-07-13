@@ -1325,28 +1325,8 @@ end
 		heat_point = 53,
 		humidity_point = 100,
 	})
-	
-for length = 1, 5 do
-	minetest.register_decoration({
-		name = "ebiomes:grass_swamp_"..length,
-		deco_type = "simple",
-		place_on = {"ebiomes:dirt_with_grass_swamp"},
-		sidelen = 16,
-		noise_params = {
-			offset = 0.05,
-			scale = 0.01,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 329,
-			octaves = 3,
-			persist = 0.6
-		},
-		y_max = 31000,
-		y_min = 1,
-		decoration = "ebiomes:grass_swamp_"..length,
-	})
-end
-	
-	
+
+
 	minetest.register_node("ebiomes:swamp_water_source", {
 		description = S("Swamp Water Source"),
 		drawtype = "liquid",
@@ -1444,6 +1424,31 @@ end
 		sounds = default.node_sound_water_defaults(),
 	})
 
+-- Looked at swampz by runs to figure this out
+	minetest.register_decoration({
+		name = "ebiomes:swamp_hole_small",
+		deco_type = "schematic",
+		place_on = {"ebiomes:dirt_with_grass_swamp"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.01,
+			scale = 0.03,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 2,
+			octaves = 3,
+			persist = 0.66
+		},
+		biomes = {"swamp"},
+		height = 1,
+		y_min = 1,
+		y_max = 4,
+--		place_offset_y = -1,
+		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_swamp_hole.mts",
+		flags = "place_center_x, place_center_z, force_placement",
+		rotation = "random",
+	})
+
+
 	bucket.register_liquid(
 		"ebiomes:swamp_water_source",
 		"ebiomes:swamp_water_flowing",
@@ -1453,6 +1458,28 @@ end
 		{tool = 1, water_bucket = 1},
 		true
 	)
+
+	
+for length = 1, 5 do
+	minetest.register_decoration({
+		name = "ebiomes:grass_swamp_"..length,
+		deco_type = "simple",
+		place_on = {"ebiomes:dirt_with_grass_swamp"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.05,
+			scale = 0.01,
+			spread = {x = 100, y = 100, z = 100},
+			seed = 329,
+			octaves = 3,
+			persist = 0.6
+		},
+		y_max = 31000,
+		y_min = 1,
+		decoration = "ebiomes:grass_swamp_"..length,
+	})
+end
+	
 
 --Fix oriented biomes
 

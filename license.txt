@@ -2,7 +2,7 @@
 
 Copyright (C) 2021-2022: CowboyLv - GPLv3 (GNU GENERAL PUBLIC LICENSE)
 
-runs - cool_trees (code used as a template for sapling functions)
+runs - cool_trees, swaz (code used as a template for sapling functions)
 License: GPLv3
 
 TenPlus1 - pigiron (code used for templating stairs)
@@ -146,4 +146,7 @@ Ryding
 ########Special thanks########
 
 TenPlus1 - for the multitude of optional mods
-Many others - For advice
+LMD, rubenwardy and sfan5 - for being helpful, rubenwardy also for the modding handbook
+runs - for simple and understandable code I could learn from
+Nathan Salapat - for the tutorials
+axcore - for notifying me to fix warning messages

@@ -41,6 +41,13 @@ if minetest.get_modpath("moreblocks") then
 		sounds = default.node_sound_wood_defaults(),
 	})
 	
+	stairsplus:register_all("downy_birch_tree", "wood", "ebiomes:downy_birch_wood", {
+		description = "Downy Birch Wood",
+		tiles = {"ebiomes_downy_birch_wood.png"},
+		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+		sounds = default.node_sound_wood_defaults(),
+	})
+	
 	stairsplus:register_all("olive_tree", "wood", "ebiomes:olive_wood", {
 		description = "Olive Wood",
 		tiles = {"ebiomes_olive_wood.png"},
@@ -92,6 +99,7 @@ if minetest.global_exists("flowerpot") then
 	flowerpot.register_node("ebiomes:alder_sapling")
 	flowerpot.register_node("ebiomes:birch_sapling")
 	flowerpot.register_node("ebiomes:cypress_sapling")
+	flowerpot.register_node("ebiomes:downy_birch_sapling")
 	flowerpot.register_node("ebiomes:olive_sapling")
 	flowerpot.register_node("ebiomes:willow_sapling")
 	flowerpot.register_node("ebiomes:pear_sapling")

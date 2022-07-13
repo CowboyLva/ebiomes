@@ -952,9 +952,6 @@ end
 
 
 
-
-
-
 --Mediterranean
 
 
@@ -1455,10 +1452,115 @@ end
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
+
+
+--Downy Birch	
 	
 	
+	minetest.register_node("ebiomes:downy_birch_tree", {
+		description = S("Downy Birch Tree"),
+		tiles = {"ebiomes_downy_birch_tree_top.png", "ebiomes_downy_birch_tree_top.png",
+			"ebiomes_downy_birch_tree.png"},
+		paramtype2 = "facedir",
+		is_ground_content = false,
+		groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
+		sounds = default.node_sound_wood_defaults(),
+
+		on_place = minetest.rotate_node
+	})
+
+	minetest.register_node("ebiomes:downy_birch_wood", {
+		description = S("Downy Birch Wood Planks"),
+		paramtype2 = "facedir",
+		place_param2 = 0,
+		tiles = {"ebiomes_downy_birch_wood.png"},
+		is_ground_content = false,
+		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
+		sounds = default.node_sound_wood_defaults(),
+	})
+
+	minetest.register_craft({
+		output = "ebiomes:downy_birch_wood 4",
+		recipe = {
+			{"ebiomes:downy_birch_tree"},
+		}
+	})
+
+	minetest.register_node("ebiomes:downy_birch_leaves", {
+		description = S("Downy Birch Tree Leaves"),
+		drawtype = "allfaces_optional",
+		tiles = {"ebiomes_downy_birch_leaves.png"},
+		special_tiles = {"ebiomes_downy_birch_leaves_simple.png"},
+		waving = 1,
+		paramtype = "light",
+		is_ground_content = false,
+		groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+		drop = {
+			max_items = 1,
+			items = {
+				{items = {"ebiomes:downy_birch_sapling"}, rarity = 20},
+				{items = {"ebiomes:downy_birch_leaves"}}
+			}
+		},
+		sounds = default.node_sound_leaves_defaults(),
+
+		after_place_node = default.after_place_leaves,
+	})
+	
+	default.register_leafdecay({
+		trunks = {"ebiomes:downy_birch_tree"},
+		leaves = {"ebiomes:downy_birch_leaves"},
+		radius = 3,
+	})
+
+local function grow_new_downy_birch_tree(pos)
+	if not default.can_grow(pos) then
+		-- try a bit later again
+		minetest.get_node_timer(pos):start(math.random(150, 300))
+		return
+	end
+	minetest.remove_node(pos)
+	minetest.place_schematic({x = pos.x-1, y = pos.y, z = pos.z-1}, modpath.."/schematics/ebiomes_downy_birch_tree.mts", "0", nil, false)
+end
+
+	minetest.register_node("ebiomes:downy_birch_sapling", {
+		description = S("Downy Birch Tree Sapling"),
+		drawtype = "plantlike",
+		tiles = {"ebiomes_downy_birch_sapling.png"},
+		inventory_image = "ebiomes_downy_birch_sapling.png",
+		wield_image = "ebiomes_downy_birch_sapling.png",
+		paramtype = "light",
+		sunlight_propagates = true,
+		walkable = false,
+		on_timer = grow_new_downy_birch_tree,
+		selection_box = {
+			type = "fixed",
+			fixed = {-3 / 16, -0.5, -3 / 16, 3 / 16, 0.5, 3 / 16}
+		},
+		groups = {snappy = 2, dig_immediate = 3, flammable = 3,
+			attached_node = 1, sapling = 1},
+		sounds = default.node_sound_leaves_defaults(),
+
+		on_construct = function(pos)
+			minetest.get_node_timer(pos):start(math.random(300, 1500))
+		end,
+
+		on_place = function(itemstack, placer, pointed_thing)
+			itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+				"ebiomes:downy_birch_sapling",
+				-- minp, maxp to be checked, relative to sapling pos
+				-- minp_relative.y = 1 because sapling pos has been checked
+				{x = -1, y = 1, z = -1},
+				{x = 1, y = 7, z = 1},
+				-- maximum interval of interior volume check
+				4)
+
+			return itemstack
+		end,
+	})
+
 	minetest.register_decoration({
-		name = "ebiomes:birch_tree_small",
+		name = "ebiomes:downy_birch_tree",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_grass_swamp"},
 		sidelen = 16,
@@ -1473,11 +1575,83 @@ end
 		biomes = {"swamp"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_birch_tree_small.mts",
+		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_downy_birch_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
+	
+	minetest.register_decoration({
+		name = "ebiomes:downy_birch_log",
+		deco_type = "schematic",
+		place_on = {"ebiomes:dirt_with_grass_swamp"},
+		place_offset_y = 1,
+		sidelen = 80,
+		fill_ratio = 0.0009,
+		biomes = {"swamp"},
+		y_max = 31000,
+		y_min = 4,
+		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_downy_birch_log.mts",
+		flags = "place_center_x",
+		rotation = "random",
+		spawn_by = {"ebiomes:dirt_with_grass_swamp"},
+		num_spawn_by = 8,
+	})
 
+if minetest.get_modpath("bonemeal") ~= nil then
+bonemeal:add_sapling({
+	{"ebiomes:downy_birch_sapling", grow_new_downy_birch_tree, "soil"},
+})
+end
+
+	stairs.register_stair_and_slab("downy_birch_wood", "ebiomes:downy_birch_wood",
+		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+		{"ebiomes_downy_birch_wood.png"},
+		S("Downy Birch Wood Stair"),
+		S("Downy Birch Wood Slab"),
+		default.node_sound_wood_defaults())
+		
+	default.register_fence("ebiomes:fence_downy_birch_wood", {
+		description = S("Downy Birch Wood Fence"),
+		texture = "ebiomes_fence_downy_birch_wood.png",
+		inventory_image = "default_fence_overlay.png^ebiomes_fence_downy_birch_wood.png^" ..
+					"default_fence_overlay.png^[makealpha:255,126,126",
+		wield_image = "default_fence_overlay.png^ebiomes_fence_downy_birch_wood.png^" ..
+					"default_fence_overlay.png^[makealpha:255,126,126",
+		material = "ebiomes:downy_birch_wood",
+		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
+		sounds = default.node_sound_wood_defaults()
+	})
+
+	default.register_fence_rail("ebiomes:fence_rail_downy_birch_wood", {
+		description = S("Downy Birch Wood Fence Rail"),
+		texture = "ebiomes_fence_rail_downy_birch_wood.png",
+		inventory_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_downy_birch_wood.png^" ..
+					"default_fence_rail_overlay.png^[makealpha:255,126,126",
+		wield_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_downy_birch_wood.png^" ..
+					"default_fence_rail_overlay.png^[makealpha:255,126,126",
+		material = "default:downy_birch_wood",
+		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
+		sounds = default.node_sound_wood_defaults()
+	})
+
+	default.register_mesepost("ebiomes:mese_post_light_downy_birch_wood", {
+		description = S("Downy Birch Wood Mese Post Light"),
+		texture = "ebiomes_fence_downy_birch_wood.png",
+		material = "ebiomes:downy_birch_wood",
+	})
+
+	doors.register_fencegate("ebiomes:gate_downy_birch_wood", {
+		description = S("Downy Birch Wood Fence Gate"),
+		texture = "ebiomes_downy_birch_wood.png",
+		material = "ebiomes:downy_birch_wood",
+		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
+	})
+
+	minetest.register_craft({
+		type = "fuel",
+		recipe = "ebiomes:gate_downy_birch_wood_closed",
+		burntime = 6,
+	})
 
 
 --Humid rainforest (will rethink how to arange things in general, knowing decors.lua)
