@@ -13,3 +13,4 @@ mobs_npc?
 mob_horse?
 moreblocks?
 flowerpot?
+forgotten_monsters?
