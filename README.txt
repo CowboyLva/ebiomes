@@ -9,6 +9,7 @@ Version 1.0.0 - By CowboyLv
 This is a vanilla themed mod for minetest game, designed to bring vanilla like biomes with least amount of changes to the vanilla minetest.
 
 Several popular mods are supported - bonemeal, mobs_animal, mobs_monster, mobs_npc, mob_horse, moreblocks, flowerpot
+Additional supported mods - forgotten_monsters
 
 Due to its nature, it is not compatible with ethereal. Other biome mod compatibility may vary.
 
