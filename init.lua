@@ -27,3 +27,7 @@ end
 
 	dofile(path .. "/mobs.lua")
 
+if minetest.get_modpath("forgotten_monsters") then
+	dofile(path .. "/forgotten_monsters.lua")
+end
+
