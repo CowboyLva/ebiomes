@@ -128,6 +128,7 @@ local mg_name = minetest.get_mapgen_setting("mg_name")
 		waving = 1,
 		paramtype = "light",
 		is_ground_content = false,
+		walkable = false,
 		groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
 		drop = {
 			max_items = 1,

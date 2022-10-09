@@ -2,7 +2,7 @@
 ################ebiomes##################
 #########################################
 
-Version 1.1.0 - By CowboyLv
+Version 1.1.X Dev - By CowboyLv
 
 ## Changes
 
