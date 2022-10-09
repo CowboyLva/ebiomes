@@ -6,52 +6,6 @@ local modpath = minetest.get_modpath(modname)
 local mg_name = minetest.get_mapgen_setting("mg_name")
 
 --Global
---[[
-	minetest.register_decoration({
-		name = "ebiomes:apple_tree",
-		deco_type = "schematic",
-		place_on = {"ebiomes:dirt_with_grass_warm"},
-		sidelen = 16,
-		noise_params = {
-			offset = 0.002,
-			scale = 0.005,
-			spread = {x = 250, y = 250, z = 250},
-			seed = 2,
-			octaves = 3,
-			persist = 0.66
-		},
-		biomes = {"deciduous_forest_warm"},
-		y_max = 31000,
-		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/apple_tree.mts",
-		flags = "place_center_x, place_center_z",
-		rotation = "random",
-	})
-	
-	minetest.register_decoration({
-		name = "default:apple_log",
-		deco_type = "schematic",
-		place_on = {"ebiomes:dirt_with_grass_warm"},
-		place_offset_y = 1,
-		sidelen = 16,
-		noise_params = {
-			offset = 0.0006,
-			scale = 0.0004,
-			spread = {x = 250, y = 250, z = 250},
-			seed = 2,
-			octaves = 3,
-			persist = 0.66
-		},
-		biomes = {"deciduous_forest_warm"},
-		y_max = 31000,
-		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/apple_log.mts",
-		flags = "place_center_x",
-		rotation = "random",
-		spawn_by = "ebiomes:dirt_with_grass_warm",
-		num_spawn_by = 8,
-	})
-]]--
 
 	minetest.register_decoration({
 		name = "ebiomes:aspen_tree",
@@ -193,6 +147,7 @@ local mg_name = minetest.get_mapgen_setting("mg_name")
 		radius = 3,
 	})
 
+--left this credit but erased it's identicals further down the line
 --borrowed from runs cooltrees modpack (baldcypress)
 --[[
 local function grow_new_baldcypress_tree(pos)
@@ -1864,19 +1819,6 @@ end
 		radius = 3,
 	})
 
---borrowed from runs cooltrees modpack (baldcypress)
---[[
-local function grow_new_baldcypress_tree(pos)
-	if not default.can_grow(pos) then
-		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(240, 600))
-		return
-	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-4, y = pos.y, z = pos.z-4}, modpath.."/schematics/baldcypress.mts", "0", nil, false)
-end
---]]
-
 local function grow_new_pear_tree(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
@@ -1887,7 +1829,6 @@ local function grow_new_pear_tree(pos)
 	minetest.place_schematic({x = pos.x-2, y = pos.y, z = pos.z-2}, modpath.."/schematics/ebiomes_pear_tree.mts", "0", nil, false)
 end
 
---schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_pear.mts"
 
 	minetest.register_node("ebiomes:pear_sapling", {
 		description = S("Pear Tree Sapling"),
@@ -2134,19 +2075,6 @@ end
 		radius = 3,
 	})
 
---borrowed from runs cooltrees modpack (baldcypress)
---[[
-local function grow_new_baldcypress_tree(pos)
-	if not default.can_grow(pos) then
-		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(240, 600))
-		return
-	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-4, y = pos.y, z = pos.z-4}, modpath.."/schematics/baldcypress.mts", "0", nil, false)
-end
---]]
-
 local function grow_new_quince_tree(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
@@ -2157,7 +2085,6 @@ local function grow_new_quince_tree(pos)
 	minetest.place_schematic({x = pos.x-1, y = pos.y, z = pos.z-1}, modpath.."/schematics/ebiomes_quince_tree.mts", "0", nil, false)
 end
 
---schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_quince.mts"
 
 	minetest.register_node("ebiomes:quince_sapling", {
 		description = S("Quince Tree Sapling"),
@@ -2421,18 +2348,6 @@ end
 		radius = 3,
 	})
 
---borrowed from runs cooltrees modpack (baldcypress)
---[[
-local function grow_new_baldcypress_tree(pos)
-	if not default.can_grow(pos) then
-		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(240, 600))
-		return
-	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-4, y = pos.y, z = pos.z-4}, modpath.."/schematics/baldcypress.mts", "0", nil, false)
-end
---]]
 
 local function grow_new_chestnut_tree(pos)
 	if not default.can_grow(pos) then
@@ -2444,7 +2359,6 @@ local function grow_new_chestnut_tree(pos)
 	minetest.place_schematic({x = pos.x-4, y = pos.y, z = pos.z-4}, modpath.."/schematics/ebiomes_chestnut_tree.mts", "0", nil, false)
 end
 
---schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_chestnut.mts"
 
 	minetest.register_node("ebiomes:chestnut_sapling", {
 		description = S("Chestnut Tree Sapling"),
@@ -2718,18 +2632,6 @@ end
 		radius = 3,
 	})
 
---borrowed from runs cooltrees modpack (baldcypress)
---[[
-local function grow_new_baldcypress_tree(pos)
-	if not default.can_grow(pos) then
-		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(240, 600))
-		return
-	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-4, y = pos.y, z = pos.z-4}, modpath.."/schematics/baldcypress.mts", "0", nil, false)
-end
---]]
 
 local function grow_new_hornbeam_tree(pos)
 	if not default.can_grow(pos) then
@@ -2741,7 +2643,6 @@ local function grow_new_hornbeam_tree(pos)
 	minetest.place_schematic({x = pos.x-3, y = pos.y, z = pos.z-3}, modpath.."/schematics/ebiomes_hornbeam_tree.mts", "0", nil, false)
 end
 
---schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_hornbeam.mts"
 
 	minetest.register_node("ebiomes:hornbeam_sapling", {
 		description = S("Hornbeam Tree Sapling"),

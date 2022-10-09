@@ -9,36 +9,6 @@ local mg_name = minetest.get_mapgen_setting("mg_name")
 
 --New
 
---Shuffle
-
---Clear registered decorations is a massive thing, if I use it I will need to refactor the code significantly
---Also so many lines
-
---[[
-	minetest.clear_registered_decorations()
-
-	minetest.register_decoration({
-		name = "default:blueberry_bush",
-		deco_type = "schematic",
-		place_on = {"default:dirt_with_grass"},
-		sidelen = 16,
-		noise_params = {
-			offset = -0.004,
-			scale = 0.01,
-			spread = {x = 100, y = 100, z = 100},
-			seed = 697,
-			octaves = 3,
-			persist = 0.7,
-		},
-		biomes = {"grassland"},
-		y_max = 31000,
-		y_min = 1,
-		place_offset_y = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/blueberry_bush.mts",
-		flags = "place_center_x, place_center_z",
-	})
---]]
-
 -- Cowberry
 
 local function grow_new_cowberry(pos)
@@ -504,33 +474,6 @@ end
 		param2_max = 96,
 	})
 	
-	-- Marram grass, not appealing right now
-
---[[
-	minetest.register_decoration({
-		name = "ebiomes:marram_grass",
-		deco_type = "simple",
-		place_on = {"default:sand"},
-		sidelen = 4,
-		noise_params = {
-			offset = -0.7,
-			scale = 4.0,
-			spread = {x = 16, y = 16, z = 16},
-			seed = 513337,
-			octaves = 1,
-			persist = 0.0,
-			flags = "absvalue, eased"
-		},
-		biomes = {"deciduous_forest_cold_shore", "cold_steppe_dunes", "steppe_dunes", "warm_steppe_dunes"},
-		y_max = 6,
-		y_min = 4,
-		decoration = {
-			"default:marram_grass_1",
-			"default:marram_grass_2",
-			"default:marram_grass_3",
-		},
-	})
---]]
 
 	minetest.register_decoration({
 		name = "ebiomes:dry_shrub",
@@ -937,7 +880,7 @@ end
 	
 	
 	
---Swamp
+--Bog
 	
 	minetest.register_node("ebiomes:cranberry_patch", {
 		description = S("Cranberry Patch"),
@@ -977,10 +920,10 @@ end
 	minetest.register_decoration({
 		name = "ebiomes:cranberry",
 		deco_type = "simple",
-		place_on = {"ebiomes:dirt_with_grass_swamp"},
+		place_on = {"ebiomes:peat_wet_with_swamp_moss_green", "ebiomes:peat_with_swamp_moss_yellow"},
 		sidelen = 16,
 		noise_params = {
-			offset = 0.01,
+			offset = 0.03,
 			scale = 0.007,
 			spread = {x = 100, y = 100, z = 100},
 			seed = 131,
@@ -1014,10 +957,10 @@ end
 	minetest.register_decoration({
 		name = "ebiomes:sundew",
 		deco_type = "simple",
-		place_on = {"ebiomes:dirt_with_grass_swamp"},
+		place_on = {"ebiomes:peat_wet_with_swamp_moss_green", "ebiomes:peat_with_swamp_moss_yellow"},
 		sidelen = 16,
 		noise_params = {
-			offset = 0,
+			offset = 0.04,
 			scale = 0.007,
 			spread = {x = 100, y = 100, z = 100},
 			seed = 513,
@@ -1050,10 +993,10 @@ end
 	minetest.register_decoration({
 		name = "ebiomes:marigold",
 		deco_type = "simple",
-		place_on = {"ebiomes:dirt_with_grass_swamp"},
+		place_on = {"ebiomes:peat_wet_with_swamp_moss_green", "ebiomes:peat_with_swamp_moss_yellow"},
 		sidelen = 16,
 		noise_params = {
-			offset = 0,
+			offset = 0.02,
 			scale = 0.007,
 			spread = {x = 100, y = 100, z = 100},
 			seed = 514,
@@ -1086,10 +1029,10 @@ end
 	minetest.register_decoration({
 		name = "ebiomes:marsh_stitchwort",
 		deco_type = "simple",
-		place_on = {"ebiomes:dirt_with_grass_swamp"},
+		place_on = {"ebiomes:dirt_with_grass_swamp", "ebiomes:peat_wet_with_swamp_moss_green", "ebiomes:peat_with_swamp_moss_yellow"},
 		sidelen = 16,
 		noise_params = {
-			offset = 0,
+			offset = 0.008,
 			scale = 0.007,
 			spread = {x = 100, y = 100, z = 100},
 			seed = 515,
@@ -1727,9 +1670,6 @@ end
 		decoration = "ebiomes:chrysanthemum_yellow",
 	})
 		
---Mediterranean grassland
---none
-
 
 --Steppes
 
@@ -2116,9 +2056,9 @@ end
 	})
 	
 if minetest.get_modpath("bonemeal") ~= nil then
-bonemeal:add_sapling({
-	{"ebiomes:peashrub_sapling", grow_new_peashrub, "soil"},
-})
+	bonemeal:add_sapling({
+		{"ebiomes:peashrub_sapling", grow_new_peashrub, "soil"},
+	})
 end
 
 

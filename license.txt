@@ -8,6 +8,9 @@ License: GPLv3
 TenPlus1 - pigiron (code used for templating stairs)
 The MIT License (MIT)
 Copyright (c) 2018 TenPlus1
+TenPlus1 - ethereal
+The MIT License (MIT)
+Copyright (c) 2016 TenPlus1
 
 
 #######Assets########
@@ -54,7 +57,7 @@ List(without mod prefix)
 Altai tulip, blackcurrant_bush_sapling, black_iris, blue_allium, blue_allium_puple, buttercup_persian, chestnut_leaves, chestnuts, chestnut_sapling,
 chestnuts_peeled, chestnuts_roasted, cypress_sapling, cladanthus, cowberry_bush_sapling, cowberry_overlay, cranberries, cranberry_patch, dried_quince_pieces,
 gooseberry_bush_sapling, gooseberry_overlay, larkspur sundew, marsh_marigold, mountain_lily, olives, pear, peashrub_leaves, peashrub_overlay, quince,
-redcurrant_bush_sapling, russian_iris, savory, siberian_lily, staehelina, sundew, thorn_bush_leaves, 
+redcurrant_bush_sapling, russian_iris, savory, siberian_lily, staehelina, sundew, thorn_bush_leaves, reeds, peat, peat_wet, peat_dry, marsh_grass_green, marsh_grass_yellow, swamp_moss_green, swamp_moss_yellow
 
 License
 -------

@@ -2,7 +2,7 @@
 if minetest.get_modpath("mobs_monster") then
 	mobs:spawn({
 		name = "mobs_monster:dirt_monster",
-		nodes = {"ebiomes:dirt_with_grass_med", "ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_steppe", "ebiomes:dirt_with_grass_steppe_cold", "ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp", "ebiomes:dirt_with_grass_warm", "ebiomes:dry_dirt_with_grass_arid", "ebiomes:dry_dirt_with_grass_arid_cool"},
+		nodes = {"ebiomes:dirt_with_grass_med", "ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_steppe", "ebiomes:dirt_with_grass_steppe_cold", "ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp", "ebiomes:dirt_with_grass_warm", "ebiomes:dry_dirt_with_grass_arid", "ebiomes:dry_dirt_with_grass_arid_cool", "ebiomes:peat_with_swamp_moss_yellow"},
 		min_light = 0,
 		max_light = 7,
 		chance = 6000,
@@ -26,7 +26,7 @@ if minetest.get_modpath("mobs_monster") then
 	mobs:spawn({
 		name = "mobs_monster:spider",
 		nodes = {
-			"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp"
+			"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp", "ebiomes:peat_with_swamp_moss_yellow"
 		},
 		min_light = 0,
 		max_light = 8,
@@ -39,7 +39,7 @@ if minetest.get_modpath("mobs_monster") then
 
 	mobs:spawn({
 		name = "mobs_monster:tree_monster",
-		nodes = {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_med", "ebiomes:dirt_with_grass_warm", "ebiomes:dirt_with_grass_swamp"},
+		nodes = {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_med", "ebiomes:dirt_with_grass_warm", "ebiomes:dirt_with_grass_swamp", "ebiomes:peat_with_swamp_moss_yellow"},
 		max_light = 7,
 		chance = 7000,
 		min_height = 0,

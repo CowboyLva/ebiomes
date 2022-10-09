@@ -1,14 +1,11 @@
 local path = minetest.get_modpath("ebiomes")
 
---translation code from flowerpot
-
 --from runs cooltrees
 --[[
 local modname = "ebiomes"
 local modpath = minetest.get_modpath(modname)
 local mg_name = minetest.get_mapgen_setting("mg_name")
 --]]
-
 
 	dofile(path .. "/reregister.lua")
 	dofile(path .. "/reregflowers.lua")

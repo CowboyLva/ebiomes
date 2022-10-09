@@ -26,7 +26,8 @@ local fmeb = {
 "ebiomes:dry_dirt_with_grass_arid_cool",
 "ebiomes:dirt_with_grass_steppe_cold",
 "ebiomes:dirt_with_grass_steppe",
-"ebiomes:dirt_with_grass_steppe_warm"
+"ebiomes:dirt_with_grass_steppe_warm",
+"ebiomes:peat_with_swamp_moss_yellow"
 
 }
 

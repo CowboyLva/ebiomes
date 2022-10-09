@@ -2,7 +2,17 @@
 ################ebiomes##################
 #########################################
 
-Version 1.0.1 - By CowboyLv
+Version 1.1.0 - By CowboyLv
+
+## Changes
+
+Vqrsion 1.1.0
+
+Reworked swamp - Now has 2 parts. Swampland and Bog.
+
+Version 1.0.1
+
+Added Forgotten Monsters by DuckGo support.
 
 ## General 
 
@@ -30,10 +40,10 @@ Things lacking - Fireflies on the mods biomes(a bug on mtg end as of July 13th 2
 
 ## Issues
 
-To remove blackberry from snowy_grassland the default mod together with other vanilla game mods have had their decorations reregistered. So far there is no method(dev term, look up the minetest modding wiki) designed to remove or change a single decoration.
+To remove blackberry from snowy_grassland the default mod together with other vanilla game mods have had their decorations reregistered. So far there is no method(dev term, look up the minetest modding wiki or doc folder in install/build minetest directory(not .minetest)) designed to remove or change a single decoration.
 
 Fireflies are bugged outside of mtg. Tested this in Ethereal as well.
 
 The possibility to recolor grass textures in lua files with colorize saving file size on mods is known. However the textures are made with Tone Chroma and other color related methods on GIMP and so far the mod author is unsure if one can replicate it using only code.
 
-There is a slight worry about crediting people. Some simple things borrowed have later found out to be used by everyone else.
+

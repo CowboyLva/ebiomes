@@ -89,6 +89,16 @@ if minetest.get_modpath("moreblocks") then
 		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
 		sounds = default.node_sound_wood_defaults(),
 	})
+
+--If someone wants glorious peat stuff they may uncomment this	
+--[[	
+	stairsplus:register_all("peat_dry", "soil", "ebiomes:peat_dry", {
+		description = "Dry Peat",
+		tiles = {"ebiomes_peat_dry.png"},
+		groups = {crumbly = 2, oddly_breakable_by_hand = 1},
+		sounds = default.node_sound_wood_defaults(),
+	})
+--]]	
 	
 end
 

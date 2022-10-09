@@ -1272,10 +1272,10 @@ end
 		node_dungeon = "default:cobble",
 		node_dungeon_alt = "default:mossycobble",
 		node_dungeon_stair = "stairs:stair_cobble",
-		y_max = 4,
+		y_max = 8,
 		y_min = 1,
 		heat_point = 53,
-		humidity_point = 100,
+		humidity_point = 85,
 	})
 
 	minetest.register_biome({
@@ -1292,7 +1292,7 @@ end
 		y_max = 0,
 		y_min = -1,
 		heat_point = 53,
-		humidity_point = 100,
+		humidity_point = 85,
 	})
 
 	minetest.register_biome({
@@ -1311,7 +1311,7 @@ end
 		y_max = -2,
 		y_min = -255,
 		heat_point = 53,
-		humidity_point = 100,
+		humidity_point = 85,
 	})
 
 	minetest.register_biome({
@@ -1323,7 +1323,7 @@ end
 		y_max = -256,
 		y_min = -31000,
 		heat_point = 53,
-		humidity_point = 100,
+		humidity_point = 85,
 	})
 
 
@@ -1424,30 +1424,6 @@ end
 		sounds = default.node_sound_water_defaults(),
 	})
 
--- Looked at swampz by runs to figure this out
-	minetest.register_decoration({
-		name = "ebiomes:swamp_hole_small",
-		deco_type = "schematic",
-		place_on = {"ebiomes:dirt_with_grass_swamp"},
-		sidelen = 16,
-		noise_params = {
-			offset = 0.01,
-			scale = 0.03,
-			spread = {x = 250, y = 250, z = 250},
-			seed = 2,
-			octaves = 3,
-			persist = 0.66
-		},
-		biomes = {"swamp"},
-		height = 1,
-		y_min = 1,
-		y_max = 4,
---		place_offset_y = -1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_swamp_hole.mts",
-		flags = "place_center_x, place_center_z, force_placement",
-		rotation = "random",
-	})
-
 
 	bucket.register_liquid(
 		"ebiomes:swamp_water_source",
@@ -1480,6 +1456,461 @@ for length = 1, 5 do
 	})
 end
 	
+
+--Bog
+
+
+--Peats
+
+	minetest.register_node("ebiomes:peat", {
+		description = S("Peat"),
+		tiles = {"ebiomes_peat.png"},
+		groups = {crumbly = 3, soil = 1},
+		sounds = default.node_sound_dirt_defaults(),
+	})
+
+	minetest.register_node("ebiomes:peat_with_swamp_moss_yellow", {
+		description = S("Peat with Yellow Swamp Moss"),
+		tiles = {"ebiomes_swamp_moss_yellow.png", "ebiomes_peat.png",
+			{name = "ebiomes_peat.png^ebiomes_swamp_moss_yellow_side.png",
+				tileable_vertical = false}},
+		groups = {crumbly = 3, soil = 1, spreading_dirt_type = 1},
+		drop = "ebiomes:peat",
+		sounds = default.node_sound_dirt_defaults({
+			footstep = {name = "default_grass_footstep", gain = 0.25},
+		}),
+	})
+
+	minetest.register_node("ebiomes:peat_with_swamp_moss_yellow_footsteps", {
+		description = S("Peat with Yellow Swamp Moss and Footsteps"),
+		tiles = {"ebiomes_swamp_moss_yellow.png^default_footprint.png", "ebiomes_peat.png",
+			{name = "ebiomes_peat.png^ebiomes_swamp_moss_yellow_side.png",
+				tileable_vertical = false}},
+		groups = {crumbly = 3, soil = 1, not_in_creative_inventory = 1},
+		drop = "ebiomes:peat",
+		sounds = default.node_sound_dirt_defaults({
+			footstep = {name = "default_grass_footstep", gain = 0.25},
+		}),
+	})
+
+	minetest.register_node("ebiomes:peat_dry", {
+		description = S("Dry Peat"),
+		tiles = {"ebiomes_peat_dry.png"},
+		groups = {crumbly = 3, soil = 1},
+		sounds = default.node_sound_dirt_defaults(),
+	})
+
+	minetest.register_node("ebiomes:peat_wet", {
+		description = S("Wet Peat"),
+		tiles = {"ebiomes_peat_wet.png"},
+		drop = "ebiomes:peat_wet",
+		liquid_viscosity = 15,
+		liquidtype = "source",
+		liquid_alternative_flowing = "ebiomes:peat_wet",
+		liquid_alternative_source = "ebiomes:peat_wet",
+		liquid_renewable = false,
+		liquid_range = 0,
+		drowning = 1,
+		walkable = false,
+		climbable = false,
+		groups = {crumbly = 3, soil = 1, liquid = 3, disable_jump = 1},
+		sounds = default.node_sound_dirt_defaults(),
+	})
+
+
+
+--peat
+--Wet peat made from a code saple of ethereal quicksand
+
+	minetest.register_node("ebiomes:peat_wet_with_swamp_moss_green", {
+		description = S("Wet Peat with Green Swamp Moss"),
+		tiles = {"ebiomes_swamp_moss_green.png", "ebiomes_peat_wet.png",
+			{name = "ebiomes_peat_wet.png^ebiomes_swamp_moss_green_side.png",
+				tileable_vertical = false}},
+		drop = "ebiomes:peat_wet",
+		liquid_viscosity = 15,
+		liquidtype = "source",
+		liquid_alternative_flowing = "ebiomes:peat_wet_with_swamp_moss_green",
+		liquid_alternative_source = "ebiomes:peat_wet_with_swamp_moss_green",
+		liquid_renewable = false,
+		liquid_range = 0,
+		drowning = 1,
+		walkable = false,
+		climbable = false,
+		groups = {crumbly = 3, soil = 1, liquid = 3, disable_jump = 1},
+		sounds = default.node_sound_dirt_defaults({
+			footstep = {name = "default_grass_footstep", gain = 0.25},
+		}),
+	})
+
+	minetest.register_node("ebiomes:peat_wet_with_swamp_moss_green_footsteps", {
+		description = S("Wet Peat with Green Swamp Moss and Footsteps"),
+		tiles = {"ebiomes_swamp_moss_green.png^default_footprint.png", "ebiomes_peat_wet.png",
+			{name = "ebiomes_peat_wet.png^ebiomes_swamp_moss_green_side.png",
+				tileable_vertical = false}},
+		drop = "ebiomes:peat_wet",
+		liquid_viscosity = 15,
+		liquidtype = "source",
+		liquid_alternative_flowing = "ebiomes:peat_wet_with_swamp_moss_green_footsteps",
+		liquid_alternative_source = "ebiomes:peat_wet_with_swamp_moss_green_footsteps",
+		liquid_renewable = false,
+		liquid_range = 0,
+		drowning = 1,
+		walkable = false,
+		climbable = false,
+		groups = {crumbly = 3, soil = 1, liquid = 3, disable_jump = 1},
+		sounds = default.node_sound_dirt_defaults({
+			footstep = {name = "default_grass_footstep", gain = 0.25},
+		}),
+	})
+
+--crafts
+
+	minetest.register_craft({
+		output = "ebiomes:peat",
+		recipe = {
+			{"ebiomes:peat_wet"},
+		}
+	})
+	
+	minetest.register_craft({
+		type = "shapeless",
+		output = "ebiomes:peat_wet",
+		recipe = {"ebiomes:peat", "group:water_bucket"},
+		replacements = {{"group:water_bucket", "bucket:bucket_empty"}}
+	})
+	
+	minetest.register_craft({
+		type = "cooking",
+		output = "ebiomes:peat_dry",
+		recipe = "ebiomes:peat",
+		burntime = 4
+	})
+	
+	minetest.register_craft({
+		type = "shapeless",
+		output = "ebiomes:peat",
+		recipe = {"ebiomes:peat_dry", "group:water_bucket"},
+		replacements = {{"group:water_bucket", "bucket:bucket_empty"}}
+	})
+	
+	
+	stairs.register_stair_and_slab("peat_dry", "ebiomes:peat_dry",
+		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+		{"ebiomes_peat_dry.png"},
+		S("Dry Peat Stair"),
+		S("Dry Peat Slab"),
+		default.node_sound_dirt_defaults())
+
+	
+	minetest.register_craftitem("ebiomes:burning_peat", {
+		description = S("Burning Peat"),
+		inventory_image = "ebiomes_burning_peat.png"
+	})
+	
+	minetest.register_craft({
+		type = "shapeless",
+		output = "ebiomes:burning_peat 2",
+		recipe = {"ebiomes:peat_dry", "group:wood"},
+		replacements = {{"group:water_bucket", "bucket:bucket_empty"}}
+	})
+		
+	minetest.register_craft({
+	type = "fuel",
+	recipe = "ebiomes:burning_peat",
+	burntime = 30,
+	})
+
+	
+	
+if minetest.get_modpath("bonemeal") ~= nil then
+	minetest.register_craft({
+--		type = "shapeless",
+		output = "bonemeal:mulch 9",
+		recipe = {
+			{"ebiomes:peat"},
+		}
+	})
+end
+
+
+
+
+
+
+
+
+	minetest.register_biome({
+		name = "bog",
+		node_water = "ebiomes:swamp_water_source",
+		node_top = "ebiomes:peat_with_swamp_moss_yellow",
+		depth_top = 1,
+		node_filler = "ebiomes:peat_wet",
+		depth_filler = 2,
+		node_riverbed = "default:gravel",
+		depth_riverbed = 2,
+		node_dungeon = "default:cobble",
+		node_dungeon_alt = "default:mossycobble",
+		node_dungeon_stair = "stairs:stair_cobble",
+		y_max = 6,
+		y_min = 3,
+		heat_point = 53,
+		humidity_point = 100,
+	})
+
+	minetest.register_decoration({
+		name = "ebiomes:peat_l1",
+		deco_type = "simple",
+		place_on = {"ebiomes:peat_with_swamp_moss_yellow"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.5,
+			scale = 0.4,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 21,
+			octaves = 3,
+			persist = 0.66
+		},
+		biomes = {"bog"},
+		height = 1,
+		y_min = 1,
+		y_max = 31000,
+		place_offset_y = -1,
+		decoration = "ebiomes:peat_wet_with_swamp_moss_green",
+		flags = "place_center_x, place_center_z, force_placement",
+		rotation = "random",
+	})
+
+	
+	minetest.register_decoration({
+		name = "ebiomes:quagmire_small",
+		deco_type = "schematic",
+		place_on = {"ebiomes:peat_with_swamp_moss_yellow"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.006,
+			scale = 0.0003,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 78,
+			octaves = 3,
+			persist = 0.66
+		},
+		biomes = {"bog"},
+		height = 1,
+		y_min = 1,
+		y_max = 31000,
+		place_offset_y = -3,
+		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_quagmire_small.mts",
+		flags = "place_center_x, place_center_z, force_placement",
+		rotation = "random",
+	})
+	
+	minetest.register_decoration({
+		name = "ebiomes:quagmire_vsmall",
+		deco_type = "schematic",
+		place_on = {"ebiomes:peat_with_swamp_moss_yellow"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.01,
+			scale = 0.0009,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 76,
+			octaves = 3,
+			persist = 0.66
+		},
+		biomes = {"bog"},
+		height = 1,
+		y_min = 1,
+		y_max = 31000,
+		place_offset_y = -3,
+		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_quagmire_vsmall.mts",
+		flags = "place_center_x, place_center_z, force_placement",
+		rotation = "random",
+	})
+	
+
+	minetest.register_node("ebiomes:reeds", {
+		description = S("Reeds"),
+		drawtype = "plantlike",
+--		drawtype = "firelike",
+		tiles = {"ebiomes_reeds.png"},
+		inventory_image = "ebiomes_reeds.png",
+		wield_image = "ebiomes_reeds.png",
+		paramtype = "light",
+		sunlight_propagates = true,
+		walkable = false,
+		selection_box = {
+			type = "fixed",
+			fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 4 / 16, 4 / 16},
+		},
+		groups = {snappy = 3, flammable = 2},
+		sounds = default.node_sound_leaves_defaults(),
+	})
+
+	minetest.register_decoration({
+		name = "ebiomes:reeds",
+		deco_type = "simple",
+		place_on = {"ebiomes:peat_wet_with_swamp_moss_green", "ebiomes:peat_with_swamp_moss_yellow"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.1,
+			scale = 0.03,
+			spread = {x = 100, y = 100, z = 100},
+			seed = 357,
+			octaves = 3,
+			persist = 0.7
+		},
+		y_max = 31000,
+		y_min = 1,
+		decoration = "ebiomes:reeds",
+	})
+
+	minetest.register_node("ebiomes:marsh_grass_green", {
+		description = S("Green Marsh Grass"),
+		tiles = {"ebiomes_marsh_grass_green.png"},
+		inventory_image = "ebiomes_marsh_grass_green.png",
+		wield_image = "ebiomes_marsh_grass_green.png",
+		drawtype = "plantlike",
+		paramtype = "light",
+		sunlight_propagates = true,
+		walkable = false,
+		buildable_to = true,
+		groups = {snappy = 3, attached_node = 1, flammable = 1},
+		sounds = default.node_sound_leaves_defaults(),
+		selection_box = {
+			type = "fixed",
+			fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 4 / 16, 6 / 16},
+		}
+	})
+	
+	minetest.register_decoration({
+		name = "ebiomes:marsh_grass_green",
+		deco_type = "simple",
+		place_on = {"ebiomes:dirt_with_grass_swamp", "ebiomes:peat_with_swamp_moss_yellow"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.05,
+			scale = 0.01,
+			spread = {x = 100, y = 100, z = 100},
+			seed = 360,
+			octaves = 3,
+			persist = 0.6
+		},
+		y_max = 31000,
+		y_min = 1,
+		decoration = "ebiomes:marsh_grass_green",
+	})
+	
+	minetest.register_node("ebiomes:marsh_grass_yellow", {
+		description = S("Yellow Marsh Grass"),
+		tiles = {"ebiomes_marsh_grass_yellow.png"},
+		inventory_image = "ebiomes_marsh_grass_yellow.png",
+		wield_image = "ebiomes_marsh_grass_yellow.png",
+		drawtype = "plantlike",
+		paramtype = "light",
+		sunlight_propagates = true,
+		walkable = false,
+		buildable_to = true,
+		groups = {snappy = 3, attached_node = 1, flammable = 1},
+		sounds = default.node_sound_leaves_defaults(),
+		selection_box = {
+			type = "fixed",
+			fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 4 / 16, 6 / 16},
+		}
+	})
+	
+	minetest.register_decoration({
+		name = "ebiomes:marsh_grass_yellow",
+		deco_type = "simple",
+		place_on = {"ebiomes:dirt_with_grass_swamp", "ebiomes:peat_with_swamp_moss_yellow"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.005,
+			scale = 0.01,
+			spread = {x = 100, y = 100, z = 100},
+			seed = 361,
+			octaves = 3,
+			persist = 0.6
+		},
+		y_max = 31000,
+		y_min = 1,
+		decoration = "ebiomes:marsh_grass_yellow",
+	})
+
+
+	minetest.register_node("ebiomes:grass_bog_1", {
+		description = S("Bog Grass"),
+		drawtype = "plantlike",
+		waving = 1,
+		tiles = {"ebiomes_grass_bog_1.png"},
+		-- Use texture of a taller grass stage in inventory
+		inventory_image = "ebiomes_grass_bog_3.png",
+		wield_image = "ebiomes_grass_bog_3.png",
+		paramtype = "light",
+		sunlight_propagates = true,
+		walkable = false,
+		buildable_to = true,
+		groups = {snappy = 3, flora = 1, attached_node = 1, grass = 1, flammable = 1},
+		sounds = default.node_sound_leaves_defaults(),
+		selection_box = {
+			type = "fixed",
+			fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, -5 / 16, 6 / 16},
+		},
+
+		on_place = function(itemstack, placer, pointed_thing)
+			-- place a random grass node
+			local stack = ItemStack("ebiomes:grass_bog_" .. math.random(1,5))
+			local ret = minetest.item_place(stack, placer, pointed_thing)
+			return ItemStack("ebiomes:grass_bog_1 " ..
+				itemstack:get_count() - (1 - ret:get_count()))
+		end,
+	})
+
+for i = 2, 5 do
+	minetest.register_node("ebiomes:grass_bog_" .. i, {
+		description = S("Bog Grass"),
+		drawtype = "plantlike",
+		waving = 1,
+		tiles = {"ebiomes_grass_bog_" .. i .. ".png"},
+		inventory_image = "ebiomes_grass_bog_" .. i .. ".png",
+		wield_image = "ebiomes_grass_bog_" .. i .. ".png",
+		paramtype = "light",
+		sunlight_propagates = true,
+		walkable = false,
+		buildable_to = true,
+		drop = "ebiomes:grass_bog_1",
+		groups = {snappy = 3, flora = 1, attached_node = 1,
+			not_in_creative_inventory = 1, grass = 1, flammable = 1},
+		sounds = default.node_sound_leaves_defaults(),
+		selection_box = {
+			type = "fixed",
+			fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, -3 / 16, 6 / 16},
+		},
+	})
+end
+
+for length = 1, 5 do
+	minetest.register_decoration({
+		name = "ebiomes:grass_bog_"..length,
+		deco_type = "simple",
+		place_on = {"ebiomes:peat_with_swamp_moss_yellow"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.05,
+			scale = 0.01,
+			spread = {x = 100, y = 100, z = 100},
+			seed = 329,
+			octaves = 3,
+			persist = 0.6
+		},
+		y_max = 31000,
+		y_min = 1,
+		decoration = "ebiomes:grass_bog_"..length,
+	})
+end
+
+
+
 
 --Fix oriented biomes
 

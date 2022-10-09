@@ -18,6 +18,10 @@ minetest.register_alias("dry_dirt_with_grass", "ebiomes:dry_dirt_with_grass_arid
 minetest.register_alias("dry_dirt_with_grass_footsteps", "ebiomes:dry_dirt_with_grass_arid_footsteps")
 minetest.register_alias("cool_dry_dirt_with_grass", "ebiomes:dry_dirt_with_grass_arid_cool")
 minetest.register_alias("cool_dry_dirt_with_grass_footsteps", "ebiomes:dry_dirt_with_grass_arid_cool_footsteps")
+minetest.register_alias("wet_peat_with_green_swamp_moss", "ebiomes:peat_wet_with_swamp_moss_green")
+minetest.register_alias("wet_peat_with_green_swamp_moss_footsteps", "ebiomes:peat_wet_with_swamp_moss_green_footsteps")
+minetest.register_alias("peat_with_yellow_swamp_moss", "ebiomes:peat_with_swamp_moss_yellow")
+minetest.register_alias("peat_with_yellow_swamp_moss_footsteps", "ebiomes:peat_with_swamp_moss_yellow_footsteps")
 
 --Decors
 minetest.register_alias("warm_bush_stem", "ebiomes:bush_stem_warm")
