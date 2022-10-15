@@ -6,7 +6,7 @@ Version 1.1.1 - By CowboyLv
 
 ## Changes
 
-Version 1.1.1 - By CowboyLv
+Version 1.1.1
 
 Reducing the unregisters.
 Previously reregister.lua unregistered all biomes, ore and decorations before reregistering them.
