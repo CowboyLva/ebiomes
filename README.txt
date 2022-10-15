@@ -2,7 +2,12 @@
 ################ebiomes##################
 #########################################
 
-Version 1.1.0 - By CowboyLv
+Version 1.1.1 dev - By CowboyLv
+
+Reducing the unregisters
+Previously reregister.lua unregistered all biomes, ore and decorations
+Now it unregisters only decorations
+Looking for a way that let's me reregister only selected decorations.
 
 ## Changes
 
