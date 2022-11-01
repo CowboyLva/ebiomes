@@ -7,9 +7,12 @@ local modpath = minetest.get_modpath(modname)
 local mg_name = minetest.get_mapgen_setting("mg_name")
 --]]
 
+if minetest.settings:get_bool("rereg_mtg_decors", true) then
 	dofile(path .. "/reregister.lua")
 	dofile(path .. "/reregflowers.lua")
-	dofile(path .. "/reregaux.lua")
+	dofile(path .. "/reregaux.lua")	
+end
+
 	dofile(path .. "/biobase.lua")
 	dofile(path .. "/decors.lua")
 	dofile(path .. "/woods.lua")

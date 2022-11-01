@@ -2,9 +2,13 @@
 ################ebiomes##################
 #########################################
 
-Version 1.1.1 - By CowboyLv
+Version 1.1.2 - By CowboyLv
 
 ## Changes
+
+Version 1.1.2
+
+Added a setting to disable reregistering decorations, so that the mod can be made compatible with other biome mods.
 
 Version 1.1.1
 
@@ -27,9 +31,11 @@ This is a vanilla themed mod for minetest game, designed to bring vanilla like b
 Several popular mods are supported - bonemeal, mobs_animal, mobs_monster, mobs_npc, mob_horse, moreblocks, flowerpot
 Additional supported mods - forgotten_monsters
 
-Due to its nature, it is not compatible with ethereal. Other biome mod compatibility may vary.
+Due to its unregistering and reregistering decorations, it is not compatible with ethereal. Other biome mod compatibility may vary.
+The user can DISABLE the setting to gain proper compatibility with ethereal and other mods that involve decorations.
 
-Retouches to vanilla - Blueberries are removed from Snowy Grassland. Cowberries have taken their place, they spawn at - Snowy Grassland, Taiga, and Tundra biomes(on moss)
+Retouches to vanilla(can be altered as of version 1.1.2) - Blueberries are removed from Snowy Grassland. Cowberries have taken their place, they spawn at - Snowy Grassland, Taiga, and Tundra biomes(on moss)
+If rereg_mtg_decors is disabled cowberries will only spawn in tundra and taiga.
 
 ## Additions
 

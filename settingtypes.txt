@@ -1,0 +1,2 @@
+#	Whether the mod reregisters vanilla decorations (If other biome mods are in use should be disabled)
+rereg_mtg_decors (Reregister MTG Decorations) bool true

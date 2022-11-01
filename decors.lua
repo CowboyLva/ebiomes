@@ -110,6 +110,7 @@ end
 		end,
 	})
 	
+if minetest.settings:get_bool("rereg_mtg_decors", true) then	
 	minetest.register_decoration({
 		name = "ebiomes:cowberry_bush",
 		deco_type = "schematic",
@@ -130,6 +131,28 @@ end
 		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_cowberry_bush.mts",
 		flags = "place_center_x, place_center_z",
 	})
+else
+	minetest.register_decoration({
+		name = "ebiomes:cowberry_bush",
+		deco_type = "schematic",
+		place_on = {"default:dirt_with_snow", "default:permafrost_with_moss"},
+		sidelen = 16,
+		noise_params = {
+			offset = -0.004,
+			scale = 0.01,
+			spread = {x = 100, y = 100, z = 100},
+			seed = 697,
+			octaves = 3,
+			persist = 0.7,
+		},
+		biomes = {"taiga", "tundra"},
+		y_max = 31000,
+		y_min = 1,
+		place_offset_y = 1,
+		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_cowberry_bush.mts",
+		flags = "place_center_x, place_center_z",
+	})
+end
 	
 if minetest.get_modpath("bonemeal") ~= nil then
 	bonemeal:add_sapling({
