@@ -53,6 +53,8 @@ If rereg_mtg_decors is disabled cowberries will only spawn in tundra and taiga.
 
 As of 1.2.0 the player can disable bamboo in Extra Biomes modmenu, should they use a different mod for adding bamboo. Although it's also recommended to disable reregistering of decorations.
 
+More experienced users can disable Humid Savanna and Japanese rainforest by commenting them out in init.lua. Mod author has not added a toggle for these, because bamboo.lua kind of depends on jprainforest.lua file.
+
 ## Additions
 
 - Deciduous forest variants - Warm and Cold Deciduous forests
@@ -61,6 +63,9 @@ As of 1.2.0 the player can disable bamboo in Extra Biomes modmenu, should they u
 - Dry grasslands - Found between grasslands and deserts
 - Warm grassland - Intended as a transition biome
 - Steppes - Between Grassland and Snowy Grassland
+- Bog - Internal Swamp biome (1.1.0)
+- Humid Savanna (1.2.0)
+- Japanese Rainforest (1.2.0)
 
 Note - there is a hurful bush in game which can only be cut with bronze or a better sword.
 
