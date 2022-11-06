@@ -165,7 +165,7 @@ end
 	minetest.register_decoration({
 		name = "ebiomes:bush",
 		deco_type = "schematic",
-		place_on = {"ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_cold", "default:dirt_with_grass", "ebiomes:dirt_with_grass_warm"},
+		place_on = {"ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_warm"},
 		sidelen = 16,
 		noise_params = {
 			offset = -0.004,
@@ -175,7 +175,7 @@ end
 			octaves = 3,
 			persist = 0.7,
 		},
-		biomes = {"warm_steppe", "deciduous_forest_cold", "deciduous_forest_humid", "deciduous_forest_warm", "grassland_warm"},
+		biomes = {"warm_steppe", "deciduous_forest_cold", "deciduous_forest_warm", "grassland_warm"},
 		y_max = 31000,
 		y_min = 1,
 		schematic = minetest.get_modpath("default") .. "/schematics/bush.mts",
@@ -201,73 +201,13 @@ end
 		schematic = minetest.get_modpath("default") .. "/schematics/pine_bush.mts",
 		flags = "place_center_x, place_center_z",
 	})
-
---Rainforest humid(keeping in global because uses non specific assets)
-
-	minetest.register_decoration({
-		name = "ebiomes:corals",
-		deco_type = "simple",
-		place_on = {"default:sand"},
-		place_offset_y = -1,
-		sidelen = 4,
-		noise_params = {
-			offset = -4,
-			scale = 4,
-			spread = {x = 50, y = 50, z = 50},
-			seed = 7013,
-			octaves = 3,
-			persist = 0.7,
-		},
-		biomes = {
-			"rainforest_humid_ocean",
-		},
-		y_max = -2,
-		y_min = -8,
-		flags = "force_placement",
-		decoration = {
-			"default:coral_green", "default:coral_pink",
-			"default:coral_cyan", "default:coral_brown",
-			"default:coral_orange", "default:coral_skeleton",
-		},
-	})
-	
-	minetest.register_decoration({
-		name = "ebiomes:junglegrass",
-		deco_type = "simple",
-		place_on = {"default:dirt_with_rainforest_litter"},
-		sidelen = 80,
-		fill_ratio = 0.1,
-		biomes = {"rainforest_humid"},
-		y_max = 31000,
-		y_min = 1,
-		decoration = "default:junglegrass",
-	})
-	
-	minetest.register_decoration({
-		name = "ebiomes:papyrus_on_dirt",
-		deco_type = "schematic",
-		place_on = {"default:dirt"},
-		sidelen = 16,
-		noise_params = {
-			offset = -0.3,
-			scale = 0.7,
-			spread = {x = 200, y = 200, z = 200},
-			seed = 354,
-			octaves = 3,
-			persist = 0.7
-		},
-		biomes = {"rainforest_humid_swamp"},
-		y_max = 0,
-		y_min = 0,
-		schematic = minetest.get_modpath("default") .. "/schematics/papyrus_on_dirt.mts",
-	})
 	
 	--flowers
 
 	minetest.register_decoration({
 		name = "ebiomes:dandelion",
 		deco_type = "simple",
-		place_on = {"ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_cold", "default:dirt_with_grass", "ebiomes:dirt_with_grass_warm"},
+		place_on = {"ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_warm"},
 		sidelen = 16,
 		noise_params = {
 			offset = 0.016,
@@ -277,7 +217,7 @@ end
 			octaves = 3,
 			persist = 0.05
 		},
-		biomes = {"warm_steppe", "deciduous_forest_cold", "deciduous_forest_humid", "deciduous_forest_warm", "grassland_warm"},
+		biomes = {"warm_steppe", "deciduous_forest_cold", "deciduous_forest_warm", "grassland_warm"},
 		y_max = 31000,
 		y_min = 1,
 		decoration = "flowers:dandelion_yellow",
@@ -286,7 +226,7 @@ end
 	minetest.register_decoration({
 		name = "ebiomes:dandelion_white",
 		deco_type = "simple",
-		place_on = {"ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_cold", "default:dirt_with_grass", "ebiomes:dirt_with_grass_warm"},
+		place_on = {"ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_warm"},
 		sidelen = 16,
 		noise_params = {
 			offset = 0.008,
@@ -296,7 +236,7 @@ end
 			octaves = 3,
 			persist = 0.05
 		},
-		biomes = {"warm_steppe", "deciduous_forest_cold", "deciduous_forest_humid", "deciduous_forest_warm", "grassland_warm"},
+		biomes = {"warm_steppe", "deciduous_forest_cold", "deciduous_forest_warm", "grassland_warm"},
 		y_max = 31000,
 		y_min = 1,
 		decoration = "flowers:dandelion_white",
@@ -306,7 +246,7 @@ end
 	minetest.register_decoration({
 		name = "ebiomes:tulip",
 		deco_type = "simple",
-		place_on = {"ebiomes:dirt_with_grass_cold", "default:dirt_with_grass", "ebiomes:dirt_with_grass_warm"},
+		place_on = {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_warm"},
 		sidelen = 16,
 		noise_params = {
 			offset = 0.012,
@@ -316,7 +256,7 @@ end
 			octaves = 3,
 			persist = 0.05
 		},
-		biomes = {"deciduous_forest_cold", "deciduous_forest_humid", "deciduous_forest_warm"},
+		biomes = {"deciduous_forest_cold", "deciduous_forest_warm"},
 		y_max = 31000,
 		y_min = 1,
 		decoration = "flowers:tulip",
@@ -326,7 +266,7 @@ end
 	minetest.register_decoration({
 		name = "ebiomes:tulip_black",
 		deco_type = "simple",
-		place_on = {"ebiomes:dirt_with_grass_cold", "default:dirt_with_grass"},
+		place_on = {"ebiomes:dirt_with_grass_cold"},
 		sidelen = 16,
 		noise_params = {
 			offset = 0.016,
@@ -336,7 +276,7 @@ end
 			octaves = 3,
 			persist = 0.05
 		},
-		biomes = {"deciduous_forest_cold", "deciduous_forest_humid"},
+		biomes = {"deciduous_forest_cold"},
 		y_max = 31000,
 		y_min = 1,
 		decoration = "flowers:tulip_black",
@@ -345,7 +285,7 @@ end
 	minetest.register_decoration({
 		name = "ebiomes:rose",
 		deco_type = "simple",
-		place_on = {"default:dirt_with_grass", "ebiomes:dirt_with_grass_warm"},
+		place_on = {"ebiomes:dirt_with_grass_warm"},
 		sidelen = 16,
 		noise_params = {
 			offset = 0.004,
@@ -355,7 +295,7 @@ end
 			octaves = 3,
 			persist = 0.05
 		},
-		biomes = {"deciduous_forest_humid", "deciduous_forest_warm"},
+		biomes = {"deciduous_forest_warm"},
 		y_max = 31000,
 		y_min = 1,
 		decoration = "flowers:rose",
@@ -364,7 +304,7 @@ end
 	minetest.register_decoration({
 		name = "ebiomes:chrysanthemum_green",
 		deco_type = "simple",
-		place_on = {"ebiomes:dirt_with_grass_cold", "default:dirt_with_grass", "ebiomes:dirt_with_grass_warm"},
+		place_on = {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_warm"},
 		sidelen = 16,
 		noise_params = {
 			offset = 0.016,
@@ -374,7 +314,7 @@ end
 			octaves = 3,
 			persist = 0.05
 		},
-		biomes = {"deciduous_forest_cold", "deciduous_forest_humid", "deciduous_forest_warm"},
+		biomes = {"deciduous_forest_cold", "deciduous_forest_warm"},
 		y_max = 31000,
 		y_min = 1,
 		decoration = "flowers:chrysanthemum_green",
@@ -414,7 +354,7 @@ end
 			octaves = 3,
 			persist = 0.7
 		},
-		biomes = {"deciduous_forest_cold_shore", "swamp_shore", "deciduous_forest_humid_shore", "deciduous_forest_warm_shore"},
+		biomes = {"deciduous_forest_cold_shore", "swamp_shore", "deciduous_forest_warm_shore"},
 		y_max = 0,
 		y_min = 0,
 		decoration = "flowers:waterlily_waving",
@@ -428,7 +368,7 @@ end
 	minetest.register_decoration({
 		name = "ebiomes:mushroom_brown",
 		deco_type = "simple",
-		place_on = {"ebiomes:dirt_with_grass_cold", "default:dirt_with_grass", "ebiomes:dirt_with_grass_warm"},
+		place_on = {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_warm"},
 		sidelen = 16,
 		noise_params = {
 			offset = 0,
@@ -438,7 +378,7 @@ end
 			octaves = 3,
 			persist = 0.66
 		},
-		biomes = {"deciduous_forest_cold", "deciduous_forest_humid", "deciduous_forest_warm"},
+		biomes = {"deciduous_forest_cold", "deciduous_forest_warm"},
 		y_max = 31000,
 		y_min = 1,
 		decoration = "flowers:mushroom_brown",
@@ -447,7 +387,7 @@ end
 	minetest.register_decoration({
 		name = "ebiomes:mushroom_red",
 		deco_type = "simple",
-		place_on = {"ebiomes:dirt_with_grass_cold", "default:dirt_with_grass", "deciduous_forest_warm", "ebiomes:dirt_with_grass_warm"},
+		place_on = {"ebiomes:dirt_with_grass_cold", "deciduous_forest_warm", "ebiomes:dirt_with_grass_warm"},
 		sidelen = 16,
 		noise_params = {
 			offset = 0,
@@ -457,7 +397,7 @@ end
 			octaves = 3,
 			persist = 0.66
 		},
-		biomes = {"deciduous_forest_cold", "deciduous_forest_humid", "deciduous_forest_warm"},
+		biomes = {"deciduous_forest_cold", "deciduous_forest_warm"},
 		y_max = 31000,
 		y_min = 1,
 		decoration = "flowers:mushroom_brown",
@@ -484,7 +424,6 @@ end
 			"cold_steppe_ocean",
 			"steppe_ocean",
 			"warm_steppe_ocean",
-			"deciduous_forest_humid_ocean",
 			"sandstone_desert_buffer_ocean",
 			"cold_desert_buffer_ocean",
 			"arid_grassland_cool_ocean"
@@ -1480,7 +1419,7 @@ end
 	
 	
 	
-local function grow_new_thorn(pos)
+local function grow_new_thorn_bush(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
 		minetest.get_node_timer(pos):start(math.random(150, 300))
@@ -1519,7 +1458,7 @@ end
 		paramtype = "light",
 		sunlight_propagates = true,
 		walkable = false,
-		on_timer = grow_new_thorn,
+		on_timer = grow_new_thorn_bush,
 		selection_box = {
 			type = "fixed",
 			fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 2 / 16, 4 / 16}

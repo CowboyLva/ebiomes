@@ -90,7 +90,7 @@ if minetest.get_modpath("moreblocks") then
 		sounds = default.node_sound_wood_defaults(),
 	})
 
---If someone wants glorious peat stuff they may uncomment this	
+--If someone wants glorious peat stuff they may uncomment this. Whether this works righ out of bat, no idea.
 --[[	
 	stairsplus:register_all("peat_dry", "soil", "ebiomes:peat_dry", {
 		description = "Dry Peat",

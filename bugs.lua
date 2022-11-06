@@ -26,9 +26,6 @@ if minetest.get_modpath("fireflies") then
 		biomes = {
 			"deciduous_forest_cold",
 			"swamp",
-			"deciduous_forest_humid",
-			"rainforest_humid",
-			"rainforest_humid_swamp",
 			"deciduous_forest_warm",
 			"bog"
 		},
@@ -54,9 +51,6 @@ if minetest.get_modpath("fireflies") then
 		biomes = {
 			"deciduous_forest_cold",
 			"swamp",
-			"deciduous_forest_humid",
-			"rainforest_humid",
-			"rainforest_humid_swamp",
 			"deciduous_forest_warm",
 			"bog"
 		},
@@ -71,11 +65,11 @@ end
 minetest.register_decoration({
 		name = "ebiomes:butterfly",
 		deco_type = "simple",
-		place_on = {"ebiomes:dirt_with_grass_med", "ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_steppe", "ebiomes:dirt_with_grass_steppe_cold", "default:dirt_with_grass", "ebiomes:dirt_with_grass_warm", "ebiomes:dirt_with_grass_swamp"},
+		place_on = {"ebiomes:dirt_with_grass_med", "ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_steppe", "ebiomes:dirt_with_grass_steppe_cold", "ebiomes:dirt_with_grass_warm", "ebiomes:dirt_with_grass_swamp", "ebiomes:peat_with_swamp_moss_yellow", "ebiomes:peat_wet_with_swamp_moss_green"},
 		place_offset_y = 2,
 		sidelen = 80,
 		fill_ratio = 0.005,
-		biomes = {"mediterranean", "warm_steppe", "steppe", "cold_steppe", "deciduous_forest_humid", "deciduous_forest_warm", "grassland_warm", "swamp"},
+		biomes = {"mediterranean", "warm_steppe", "steppe", "cold_steppe", "deciduous_forest_warm", "grassland_warm", "swamp", "bog"},
 		y_max = 31000,
 		y_min = 1,
 		decoration = {

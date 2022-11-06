@@ -24,7 +24,7 @@ local S = minetest.get_translator("ebiomes")
 			octaves = 1,
 			persist = 0.0
 		},
-		biomes = {"deciduous_forest_cold", "deciduous_forest_cold_shore", "rainforest_humid", "rainforest_humid_swamp", "deciduous_forest_humid", "deciduous_forest_humid_shore", "deciduous_forest_warm", "deciduous_forest_warm_shore"}
+		biomes = {"deciduous_forest_cold", "deciduous_forest_cold_shore", "deciduous_forest_warm", "deciduous_forest_warm_shore"}
 	})
 
 	-- Dirt
@@ -47,7 +47,7 @@ local S = minetest.get_translator("ebiomes")
 			persist = 0.0
 		},
 		-- Only where default:dirt is present as surface material
-		biomes = {"deciduous_forest_cold", "meditarranean", "warm_steppe", "steppe", "cold_steppe", "deciduous_forest_humid", "deciduous_forest_humid_shore", "deciduous_forest_warm", "deciduous_forest_warm_shore"}
+		biomes = {"deciduous_forest_cold", "meditarranean", "warm_steppe", "steppe", "cold_steppe", "deciduous_forest_warm", "deciduous_forest_warm_shore"}
 	})
 
 
@@ -1910,147 +1910,6 @@ for length = 1, 5 do
 end
 
 
-
-
---Fix oriented biomes
-
---Humid rainforest
-
-	minetest.register_biome({
-		name = "rainforest_humid",
-		node_top = "default:dirt_with_rainforest_litter",
-		depth_top = 1,
-		node_filler = "default:dirt",
-		depth_filler = 3,
-		node_riverbed = "default:sand",
-		depth_riverbed = 2,
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		y_max = 31000,
-		y_min = 1,
-		heat_point = 86,
-		humidity_point = 100,
-	})
-
-	minetest.register_biome({
-		name = "rainforest_humid_swamp",
-		node_top = "default:dirt",
-		depth_top = 1,
-		node_filler = "default:dirt",
-		depth_filler = 3,
-		node_riverbed = "default:sand",
-		depth_riverbed = 2,
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		y_max = 0,
-		y_min = -1,
-		heat_point = 86,
-		humidity_point = 100,
-	})
-
-	minetest.register_biome({
-		name = "rainforest_humid_ocean",
-		node_top = "default:sand",
-		depth_top = 1,
-		node_filler = "default:sand",
-		depth_filler = 3,
-		node_riverbed = "default:sand",
-		depth_riverbed = 2,
-		node_cave_liquid = "default:water_source",
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		vertical_blend = 1,
-		y_max = -2,
-		y_min = -255,
-		heat_point = 86,
-		humidity_point = 100,
-	})
-
-	minetest.register_biome({
-		name = "rainforest_humid_under",
-		node_cave_liquid = {"default:water_source", "default:lava_source"},
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		y_max = -256,
-		y_min = -31000,
-		heat_point = 86,
-		humidity_point = 100,
-	})
-	
-	
---Humid deciduous
-
-	minetest.register_biome({
-		name = "deciduous_forest_humid",
-		node_top = "default:dirt_with_grass",
-		depth_top = 1,
-		node_filler = "default:dirt",
-		depth_filler = 3,
-		node_riverbed = "default:sand",
-		depth_riverbed = 2,
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		y_max = 31000,
-		y_min = 1,
-		heat_point = 60,
-		humidity_point = 75,
-	})
-
-	minetest.register_biome({
-		name = "deciduous_forest_humid_shore",
-		node_top = "default:dirt",
-		depth_top = 1,
-		node_filler = "default:dirt",
-		depth_filler = 3,
-		node_riverbed = "default:sand",
-		depth_riverbed = 2,
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		y_max = 0,
-		y_min = -1,
-		heat_point = 60,
-		humidity_point = 75,
-	})
-
-	minetest.register_biome({
-		name = "deciduous_forest_humid_ocean",
-		node_top = "default:sand",
-		depth_top = 1,
-		node_filler = "default:sand",
-		depth_filler = 3,
-		node_riverbed = "default:sand",
-		depth_riverbed = 2,
-		node_cave_liquid = "default:water_source",
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		vertical_blend = 1,
-		y_max = -2,
-		y_min = -255,
-		heat_point = 60,
-		humidity_point = 75,
-	})
-
-	minetest.register_biome({
-		name = "deciduous_forest_humid_under",
-		node_cave_liquid = {"default:water_source", "default:lava_source"},
-		node_dungeon = "default:cobble",
-		node_dungeon_alt = "default:mossycobble",
-		node_dungeon_stair = "stairs:stair_cobble",
-		y_max = -256,
-		y_min = -31000,
-		heat_point = 60,
-		humidity_point = 75,
-	})
-	
-
-
 -- Warm deciduous forest
 
 	minetest.register_node("ebiomes:dirt_with_grass_warm", {
@@ -2636,7 +2495,7 @@ for length = 1, 5 do
 		place_on = {"ebiomes:dry_dirt_with_grass_arid_cool"},
 		sidelen = 16,
 		noise_params = {
-			offset = 0.04,
+			offset = 0.07,
 			scale = 0.02,
 			spread = {x = 100, y = 100, z = 100},
 			seed = 329,

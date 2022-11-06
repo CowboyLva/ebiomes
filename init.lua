@@ -19,6 +19,13 @@ end
 	dofile(path .. "/bugs.lua")
 	dofile(path .. "/stuff.lua")
 	dofile(path .. "/loot.lua")
+	
+	dofile(path .. "/savanna.lua")
+	dofile(path .. "/jprainforest.lua")
+	
+if minetest.settings:get_bool("reg_bamboo", true) then
+	dofile(path .. "/bamboo.lua")
+end
 
 --took a good peek at pigiron mod
 if minetest.get_modpath("bonemeal") then
@@ -30,4 +37,3 @@ end
 if minetest.get_modpath("forgotten_monsters") then
 	dofile(path .. "/forgotten_monsters.lua")
 end
-

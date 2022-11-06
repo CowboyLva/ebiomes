@@ -1,2 +1,5 @@
 #	Whether the mod reregisters vanilla decorations (If other biome mods are in use should be disabled)
 rereg_mtg_decors (Reregister MTG Decorations) bool true
+
+#       Whether the mod registers Bamboo
+reg_bamboo (Register Bamboo) bool true
