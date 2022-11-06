@@ -184,6 +184,12 @@ end
 		spawn_by = "ebiomes:bamboo",
 		num_spawn_by = 1
 	})
+
+if minetest.global_exists("dungeon_loot") then
+	dungeon_loot.register ({
+		{name = "ebiomes:bamboo", chance = 0.3, count = {5, 13}},
+	})	
+end
 	
 if minetest.get_modpath("bonemeal") ~= nil then
 	bonemeal:add_sapling({

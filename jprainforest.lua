@@ -1016,12 +1016,6 @@ end
 
 --Other mods
 
-if minetest.global_exists("dungeon_loot") then
-	dungeon_loot.register ({
-		{name = "ebiomes:bamoboo", chance = 0.3, count = {5, 13}},
-	})	
-end
-
 --Misc
 
 if minetest.get_modpath("moreblocks") then
