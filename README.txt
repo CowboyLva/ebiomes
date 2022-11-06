@@ -67,7 +67,19 @@ More experienced users can disable Humid Savanna and Japanese rainforest by comm
 - Humid Savanna (1.2.0)
 - Japanese Rainforest (1.2.0)
 
-Note - there is a hurful bush in game which can only be cut with bronze or a better sword.
+## Notes
+
+Tips:
+
+Bonemeal mod is highly recommended
+
+There is a hurful bush in game which can only be cut with bronze or a better sword.
+
+Bog is nasty, watch your step.
+
+As of version 1.2.0 the player can encounter moss patches in the Japanese Rainforest. Those are useful for making mossy cobblestone. Or the player can use bonemeal to grow the occasional moss patch out of the rainforest litter there.
+
+Bamboo patches also occur on regular rainforest. (On default)
 
 Things lacking - Fireflies on the mods biomes(a bug on mtg end as of July 13th 2022, the code for them is in the mod)
 
