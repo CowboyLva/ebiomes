@@ -1507,7 +1507,7 @@ end
 	
 if minetest.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
-	{"ebiomes:thorn_bush_sapling", grow_new_thorn, "soil"},
+	{"ebiomes:thorn_bush_sapling", grow_new_thorn_bush, "soil"},
 })
 end
 	
