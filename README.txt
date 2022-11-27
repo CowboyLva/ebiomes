@@ -55,7 +55,8 @@ To gain better compatibility with other biome mods(like ethereal) the user has t
 Retouches to vanilla(if reregistering is ENABLED) - Blueberries are removed from Snowy Grassland. Cowberries have taken their place, they spawn at - Snowy Grassland, Taiga, and Tundra biomes(on moss)
 If rereg_mtg_decors is disabled cowberries will only spawn in tundra and taiga.
 
-As of 1.2.0 the player can disable bamboo in Extra Biomes modmenu, either as a preference or a different mod will be used for adding bamboo. For this to work the player has to disable reregistering of decorations.
+As of 1.2.0 the player can disable bamboo in Extra Biomes modmenu, either as a preference.
+Or if a different mod will be used for adding bamboo - for this to work the player has to disable reregistering of decorations.
 
 ## Additions
 
