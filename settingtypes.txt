@@ -3,3 +3,7 @@ rereg_mtg_decors (Reregister MTG Decorations) bool true
 
 #       Whether the mod registers Bamboo
 reg_bamboo (Register Bamboo) bool true
+
+#       Biomes
+reg_hsavanna (Register Humid Savanna) bool true
+reg_jprainforest (Register Japanese Rainforest) bool true

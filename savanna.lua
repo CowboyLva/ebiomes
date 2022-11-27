@@ -37,7 +37,7 @@ minetest.register_alias("tamarind_pulp", "ebiomes:tamarind_pulp")
 			{name = "default_dry_dirt.png^ebiomes_humid_savanna_grass_side.png",
 				tileable_vertical = false}},
 		groups = {crumbly = 3, soil = 1, spreading_dirt_type = 1},
-		drop = "default:dirt",
+		drop = "default:dry_dirt",
 		sounds = default.node_sound_dirt_defaults({
 			footstep = {name = "default_grass_footstep", gain = 0.25},
 		}),
@@ -54,7 +54,7 @@ minetest.register_alias("tamarind_pulp", "ebiomes:tamarind_pulp")
 			{name = "default_dry_dirt.png^ebiomes_humid_savanna_grass_side.png",
 				tileable_vertical = false}},
 		groups = {crumbly = 3, soil = 1, not_in_creative_inventory = 1},
-		drop = "default:dirt",
+		drop = "default:dry_dirt",
 		sounds = default.node_sound_dirt_defaults({
 			footstep = {name = "default_grass_footstep", gain = 0.25},
 		}),
@@ -130,8 +130,8 @@ end
 		name = "humid_savanna",
 		node_top = "ebiomes:dry_dirt_with_humid_savanna_grass",
 		depth_top = 1,
-		node_filler = "default:dirt",
-		depth_filler = 3,
+		node_filler = "default:dry_dirt",
+		depth_filler = 2,
 		node_riverbed = "default:sand",
 		depth_riverbed = 2,
 		node_dungeon = "default:cobble",

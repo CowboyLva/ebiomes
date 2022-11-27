@@ -115,6 +115,8 @@ end
 		end,
 	})
 
+if minetest.settings:get_bool("reg_jprainforest", true) then
+
 	minetest.register_decoration({
 		name = "ebiomes:bamboo_l1",
 		deco_type = "schematic",
@@ -184,6 +186,81 @@ end
 		spawn_by = "ebiomes:bamboo",
 		num_spawn_by = 1
 	})
+	
+else
+
+	minetest.register_decoration({
+		name = "ebiomes:bamboo_l1",
+		deco_type = "schematic",
+		place_on = {"default:dirt_with_rainforest_litter"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.0001,
+			scale = 0.0001,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 221,
+			octaves = 3,
+			persist = 0.66
+		},
+		biomes = {"rainforest"},
+		y_max = 31000,
+		y_min = 1,
+		place_offset_y = 1,
+		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_bamboo.mts",
+		flags = "place_center_x, place_center_z",
+		rotation = "random"
+	})
+	
+	minetest.register_decoration({
+		name = "ebiomes:bamboo_l2",
+		deco_type = "schematic",
+		place_on = {"default:dirt_with_rainforest_litter"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.9,
+			scale = 0.9,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 222,
+			octaves = 3,
+			persist = 0.66
+		},
+		biomes = {"rainforest"},
+		y_max = 31000,
+		y_min = 1,
+		place_offset_y = 1,
+		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_bamboo.mts",
+		flags = "place_center_x, place_center_z",
+		rotation = "random",
+		spawn_by = "ebiomes:bamboo",
+		num_spawn_by = 1
+	})
+	
+	minetest.register_decoration({
+		name = "ebiomes:bamboo_l3",
+		deco_type = "schematic",
+		place_on = {"default:dirt_with_rainforest_litter"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.9,
+			scale = 0.9,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 223,
+			octaves = 3,
+			persist = 0.66
+		},
+		biomes = {"rainforest"},
+		y_max = 31000,
+		y_min = 1,
+		place_offset_y = 1,
+		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_bamboo.mts",
+		flags = "place_center_x, place_center_z",
+		rotation = "random",
+		spawn_by = "ebiomes:bamboo",
+		num_spawn_by = 1
+	})
+
+end
+
 
 if minetest.global_exists("dungeon_loot") then
 	dungeon_loot.register ({

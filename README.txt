@@ -2,37 +2,42 @@
 ################ebiomes##################
 #########################################
 
-Version 1.2.0 - By CowboyLv
+Version 1.2.1 - By CowboyLv
 
 ## Changes
 
-Version 1.2.0
+1.2.1
+
+Humid Savanna ground layer fix.
+Added settings for Humid Savanna and Japanese Rainforest.
+
+1.2.0
 
 Added Humid Savanna and Japanese Rainforest biomes.
 Bamboo - Can be turned off if need be. (Don't do this on worlds where it was on)
-Filled in missing aliases
-Removed 2 biome fillers(Humid Rainforest, Humid Deiciduous Forest). Those do not add anything, they merelly fill space with a preexisting biome to prevent anomalies.
+Filled in missing aliases.
+Removed 2 "biome fillers"(Humid Rainforest, Humid Deiciduous Forest). Those do not add anything, they merelly fill space with a preexisting biome to prevent abnormalities.
 Tweaks in arid grasslands. Colors and Cool Arid Grassland now has more grass.
 
 
-Version 1.1.2
+1.1.2
 
 Added a setting to disable reregistering decorations, so that the mod can be made compatible with other biome mods.
 
 
-Version 1.1.1
+1.1.1
 
 Reduced the unregisters.
 Previously reregister.lua unregistered all biomes, ore and decorations before reregistering them.
 Now it unregisters and reregisters decorations only.
 
 
-Version 1.1.0
+1.1.0
 
 Reworked swamp - Now has 2 parts. Swampland and Bog.
 
 
-Version 1.0.1
+1.0.1
 
 Added Forgotten Monsters by DuckGo support.
 
@@ -43,17 +48,14 @@ Added Forgotten Monsters by DuckGo support.
 This is a vanilla themed mod for minetest game, designed to bring vanilla like biomes with least amount of changes to the vanilla minetest.
 
 Several popular mods are supported - bonemeal, mobs_animal, mobs_monster, mobs_npc, mob_horse, moreblocks, flowerpot
-Additional supported mods - forgotten_monsters
+Post 1.0.0 - forgotten_monsters
 
-Due to its unregistering and reregistering decorations, it is not compatible with ethereal. Other biome mod compatibility may vary.
-The user can DISABLE the setting to gain proper compatibility with ethereal and other mods that involve decorations.
+To gain better compatibility with other biome mods(like ethereal) the user has to disable unregistering and reregistering of decorations.
 
-Retouches to vanilla(ENABLED by default, but can be ALTERED as of version 1.1.2) - Blueberries are removed from Snowy Grassland. Cowberries have taken their place, they spawn at - Snowy Grassland, Taiga, and Tundra biomes(on moss)
+Retouches to vanilla(if reregistering is ENABLED) - Blueberries are removed from Snowy Grassland. Cowberries have taken their place, they spawn at - Snowy Grassland, Taiga, and Tundra biomes(on moss)
 If rereg_mtg_decors is disabled cowberries will only spawn in tundra and taiga.
 
-As of 1.2.0 the player can disable bamboo in Extra Biomes modmenu, should they use a different mod for adding bamboo. Although it's also recommended to disable reregistering of decorations.
-
-More experienced users can disable Humid Savanna and Japanese rainforest by commenting them out in init.lua. Mod author has not added a toggle for these, because bamboo.lua kind of depends on jprainforest.lua file.
+As of 1.2.0 the player can disable bamboo in Extra Biomes modmenu, either as a preference or a different mod will be used for adding bamboo. For this to work the player has to disable reregistering of decorations.
 
 ## Additions
 
@@ -75,11 +77,11 @@ Bonemeal mod is highly recommended
 
 There is a hurful bush in game which can only be cut with bronze or a better sword.
 
-Bog is nasty, watch your step.
+Bog is nasty, watch Your step.
 
 As of version 1.2.0 the player can encounter moss patches in the Japanese Rainforest. Those are useful for making mossy cobblestone. Or the player can use bonemeal to grow the occasional moss patch out of the rainforest litter there.
 
-Bamboo patches also occur on regular rainforest. (On default)
+Bamboo patches occur on Japanese and regular Rainforest. (By default)
 
 Things lacking - Fireflies on the mods biomes(a bug on mtg end as of July 13th 2022, the code for them is in the mod)
 
@@ -91,6 +93,4 @@ Fireflies are bugged outside of mtg. Tested this in Ethereal as well.
 
 The possibility to recolor grass textures in lua files with colorize saving file size on mods is known. However the textures are made with Tone Chroma and other color related methods on GIMP and so far the mod author is unsure if one can replicate it using only code.
 
-
-
-
+Mod author is puzzled whether to have the mod code be monolythic or modular?

@@ -19,9 +19,14 @@ end
 	dofile(path .. "/bugs.lua")
 	dofile(path .. "/stuff.lua")
 	dofile(path .. "/loot.lua")
-	
+
+if minetest.settings:get_bool("reg_hsavanna", true) then	
 	dofile(path .. "/savanna.lua")
+end
+
+if minetest.settings:get_bool("reg_jprainforest", true) then
 	dofile(path .. "/jprainforest.lua")
+end
 	
 if minetest.settings:get_bool("reg_bamboo", true) then
 	dofile(path .. "/bamboo.lua")
