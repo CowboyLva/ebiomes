@@ -1743,7 +1743,7 @@ end
 			type = "fixed",
 			fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 4 / 16, 4 / 16},
 		},
-		groups = {snappy = 3, flammable = 2},
+		groups = {snappy = 3, flammable = 2, attached_node = 1},
 		sounds = default.node_sound_leaves_defaults(),
 	})
 
