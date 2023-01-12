@@ -1,7 +1,8 @@
 local path = minetest.get_modpath("ebiomes")
 
---from runs cooltrees
+--quick access template
 --[[
+--from runs cooltrees
 local modname = "ebiomes"
 local modpath = minetest.get_modpath(modname)
 local mg_name = minetest.get_mapgen_setting("mg_name")

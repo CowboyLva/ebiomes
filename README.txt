@@ -2,9 +2,14 @@
 ################ebiomes##################
 #########################################
 
-Version 1.2.1 - By CowboyLv
+Version 1.2.2 - By CowboyLv
 
 ## Changes
+
+1.2.2
+
+Warm steppe underground parameters fixed, small general cleanup.
+Before version bump - Reeds fixed and cranberries retexture.
 
 1.2.1
 
@@ -57,6 +62,8 @@ If rereg_mtg_decors is disabled cowberries will only spawn in tundra and taiga.
 
 As of 1.2.0 the player can disable bamboo in Extra Biomes modmenu, either as a preference.
 Or if a different mod will be used for adding bamboo - for this to work the player has to disable reregistering of decorations.
+
+Don't use v6 mapgen, everything else is fine.
 
 ## Additions
 
