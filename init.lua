@@ -44,7 +44,8 @@ if minetest.get_modpath("forgotten_monsters") then
 	dofile(path .. "/forgotten_monsters.lua")
 end
 
-if minetest.get_modpath("animalworld") then
-	dofile(path .. "/animalworld.lua")
+if minetest.settings:get_bool("supp_animalworld", true) then
+	if minetest.get_modpath("animalworld") then
+		dofile(path .. "/animalworld.lua")
+	end
 end
-
