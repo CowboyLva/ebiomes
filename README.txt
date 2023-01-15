@@ -2,9 +2,15 @@
 ################ebiomes##################
 #########################################
 
-Version 1.2.2 - By CowboyLv
+Version 1.2.3 - By CowboyLv
 
 ## Changes
+
+1.2.3
+
+Typo fixes
+Uppdated grassland code with normal_grass group to match current minetest game versions
+Wilhelmines Animal World (animalworld) by liil support
 
 1.2.2
 
@@ -53,7 +59,7 @@ Added Forgotten Monsters by DuckGo support.
 This is a vanilla themed mod for minetest game, designed to bring vanilla like biomes with least amount of changes to the vanilla minetest.
 
 Several popular mods are supported - bonemeal, mobs_animal, mobs_monster, mobs_npc, mob_horse, moreblocks, flowerpot
-Post 1.0.0 - forgotten_monsters
+Post 1.0.0 - forgotten_monsters, animalworld
 
 To gain better compatibility with other biome mods(like ethereal) the user has to disable unregistering and reregistering of decorations.
 

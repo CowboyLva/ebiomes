@@ -387,7 +387,7 @@ end
 	minetest.register_decoration({
 		name = "ebiomes:mushroom_red",
 		deco_type = "simple",
-		place_on = {"ebiomes:dirt_with_grass_cold", "deciduous_forest_warm", "ebiomes:dirt_with_grass_warm"},
+		place_on = {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_warm"},
 		sidelen = 16,
 		noise_params = {
 			offset = 0,
@@ -440,7 +440,7 @@ end
 	minetest.register_decoration({
 		name = "ebiomes:dry_shrub",
 		deco_type = "simple",
-		place_on = {"ebiomes:dirt_with_grass_steppe_cold", "ebiomes:dry_dirt_with_grass_arid", "ebiomes:dry_dirt_with_grass_arid_cool", "default:sand", "default:silver_sand"},
+		place_on = {"ebiomes:dirt_with_grass_steppe_cold", "ebiomes:dry_dirt_with_grass_arid", "ebiomes:dry_dirt_with_grass_arid_cool", "default:desert_sand", "default:silver_sand"},
 		sidelen = 16,
 		noise_params = {
 			offset = 0,

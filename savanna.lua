@@ -77,7 +77,8 @@ minetest.register_alias("tamarind_pulp", "ebiomes:tamarind_pulp")
 		sunlight_propagates = true,
 		walkable = false,
 		buildable_to = true,
-		groups = {snappy = 3, flora = 1, attached_node = 1, grass = 1, flammable = 1},
+		groups = {snappy = 3, flora = 1, attached_node = 1, grass = 1,
+		normal_grass = 1, flammable = 1},
 		max_items = 1,
 			items = {
 				{items = {"farming:seed_wheat"}, rarity = 5},
@@ -112,8 +113,8 @@ for i = 2, 5 do
 		buildable_to = true,
 		drop = "ebiomes:humid_savanna_grass_1",
 		groups = {snappy = 3, flora = 1, attached_node = 1,
-			not_in_creative_inventory = 1, grass = 1, flammable = 1},
-			max_items = 1,
+			not_in_creative_inventory = 1, grass = 1,
+			normal_grass = 1, flammable = 1},
 		items = {
 			{items = {"farming:seed_wheat"}, rarity = 5},
 			{items = {"ebiomes:humid_savanna_grass_1"}},
@@ -548,7 +549,7 @@ end
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
 		wield_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_afzelia_wood.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
-		material = "default:afzelia_wood",
+		material = "ebiomes:afzelia_wood",
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
 		sounds = default.node_sound_wood_defaults()
 	})
@@ -781,7 +782,7 @@ end
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
 		wield_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_limba_wood.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
-		material = "default:limba_wood",
+		material = "ebiomes:limba_wood",
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
 		sounds = default.node_sound_wood_defaults()
 	})
@@ -884,7 +885,7 @@ end
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
 		wield_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_limba_black_wood.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
-		material = "default:limba_black_wood",
+		material = "ebiomes:limba_black_wood",
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
 		sounds = default.node_sound_wood_defaults()
 	})
@@ -1108,7 +1109,7 @@ end
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
 		wield_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_siri_wood.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
-		material = "default:siri_wood",
+		material = "ebiomes:siri_wood",
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
 		sounds = default.node_sound_wood_defaults()
 	})
@@ -1423,7 +1424,7 @@ end
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
 		wield_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_tamarind_wood.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
-		material = "default:tamarind_wood",
+		material = "ebiomes:tamarind_wood",
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
 		sounds = default.node_sound_wood_defaults()
 	})

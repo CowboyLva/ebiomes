@@ -499,7 +499,7 @@ end
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
 		wield_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_sugi_wood.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
-		material = "default:sugi_wood",
+		material = "ebiomes:sugi_wood",
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
 		sounds = default.node_sound_wood_defaults()
 	})
@@ -710,7 +710,7 @@ end
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
 		wield_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_mizunara_wood.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
-		material = "default:mizunara_wood",
+		material = "ebiomes:mizunara_wood",
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
 		sounds = default.node_sound_wood_defaults()
 	})
@@ -922,7 +922,7 @@ end
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
 		wield_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_stoneoak_wood.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
-		material = "default:stoneoak_wood",
+		material = "ebiomes:stoneoak_wood",
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
 		sounds = default.node_sound_wood_defaults()
 	})

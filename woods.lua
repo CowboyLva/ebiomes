@@ -281,7 +281,7 @@ end
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
 		wield_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_willow_wood.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
-		material = "default:willow_wood",
+		material = "ebiomes:willow_wood",
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
 		sounds = default.node_sound_wood_defaults()
 	})
@@ -481,7 +481,7 @@ end
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
 		wield_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_alder_wood.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
-		material = "default:alder_wood",
+		material = "ebiomes:alder_wood",
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
 		sounds = default.node_sound_wood_defaults()
 	})
@@ -682,7 +682,7 @@ end
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
 		wield_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_ash_wood.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
-		material = "default:ash_wood",
+		material = "ebiomes:ash_wood",
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
 		sounds = default.node_sound_wood_defaults()
 	})
@@ -881,7 +881,7 @@ end
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
 		wield_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_birch_wood.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
-		material = "default:birch_wood",
+		material = "ebiomes:birch_wood",
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
 		sounds = default.node_sound_wood_defaults()
 	})
@@ -1087,7 +1087,7 @@ end
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
 		wield_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_cypress_wood.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
-		material = "default:cypress_wood",
+		material = "ebiomes:cypress_wood",
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
 		sounds = default.node_sound_wood_defaults()
 	})
@@ -1341,7 +1341,7 @@ end
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
 		wield_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_olive_wood.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
-		material = "default:olive_wood",
+		material = "ebiomes:olive_wood",
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
 		sounds = default.node_sound_wood_defaults()
 	})
@@ -1585,7 +1585,7 @@ end
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
 		wield_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_downy_birch_wood.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
-		material = "default:downy_birch_wood",
+		material = "ebiomes:downy_birch_wood",
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
 		sounds = default.node_sound_wood_defaults()
 	})
@@ -1788,7 +1788,7 @@ end
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
 		wield_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_pear_wood.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
-		material = "default:pear_wood",
+		material = "ebiomes:pear_wood",
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
 		sounds = default.node_sound_wood_defaults()
 	})
@@ -2044,7 +2044,7 @@ end
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
 		wield_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_quince_wood.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
-		material = "default:quince_wood",
+		material = "ebiomes:quince_wood",
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
 		sounds = default.node_sound_wood_defaults()
 	})
@@ -2318,7 +2318,7 @@ end
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
 		wield_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_chestnut_wood.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
-		material = "default:chestnut_wood",
+		material = "ebiomes:chestnut_wood",
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
 		sounds = default.node_sound_wood_defaults()
 	})
@@ -2602,7 +2602,7 @@ end
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
 		wield_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_hornbeam_wood.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
-		material = "default:hornbeam_wood",
+		material = "ebiomes:hornbeam_wood",
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
 		sounds = default.node_sound_wood_defaults()
 	})
