@@ -52,6 +52,7 @@ mobs:spawn({
 	max_height = 120,
 
 })
+
 	minetest.register_decoration({
 		name = "ebiomes:animalworld_beavernest",
 		deco_type = "schematic",
