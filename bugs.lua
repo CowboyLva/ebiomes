@@ -18,7 +18,8 @@ if minetest.get_modpath("fireflies") then
 			"ebiomes:dirt_with_grass_swamp",
 			"ebiomes:dirt_with_grass_warm",
 			"ebiomes:peat_with_swamp_moss_yellow",
-			"ebiomes:peat_wet_with_swamp_moss_green"
+			"ebiomes:peat_wet_with_swamp_moss_green",
+			"ebiomes:dirt_with_japanese_rainforest_litter"
 		},
 		place_offset_y = 2,
 		sidelen = 80,
@@ -27,7 +28,8 @@ if minetest.get_modpath("fireflies") then
 			"deciduous_forest_cold",
 			"swamp",
 			"deciduous_forest_warm",
-			"bog"
+			"bog",
+			"japanese_rainforest"
 		},
 		y_max = 31000,
 		y_min = -1,
@@ -43,7 +45,8 @@ if minetest.get_modpath("fireflies") then
 			"ebiomes:dirt_with_grass_swamp",
 			"ebiomes:dirt_with_grass_warm",
 			"ebiomes:peat_with_swamp_moss_yellow",
-			"ebiomes:peat_wet_with_swamp_moss_green"
+			"ebiomes:peat_wet_with_swamp_moss_green",
+			"ebiomes:dirt_with_japanese_rainforest_litter"
 		},
 		place_offset_y = 3,
 		sidelen = 80,
@@ -52,7 +55,8 @@ if minetest.get_modpath("fireflies") then
 			"deciduous_forest_cold",
 			"swamp",
 			"deciduous_forest_warm",
-			"bog"
+			"bog",
+			"japanese_rainforest"
 		},
 		y_max = 31000,
 		y_min = -1,
@@ -65,7 +69,7 @@ end
 minetest.register_decoration({
 		name = "ebiomes:butterfly",
 		deco_type = "simple",
-		place_on = {"ebiomes:dirt_with_grass_med", "ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_steppe", "ebiomes:dirt_with_grass_steppe_cold", "ebiomes:dirt_with_grass_warm", "ebiomes:dirt_with_grass_swamp", "ebiomes:peat_with_swamp_moss_yellow", "ebiomes:peat_wet_with_swamp_moss_green"},
+		place_on = {"ebiomes:dirt_with_grass_med", "ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_steppe", "ebiomes:dirt_with_grass_steppe_cold", "ebiomes:dirt_with_grass_warm", "ebiomes:dirt_with_grass_swamp", "ebiomes:peat_with_swamp_moss_yellow", "ebiomes:peat_wet_with_swamp_moss_green", "ebiomes:dirt_with_japanese_rainforest_litter", "ebiomes:dry_dirt_with_humid_savanna_grass"},
 		place_offset_y = 2,
 		sidelen = 80,
 		fill_ratio = 0.005,
@@ -75,7 +79,9 @@ minetest.register_decoration({
 		decoration = {
 			"butterflies:butterfly_white",
 			"butterflies:butterfly_red",
-			"butterflies:butterfly_violet"
+			"butterflies:butterfly_violet",
+			"japanese_rainforest",
+			"humid_savanna"
 		},
 		spawn_by = "group:flower",
 		num_spawn_by = 1

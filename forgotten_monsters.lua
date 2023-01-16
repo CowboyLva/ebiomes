@@ -6,7 +6,7 @@ if not mobs.custom_spawn_monster then
 mobs:spawn({
 	name = "hungry:hungry",
 --	nodes = {"default:dirt_with_grass","default:dirt_with_rainforest_litter"},
-	nodes = {"ebiomes:dirt_with_grass_warm", "ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_med", "ebiomes:dirt_with_grass_steppe_warm"},
+	nodes = {"ebiomes:dirt_with_grass_warm", "ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_med", "ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_japanese_rainforest_litter"},
 --	biomes = {"deciduous_forest_cold", "deciduous_forest_warm"},
 	min_light = 14,
 	--interval = 30, -- 60
@@ -27,8 +27,9 @@ local fmeb = {
 "ebiomes:dirt_with_grass_steppe_cold",
 "ebiomes:dirt_with_grass_steppe",
 "ebiomes:dirt_with_grass_steppe_warm",
-"ebiomes:peat_with_swamp_moss_yellow"
-
+"ebiomes:peat_with_swamp_moss_yellow",
+"ebiomes:dirt_with_japanese_rainforest_litter",
+"ebiomes:dry_dirt_with_humid_savanna_grass"
 }
 
 --skull archers

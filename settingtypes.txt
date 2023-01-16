@@ -5,8 +5,17 @@ rereg_mtg_decors (Reregister MTG Decorations) bool true
 reg_bamboo (Register Bamboo) bool true
 
 #       Biomes
+reg_arids (Register Arid Grasslands) bool true
+reg_buffers (Register Biome Buffers) bool true
+reg_cswamps (Cold Deciduous Forest, Swamp, Bog) bool true
+reg_cowberries (Register Cowberries) bool true
+reg_mediterranean (Register Mediterranean) bool true
+reg_steppes (Register Steppes) bool true
+reg_warms (Warm Deciduous Forest and Grassland) bool true
+
 reg_hsavanna (Register Humid Savanna) bool true
 reg_jprainforest (Register Japanese Rainforest) bool true
 
-#	Support
-supp_animalworld (Wilhelmines Animal World Support) bool true
+#Support toggles
+supp_animalworld (Support Wilhelmines Animal World) bool true
+supp_nssm (Support Not So Simple Mobs) bool true

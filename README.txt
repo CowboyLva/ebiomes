@@ -2,15 +2,28 @@
 ################ebiomes##################
 #########################################
 
-Version 1.2.3 - By CowboyLv
+Version 1.3.0 - By CowboyLv
 
 ## Changes
+
+1.3.0
+
+Code refactor - Biomes made before 1.2.0 release are now toggleable, closely related biomes are lumped into groups.
+
+Cowberries can also be now disabled, disabling them will disable reregistering of decorations even if reregistering toggle is set to enabled. (Since they are the only reason for that to begin with)
+
+Support for nssm. However nssm seems to significantly slow down mapgen, even when it's the only mod active. Therefore ir's recommended only for the biggest fans of it. Support toggle can be left on, it's fine as long as nssm isn't actually loaded.
+
+Player can now also disable buffer biomes. (Since 1.2.0 there were only two Sandstone Desert Buffer and Cold Desert Buffer)
+
+Slight adjustments to mob spawns - e.g. Bunnies now spawn in more biomes.
 
 1.2.3
 
 Typo fixes
 Uppdated grassland code with normal_grass group to match current minetest game versions
 Wilhelmines Animal World (animalworld) by liil support
+
 
 1.2.2
 
@@ -59,7 +72,7 @@ Added Forgotten Monsters by DuckGo support.
 This is a vanilla themed mod for minetest game, designed to bring vanilla like biomes with least amount of changes to the vanilla minetest.
 
 Several popular mods are supported - bonemeal, mobs_animal, mobs_monster, mobs_npc, mob_horse, moreblocks, flowerpot
-Post 1.0.0 - forgotten_monsters, animalworld
+Post 1.0.0 - forgotten_monsters, animalworld, nssm
 
 To gain better compatibility with other biome mods(like ethereal) the user has to disable unregistering and reregistering of decorations.
 
