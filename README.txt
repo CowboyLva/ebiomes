@@ -12,7 +12,7 @@ Code refactor - Biomes made before 1.2.0 release are now toggleable, closely rel
 
 Cowberries can also be now disabled, disabling them will disable reregistering of decorations even if reregistering toggle is set to enabled. (Since they are the only reason for that to begin with)
 
-Support for nssm. However nssm seems to significantly slow down mapgen, even when it's the only mod active. Therefore ir's recommended only for the biggest fans of it. Support toggle can be left on, it's fine as long as nssm isn't actually loaded.
+Support for nssm. However nssm seems to significantly slow down mapgen, even when it's the only mod active. Therefore it's recommended only for the biggest fans of it. Support toggle can be left on, it's fine as long as nssm isn't actually loaded.
 
 Player can now also disable buffer biomes. (Since 1.2.0 there were only two Sandstone Desert Buffer and Cold Desert Buffer)
 
