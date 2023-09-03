@@ -79,3 +79,18 @@ if minetest.settings:get_bool("supp_nssm", true) then
 end
 
 
+
+
+if minetest.settings:get_bool("reg_hsavanna", true) and minetest.settings:get_bool("reg_jsavanna", true) then
+	dofile(path .. "/jsavanna.lua")
+end
+
+if minetest.settings:get_bool("reg_cswamps", true) and minetest.settings:get_bool("reg_warms", true) and minetest.settings:get_bool("reg_trainforest", true) then
+	dofile(path .. "/trainforest.lua")
+end
+
+if minetest.settings:get_bool("reg_cswamps", true) and minetest.settings:get_bool("reg_warms", true) and minetest.settings:get_bool("reg_steppes", true) and minetest.settings:get_bool("reg_extensions", true) then
+	dofile(path .. "/extensions.lua")
+end
+
+

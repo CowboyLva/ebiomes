@@ -31,7 +31,7 @@ local mg_name = minetest.get_mapgen_setting("mg_name")
 			octaves = 1,
 			persist = 0.0
 		},
-		biomes = {"deciduous_forest_cold", "deciduous_forest_cold_shore", "deciduous_forest_warm", "deciduous_forest_warm_shore"}
+		biomes = {"deciduous_forest_cold", "deciduous_forest_cold_shore", "deciduous_forest_warm", "deciduous_forest_warm_shore", "temperate_rainforest"}
 	})
 
 	-- Dirt
@@ -54,7 +54,7 @@ local mg_name = minetest.get_mapgen_setting("mg_name")
 			persist = 0.0
 		},
 		-- Only where default:dirt is present as surface material
-		biomes = {"deciduous_forest_cold", "meditarranean", "warm_steppe", "steppe", "cold_steppe", "deciduous_forest_warm", "deciduous_forest_warm_shore", "japanese_rainforest"}
+		biomes = {"deciduous_forest_cold", "meditarranean", "warm_steppe", "steppe", "cold_steppe", "deciduous_forest_warm", "japanese_rainforest", "temperate_rainforest", "jungle_savanna"}
 	})
 
 
@@ -76,6 +76,7 @@ local mg_name = minetest.get_mapgen_setting("mg_name")
 		},
 		biomes = {
 			"humid_savanna_ocean",
+			"jungle_savanna_ocean",
 		},
 		y_max = -2,
 		y_min = -8,

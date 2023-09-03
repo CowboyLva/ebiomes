@@ -29,7 +29,10 @@ local fmeb = {
 "ebiomes:dirt_with_grass_steppe_warm",
 "ebiomes:peat_with_swamp_moss_yellow",
 "ebiomes:dirt_with_japanese_rainforest_litter",
-"ebiomes:dry_dirt_with_humid_savanna_grass"
+"ebiomes:dry_dirt_with_humid_savanna_grass",
+"ebiomes:dirt_with_forest_litter",
+"ebiomes:dirt_with_jungle_savanna_grass"
+
 }
 
 --skull archers

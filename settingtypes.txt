@@ -14,8 +14,17 @@ reg_steppes (Register Steppes) bool true
 reg_warms (Warm Deciduous Forest and Grassland) bool true
 
 reg_hsavanna (Register Humid Savanna) bool true
+reg_hjavanna (Register Jungle Savanna) bool true
 reg_jprainforest (Register Japanese Rainforest) bool true
+reg_trainforest (Register Temperate Rainforest) bool true
+reg_extensions (Register Default Biome Extensions) bool true
 
-#Support toggles
+#	Alternate options
+alt_jprf_vegetation (Japanese Rainforest Alternate Vegetation Generation) bool false
+
+#	Development testing
+dev_testing (Development Testing) bool false
+
+#	Support toggles
 supp_animalworld (Support Wilhelmines Animal World) bool true
 supp_nssm (Support Not So Simple Mobs) bool true

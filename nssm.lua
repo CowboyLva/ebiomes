@@ -29,13 +29,13 @@ nssm = {
 --]]
 		-- DUCKS
 
-		mobs:spawn_specific("nssm:duck", {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp", "ebiomes:dirt_with_grass_warm", "ebiomes:dirt_with_grass_steppe_warm"},
+		mobs:spawn_specific("nssm:duck", {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp", "ebiomes:dirt_with_grass_warm", "ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_forest_litter", "ebiomes:dirt_with_japanese_rainforest_litter"},
 			{"group:flora"}, 10, 20, 50, 1500000/mm, 1, -31000, 40)
 
-		mobs:spawn_specific("nssm:duckking", {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp", "ebiomes:dirt_with_grass_warm", "ebiomes:dirt_with_grass_steppe_warm"},
+		mobs:spawn_specific("nssm:duckking", {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp", "ebiomes:dirt_with_grass_warm", "ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_forest_litter", "ebiomes:dirt_with_japanese_rainforest_litter"},
 			{"group:flora"}, 10, 20, 400, 120000000/mm, 1, -31000, 40)
 
-		mobs:spawn_specific("nssm:enderduck", {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp", "ebiomes:dirt_with_grass_warm", "ebiomes:dirt_with_grass_steppe_warm"},
+		mobs:spawn_specific("nssm:enderduck", {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp", "ebiomes:dirt_with_grass_warm", "ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_forest_litter", "ebiomes:dirt_with_japanese_rainforest_litter"},
 			{"group:flora"}, 0, 10, 120, 5000000/mm, 1, -31000, 40)
 
 		mobs:spawn_specific("nssm:flying_duck", {"air"},
@@ -44,7 +44,7 @@ nssm = {
 		mobs:spawn_specific("nssm:flying_duck", {"air"},
 			{"group:flora"}, 10, 20, 120, 25000000/mm, 1, 1, 40)
 
-		mobs:spawn_specific("nssm:spiderduck", {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp", "ebiomes:dirt_with_grass_warm", "ebiomes:dirt_with_grass_steppe_warm"},
+		mobs:spawn_specific("nssm:spiderduck", {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp", "ebiomes:dirt_with_grass_warm", "ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_forest_litter", "ebiomes:dirt_with_japanese_rainforest_litter"},
 			{"group:flora"}, 0, 10, 120, 5000000/mm, 1, -31000, 45)
 
 		mobs:spawn_specific("nssm:swimming_duck", {"default:water_source"},
@@ -59,8 +59,8 @@ nssm = {
 		mobs:spawn_specific("nssm:echidna", {"ebiomes:dry_dirt_with_grass_arid"},
 			{"default:dry_shrub", "ebiomes:hardy_bush_leaves", "ebiomes:thorn_bush_leaves"}, 0, 20, 200, 100000000/mm, 1, 50, 31000)
 
-		mobs:spawn_specific("nssm:manticore", {"ebiomes:dirt_with_grass_warm", "ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_steppe_med"},
-			{"ebiomes:dirt_with_grass_warm", "ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_steppe_med"}, 10, 20, 60, 13000000/mm, 1, 40, 31000)
+		mobs:spawn_specific("nssm:manticore", {"ebiomes:dirt_with_grass_warm", "ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_med"},
+			{"ebiomes:dirt_with_grass_warm", "ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_steppe_cold"}, 10, 20, 60, 13000000/mm, 1, 40, 31000)
 
 		mobs:spawn_specific("nssm:werewolf", {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp", "ebiomes:dirt_with_grass_warm", "ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_steppe", "ebiomes:dirt_with_grass_steppe_cold", "ebiomes:dirt_with_japanese_rainforest_litter", "default:dirt_with_coniferous_litter"},
 			{"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp", "ebiomes:dirt_with_grass_warm", "ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_steppe", "ebiomes:dirt_with_grass_steppe_cold", "ebiomes:dirt_with_japanese_rainforest_litter", "default:dirt_with_coniferous_litter"}, 0, 10, 60, 13000000/mm, 1, 40, 31000)
@@ -87,10 +87,10 @@ nssm = {
 --]]
 		-- FOREST
 
-		mobs:spawn_specific("nssm:larva", {"ebiomes:dirt_with_japanese_rainforest_litter", "ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_warm"},
+		mobs:spawn_specific("nssm:larva", {"ebiomes:dirt_with_japanese_rainforest_litter", "ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_warm", "ebiomes:dirt_with_forest_litter"},
 			{"ebiomes:mizunara_tree", "ebiomes:alder_tree", "ebiomes:pear_tree"}, 0, 20, 40, 800000/mm, 1, -31000, 140)
 
-		mobs:spawn_specific("nssm:masticone", {"ebiomes:dirt_with_japanese_rainforest_litter", "ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp", "ebiomes:dirt_with_grass_warm", "ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_steppe"},
+		mobs:spawn_specific("nssm:masticone", {"ebiomes:dirt_with_japanese_rainforest_litter", "ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp", "ebiomes:dirt_with_grass_warm", "ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_steppe", "ebiomes:dirt_with_forest_litter"},
 			{"ebiomes:mizunara_tree", "ebiomes:alder_tree", "ebiomes:pear_tree", "ebiomes:downy_birch_tree"}, 0, 20, 180, 6000000/mm, 2, -31000, 140)
 --[[
 		-- PINE FOREST

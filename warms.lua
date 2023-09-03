@@ -433,7 +433,7 @@ end
 		place_on = {"ebiomes:dirt_with_grass_warm"},
 		sidelen = 16,
 		noise_params = {
-			offset = 0.001,
+			offset = 0.003,
 			scale = 0.001,
 			spread = {x = 250, y = 250, z = 250},
 			seed = 100,
@@ -689,7 +689,7 @@ end
 		place_on = {"ebiomes:dirt_with_grass_warm"},
 		sidelen = 16,
 		noise_params = {
-			offset = 0.001,
+			offset = 0.003,
 			scale = 0.001,
 			spread = {x = 250, y = 250, z = 250},
 			seed = 101,
@@ -963,7 +963,7 @@ end
 		place_on = {"ebiomes:dirt_with_grass_warm"},
 		sidelen = 16,
 		noise_params = {
-			offset = 0.001,
+			offset = 0.002,
 			scale = 0.001,
 			spread = {x = 250, y = 250, z = 250},
 			seed = 106,
@@ -1247,7 +1247,7 @@ end
 		place_on = {"ebiomes:dirt_with_grass_warm"},
 		sidelen = 16,
 		noise_params = {
-			offset = 0.01,
+			offset = 0.04,
 			scale = 0.01,
 			spread = {x = 250, y = 250, z = 250},
 			seed = 106,

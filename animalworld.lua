@@ -32,7 +32,7 @@ mobs:spawn({
 
 mobs:spawn({
 	name = "animalworld:bat",
-	nodes = {"ebiomes:dirt_with_grass_med", "ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_steppe", "ebiomes:dirt_with_grass_steppe_cold", "ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp", "ebiomes:dirt_with_grass_warm", "ebiomes:dry_dirt_with_grass_arid", "ebiomes:dry_dirt_with_grass_arid_cool", "ebiomes:peat_with_swamp_moss_yellow", "ebiomes:wet_peat_with_swamp_moss_green", "ebiomes:dirt_with_japanese_rainforest_litter", "ebiomes:dry_dirt_with_humid_savanna_grass"},
+	nodes = {"ebiomes:dirt_with_grass_med", "ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_steppe", "ebiomes:dirt_with_grass_steppe_cold", "ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp", "ebiomes:dirt_with_grass_warm", "ebiomes:dry_dirt_with_grass_arid", "ebiomes:dry_dirt_with_grass_arid_cool", "ebiomes:peat_with_swamp_moss_yellow", "ebiomes:wet_peat_with_swamp_moss_green", "ebiomes:dirt_with_japanese_rainforest_litter", "ebiomes:dry_dirt_with_humid_savanna_grass", "ebiomes:dirt_with_forest_litter", "ebiomes:dirt_with_jungle_savanna_grass"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000
@@ -44,7 +44,7 @@ mobs:spawn({
 
 mobs:spawn({
 	name = "animalworld:bear",
-	nodes = {"ebiomes:dirt_with_grass_cold"}, {"ebiomes:dirt_with_grass_swamp"},
+	nodes = {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp", "ebiomes:dirt_with_forest_litter"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000
@@ -55,7 +55,7 @@ mobs:spawn({
 	minetest.register_decoration({
 		name = "ebiomes:animalworld_beavernest",
 		deco_type = "schematic",
-		place_on = {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp"},
+		place_on = {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp", "ebiomes:dirt_with_forest_litter"},
 		place_offset_y = -2,
     sidelen = 16,
     fill_ratio = 0.00018,
@@ -66,7 +66,7 @@ mobs:spawn({
 		flags = "place_center_x",
     flags = "force_placement",
 		rotation = "random",
-		spawn_by = {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp"},
+		spawn_by = {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp", "ebiomes:dirt_with_forest_litter"},
 		num_spawn_by = 8,
 	})
 
@@ -96,7 +96,7 @@ mobs:spawn({
 
 mobs:spawn({
 	name = "animalworld:boar",
-	nodes = {"ebiomes:dirt_with_japanese_rainforest_litter", "ebiomes:dirt_with_grass_cold",},
+	nodes = {"ebiomes:dirt_with_japanese_rainforest_litter", "ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_forest_litter"},
 	min_light = 14,
 	interval = 60,
 	chance = 8000, -- 15000
@@ -131,7 +131,7 @@ mobs:spawn({
 
 mobs:spawn({
 	name = "animalworld:crocodile",
-	nodes = {"ebiomes:dry_dirt_with_humid_savanna_grass", "ebiomes:dry_dirt_with_grass_arid"},
+	nodes = {"ebiomes:dry_dirt_with_humid_savanna_grass", "ebiomes:dry_dirt_with_grass_arid", "ebiomes:dirt_with_jungle_savanna_grass"},
 	min_light = 14,
 	interval = 60,
 	chance = 8000, -- 15000
@@ -173,7 +173,7 @@ mobs:spawn({
 
 mobs:spawn({
 	name = "animalworld:frog",
-	nodes = {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp", "ebiomes:dirt_with_grass_warm", "ebiomes:dirt_with_japanese_rainforest_litter"},
+	nodes = {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp", "ebiomes:dirt_with_grass_warm", "ebiomes:dirt_with_japanese_rainforest_litter", "ebiomes:dirt_with_forest_litter", "ebiomes:dirt_with_jungle_savanna_grass"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000
@@ -229,7 +229,7 @@ mobs:spawn({
 
 mobs:spawn({
 	name = "animalworld:goose",
-	nodes = {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp"},
+	nodes = {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp", "ebiomes:dirt_with_forest_litter"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000
@@ -241,7 +241,7 @@ mobs:spawn({
 
 mobs:spawn({
 	name = "animalworld:hare",
-	nodes = {"ebiomes:dirt_with_grass_med", "ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_steppe", "ebiomes:dirt_with_grass_steppe_cold", "ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp", "ebiomes:dirt_with_grass_warm", "ebiomes:dry_dirt_with_grass_arid", "ebiomes:dry_dirt_with_grass_arid_cool", "ebiomes:dirt_with_japanese_rainforest_litter", "ebiomes:dry_dirt_with_humid_savanna_grass"},
+	nodes = {"ebiomes:dirt_with_grass_med", "ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_steppe", "ebiomes:dirt_with_grass_steppe_cold", "ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp", "ebiomes:dirt_with_grass_warm", "ebiomes:dry_dirt_with_grass_arid", "ebiomes:dry_dirt_with_grass_arid_cool", "ebiomes:dirt_with_japanese_rainforest_litter", "ebiomes:dry_dirt_with_humid_savanna_grass", "ebiomes:dirt_with_forest_litter", "ebiomes:dirt_with_jungle_savanna_grass"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000
@@ -328,7 +328,7 @@ mobs:spawn({
 --]]
 mobs:spawn({
 	name = "animalworld:indianrhino",
-	nodes = {"ebiomes:dry_dirt_with_humid_savanna_grass"},
+	nodes = {"ebiomes:dry_dirt_with_humid_savanna_grass", "ebiomes:dirt_with_jungle_savanna_grass"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000
@@ -410,7 +410,7 @@ mobs:spawn({
 
 mobs:spawn({
 	name = "animalworld:monkey",
-	nodes = {"ebiomes:dirt_with_japanese_rainforest_litter"},
+	nodes = {"ebiomes:dirt_with_japanese_rainforest_litter", "ebiomes:dirt_with_jungle_savanna_grass"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000
@@ -474,7 +474,7 @@ mobs:spawn({
 
 mobs:spawn({
 	name = "animalworld:snail",
-	nodes = {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_warm"},
+	nodes = {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_warm", "ebiomes:dirt_with_forest_litter"},
 	neighbors = {"farming:cucumber", "farming:cabbage_6", "farming:lettuce_5", "farming:beetroot_5", "flowers:dandelion_yellow"},
 	min_light = 0,
 	interval = 30,
@@ -512,7 +512,7 @@ mobs:spawn({
 
 mobs:spawn({
 	name = "animalworld:spidermale",
-	nodes = {"ebiomes:dry_dirt_with_grass_arid"}, {"ebiomes:dry_dirt_with_humid_savanna_grass"},
+	nodes = {"ebiomes:dry_dirt_with_grass_arid", "ebiomes:dry_dirt_with_humid_savanna_grass", "ebiomes:dirt_with_jungle_savanna_grass"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000
@@ -540,7 +540,7 @@ mobs:spawn({
 
 mobs:spawn({
 	name = "animalworld:tapir",
-	nodes = {"default:dirt_with_rainforest_litter"},
+	nodes = {"default:dirt_with_rainforest_litter", "ebiomes:dirt_with_jungle_savanna_grass"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000
@@ -604,7 +604,7 @@ mobs:spawn({
 
 mobs:spawn({
 	name = "animalworld:viper",
-	nodes = {"ebiomes:dirt_with_grass_cold"}, 
+	nodes = {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_forest_litter"}, 
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000
@@ -616,7 +616,7 @@ mobs:spawn({
 
 mobs:spawn({
 	name = "animalworld:volverine",
-	nodes = {"ebiomes:dirt_with_steppe_cold"},
+	nodes = {"ebiomes:dirt_with_steppe_grass_cold"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000
@@ -628,7 +628,7 @@ mobs:spawn({
 
 mobs:spawn({
 	name = "animalworld:vulture",
-	nodes = {"ebiomes:dirt_with_grass_med"}, {"ebiomes:dry_dirt_with_grass_arid"}, {"ebiomes:dry_dirt_with_humid_savanna_grass"}, {"ebiomes:dirt_with_grass_steppe"},
+	nodes = {"ebiomes:dirt_with_grass_med", "ebiomes:dry_dirt_with_grass_arid", "ebiomes:dry_dirt_with_humid_savanna_grass", "ebiomes:dirt_with_grass_steppe"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000
@@ -678,7 +678,7 @@ mobs:spawn({
 
 mobs:spawn({
 	name = "animalworld:wolf",
-	nodes = {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp", "ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_steppe", "ebiomes:dirt_with_grass_steppe_cold", "ebiomes:dirt_with_japanese_rainforest_litter"},
+	nodes = {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp", "ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_steppe", "ebiomes:dirt_with_grass_steppe_cold", "ebiomes:dirt_with_japanese_rainforest_litter", "ebiomes:dirt_with_forest_litter"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000

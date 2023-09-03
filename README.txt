@@ -2,9 +2,20 @@
 ################ebiomes##################
 #########################################
 
-Version 1.3.0 - By CowboyLv
+Version 1.4.0 - By CowboyLv
 
 ## Changes
+
+1.4.0
+
+Biomes
+Jungle Savanna - Biome between Humid Savanna and Rainforest
+Temperate Rainforest - Thick wet forest found near various Temperate forest biomes, has beech tree
+Grassland and Deciduous Forest extensions that blend with nearby biomes
+
+Color adjustments in steppes and warm grass biomes
+Various tweaks and fixes
+
 
 1.3.0
 
@@ -82,6 +93,12 @@ If rereg_mtg_decors is disabled cowberries will only spawn in tundra and taiga.
 As of 1.2.0 the player can disable bamboo in Extra Biomes modmenu, either as a preference.
 Or if a different mod will be used for adding bamboo - for this to work the player has to disable reregistering of decorations.
 
+Some biomes depend on others like:
+
+Jungle Savanna - Humid Savanna
+Temperate Rainforest - Cold and Warm Deciduous Forests
+Extensions - Cold Deciduous, Warm Deciduous, Steppes
+
 Don't use v6 mapgen, everything else is fine.
 
 ## Additions
@@ -95,6 +112,9 @@ Don't use v6 mapgen, everything else is fine.
 - Bog - Internal Swamp biome (1.1.0)
 - Humid Savanna (1.2.0)
 - Japanese Rainforest (1.2.0)
+- Jungle Savanna (1.4.0)
+- Temperate Rainforest (1.4.0)
+- Grassland and Deciduous Forest Extensions (1.4.0)
 
 ## Notes
 

@@ -333,6 +333,23 @@ end
 			return itemstack
 		end,
 	})
+if minetest.settings:get_bool("alt_jprf_vegetation", true) then
+	
+	minetest.register_decoration({
+		name = "ebiomes:sugi_tree",
+		deco_type = "schematic",
+		place_on = {"ebiomes:dirt_with_japanese_rainforest_litter"},
+		sidelen = 80,
+		fill_ratio = 0.03,
+		biomes = {"japanese_rainforest"},
+		y_max = 31000,
+		y_min = 1,
+		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_sugi_tree.mts",
+		flags = "place_center_x, place_center_z",
+		rotation = "random",
+	})
+
+else
 
 	minetest.register_decoration({
 		name = "ebiomes:sugi_tree",
@@ -354,6 +371,8 @@ end
 		flags = "place_center_x, place_center_z",
 		rotation = "random"
 	})
+
+end
 	
 	minetest.register_decoration({
 		name = "ebiomes:sugi_log",
@@ -545,6 +564,24 @@ end
 		end,
 	})
 
+if minetest.settings:get_bool("alt_jprf_vegetation", true) then
+	
+	minetest.register_decoration({
+		name = "ebiomes:mizunara_tree",
+		deco_type = "schematic",
+		place_on = {"ebiomes:dirt_with_japanese_rainforest_litter"},
+		sidelen = 80,
+		fill_ratio = 0.02,
+		biomes = {"japanese_rainforest"},
+		y_max = 31000,
+		y_min = 1,
+		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_mizunara_tree.mts",
+		flags = "place_center_x, place_center_z",
+		rotation = "random",
+	})
+	
+else
+
 	minetest.register_decoration({
 		name = "ebiomes:mizunara_tree",
 		deco_type = "schematic",
@@ -565,6 +602,8 @@ end
 		flags = "place_center_x, place_center_z",
 		rotation = "random"
 	})
+
+end
 	
 	minetest.register_decoration({
 		name = "ebiomes:mizunara_log",
@@ -756,6 +795,25 @@ end
 			return itemstack
 		end,
 	})
+	
+if minetest.settings:get_bool("alt_jprf_vegetation", true) then
+	
+	minetest.register_decoration({
+		name = "ebiomes:stoneoak_tree",
+		deco_type = "schematic",
+		place_on = {"ebiomes:dirt_with_japanese_rainforest_litter"},
+		sidelen = 80,
+		fill_ratio = 0.005,
+		biomes = {"japanese_rainforest"},
+		y_max = 31000,
+		y_min = 1,
+		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_stoneoak_tree.mts",
+		flags = "place_center_x, place_center_z",
+		rotation = "random",
+	})
+	
+
+else
 
 	minetest.register_decoration({
 		name = "ebiomes:stoneoak_tree",
@@ -764,7 +822,7 @@ end
 		sidelen = 16,
 		noise_params = {
 			offset = 0.012,
-			scale = 0.001,
+			scale = 0.005,
 			spread = {x = 250, y = 250, z = 250},
 			seed = 1203,
 			octaves = 3,
@@ -777,6 +835,8 @@ end
 		flags = "place_center_x, place_center_z",
 		rotation = "random"
 	})
+
+end
 		
 	minetest.register_decoration({
 		name = "ebiomes:stoneoak_log",
@@ -849,7 +909,6 @@ end
 		burntime = 9,
 	})
 
-
 for length = 1, 3 do
 	minetest.register_decoration({
 		name = "ebiomes:fernjp_"..length,
@@ -863,6 +922,7 @@ for length = 1, 3 do
 		decoration = "default:fern_"..length,
 	})
 end
+
 --[[	
 	minetest.register_decoration({
 		name = "ebiomes:junglegrass_jrf",
@@ -896,6 +956,7 @@ end
 			fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 4 / 16, 6 / 16},
 		},
 	})
+	
 
 	minetest.register_decoration({
 		name = "ebiomes:forestgrowth",
@@ -907,7 +968,7 @@ end
 		y_max = 31000,
 		y_min = 1,
 		decoration = "ebiomes:forestgrowth",
-	})
+	})	
 
 	minetest.register_craft({
 		output = "default:stick",
