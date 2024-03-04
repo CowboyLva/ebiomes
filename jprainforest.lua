@@ -333,21 +333,30 @@ end
 			return itemstack
 		end,
 	})
-if minetest.settings:get_bool("alt_jprf_vegetation", true) then
+	
+if minetest.settings:get_bool("light_mapgen", true) then
 	
 	minetest.register_decoration({
 		name = "ebiomes:sugi_tree",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_japanese_rainforest_litter"},
-		sidelen = 80,
-		fill_ratio = 0.03,
+		sidelen = 16,
+		noise_params = {
+			offset = 0.04,
+			scale = 0.001,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 201,
+			octaves = 3,
+			persist = 0.66
+		},
 		biomes = {"japanese_rainforest"},
 		y_max = 31000,
 		y_min = 1,
 		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_sugi_tree.mts",
 		flags = "place_center_x, place_center_z",
-		rotation = "random",
+		rotation = "random"
 	})
+
 
 else
 
@@ -564,20 +573,27 @@ end
 		end,
 	})
 
-if minetest.settings:get_bool("alt_jprf_vegetation", true) then
+if minetest.settings:get_bool("light_mapgen", true) then
 	
 	minetest.register_decoration({
 		name = "ebiomes:mizunara_tree",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_japanese_rainforest_litter"},
-		sidelen = 80,
-		fill_ratio = 0.02,
+		sidelen = 16,
+		noise_params = {
+			offset = 0.008,
+			scale = 0.001,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 702,
+			octaves = 3,
+			persist = 0.66
+		},
 		biomes = {"japanese_rainforest"},
 		y_max = 31000,
 		y_min = 1,
 		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_mizunara_tree.mts",
 		flags = "place_center_x, place_center_z",
-		rotation = "random",
+		rotation = "random"
 	})
 	
 else
@@ -796,20 +812,27 @@ end
 		end,
 	})
 	
-if minetest.settings:get_bool("alt_jprf_vegetation", true) then
+if minetest.settings:get_bool("light_mapgen", true) then
 	
 	minetest.register_decoration({
 		name = "ebiomes:stoneoak_tree",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_japanese_rainforest_litter"},
-		sidelen = 80,
-		fill_ratio = 0.005,
+		sidelen = 16,
+		noise_params = {
+			offset = 0.008,
+			scale = 0.005,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 1203,
+			octaves = 3,
+			persist = 0.66
+		},
 		biomes = {"japanese_rainforest"},
 		y_max = 31000,
 		y_min = 1,
 		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_stoneoak_tree.mts",
 		flags = "place_center_x, place_center_z",
-		rotation = "random",
+		rotation = "random"
 	})
 	
 

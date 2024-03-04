@@ -1837,6 +1837,30 @@ end
 		end,
 	})
 
+
+if minetest.settings:get_bool("light_mapgen", true) then
+	minetest.register_decoration({
+		name = "ebiomes:alder_tree",
+		deco_type = "schematic",
+		place_on = {"ebiomes:dirt_with_grass_cold"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.005,
+			scale = 0.015,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 103,
+			octaves = 3,
+			persist = 0.66
+		},
+		biomes = {"deciduous_forest_cold"},
+		y_max = 31000,
+		y_min = 1,
+		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_alder_tree.mts",
+		flags = "place_center_x, place_center_z",
+		rotation = "random",
+	})
+
+else
 	minetest.register_decoration({
 		name = "ebiomes:alder_tree",
 		deco_type = "schematic",
@@ -1857,6 +1881,7 @@ end
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
+end
 	
 	minetest.register_decoration({
 		name = "ebiomes:alder_log",
@@ -2037,6 +2062,31 @@ end
 		end,
 	})
 
+
+if minetest.settings:get_bool("light_mapgen", true) then
+
+	minetest.register_decoration({
+		name = "ebiomes:ash_tree",
+		deco_type = "schematic",
+		place_on = {"ebiomes:dirt_with_grass_cold"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.005,
+			scale = 0.01,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 102,
+			octaves = 3,
+			persist = 0.66
+		},
+		biomes = {"deciduous_forest_cold"},
+		y_max = 31000,
+		y_min = 1,
+		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_ash_tree.mts",
+		flags = "place_center_x, place_center_z",
+		rotation = "random",
+	})
+
+else
 	minetest.register_decoration({
 		name = "ebiomes:ash_tree",
 		deco_type = "schematic",
@@ -2057,7 +2107,8 @@ end
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
-	
+end	
+
 	minetest.register_decoration({
 		name = "ebiomes:ash_log",
 		deco_type = "schematic",
@@ -2237,6 +2288,29 @@ end
 		end,
 	})
 
+
+if minetest.settings:get_bool("light_mapgen", true) then
+	minetest.register_decoration({
+		name = "ebiomes:birch_tree",
+		deco_type = "schematic",
+		place_on = {"ebiomes:dirt_with_grass_cold"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.006,
+			scale = 0.003,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 104,
+			octaves = 3,
+			persist = 0.66
+		},
+		biomes = {"deciduous_forest_cold"},
+		y_max = 31000,
+		y_min = 1,
+		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_birch_tree.mts",
+		flags = "place_center_x, place_center_z",
+		rotation = "random",
+	})
+else
 	minetest.register_decoration({
 		name = "ebiomes:birch_tree",
 		deco_type = "schematic",
@@ -2257,6 +2331,8 @@ end
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
+end
+
 	
 	minetest.register_decoration({
 		name = "ebiomes:birch_log",

@@ -2,9 +2,13 @@
 ################ebiomes##################
 #########################################
 
-Version 1.4.0 - By CowboyLv
+Version 1.4.1 - By CowboyLv
 
 ## Changes
+
+1.4.1
+
+Implemented a light mapgen(decorations) toggle to reduce mapgen lag on the denser biomes
 
 1.4.0
 

@@ -403,7 +403,29 @@ end
 			return itemstack
 		end,
 	})
-
+	
+if minetest.settings:get_bool("light_mapgen", true) then
+	minetest.register_decoration({
+		name = "ebiomes:beech_tree",
+		deco_type = "schematic",
+		place_on = {"ebiomes:dirt_with_forest_litter"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.009,
+			scale = 0.015,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 113,
+			octaves = 3,
+			persist = 0.66
+		},
+		biomes = {"temperate_rainforest"},
+		y_max = 31000,
+		y_min = 1,
+		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_beech_tree.mts",
+		flags = "place_center_x, place_center_z",
+		rotation = "random",
+	})
+else
 	minetest.register_decoration({
 		name = "ebiomes:beech_tree",
 		deco_type = "schematic",
@@ -424,6 +446,7 @@ end
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
+end
 	
 	minetest.register_decoration({
 		name = "ebiomes:beech_log",
@@ -506,7 +529,28 @@ if minetest.global_exists("flowerpot") then
 end
 	
 -- Decors
-
+if minetest.settings:get_bool("light_mapgen", true) then
+	minetest.register_decoration({
+		name = "ebiomes:alder_tree_trf",
+		deco_type = "schematic",
+		place_on = {"ebiomes:dirt_with_forest_litter"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.005,
+			scale = 0.015,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 103,
+			octaves = 3,
+			persist = 0.66
+		},
+		biomes = {"temperate_rainforest"},
+		y_max = 31000,
+		y_min = 1,
+		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_alder_tree.mts",
+		flags = "place_center_x, place_center_z",
+		rotation = "random",
+	})
+else
 	minetest.register_decoration({
 		name = "ebiomes:alder_tree_trf",
 		deco_type = "schematic",
@@ -527,6 +571,7 @@ end
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
+end
 	
 	minetest.register_decoration({
 		name = "ebiomes:alder_log_trf",
@@ -545,7 +590,28 @@ end
 		num_spawn_by = 8,
 	})
 	
-	
+if minetest.settings:get_bool("light_mapgen", true) then
+	minetest.register_decoration({
+		name = "ebiomes:hornbeam_tree_trf",
+		deco_type = "schematic",
+		place_on = {"ebiomes:dirt_with_forest_litter"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.032,
+			scale = 0.01,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 106,
+			octaves = 3,
+			persist = 0.66
+		},
+		biomes = {"temperate_rainforest"},
+		y_max = 31000,
+		y_min = 1,
+		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_hornbeam_tree.mts",
+		flags = "place_center_x, place_center_z",
+		rotation = "random",
+	})
+else	
 	minetest.register_decoration({
 		name = "ebiomes:hornbeam_tree_trf",
 		deco_type = "schematic",
@@ -566,6 +632,7 @@ end
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
+end
 	
 	minetest.register_decoration({
 		name = "ebiomes:hornbeam_log_trf",
@@ -623,8 +690,28 @@ end
 		num_spawn_by = 8,
 	})
 	
-	
-		minetest.register_decoration({
+if minetest.settings:get_bool("light_mapgen", true) then
+	minetest.register_decoration({
+		name = "ebiomes:pine_tree_trf",
+		deco_type = "schematic",
+		place_on = {"ebiomes:dirt_with_forest_litter"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.001,
+			scale = 0.048,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 2,
+			octaves = 3,
+			persist = 0.66
+		},
+		biomes = {"temperate_rainforest"},
+		y_max = 31000,
+		y_min = 4,
+		schematic = minetest.get_modpath("default") .. "/schematics/pine_tree.mts",
+		flags = "place_center_x, place_center_z",
+	})
+else	
+	minetest.register_decoration({
 		name = "ebiomes:pine_tree_trf",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_forest_litter"},
@@ -643,9 +730,9 @@ end
 		schematic = minetest.get_modpath("default") .. "/schematics/pine_tree.mts",
 		flags = "place_center_x, place_center_z",
 	})
+end
 
-
-
+if minetest.settings:get_bool("light_mapgen", true) then
 	minetest.register_decoration({
 		name = "ebiomes:small_pine_tree_trf",
 		deco_type = "schematic",
@@ -665,6 +752,27 @@ end
 		schematic = minetest.get_modpath("default") .. "/schematics/small_pine_tree.mts",
 		flags = "place_center_x, place_center_z",
 	})
+else
+	minetest.register_decoration({
+		name = "ebiomes:small_pine_tree_trf",
+		deco_type = "schematic",
+		place_on = {"ebiomes:dirt_with_forest_litter"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.001,
+			scale = -0.005,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 101,
+			octaves = 3,
+			persist = 0.03
+		},
+		biomes = {"temperate_rainforest"},
+		y_max = 31000,
+		y_min = 4,
+		schematic = minetest.get_modpath("default") .. "/schematics/small_pine_tree.mts",
+		flags = "place_center_x, place_center_z",
+	})
+end
 
 	minetest.register_decoration({
 		name = "ebiomes:pine_log_trf",

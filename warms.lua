@@ -426,7 +426,8 @@ end
 			return itemstack
 		end,
 	})
-
+	
+if minetest.settings:get_bool("light_mapgen", true) then
 	minetest.register_decoration({
 		name = "ebiomes:pear_tree",
 		deco_type = "schematic",
@@ -447,6 +448,28 @@ end
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
+else
+	minetest.register_decoration({
+		name = "ebiomes:pear_tree",
+		deco_type = "schematic",
+		place_on = {"ebiomes:dirt_with_grass_warm"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.003,
+			scale = 0.001,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 100,
+			octaves = 3,
+			persist = 0.66
+		},
+		biomes = {"deciduous_forest_warm"},
+		y_max = 31000,
+		y_min = 1,
+		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_pear_tree.mts",
+		flags = "place_center_x, place_center_z",
+		rotation = "random",
+	})
+end
 	
 	minetest.register_decoration({
 		name = "ebiomes:pear_log",
@@ -1241,6 +1264,28 @@ end
 		end,
 	})
 
+if minetest.settings:get_bool("light_mapgen", true) then
+	minetest.register_decoration({
+		name = "ebiomes:hornbeam_tree",
+		deco_type = "schematic",
+		place_on = {"ebiomes:dirt_with_grass_warm"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.02,
+			scale = 0.01,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 106,
+			octaves = 3,
+			persist = 0.66
+		},
+		biomes = {"deciduous_forest_warm"},
+		y_max = 31000,
+		y_min = 1,
+		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_hornbeam_tree.mts",
+		flags = "place_center_x, place_center_z",
+		rotation = "random",
+	})
+else
 	minetest.register_decoration({
 		name = "ebiomes:hornbeam_tree",
 		deco_type = "schematic",
@@ -1261,6 +1306,7 @@ end
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
+end
 	
 	minetest.register_decoration({
 		name = "ebiomes:hornbeam_log",

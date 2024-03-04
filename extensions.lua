@@ -592,7 +592,7 @@ local mg_name = minetest.get_mapgen_setting("mg_name")
 -- Warmish/Fruity deciduous forest
 
 
-
+if minetest.settings:get_bool("light_mapgen", true) then
 	minetest.register_decoration({
 		name = "ebiomes:pear_treeext",
 		deco_type = "schematic",
@@ -613,6 +613,28 @@ local mg_name = minetest.get_mapgen_setting("mg_name")
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
+else
+	minetest.register_decoration({
+		name = "ebiomes:pear_treeext",
+		deco_type = "schematic",
+		place_on = {"default:dirt_with_grass"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.004,
+			scale = 0.001,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 100,
+			octaves = 3,
+			persist = 0.66
+		},
+		biomes = {"deciduous_forest_fruity"},
+		y_max = 31000,
+		y_min = 1,
+		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_pear_tree.mts",
+		flags = "place_center_x, place_center_z",
+		rotation = "random",
+	})
+end
 	
 	minetest.register_decoration({
 		name = "ebiomes:pear_logext",
@@ -631,7 +653,28 @@ local mg_name = minetest.get_mapgen_setting("mg_name")
 		num_spawn_by = 8,
 	})
 	
-	
+if minetest.settings:get_bool("light_mapgen", true) then
+	minetest.register_decoration({
+		name = "ebiomes:hornbeam_treeext",
+		deco_type = "schematic",
+		place_on = {"default:dirt_with_grass"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.005,
+			scale = 0.01,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 106,
+			octaves = 3,
+			persist = 0.66
+		},
+		biomes = {"deciduous_forest_fruity"},
+		y_max = 31000,
+		y_min = 1,
+		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_hornbeam_tree.mts",
+		flags = "place_center_x, place_center_z",
+		rotation = "random",
+	})
+else	
 	minetest.register_decoration({
 		name = "ebiomes:hornbeam_treeext",
 		deco_type = "schematic",
@@ -652,6 +695,7 @@ local mg_name = minetest.get_mapgen_setting("mg_name")
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
+end
 	
 	minetest.register_decoration({
 		name = "ebiomes:hornbeam_log",
@@ -777,7 +821,29 @@ local mg_name = minetest.get_mapgen_setting("mg_name")
 		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_gooseberry_bush.mts",
 		flags = "place_center_x, place_center_z",
 	})
-	
+
+if minetest.settings:get_bool("light_mapgen", true) then
+	minetest.register_decoration({
+		name = "ebiomes:ash_treeext",
+		deco_type = "schematic",
+		place_on = {"default:dirt_with_grass"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.001,
+			scale = 0.01,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 102,
+			octaves = 3,
+			persist = 0.66
+		},
+		biomes = {"deciduous_forest_woody"},
+		y_max = 31000,
+		y_min = 1,
+		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_ash_tree.mts",
+		flags = "place_center_x, place_center_z",
+		rotation = "random",
+	})
+else	
 	minetest.register_decoration({
 		name = "ebiomes:ash_treeext",
 		deco_type = "schematic",
@@ -798,6 +864,7 @@ local mg_name = minetest.get_mapgen_setting("mg_name")
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
+end
 	
 	minetest.register_decoration({
 		name = "ebiomes:ash_logext",

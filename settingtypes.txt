@@ -20,7 +20,7 @@ reg_trainforest (Register Temperate Rainforest) bool true
 reg_extensions (Register Default Biome Extensions) bool true
 
 #	Alternate options
-alt_jprf_vegetation (Japanese Rainforest Alternate Vegetation Generation) bool false
+light_mapgen (Light Mapgen) bool false
 
 #	Development testing
 dev_testing (Development Testing) bool false

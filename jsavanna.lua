@@ -286,7 +286,28 @@ end
 		rotation = "random"
 	})
 	
-	
+if minetest.settings:get_bool("light_mapgen", true) then	
+	minetest.register_decoration({
+		name = "ebiomes:limba_tree_jsv",
+		deco_type = "schematic",
+		place_on = {"ebiomes:dirt_with_jungle_savanna_grass"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.01,
+			scale = 0.001,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 202,
+			octaves = 3,
+			persist = 0.66
+		},
+		biomes = {"jungle_savanna"},
+		y_max = 31000,
+		y_min = 1,
+		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_limba_tree.mts",
+		flags = "place_center_x, place_center_z",
+		rotation = "random",
+	})
+else
 	minetest.register_decoration({
 		name = "ebiomes:limba_tree_jsv",
 		deco_type = "schematic",
@@ -307,6 +328,7 @@ end
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
+end
 	
 	minetest.register_decoration({
 		name = "ebiomes:limba_log_jsv",
