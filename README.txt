@@ -12,6 +12,7 @@ Added Maple and Oak trees which are found in deciduous forest variants if extens
 Made cooking recipes with buckets have the cookable item be placed on top, instead of right
 Added dyes to flowers - Credit to Skivling
 Added sands with debris
+Reworked reregistration so it only affects snowy grassland without touching other mods.
 
 1.4.1
 

@@ -10,12 +10,9 @@ local mg_name = minetest.get_mapgen_setting("mg_name")
 
 -- Base
 
-if minetest.settings:get_bool("reg_cowberries", true) then
+    dofile(path .. "/rereg.lua")
 	dofile(path .. "/cowberries.lua")
-	if minetest.settings:get_bool("rereg_mtg_decors", true) then
-		dofile(path .. "/rereg.lua")
-	end
-end
+	
 
 if minetest.settings:get_bool("reg_arids", true) then
 	dofile(path .. "/arids.lua")
@@ -92,6 +89,5 @@ end
 if minetest.settings:get_bool("reg_cswamps", true) and minetest.settings:get_bool("reg_warms", true) and minetest.settings:get_bool("reg_steppes", true) and minetest.settings:get_bool("reg_extensions", true) then
 	dofile(path .. "/extensions.lua")
 end
-
 
 
