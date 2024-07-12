@@ -97,11 +97,6 @@ This is a vanilla themed mod for minetest game, designed to bring vanilla like b
 Several popular mods are supported - bonemeal, mobs_animal, mobs_monster, mobs_npc, mob_horse, moreblocks, flowerpot
 Post 1.0.0 - forgotten_monsters, animalworld, nssm
 
-To gain better compatibility with other biome mods(like ethereal) the user has to disable unregistering and reregistering of decorations.
-
-Retouches to vanilla(if reregistering is ENABLED) - Blueberries are removed from Snowy Grassland. Cowberries have taken their place, they spawn at - Snowy Grassland, Taiga, and Tundra biomes(on moss)
-If rereg_mtg_decors is disabled cowberries will only spawn in tundra and taiga.
-
 As of 1.2.0 the player can disable bamboo in Extra Biomes modmenu, either as a preference.
 Or if a different mod will be used for adding bamboo - for this to work the player has to disable reregistering of decorations.
 
@@ -146,6 +141,6 @@ Things lacking - Fireflies on the mods biomes(a bug on mtg end as of July 13th 2
 
 ## Issues
 
-To remove blackberry from snowy_grassland the default mod together with other vanilla game mods have had their decorations reregistered. So far there is no method(dev term, look up the minetest modding wiki or doc folder in install/build minetest directory(not .minetest)) designed to remove or change a single decoration.
+To remove blackberry from snowy_grassland the default mods snowy grassland biome has been reregistered. So far there is no method(dev term, look up the minetest modding wiki or doc folder in install/build minetest directory(not .minetest)) designed to remove or change a single decoration.
 
 Fireflies are bugged outside of mtg. Has been tested in Ethereal as well.
