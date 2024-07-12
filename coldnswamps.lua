@@ -1424,6 +1424,13 @@ end
 		}
 	})
 
+    minetest.register_craft({
+		output = "dye:red",
+		recipe = {
+			{"ebiomes:sundew"}
+		},
+	})
+
 	minetest.register_decoration({
 		name = "ebiomes:sundew",
 		deco_type = "simple",
@@ -1460,6 +1467,13 @@ end
 		}
 	})
 
+    minetest.register_craft({
+		output = "dye:yellow 4",
+		recipe = {
+			{"ebiomes:marigold"}
+		},
+	})
+
 	minetest.register_decoration({
 		name = "ebiomes:marigold",
 		deco_type = "simple",
@@ -1494,6 +1508,13 @@ end
 			type = "fixed",
 			fixed = {-5 / 16, -0.5, -5 / 16, 5 / 16, -2 / 16, 5 / 16},
 		}
+	})
+
+    minetest.register_craft({
+		output = "dye:white 4",
+		recipe = {
+			{"ebiomes:marsh_stitchwort"}
+		},
 	})
 
 	minetest.register_decoration({

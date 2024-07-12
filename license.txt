@@ -1,6 +1,6 @@
 ########Code########
 
-Copyright (C) 2021-2023: CowboyLv - GPLv3 (GNU GENERAL PUBLIC LICENSE)
+Copyright (C) 2021-2024: CowboyLv - GPLv3 (GNU GENERAL PUBLIC LICENSE)
 
 runs - cool_trees, swaz (code used as a template for sapling functions)
 License: GPLv3
@@ -18,7 +18,7 @@ Minetest Game derrivatives(Non-derrivatives listed further)
 License
 --------
 Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
-Copyright (C) 2021-2022: CowboyLv
+Copyright (C) 2021-2024: CowboyLv
 
 You are free to:
 Share — copy and redistribute the material in any medium or format.
@@ -57,14 +57,13 @@ List(without mod prefix)
 Altai tulip, blackcurrant_bush_sapling, black_iris, blue_allium, blue_allium_puple, buttercup_persian, chestnut_leaves, chestnuts, chestnut_sapling,
 chestnuts_peeled, chestnuts_roasted, cypress_sapling, cladanthus, cowberry_bush_sapling, cowberry_overlay, cranberries, cranberry_patch, dried_quince_pieces,
 gooseberry_bush_sapling, gooseberry_overlay, larkspur sundew, marsh_marigold, mountain_lily, olives, pear, peashrub_leaves, peashrub_overlay, quince,
-redcurrant_bush_sapling, russian_iris, savory, siberian_lily, staehelina, sundew, thorn_bush_leaves, reeds, peat, peat_wet, peat_dry, marsh_grass_green, marsh_grass_yellow, swamp_moss_green, swamp_moss_yellow, willow_leaves, burning_peat, afzelia_sapling, bamboo, bamboo_leaves, bamboo_sprout, forestgrowth, jaragua_grass, limba_sapling, mizunara_sapling, siri_sapling, stoneoak_sapling, tamarind_pods_hanging, tamarind_pods, tamarind_pulp, tamarind_sapling, moss, moss_clump
-
+redcurrant_bush_sapling, russian_iris, savory, siberian_lily, staehelina, sundew, thorn_bush_leaves, reeds, peat, peat_wet, peat_dry, marsh_grass_green, marsh_grass_yellow, swamp_moss_green, swamp_moss_yellow, willow_leaves, burning_peat, afzelia_sapling, bamboo, bamboo_leaves, bamboo_sprout, forestgrowth, jaragua_grass, limba_sapling, mizunara_sapling, siri_sapling, stoneoak_sapling, tamarind_pods_hanging, tamarind_pods, tamarind_pulp, tamarind_sapling, moss, moss_clump, maple_leaves, oak_leaves, acorns_hanging, acorns, acorns_cooked
 
 License
 -------
 
 Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
-Copyright (C) 2021-2023: CowboyLv
+Copyright (C) 2021-2024: CowboyLv
 
 You are free to:
 Share — copy and redistribute the material in any medium or format
@@ -154,3 +153,4 @@ LMD, rubenwardy and sfan5 - for being helpful, rubenwardy also for the modding h
 runs - for simple and understandable code I could learn from
 Nathan Salapat - for the tutorials
 axcore - for notifying me to fix warning messages
+Skivling - for notifying about the lack of dyes and for making a mod to adress the issue before the 1.5 release

@@ -234,6 +234,13 @@ end
 		}
 	})
 
+    minetest.register_craft({
+		output = "dye:black 4",
+		recipe = {
+			{"ebiomes:black_iris"}
+		},
+	})
+
 	minetest.register_decoration({
 		name = "ebiomes:black_iris",
 		deco_type = "simple",
@@ -273,6 +280,13 @@ end
 		}
 	})
 
+    minetest.register_craft({
+		output = "dye:white 4",
+		recipe = {
+			{"ebiomes:cladanthus"}
+		},
+	})
+
 	minetest.register_decoration({
 		name = "ebiomes:cladanthus",
 		deco_type = "simple",
@@ -308,6 +322,13 @@ end
 			type = "fixed",
 			fixed = {-3 / 16, -0.5, -3 / 16, 3 / 16, -2 / 16, 3 / 16},
 		}
+	})
+
+    minetest.register_craft({
+		output = "dye:white 4",
+		recipe = {
+			{"ebiomes:savory"}
+		},
 	})
 
 	minetest.register_decoration({
@@ -347,6 +368,13 @@ end
 		}
 	})
 
+    minetest.register_craft({
+		output = "dye:magenta 4",
+		recipe = {
+			{"ebiomes:staehelina"}
+		},
+	})
+
 	minetest.register_decoration({
 		name = "ebiomes:staehelina",
 		deco_type = "simple",
@@ -381,6 +409,13 @@ end
 			type = "fixed",
 			fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, -2 / 16, 4 / 16},
 		}
+	})
+
+    minetest.register_craft({
+		output = "dye:orange 4",
+		recipe = {
+			{"ebiomes:buttercup_persian"}
+		},
 	})
 
 	minetest.register_decoration({
@@ -420,6 +455,13 @@ end
 			type = "fixed",
 			fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, -1 / 16, 4 / 16},
 		}
+	})
+
+    minetest.register_craft({
+		output = "dye:yellow 4",
+		recipe = {
+			{"ebiomes:chrysanthemum_yellow"}
+		},
 	})
 
 	minetest.register_decoration({

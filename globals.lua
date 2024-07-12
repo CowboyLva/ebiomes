@@ -7,6 +7,12 @@ local mg_name = minetest.get_mapgen_setting("mg_name")
 
 --Globals
 
+--Aliases
+
+minetest.register_alias("desert_sand_with_debris", "ebiomes:desert_sand_with_debris")
+minetest.register_alias("sand_with_debris", "ebiomes:sand_with_debris")
+minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_debris")
+
 --Biome basics
 
 	-- Blob ore.
@@ -55,6 +61,354 @@ local mg_name = minetest.get_mapgen_setting("mg_name")
 		},
 		-- Only where default:dirt is present as surface material
 		biomes = {"deciduous_forest_cold", "meditarranean", "warm_steppe", "steppe", "cold_steppe", "deciduous_forest_warm", "japanese_rainforest", "temperate_rainforest", "jungle_savanna"}
+	})
+
+
+--Debris
+
+-- Desert sand with debris
+
+	minetest.register_node("ebiomes:desert_sand_with_debris", {
+	    description = S("Desert Sand with Debris"),
+	    tiles = {"ebiomes_desert_sand_with_debris.png"},
+	    groups = {crumbly = 3, falling_node = 1, sand = 1},
+        drop = "default:desert_sand",
+	    sounds = default.node_sound_sand_defaults(),
+	})
+
+    minetest.register_craft({
+	    output = "ebiomes:desert_sand_with_debris",
+	    recipe = {
+	    	{"default:desert_sand"}
+	    }
+    })
+
+    minetest.register_craft({
+	    output = "default:desert_sand",
+	    recipe = {
+	    	{"ebiomes:desert_sand_with_debris"}
+	    }
+    })
+
+
+	minetest.register_decoration({
+		name = "ebiomes:desert_sand_with_debris_l1",
+		deco_type = "simple",
+		place_on = {"default:desert_sand"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.01,
+			scale = 0.04,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 21,
+			octaves = 3,
+			persist = 0.66
+		},
+--		biomes = {"sandstone_desert", "sandstone_desert_buffer"},
+		height = 1,
+		y_min = 7,
+		y_max = 31000,
+		place_offset_y = -1,
+		decoration = "ebiomes:desert_sand_with_debris",
+		flags = "place_center_x, place_center_z, force_placement",
+		rotation = "random",
+	})
+
+	minetest.register_decoration({
+		name = "ebiomes:desert_sand_with_debris_l1_low",
+		deco_type = "simple",
+		place_on = {"default:desert_sand"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.1,
+			scale = 0.04,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 21,
+			octaves = 3,
+			persist = 0.66
+		},
+--		biomes = {"sandstone_desert", "sandstone_desert_buffer"},
+		height = 1,
+		y_min = -1,
+		y_max = 6,
+		place_offset_y = -1,
+		decoration = "ebiomes:desert_sand_with_debris",
+		flags = "place_center_x, place_center_z, force_placement",
+		rotation = "random",
+	})
+	
+	minetest.register_decoration({
+		name = "ebiomes:desert_sand_with_debris_l2",
+		deco_type = "simple",
+		place_on = {"default:desert_sand"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.9,
+			scale = 0.9,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 21,
+			octaves = 3,
+			persist = 0.66
+		},
+--		biomes = {"sandstone_desert", "sandstone_desert_buffer"},
+		height = 1,
+		y_min = -1,
+		y_max = 31000,
+		place_offset_y = -1,
+		decoration = "ebiomes:desert_sand_with_debris",
+		flags = "place_center_x, place_center_z, force_placement",
+		rotation = "random",
+		spawn_by = "ebiomes:desert_sand_with_debris",
+		num_spawn_by = 1
+	})
+
+
+-- Sand with debris
+
+	minetest.register_node("ebiomes:sand_with_debris", {
+	    description = S("Sand with Debris"),
+	    tiles = {"ebiomes_sand_with_debris.png"},
+	    groups = {crumbly = 3, falling_node = 1, sand = 1},
+        drop = "default:sand",
+	    sounds = default.node_sound_sand_defaults(),
+	})
+
+    minetest.register_craft({
+	    output = "ebiomes:sand_with_debris",
+	    recipe = {
+	    	{"default:sand"}
+	    }
+    })
+
+    minetest.register_craft({
+	    output = "default:sand",
+	    recipe = {
+	    	{"ebiomes:sand_with_debris"}
+	    }
+    })
+
+	minetest.register_decoration({
+		name = "ebiomes:sand_with_debris_l1",
+		deco_type = "simple",
+		place_on = {"default:sand"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.01,
+			scale = 0.04,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 21,
+			octaves = 3,
+			persist = 0.66
+		},
+--		biomes = {"desert"},
+		height = 1,
+		y_min = 7,
+		y_max = 31000,
+		place_offset_y = -1,
+		decoration = "ebiomes:sand_with_debris",
+		flags = "place_center_x, place_center_z, force_placement",
+		rotation = "random",
+	})
+
+	minetest.register_decoration({
+		name = "ebiomes:sand_with_debris_l1_low",
+		deco_type = "simple",
+		place_on = {"default:sand"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.1,
+			scale = 0.04,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 21,
+			octaves = 3,
+			persist = 0.66
+		},
+--		biomes = {"desert"},
+		height = 1,
+		y_min = -1,
+		y_max = 6,
+		place_offset_y = -1,
+		decoration = "ebiomes:sand_with_debris",
+		flags = "place_center_x, place_center_z, force_placement",
+		rotation = "random",
+	})
+	
+	minetest.register_decoration({
+		name = "ebiomes:sand_with_debris_l2",
+		deco_type = "simple",
+		place_on = {"default_sand"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.9,
+			scale = 0.9,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 21,
+			octaves = 3,
+			persist = 0.66
+		},
+--		biomes = {"desert"},
+		height = 1,
+		y_min = -1,
+		y_max = 31000,
+		place_offset_y = -1,
+		decoration = "ebiomes:sand_with_debris",
+		flags = "place_center_x, place_center_z, force_placement",
+		rotation = "random",
+		spawn_by = "ebiomes:sand_with_debris",
+		num_spawn_by = 1
+	})
+
+
+-- Silver sand with debris
+
+	minetest.register_node("ebiomes:silder_sand_with_debris", {
+	    description = S("Silver Sand with Debris"),
+	    tiles = {"ebiomes_desert_sand_with_debris.png"},
+	    groups = {crumbly = 3, falling_node = 1, sand = 1},
+        drop = "default:silver_sand",
+	    sounds = default.node_sound_sand_defaults(),
+	})
+
+    minetest.register_craft({
+	    output = "ebiomes:silver_sand_with_debris",
+	    recipe = {
+	    	{"default:silver_sand"}
+	    }
+    })
+
+    minetest.register_craft({
+	    output = "default:silver_sand",
+	    recipe = {
+	    	{"ebiomes:silver_sand_with_debris"}
+	    }
+    })
+
+
+	minetest.register_decoration({
+		name = "ebiomes:silver_sand_with_debris_l1",
+		deco_type = "simple",
+		place_on = {"default:silver_sand"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.01,
+			scale = 0.04,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 21,
+			octaves = 3,
+			persist = 0.66
+		},
+--		biomes = {"cold_desert", "cold_desert_buffer"},
+		height = 1,
+		y_min = 7,
+		y_max = 31000,
+		place_offset_y = -1,
+		decoration = "ebiomes:silver_sand_with_debris",
+		flags = "place_center_x, place_center_z, force_placement",
+		rotation = "random",
+	})
+
+	minetest.register_decoration({
+		name = "ebiomes:silver_sand_with_debris_l1_low",
+		deco_type = "simple",
+		place_on = {"default:silver_sand"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.1,
+			scale = 0.04,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 21,
+			octaves = 3,
+			persist = 0.66
+		},
+--		biomes = {"cold_desert", "cold_desert_buffer"},
+		height = 1,
+		y_min = -1,
+		y_max = 6,
+		place_offset_y = -1,
+		decoration = "ebiomes:silver_sand_with_debris",
+		flags = "place_center_x, place_center_z, force_placement",
+		rotation = "random",
+	})
+	
+	minetest.register_decoration({
+		name = "ebiomes:silver_sand_with_debris_l2",
+		deco_type = "simple",
+		place_on = {"default_silver_sand"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.9,
+			scale = 0.9,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 21,
+			octaves = 3,
+			persist = 0.66
+		},
+--		biomes = {"cold_desert"},
+		height = 1,
+		y_min = -1,
+		y_max = 31000,
+		place_offset_y = -1,
+		decoration = "ebiomes:silver_sand_with_debris",
+		flags = "place_center_x, place_center_z, force_placement",
+		rotation = "random",
+		spawn_by = "ebiomes:silver_sand_with_debris",
+		num_spawn_by = 1
+	})
+
+--[[
+--Marram grass (template)
+
+	minetest.register_decoration({
+		name = "ebiomes:marram_grass",
+		deco_type = "simple",
+		place_on = {"default:sand"},
+		sidelen = 4,
+		noise_params = {
+			offset = -0.7,
+			scale = 4.0,
+			spread = {x = 16, y = 16, z = 16},
+			seed = 513337,
+			octaves = 1,
+			persist = 0.0,
+			flags = "absvalue, eased"
+		},
+		biomes = {"warm_steppe_dunes", "steppe_dunes", "cold_steppe_dunes", "deciduous_forest_cold_shore"},
+		y_max = 6,
+		y_min = 4,
+		decoration = {
+			"default:marram_grass_1",
+			"default:marram_grass_2",
+			"default:marram_grass_3",
+		},
+	})
+--]]
+
+--Marram grass on debris
+
+	-- Marram grass
+
+	minetest.register_decoration({
+		name = "ebiomes:marram_grass_debris",
+		deco_type = "simple",
+		place_on = {"ebiomes:sand_with_debris"},
+		sidelen = 4,
+		noise_params = {
+			offset = -0.7,
+			scale = 4.0,
+			spread = {x = 16, y = 16, z = 16},
+			seed = 513337,
+			octaves = 1,
+			persist = 0.0,
+			flags = "absvalue, eased"
+		},
+		biomes = {"coniferous_forest_dunes", "grassland_dunes"},
+		y_max = 6,
+		y_min = 4,
+		decoration = {
+			"default:marram_grass_1",
+			"default:marram_grass_2",
+			"default:marram_grass_3",
+		},
 	})
 
 

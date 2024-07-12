@@ -301,6 +301,13 @@ minetest.register_biome({
 		}
 	})
 
+    minetest.register_craft({
+		output = "dye:violet 4",
+		recipe = {
+			{"ebiomes:larkspur"}
+		},
+	})
+
 	minetest.register_decoration({
 		name = "ebiomes:larkspur",
 		deco_type = "simple",

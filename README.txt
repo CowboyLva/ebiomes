@@ -2,9 +2,16 @@
 ################ebiomes##################
 #########################################
 
-Version 1.4.1 - By CowboyLv
+Version 1.5.0 - By CowboyLv
 
 ## Changes
+
+1.5.0
+
+Added Maple and Oak trees which are found in deciduous forest variants if extensions are enabled(default on)
+Made cooking recipes with buckets have the cookable item be placed on top, instead of right
+Added dyes to flowers - Credit to Skivling
+Added sands with debris
 
 1.4.1
 

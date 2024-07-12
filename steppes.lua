@@ -571,6 +571,13 @@ end
 		}
 	})
 
+    minetest.register_craft({
+		output = "dye:blue 4",
+		recipe = {
+			{"ebiomes:blue_allium"}
+		},
+	})
+
 	minetest.register_decoration({
 		name = "ebiomes:blue_allium",
 		deco_type = "simple",
@@ -607,6 +614,13 @@ end
 		}
 	})
 
+    minetest.register_craft({
+		output = "dye:violet 4",
+		recipe = {
+			{"ebiomes:blue_allium_purple"}
+		},
+	})
+
 	minetest.register_decoration({
 		name = "ebiomes:blue_allium_purple",
 		deco_type = "simple",
@@ -641,6 +655,13 @@ end
 			type = "fixed",
 			fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, -1 / 16, 4 / 16},
 		}
+	})
+
+    minetest.register_craft({
+		output = "dye:yellow 4",
+		recipe = {
+			{"ebiomes:altai_tulip"}
+		},
 	})
 
 	minetest.register_decoration({
@@ -681,6 +702,13 @@ end
 		}
 	})
 
+    minetest.register_craft({
+		output = "dye:blue 4",
+		recipe = {
+			{"ebiomes:russian_iris"}
+		},
+	})
+
 	minetest.register_decoration({
 		name = "ebiomes:russian_iris",
 		deco_type = "simple",
@@ -719,6 +747,13 @@ end
 		}
 	})
 
+    minetest.register_craft({
+		output = "dye:orange 4",
+		recipe = {
+			{"ebiomes:siberian_lily"}
+		},
+	})
+
 	minetest.register_decoration({
 		name = "ebiomes:siberian_lily",
 		deco_type = "simple",
@@ -754,6 +789,13 @@ end
 			type = "fixed",
 			fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, -1 / 16, 4 / 16},
 		}
+	})
+
+    minetest.register_craft({
+		output = "dye:blue 4",
+		recipe = {
+			{"ebiomes:mountain_lily"}
+		},
 	})
 
 	minetest.register_decoration({
@@ -809,14 +851,16 @@ end
 	minetest.register_craft({
 		output = "ebiomes:bucket_peas",
 		recipe = {
-			{"bucket:bucket_water", "group:cooking_peas"},
+            {"group:cooking_peas"},
+			{"bucket:bucket_water"},
 		}
 	})
 
 	minetest.register_craft({
 		output = "ebiomes:bucket_peas",
 		recipe = {
-			{"bucket:bucket_river_water", "group:cooking_peas"},
+            {"group:cooking_peas"},
+			{"bucket:bucket_river_water"},
 		}
 	})
 
