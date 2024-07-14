@@ -2,9 +2,14 @@
 ################ebiomes##################
 #########################################
 
-Version 1.5.0 - By CowboyLv
+Version 1.5.1 - By CowboyLv
 
 ## Changes
+
+1.5.1
+
+Added setting descriptions
+Implemented a setting to make quagmires generate without cranberries
 
 1.5.0
 

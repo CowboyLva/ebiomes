@@ -1,26 +1,38 @@
-#       Whether the mod registers Bamboo
+#       Whether the mod registers Bamboo, disable it if using another mod for bamboo
 reg_bamboo (Register Bamboo) bool true
 
-#       Biomes
+#       Registers Arid Grasslands bordering deserts
 reg_arids (Register Arid Grasslands) bool true
+
+#       Registers Biome Buffers, to increase their surface area
 reg_buffers (Register Biome Buffers) bool true
+
 reg_cswamps (Cold Deciduous Forest, Swamp, Bog) bool true
+
 reg_mediterranean (Register Mediterranean) bool true
+
 reg_steppes (Register Steppes) bool true
+
 reg_warms (Warm Deciduous Forest and Grassland) bool true
 
 reg_hsavanna (Register Humid Savanna) bool true
-reg_hjavanna (Register Jungle Savanna) bool true
+
+#       Depends on humid savanna
+reg_jsavanna (Register Jungle Savanna) bool true
+
 reg_jprainforest (Register Japanese Rainforest) bool true
+
 reg_trainforest (Register Temperate Rainforest) bool true
+
+#       Improves Some of the Default Biomes, making them more coherent with the additions (Curently grassland and deciduous forest, maple and oak also reside here for the time being). Depends on Cold deciduous and Warm biome branches.
 reg_extensions (Register Default Biome Extensions) bool true
 
-#	Alternate options
+#	    Toggle lighter mapgen, makes decorations more sparse in the denser biomes for increased performance
 light_mapgen (Light Mapgen) bool false
 
-#	Development testing
-dev_testing (Development Testing) bool false
-
-#	Support toggles
 supp_animalworld (Support Wilhelmines Animal World) bool true
+
 supp_nssm (Support Not So Simple Mobs) bool true
+
+#       Enable this to make quagmires generate without cranberries. There will be some plants(including small ammount of cranberries) on the quagmire due to plants generating later
+pl_quagmires (Plantless Quagmires) bool false

@@ -732,7 +732,58 @@ end
 		rotation = "random",
 	})
 
+
+if minetest.settings:get_bool("pl_quagmires", true) then
+
+	minetest.register_decoration({
+		name = "ebiomes:quagmire_small",
+		deco_type = "schematic",
+		place_on = {"ebiomes:peat_with_swamp_moss_yellow"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.006,
+			scale = 0.0003,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 78,
+			octaves = 3,
+			persist = 0.66
+		},
+		biomes = {"bog"},
+		height = 1,
+		y_min = 1,
+		y_max = 31000,
+		place_offset_y = -3,
+		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_quagmire_small_np.mts",
+		flags = "place_center_x, place_center_z, force_placement",
+		rotation = "random",
+	})
 	
+	minetest.register_decoration({
+		name = "ebiomes:quagmire_vsmall",
+		deco_type = "schematic",
+		place_on = {"ebiomes:peat_with_swamp_moss_yellow"},
+		sidelen = 16,
+		noise_params = {
+			offset = 0.01,
+			scale = 0.0009,
+			spread = {x = 250, y = 250, z = 250},
+			seed = 76,
+			octaves = 3,
+			persist = 0.66
+		},
+		biomes = {"bog"},
+		height = 1,
+		y_min = 1,
+		y_max = 31000,
+		place_offset_y = -3,
+		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_quagmire_vsmall_np.mts",
+		flags = "place_center_x, place_center_z, force_placement",
+		rotation = "random",
+	})
+
+
+else	
+
 	minetest.register_decoration({
 		name = "ebiomes:quagmire_small",
 		deco_type = "schematic",
@@ -778,8 +829,10 @@ end
 		flags = "place_center_x, place_center_z, force_placement",
 		rotation = "random",
 	})
-	
 
+end
+
+	
 	minetest.register_node("ebiomes:reeds", {
 		description = S("Reeds"),
 		drawtype = "plantlike",
