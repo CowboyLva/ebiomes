@@ -103,7 +103,7 @@ Several popular mods are supported - bonemeal, mobs_animal, mobs_monster, mobs_n
 Post 1.0.0 - forgotten_monsters, animalworld, nssm
 
 As of 1.2.0 the player can disable bamboo in Extra Biomes modmenu, either as a preference.
-Or if a different mod will be used for adding bamboo - for this to work the player has to disable reregistering of decorations.
+Or if a different mod will be used for adding bamboo.
 
 Some biomes depend on others like:
 
