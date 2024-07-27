@@ -187,7 +187,7 @@ end
 		node_dungeon_alt = "default:mossycobble",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = -256,
-		y_min = -31000,
+		y_min = -400,
 		heat_point = 89,
 		humidity_point = 54,
 	})
@@ -271,7 +271,7 @@ end
 		is_ground_content = false,
 		groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
 		sounds = default.node_sound_wood_defaults(),
-	
+
 		on_place = minetest.rotate_node
 	})
 
@@ -308,7 +308,7 @@ end
 			}
 		},
 		sounds = default.node_sound_leaves_defaults(),
-	
+
 		after_place_node = default.after_place_leaves,
 	})
 
@@ -360,7 +360,7 @@ end
 		groups = {snappy = 2, dig_immediate = 3, flammable = 3,
 			attached_node = 1, sapling = 1},
 		sounds = default.node_sound_leaves_defaults(),
-	
+
 		on_construct = function(pos)
 			minetest.get_node_timer(pos):start(math.random(300, 1500))
 		end,
@@ -399,7 +399,7 @@ end
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:afzelia_log",
 		deco_type = "schematic",
@@ -414,7 +414,7 @@ end
 		flags = "place_center_x",
 		rotation = "random"
 	})
-	
+
 if minetest.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:afzelia_sapling", grow_new_afzelia_tree, "soil"},
@@ -427,7 +427,7 @@ end
 		S("Afzelia Wood Stair"),
 		S("Afzelia Wood Slab"),
 		default.node_sound_wood_defaults())
-		
+
 	default.register_fence("ebiomes:fence_afzelia_wood", {
 		description = S("Afzelia Wood Fence"),
 		texture = "ebiomes_fence_afzelia_wood.png",
@@ -474,8 +474,8 @@ end
 --Extras
 
 if minetest.get_modpath("moreblocks") then
-	
-	
+
+
 	stairsplus:register_all("afzelia_tree", "wood", "ebiomes:afzelia_wood", {
 		description = "Afzelia Wood",
 		tiles = {"ebiomes_afzelia_wood.png"},
@@ -483,14 +483,14 @@ if minetest.get_modpath("moreblocks") then
 		sounds = default.node_sound_wood_defaults(),
 	})
 
-	
+
 end
 
 -- Support for flowerpot
 if minetest.global_exists("flowerpot") then
 
 	flowerpot.register_node("ebiomes:afzelia_sapling")
-	
+
 end
 
 
@@ -504,7 +504,7 @@ end
 		is_ground_content = false,
 		groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
 		sounds = default.node_sound_wood_defaults(),
-	
+
 		on_place = minetest.rotate_node
 	})
 
@@ -541,7 +541,7 @@ end
 			}
 		},
 		sounds = default.node_sound_leaves_defaults(),
-	
+
 		after_place_node = default.after_place_leaves,
 	})
 
@@ -632,7 +632,7 @@ end
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:limba_log",
 		deco_type = "schematic",
@@ -647,7 +647,7 @@ end
 		flags = "place_center_x",
 		rotation = "random"
 	})
-	
+
 if minetest.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:limba_sapling", grow_new_limba_tree, "soil"},
@@ -660,7 +660,7 @@ end
 		S("Limba Wood Stair"),
 		S("Limba Wood Slab"),
 		default.node_sound_wood_defaults())
-		
+
 	default.register_fence("ebiomes:fence_limba_wood", {
 		description = S("Limba Wood Fence"),
 		texture = "ebiomes_fence_limba_wood.png",
@@ -707,8 +707,8 @@ end
 --Extras
 
 if minetest.get_modpath("moreblocks") then
-	
-	
+
+
 	stairsplus:register_all("limba_tree", "wood", "ebiomes:limba_wood", {
 		description = "Limba Wood",
 		tiles = {"ebiomes_limba_wood.png"},
@@ -716,14 +716,14 @@ if minetest.get_modpath("moreblocks") then
 		sounds = default.node_sound_wood_defaults(),
 	})
 
-	
+
 end
 
 -- Support for flowerpot
 if minetest.global_exists("flowerpot") then
 
 	flowerpot.register_node("ebiomes:limba_sapling")
-	
+
 end
 
 --Black Limba wood
@@ -746,7 +746,7 @@ end
 			{"ebiomes:limba_wood", "", "ebiomes:limba_wood"},
 		}
 	})
-	
+
 	minetest.register_craft({
 		output = "ebiomes:limba_wood 5",
 		recipe = {
@@ -763,7 +763,7 @@ end
 		S("Black Limba Wood Stair"),
 		S("Black Limba Wood Slab"),
 		default.node_sound_wood_defaults())
-		
+
 	default.register_fence("ebiomes:fence_limba_black_wood", {
 		description = S("Black Limba Wood Fence"),
 		texture = "ebiomes_fence_limba_black_wood.png",
@@ -810,8 +810,8 @@ end
 --Extras
 
 if minetest.get_modpath("moreblocks") then
-	
-	
+
+
 	stairsplus:register_all("" , "wood", "ebiomes:limba_black_wood", {
 		description = "Black Limba Wood",
 		tiles = {"ebiomes_limba_black_wood.png"},
@@ -819,7 +819,7 @@ if minetest.get_modpath("moreblocks") then
 		sounds = default.node_sound_wood_defaults(),
 	})
 
-end	
+end
 
 --Siri
 
@@ -920,7 +920,7 @@ end
 		groups = {snappy = 2, dig_immediate = 3, flammable = 3,
 			attached_node = 1, sapling = 1},
 		sounds = default.node_sound_leaves_defaults(),
-	
+
 		on_construct = function(pos)
 			minetest.get_node_timer(pos):start(math.random(300, 1500))
 		end,
@@ -959,7 +959,7 @@ end
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:siri_log",
 		deco_type = "schematic",
@@ -974,7 +974,7 @@ end
 		flags = "place_center_x",
 		rotation = "random"
 	})
-	
+
 if minetest.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:siri_sapling", grow_new_siri_tree, "soil"},
@@ -987,7 +987,7 @@ end
 		S("Siri Wood Stair"),
 		S("Siri Wood Slab"),
 		default.node_sound_wood_defaults())
-		
+
 	default.register_fence("ebiomes:fence_siri_wood", {
 		description = S("Siri Wood Fence"),
 		texture = "ebiomes_fence_siri_wood.png",
@@ -1034,8 +1034,8 @@ end
 --Extras
 
 if minetest.get_modpath("moreblocks") then
-	
-	
+
+
 	stairsplus:register_all("siri_tree", "wood", "ebiomes:siri_wood", {
 		description = "Siri Wood",
 		tiles = {"ebiomes_siri_wood.png"},
@@ -1043,14 +1043,14 @@ if minetest.get_modpath("moreblocks") then
 		sounds = default.node_sound_wood_defaults(),
 	})
 
-	
+
 end
 
 -- Support for flowerpot
 if minetest.global_exists("flowerpot") then
 
 	flowerpot.register_node("ebiomes:siri_sapling")
-	
+
 end
 
 
@@ -1066,7 +1066,7 @@ end
 		is_ground_content = false,
 		groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
 		sounds = default.node_sound_wood_defaults(),
-	
+
 		on_place = minetest.rotate_node
 	})
 
@@ -1103,7 +1103,7 @@ end
 			}
 		},
 		sounds = default.node_sound_leaves_defaults(),
-	
+
 		after_place_node = default.after_place_leaves,
 	})
 
@@ -1112,7 +1112,7 @@ end
 		leaves = {"ebiomes:tamarind_leaves"},
 		radius = 3,
 	})
-	
+
 	minetest.register_node("ebiomes:tamarind_pods_hanging", {
 		description = S("Hanging Tamarind Pods"),
 		drawtype = "plantlike",
@@ -1171,27 +1171,27 @@ end
 			end
 		end
 	})
-	
+
 	minetest.register_craftitem("ebiomes:tamarind_pods", {
 		description = S("Tamarind Pods"),
 		inventory_image = "ebiomes_tamarind_pods.png",
 		groups = {legumes = 1},
 	})
-	
+
 	minetest.register_craft({
 		output = "ebiomes:tamarind_pulp 2",
 		recipe = {
 			{"ebiomes:tamarind_pods"},
 		}
 	})
-	
+
 	minetest.register_craftitem("ebiomes:tamarind_pulp", {
 		description = S("Tamarind Pulp"),
 		inventory_image = "ebiomes_tamarind_pulp.png",
 		groups = {food_pulps = 1},
 		on_use = minetest.item_eat(3),
 	})
-	
+
 
 --borrowed from runs cooltrees modpack (baldcypress)
 --[[
@@ -1274,7 +1274,7 @@ end
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:tamarind_log",
 		deco_type = "schematic",
@@ -1289,7 +1289,7 @@ end
 		flags = "place_center_x",
 		rotation = "random"
 	})
-	
+
 if minetest.get_modpath("bonemeal") ~= nil then
 	bonemeal:add_sapling({
 		{"ebiomes:tamarind_sapling", grow_new_tamarind_tree, "soil"},
@@ -1302,7 +1302,7 @@ end
 		S("Tamarind Wood Stair"),
 		S("Tamarind Wood Slab"),
 		default.node_sound_wood_defaults())
-		
+
 	default.register_fence("ebiomes:fence_tamarind_wood", {
 		description = S("Tamarind Wood Fence"),
 		texture = "ebiomes_fence_tamarind_wood.png",
@@ -1351,12 +1351,12 @@ end
 if minetest.global_exists("dungeon_loot") then
 	dungeon_loot.register ({
 		{name = "ebiomes:tamarind_pulp", chance = 0.3, count = {4, 12}},
-	})	
+	})
 end
 
 if minetest.get_modpath("moreblocks") then
-	
-	
+
+
 	stairsplus:register_all("tamarind_tree", "wood", "ebiomes:tamarind_wood", {
 		description = "Tamarind Wood",
 		tiles = {"ebiomes_tamarind_wood.png"},
@@ -1364,14 +1364,14 @@ if minetest.get_modpath("moreblocks") then
 		sounds = default.node_sound_wood_defaults(),
 	})
 
-	
+
 end
 
 -- Support for flowerpot
 if minetest.global_exists("flowerpot") then
 
 	flowerpot.register_node("ebiomes:tamarind_sapling")
-	
+
 end
 
 --Additionals
@@ -1382,6 +1382,5 @@ if minetest.get_modpath("bonemeal") ~= nil then
 		{"ebiomes:dry_dirt_with_humid_savanna_grass", {"ebiomes:humid_savanna_grass_1", "ebiomes:humid_savanna_grass_2", "ebiomes:humid_savanna_grass_3", "ebiomes:humid_savanna_grass_4", "ebiomes:humid_savanna_grass_5"},
 			{"ebiomes:jaragua_grass"} }
 	})
-	
-end
 
+end

@@ -53,8 +53,8 @@ minetest.register_alias("dirt_jungle_savanna_grass_footsteps", "ebiomes:dirt_wit
 
 
 
-if minetest.settings:get_bool("reg_hsavanna", true) then	
-	
+if minetest.settings:get_bool("reg_hsavanna", true) then
+
 	minetest.register_biome({
 		name = "jungle_savanna",
 		node_top = "ebiomes:dirt_with_jungle_savanna_grass",
@@ -115,7 +115,7 @@ if minetest.settings:get_bool("reg_hsavanna", true) then
 		node_dungeon_alt = "default:mossycobble",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = -256,
-		y_min = -31000,
+		y_min = -400,
 		heat_point = 87,
 		humidity_point = 62,
 	})
@@ -247,9 +247,9 @@ for length = 1, 5 do
 	})
 end
 
-	
+
 --Trees
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:afzelia_tree_jsv",
 		deco_type = "schematic",
@@ -270,7 +270,7 @@ end
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:afzelia_log_jsv",
 		deco_type = "schematic",
@@ -285,8 +285,8 @@ end
 		flags = "place_center_x",
 		rotation = "random"
 	})
-	
-if minetest.settings:get_bool("light_mapgen", true) then	
+
+if minetest.settings:get_bool("light_mapgen", true) then
 	minetest.register_decoration({
 		name = "ebiomes:limba_tree_jsv",
 		deco_type = "schematic",
@@ -329,7 +329,7 @@ else
 		rotation = "random",
 	})
 end
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:limba_log_jsv",
 		deco_type = "schematic",
@@ -344,7 +344,7 @@ end
 		flags = "place_center_x",
 		rotation = "random"
 	})
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:tamarind_tree_jsv",
 		deco_type = "schematic",
@@ -365,7 +365,7 @@ end
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:tamarind_log_jsv",
 		deco_type = "schematic",
@@ -380,10 +380,10 @@ end
 		flags = "place_center_x",
 		rotation = "random"
 	})
-	
-	
-	
-	
+
+
+
+
 	minetest.register_decoration({
 		name = "ebiomes:jungle_tree_jsv",
 		deco_type = "schematic",
@@ -397,7 +397,7 @@ end
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
-	
+
 end
 
 --Additionals
@@ -408,9 +408,5 @@ if minetest.get_modpath("bonemeal") ~= nil then
 		{"ebiomes:dirt_with_jungle_savanna_grass", {"ebiomes:jungle_savanna_grass_1", "ebiomes:jungle_savanna_grass_2", "ebiomes:jungle_savanna_grass_3", "ebiomes:jungle_savanna_grass_4", "ebiomes:jungle_savanna_grass_5"},
 			{"default:junglegrass"} }
 	})
-	
+
 end
-
-
-
-

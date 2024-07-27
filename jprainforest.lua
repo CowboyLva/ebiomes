@@ -120,7 +120,7 @@ minetest.register_alias("forestgrowth", "ebiomes:forestgrowth")
 		node_dungeon_alt = "default:mossycobble",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = -256,
-		y_min = -31000,
+		y_min = -400,
 		heat_point = 65,
 		humidity_point = 80,
 	})
@@ -174,7 +174,7 @@ minetest.register_alias("forestgrowth", "ebiomes:forestgrowth")
 		flags = "place_center_x, place_center_z, force_placement",
 		rotation = "random",
 	})
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:moss_l2",
 		deco_type = "simple",
@@ -199,8 +199,8 @@ minetest.register_alias("forestgrowth", "ebiomes:forestgrowth")
 		spawn_by = "ebiomes:moss",
 		num_spawn_by = 1
 	})
-	
-	
+
+
 	minetest.register_craft({
 		output = "default:mossycobble 8",
 		recipe = {
@@ -208,10 +208,10 @@ minetest.register_alias("forestgrowth", "ebiomes:forestgrowth")
 			{"default:cobble", "ebiomes:moss", "default:cobble"},
 			{"default:cobble", "default:cobble", "default:cobble"}
 		}
-	})		
-	
+	})
+
 --Decors
-	
+
 --woods
 
 --Japanese rainforrest
@@ -333,9 +333,9 @@ end
 			return itemstack
 		end,
 	})
-	
+
 if minetest.settings:get_bool("light_mapgen", true) then
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:sugi_tree",
 		deco_type = "schematic",
@@ -382,7 +382,7 @@ else
 	})
 
 end
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:sugi_log",
 		deco_type = "schematic",
@@ -397,7 +397,7 @@ end
 		flags = "place_center_x",
 		rotation = "random"
 	})
-	
+
 if minetest.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:sugi_sapling", grow_new_sugi_tree, "soil"},
@@ -410,7 +410,7 @@ end
 		S("Sugi Wood Stair"),
 		S("Sugi Wood Slab"),
 		default.node_sound_wood_defaults())
-		
+
 	default.register_fence("ebiomes:fence_sugi_wood", {
 		description = S("Sugi Wood Fence"),
 		texture = "ebiomes_fence_sugi_wood.png",
@@ -502,7 +502,7 @@ end
 			}
 		},
 		sounds = default.node_sound_leaves_defaults(),
-	
+
 		after_place_node = default.after_place_leaves,
 	})
 
@@ -554,11 +554,11 @@ end
 		groups = {snappy = 2, dig_immediate = 3, flammable = 3,
 			attached_node = 1, sapling = 1},
 		sounds = default.node_sound_leaves_defaults(),
-	
+
 		on_construct = function(pos)
 			minetest.get_node_timer(pos):start(math.random(300, 1500))
 		end,
-	
+
 		on_place = function(itemstack, placer, pointed_thing)
 			itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
 				"ebiomes:mizunara_sapling",
@@ -574,7 +574,7 @@ end
 	})
 
 if minetest.settings:get_bool("light_mapgen", true) then
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:mizunara_tree",
 		deco_type = "schematic",
@@ -595,7 +595,7 @@ if minetest.settings:get_bool("light_mapgen", true) then
 		flags = "place_center_x, place_center_z",
 		rotation = "random"
 	})
-	
+
 else
 
 	minetest.register_decoration({
@@ -620,7 +620,7 @@ else
 	})
 
 end
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:mizunara_log",
 		deco_type = "schematic",
@@ -635,7 +635,7 @@ end
 		flags = "place_center_x",
 		rotation = "random"
 	})
-	
+
 if minetest.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:mizunara_sapling", grow_new_mizunara_tree, "soil"},
@@ -648,7 +648,7 @@ end
 		S("Mizunara Wood Stair"),
 		S("Mizunara Wood Slab"),
 		default.node_sound_wood_defaults())
-		
+
 	default.register_fence("ebiomes:fence_mizunara_wood", {
 		description = S("Mizunara Wood Fence"),
 		texture = "ebiomes_fence_mizunara_wood.png",
@@ -704,7 +704,7 @@ end
 		is_ground_content = false,
 		groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
 		sounds = default.node_sound_wood_defaults(),
-	
+
 		on_place = minetest.rotate_node
 	})
 
@@ -724,7 +724,7 @@ end
 			{"ebiomes:stoneoak_tree"},
 		}
 	})
-	
+
 	minetest.register_node("ebiomes:stoneoak_leaves", {
 		description = S("Stone Oak Tree Leaves"),
 		drawtype = "allfaces_optional",
@@ -741,7 +741,7 @@ end
 			}
 		},
 		sounds = default.node_sound_leaves_defaults(),
-	
+
 		after_place_node = default.after_place_leaves,
 	})
 
@@ -797,7 +797,7 @@ end
 		on_construct = function(pos)
 			minetest.get_node_timer(pos):start(math.random(300, 1500))
 		end,
-	
+
 		on_place = function(itemstack, placer, pointed_thing)
 			itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
 				"ebiomes:stoneoak_sapling",
@@ -811,9 +811,9 @@ end
 			return itemstack
 		end,
 	})
-	
+
 if minetest.settings:get_bool("light_mapgen", true) then
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:stoneoak_tree",
 		deco_type = "schematic",
@@ -834,7 +834,7 @@ if minetest.settings:get_bool("light_mapgen", true) then
 		flags = "place_center_x, place_center_z",
 		rotation = "random"
 	})
-	
+
 
 else
 
@@ -860,7 +860,7 @@ else
 	})
 
 end
-		
+
 	minetest.register_decoration({
 		name = "ebiomes:stoneoak_log",
 		deco_type = "schematic",
@@ -875,7 +875,7 @@ end
 		flags = "place_center_x",
 		rotation = "random"
 	})
-	
+
 if minetest.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:stoneoak_sapling", grow_new_stoneoak_tree, "soil"},
@@ -888,7 +888,7 @@ end
 		S("Stone Oak Wood Stair"),
 		S("Stone Oak Wood Slab"),
 		default.node_sound_wood_defaults())
-		
+
 	default.register_fence("ebiomes:fence_stoneoak_wood", {
 		description = S("Stone Oak Wood Fence"),
 		texture = "ebiomes_fence_stoneoak_wood.png",
@@ -946,7 +946,7 @@ for length = 1, 3 do
 	})
 end
 
---[[	
+--[[
 	minetest.register_decoration({
 		name = "ebiomes:junglegrass_jrf",
 		deco_type = "simple",
@@ -979,7 +979,7 @@ end
 			fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 4 / 16, 6 / 16},
 		},
 	})
-	
+
 
 	minetest.register_decoration({
 		name = "ebiomes:forestgrowth",
@@ -991,7 +991,7 @@ end
 		y_max = 31000,
 		y_min = 1,
 		decoration = "ebiomes:forestgrowth",
-	})	
+	})
 
 	minetest.register_craft({
 		output = "default:stick",
@@ -1006,29 +1006,29 @@ end
 --Misc
 
 if minetest.get_modpath("moreblocks") then
-	
-	
+
+
 	stairsplus:register_all("sugi_tree", "wood", "ebiomes:sugi_wood", {
 		description = "Sugi Wood",
 		tiles = {"ebiomes_sugi_wood.png"},
 		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
 		sounds = default.node_sound_wood_defaults(),
 	})
-	
+
 	stairsplus:register_all("mizunara_tree", "wood", "ebiomes:mizunara_wood", {
 		description = "Mizunara Wood",
 		tiles = {"ebiomes_mizunara_wood.png"},
 		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
 		sounds = default.node_sound_wood_defaults(),
 	})
-	
+
 	stairsplus:register_all("stoneoak_tree", "wood", "ebiomes:stoneoak_wood", {
 		description = "Stone Oak Wood",
 		tiles = {"ebiomes_stoneoak_wood.png"},
 		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
 		sounds = default.node_sound_wood_defaults(),
 	})
-	
+
 end
 
 -- Support for flowerpot
@@ -1037,7 +1037,7 @@ if minetest.global_exists("flowerpot") then
 	flowerpot.register_node("ebiomes:sugi_sapling")
 	flowerpot.register_node("ebiomes:mizunara_sapling")
 	flowerpot.register_node("ebiomes:stoneoak_sapling")
-	
+
 end
 
 --Ground stuff
@@ -1046,6 +1046,5 @@ if minetest.get_modpath("bonemeal") ~= nil then
 		{"ebiomes:dirt_with_japanese_rainforest_litter", {"default:fern_1", "default:fern_2", "default:fern_3"},
 			{"ebiomes:forestgrowth", "ebiomes:moss"} }
 	})
-	
-end
 
+end

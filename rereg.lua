@@ -128,7 +128,7 @@ end
 		node_dungeon_alt = "default:mossycobble",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = -256,
-		y_min = -31000,
+		y_min = -400,
 		heat_point = 20,
 		humidity_point = 35,
 	})
@@ -177,5 +177,3 @@ end
 		schematic = minetest.get_modpath("default") .. "/schematics/pine_bush.mts",
 		flags = "place_center_x, place_center_z",
 	})
-
-

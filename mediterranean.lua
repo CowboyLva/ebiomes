@@ -186,12 +186,12 @@ end
 		node_dungeon_alt = "default:mossycobble",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = -256,
-		y_min = -31000,
+		y_min = -400,
 		heat_point = 70,
 		humidity_point = 50,
 	})
-	
-	
+
+
 for length = 1, 5 do
 	minetest.register_decoration({
 		name = "ebiomes:grass_med_"..length,
@@ -211,9 +211,9 @@ for length = 1, 5 do
 		decoration = "ebiomes:grass_med_"..length,
 	})
 end
-		
+
 	--ebiomes folliage
-	
+
 	--Mediterranean
 
 	minetest.register_node("ebiomes:black_iris", {
@@ -258,10 +258,10 @@ end
 		y_min = 1,
 		decoration = "ebiomes:black_iris",
 	})
-	
-	
-	
-	
+
+
+
+
 	minetest.register_node("ebiomes:cladanthus", {
 		description = S("Cladanthus"),
 		tiles = {"ebiomes_cladanthus.png"},
@@ -304,8 +304,8 @@ end
 		y_min = 1,
 		decoration = "ebiomes:cladanthus",
 	})
-	
-	
+
+
 	minetest.register_node("ebiomes:savory", {
 		description = S("Savory"),
 		tiles = {"ebiomes_savory.png"},
@@ -348,8 +348,8 @@ end
 		y_min = 1,
 		decoration = "ebiomes:savory",
 	})
-	
-	
+
+
 	minetest.register_node("ebiomes:staehelina", {
 		description = S("Staehelina"),
 		tiles = {"ebiomes_staehelina.png"},
@@ -392,7 +392,7 @@ end
 		y_min = 1,
 		decoration = "ebiomes:staehelina",
 	})
-	
+
 		minetest.register_node("ebiomes:buttercup_persian", {
 		description = S("Persian Buttercup"),
 		tiles = {"ebiomes_buttercup_persian.png"},
@@ -435,10 +435,10 @@ end
 		y_min = 1,
 		decoration = "ebiomes:buttercup_persian",
 	})
-	
-	
-	
-	
+
+
+
+
 	minetest.register_node("ebiomes:chrysanthemum_yellow", {
 		description = S("Yellow Chrysanthemum"),
 		tiles = {"ebiomes_chrysanthemum_yellow.png"},
@@ -588,7 +588,7 @@ end
 		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_bush_warm.mts",
 		flags = "place_center_x, place_center_z",
 	})
-	
+
 if minetest.get_modpath("bonemeal") ~= nil then
 	bonemeal:add_sapling({
 		{"ebiomes:bush_sapling_warm", grow_new_bush_warm, "soil"},
@@ -607,9 +607,9 @@ end
 		recipe = "ebiomes:bush_stem_warm",
 		burntime = 8,
 	})
-	
+
 	--Trees
-	
+
 	--Cypress
 
 	minetest.register_node("ebiomes:cypress_tree", {
@@ -660,7 +660,7 @@ end
 
 		after_place_node = default.after_place_leaves,
 	})
-	
+
 	default.register_leafdecay({
 		trunks = {"ebiomes:cypress_tree"},
 		leaves = {"ebiomes:cypress_leaves"},
@@ -733,8 +733,8 @@ end
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
-	
-	
+
+
 	minetest.register_decoration({
 		name = "ebiomes:cypress_log",
 		deco_type = "schematic",
@@ -751,7 +751,7 @@ end
 		spawn_by = {"ebiomes:dirt_with_grass_med"},
 		num_spawn_by = 8,
 	})
-	
+
 if minetest.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:cypress_sapling", grow_new_cypress, "soil"},
@@ -765,7 +765,7 @@ end
 		S("Cypress Wood Stair"),
 		S("Cypress Wood Slab"),
 		default.node_sound_wood_defaults())
-		
+
 	default.register_fence("ebiomes:fence_cypress_wood", {
 		description = S("Cypress Wood Fence"),
 		texture = "ebiomes_fence_cypress_wood.png",
@@ -862,7 +862,7 @@ end
 
 		after_place_node = default.after_place_leaves,
 	})
-	
+
 	minetest.register_node("ebiomes:olives", {
 		description = S("Olives"),
 		drawtype = "plantlike",
@@ -916,7 +916,7 @@ end
 			end
 		end
 	})
-	
+
 	default.register_leafdecay({
 		trunks = {"ebiomes:olive_tree"},
 		leaves = {"ebiomes:olive_leaves", "ebiomes:olives"},
@@ -989,7 +989,7 @@ end
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:olive_log",
 		deco_type = "schematic",
@@ -1006,7 +1006,7 @@ end
 		spawn_by = {"ebiomes:dirt_with_grass_med"},
 		num_spawn_by = 8,
 	})
-	
+
 if minetest.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:olive_sapling", grow_new_olive, "soil"},
@@ -1019,7 +1019,7 @@ end
 		S("Olive Wood Stair"),
 		S("Olive Wood Slab"),
 		default.node_sound_wood_defaults())
-		
+
 	default.register_fence("ebiomes:fence_olive_wood", {
 		description = S("Olive Wood Fence"),
 		texture = "ebiomes_fence_olive_wood.png",
@@ -1085,11 +1085,11 @@ if minetest.settings:get_bool("reg_warms", true) then
 end
 
 --Loot
-	
+
 if minetest.global_exists("dungeon_loot") then
 	dungeon_loot.register ({
 		{name = "ebiomes:olives", chance = 0.5, count = {3, 8}},
-	})	
+	})
 end
 
 --Bonemeal
@@ -1110,27 +1110,27 @@ end
 
 
 
-	
---Peripheral mod support	
-	
+
+--Peripheral mod support
+
 --Moreblocks
 
 if minetest.get_modpath("moreblocks") then
-	
+
 	stairsplus:register_all("cypress_tree", "wood", "ebiomes:cypress_wood", {
 		description = "Cypress Wood",
 		tiles = {"ebiomes_cypress_wood.png"},
 		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
 		sounds = default.node_sound_wood_defaults(),
 	})
-	
+
 	stairsplus:register_all("olive_tree", "wood", "ebiomes:olive_wood", {
 		description = "Olive Wood",
 		tiles = {"ebiomes_olive_wood.png"},
 		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
 		sounds = default.node_sound_wood_defaults(),
-	})	
-	
+	})
+
 end
 
 -- Support for flowerpot
@@ -1138,15 +1138,14 @@ if minetest.global_exists("flowerpot") then
 
 	flowerpot.register_node("ebiomes:cypress_sapling")
 	flowerpot.register_node("ebiomes:olive_sapling")
-	
+
 	flowerpot.register_node("ebiomes:bush_sapling_warm")
-	
+
 	flowerpot.register_node("ebiomes:black_iris")
 	flowerpot.register_node("ebiomes:savory")
 	flowerpot.register_node("ebiomes:chrysanthemum_yellow")
 	flowerpot.register_node("ebiomes:cladanthus")
 	flowerpot.register_node("ebiomes:buttercup_persian")
 	flowerpot.register_node("ebiomes:staehelina")
-	
-end
 
+end

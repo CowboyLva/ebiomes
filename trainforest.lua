@@ -103,11 +103,11 @@ minetest.register_alias("beech_sapling", "ebiomes:beech_sapling")
 		node_dungeon_alt = "default:mossycobble",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = -256,
-		y_min = -31000,
+		y_min = -400,
 		heat_point = 60,
 		humidity_point = 80,
 	})
-	
+
 
 --Global non-tree decors
 
@@ -171,7 +171,7 @@ end
 		schematic = minetest.get_modpath("default") .. "/schematics/bush.mts",
 		flags = "place_center_x, place_center_z",
 	})
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:pine_bush_trf",
 		deco_type = "schematic",
@@ -194,7 +194,7 @@ end
 
 
 	--flowers
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:rose_trf",
 		deco_type = "simple",
@@ -215,7 +215,7 @@ end
 	})
 
 	--mushrooms
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:mushroom_brown_trf",
 		deco_type = "simple",
@@ -234,7 +234,7 @@ end
 		y_min = 1,
 		decoration = "flowers:mushroom_brown",
 	})
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:mushroom_red_trf",
 		deco_type = "simple",
@@ -276,7 +276,7 @@ end
 		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_blackcurrant_bush.mts",
 		flags = "place_center_x, place_center_z",
 	})
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:gooseberry_bush_trf",
 		deco_type = "schematic",
@@ -300,9 +300,9 @@ end
 
 
 --Trees
-	
+
 --Beech
-	
+
 	minetest.register_node("ebiomes:beech_tree", {
 		description = S("Beech Tree"),
 		tiles = {"ebiomes_beech_tree_top.png", "ebiomes_beech_tree_top.png",
@@ -351,7 +351,7 @@ end
 
 		after_place_node = default.after_place_leaves,
 	})
-	
+
 	default.register_leafdecay({
 		trunks = {"ebiomes:beech_tree"},
 		leaves = {"ebiomes:beech_leaves"},
@@ -403,7 +403,7 @@ end
 			return itemstack
 		end,
 	})
-	
+
 if minetest.settings:get_bool("light_mapgen", true) then
 	minetest.register_decoration({
 		name = "ebiomes:beech_tree",
@@ -447,7 +447,7 @@ else
 		rotation = "random",
 	})
 end
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:beech_log",
 		deco_type = "schematic",
@@ -464,20 +464,20 @@ end
 		spawn_by = {"ebiomes:dirt_with_forest_litter"},
 		num_spawn_by = 8,
 	})
-	
+
 if minetest.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:beech_sapling", grow_new_beech_tree, "soil"},
 })
 end
-	
+
 	stairs.register_stair_and_slab("beech_wood", "ebiomes:beech_wood",
 		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		{"ebiomes_beech_wood.png"},
 		S("Beech Wood Stair"),
 		S("Beech Wood Slab"),
 		default.node_sound_wood_defaults())
-		
+
 	default.register_fence("ebiomes:fence_beech_wood", {
 		description = S("Beech Wood Fence"),
 		texture = "ebiomes_fence_beech_wood.png",
@@ -519,15 +519,15 @@ end
 		type = "fuel",
 		recipe = "ebiomes:gate_beech_wood_closed",
 		burntime = 9,
-	})		
-	
+	})
+
 	-- Support for flowerpot
 if minetest.global_exists("flowerpot") then
 
 	flowerpot.register_node("ebiomes:beech_sapling")
-	
+
 end
-	
+
 -- Decors
 if minetest.settings:get_bool("light_mapgen", true) then
 	minetest.register_decoration({
@@ -572,7 +572,7 @@ else
 		rotation = "random",
 	})
 end
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:alder_log_trf",
 		deco_type = "schematic",
@@ -589,7 +589,7 @@ end
 		spawn_by = {"ebiomes:dirt_with_grass_cold"},
 		num_spawn_by = 8,
 	})
-	
+
 if minetest.settings:get_bool("light_mapgen", true) then
 	minetest.register_decoration({
 		name = "ebiomes:hornbeam_tree_trf",
@@ -611,7 +611,7 @@ if minetest.settings:get_bool("light_mapgen", true) then
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
-else	
+else
 	minetest.register_decoration({
 		name = "ebiomes:hornbeam_tree_trf",
 		deco_type = "schematic",
@@ -633,7 +633,7 @@ else
 		rotation = "random",
 	})
 end
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:hornbeam_log_trf",
 		deco_type = "schematic",
@@ -650,8 +650,8 @@ end
 		spawn_by = {"ebiomes:dirt_with_forest_litter"},
 		num_spawn_by = 8,
 	})
-		
-	
+
+
 	minetest.register_decoration({
 		name = "ebiomes:chestnut_tree_trf",
 		deco_type = "schematic",
@@ -672,7 +672,7 @@ end
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:chestnut_log_trf",
 		deco_type = "schematic",
@@ -689,7 +689,7 @@ end
 		spawn_by = {"ebiomes:dirt_with_forest_litter"},
 		num_spawn_by = 8,
 	})
-	
+
 if minetest.settings:get_bool("light_mapgen", true) then
 	minetest.register_decoration({
 		name = "ebiomes:pine_tree_trf",
@@ -710,7 +710,7 @@ if minetest.settings:get_bool("light_mapgen", true) then
 		schematic = minetest.get_modpath("default") .. "/schematics/pine_tree.mts",
 		flags = "place_center_x, place_center_z",
 	})
-else	
+else
 	minetest.register_decoration({
 		name = "ebiomes:pine_tree_trf",
 		deco_type = "schematic",
@@ -790,10 +790,10 @@ end
 		spawn_by = {"ebiomes:dirt_with_grass_cold"},
 		num_spawn_by = 8,
 	})
-	
-	
+
+
 -- Mod support
-	
+
 -- Bonemeal
 if minetest.get_modpath("bonemeal") then
 	bonemeal:add_deco({
@@ -801,7 +801,3 @@ if minetest.get_modpath("bonemeal") then
 			{"flowers:rose"} }
 	})
 end
-	
-	
-	
-	
