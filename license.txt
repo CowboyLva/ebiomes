@@ -12,6 +12,10 @@ TenPlus1 - ethereal
 The MIT License (MIT)
 Copyright (c) 2016 TenPlus1
 
+Contributors
+
+Adikalon - https://github.com/adikalon
+
 
 #######Assets########
 Minetest Game derrivatives(Non-derrivatives listed further)
