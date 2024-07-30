@@ -169,11 +169,11 @@ end
 		node_dungeon_alt = "default:mossycobble",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = -256,
-		y_min = -31000,
+		y_min = -400,
 		heat_point = 60,
 		humidity_point = 20,
 	})
-	
+
 for length = 1, 5 do
 	minetest.register_decoration({
 		name = "ebiomes:grass_arid_"..length,
@@ -342,11 +342,11 @@ end
 		node_dungeon_alt = "default:mossycobble",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = -256,
-		y_min = -31000,
+		y_min = -400,
 		heat_point = 40,
 		humidity_point = 20,
 	})
-	
+
 for length = 1, 5 do
 	minetest.register_decoration({
 		name = "ebiomes:grass_arid_cool_"..length,
@@ -368,7 +368,7 @@ for length = 1, 5 do
 end
 
 --Folliage
-	
+
 --Biome specific
 
 --Hardy bush
@@ -479,7 +479,7 @@ end
 		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_hardy_bush.mts",
 		flags = "place_center_x, place_center_z",
 	})
-	
+
 if minetest.get_modpath("bonemeal") ~= nil then
 	bonemeal:add_sapling({
 		{"ebiomes:hardy_bush_sapling", grow_new_hardy_bush, "soil"},
@@ -498,10 +498,10 @@ end
 		recipe = "ebiomes:hardy_bush_stem",
 		burntime = 8,
 	})
-	
-	
+
+
 --Thorn bush
-		
+
 local function grow_new_thorn_bush(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
@@ -511,7 +511,7 @@ local function grow_new_thorn_bush(pos)
 	minetest.remove_node(pos)
 	minetest.place_schematic({x = pos.x-1, y = pos.y, z = pos.z-1}, modpath.."/schematics/ebiomes_thorn_bush.mts", "0", nil, false)
 end
-		
+
 	minetest.register_node("ebiomes:thorn_bush_leaves", {
 		description = S("Thorn Bush Leaves"),
 		drawtype = "allfaces_optional",
@@ -566,7 +566,7 @@ end
 			return itemstack
 		end,
 	})
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:thorn_bush",
 		deco_type = "schematic",
@@ -587,7 +587,7 @@ end
 		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_thorn_bush.mts",
 		flags = "place_center_x, place_center_z",
 	})
-	
+
 if minetest.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:thorn_bush_sapling", grow_new_thorn_bush, "soil"},
@@ -600,7 +600,7 @@ if minetest.get_modpath("bonemeal") then
 		{"ebiomes:dry_dirt_with_grass_arid", {"ebiomes:grass_arid_1", "ebiomes:grass_arid_2", "ebiomes:grass_arid_3", "ebiomes:grass_arid_4", "ebiomes:grass_arid_5"},
 			{"default:dry_shrub"} }
 	})
-	
+
 	bonemeal:add_deco({
 		{"ebiomes:dry_dirt_with_grass_arid_cool", {"ebiomes:grass_arid_cool_1", "ebiomes:grass_arid_cool_2", "ebiomes:grass_arid_cool_3", "ebiomes:grass_arid_cool_4", "ebiomes:grass_arid_cool_5"},
 			{"default:dry_shrub"} }
@@ -615,4 +615,3 @@ if minetest.global_exists("flowerpot") then
 	flowerpot.register_node("ebiomes:hardy_bush_sapling")
 	flowerpot.register_node("ebiomes:thorn_bush_sapling")
 end
-

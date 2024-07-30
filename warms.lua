@@ -185,11 +185,11 @@ end
 		node_dungeon_alt = "default:mossycobble",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = -256,
-		y_min = -31000,
+		y_min = -400,
 		heat_point = 65,
 		humidity_point = 60,
 	})
-	
+
 for length = 1, 5 do
 	minetest.register_decoration({
 		name = "ebiomes:grass_warm_"..length,
@@ -274,11 +274,11 @@ minetest.register_biome({
 		node_dungeon_alt = "default:mossycobble",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = -256,
-		y_min = -31000,
+		y_min = -400,
 		heat_point = 65,
 		humidity_point = 35,
 	})
-	
+
 --Folliage
 
 --Biome specific
@@ -325,11 +325,11 @@ minetest.register_biome({
 		y_min = 1,
 		decoration = "ebiomes:larkspur",
 	})
-	
+
 --Woods
 
 --Warm deciduous
-	
+
 --Pear
 
 	minetest.register_node("ebiomes:pear_tree", {
@@ -380,7 +380,7 @@ minetest.register_biome({
 
 		after_place_node = default.after_place_leaves,
 	})
-	
+
 	default.register_leafdecay({
 		trunks = {"ebiomes:pear_tree"},
 		leaves = {"ebiomes:pear_leaves"},
@@ -433,7 +433,7 @@ end
 			return itemstack
 		end,
 	})
-	
+
 if minetest.settings:get_bool("light_mapgen", true) then
 	minetest.register_decoration({
 		name = "ebiomes:pear_tree",
@@ -477,7 +477,7 @@ else
 		rotation = "random",
 	})
 end
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:pear_log",
 		deco_type = "schematic",
@@ -494,7 +494,7 @@ end
 		spawn_by = {"ebiomes:dirt_with_grass_warm"},
 		num_spawn_by = 8,
 	})
-	
+
 if minetest.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:pear_sapling", grow_new_pear_tree, "soil"},
@@ -508,7 +508,7 @@ end
 		S("Pear Wood Stair"),
 		S("Pear Wood Slab"),
 		default.node_sound_wood_defaults())
-		
+
 	default.register_fence("ebiomes:fence_pear_wood", {
 		description = S("Pear Wood Fence"),
 		texture = "ebiomes_fence_pear_wood.png",
@@ -606,9 +606,9 @@ end
 			end
 		end
 	})
-	
-	
-	
+
+
+
 --Quince
 
 	minetest.register_node("ebiomes:quince_tree", {
@@ -659,7 +659,7 @@ end
 
 		after_place_node = default.after_place_leaves,
 	})
-	
+
 	default.register_leafdecay({
 		trunks = {"ebiomes:quince_tree"},
 		leaves = {"ebiomes:quince_leaves"},
@@ -733,7 +733,7 @@ end
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:quince_log",
 		deco_type = "schematic",
@@ -750,7 +750,7 @@ end
 		spawn_by = {"ebiomes:dirt_with_grass_warm"},
 		num_spawn_by = 8,
 	})
-	
+
 if minetest.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:quince_sapling", grow_new_quince_tree, "soil"},
@@ -764,7 +764,7 @@ end
 		S("Quince Wood Stair"),
 		S("Quince Wood Slab"),
 		default.node_sound_wood_defaults())
-		
+
 	default.register_fence("ebiomes:fence_quince_wood", {
 		description = S("Quince Wood Fence"),
 		texture = "ebiomes_fence_quince_wood.png",
@@ -862,26 +862,26 @@ end
 			end
 		end
 	})
-	
-	
-	
+
+
+
 	minetest.register_craftitem("ebiomes:dried_quince_pieces", {
 		description = S("Dried Quince Pieces"),
 		inventory_image = "ebiomes_dried_quince_pieces.png",
 		on_use = minetest.item_eat(4),
 		groups = {food_bread = 1, flammable = 2},
 	})
-	
+
 	minetest.register_craft({
 		type = "cooking",
 		cooktime = 2,
 		output = "ebiomes:dried_quince_pieces",
 		recipe = "ebiomes:quince",
 	})
-	
-	
-	
-	
+
+
+
+
 --Chestnut
 
 	minetest.register_node("ebiomes:chestnut_tree", {
@@ -932,7 +932,7 @@ end
 
 		after_place_node = default.after_place_leaves,
 	})
-	
+
 	default.register_leafdecay({
 		trunks = {"ebiomes:chestnut_tree"},
 		leaves = {"ebiomes:chestnut_leaves"},
@@ -1007,7 +1007,7 @@ end
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:chestnut_log",
 		deco_type = "schematic",
@@ -1024,7 +1024,7 @@ end
 		spawn_by = {"ebiomes:dirt_with_grass_warm"},
 		num_spawn_by = 8,
 	})
-	
+
 if minetest.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:chestnut_sapling", grow_new_chestnut_tree, "soil"},
@@ -1038,7 +1038,7 @@ end
 		S("Chestnut Wood Stair"),
 		S("Chestnut Wood Slab"),
 		default.node_sound_wood_defaults())
-		
+
 	default.register_fence("ebiomes:fence_chestnut_wood", {
 		description = S("Chestnut Wood Fence"),
 		texture = "ebiomes_fence_chestnut_wood.png",
@@ -1135,37 +1135,37 @@ end
 			end
 		end
 	})
-	
-	
-	
+
+
+
 	minetest.register_craftitem("ebiomes:chestnuts_peeled", {
 		description = S("Peeled Chestnuts"),
 		inventory_image = "ebiomes_chestnuts_peeled.png",
 		groups = {food_bread = 1, flammable = 2},
 	})
-	
+
 	minetest.register_craft({
 		output = "ebiomes:chestnuts_peeled",
 		recipe = {
 			{"ebiomes:chestnuts"},
 		}
 	})
-	
+
 	minetest.register_craftitem("ebiomes:chestnuts_roasted", {
 		description = S("Roasted Chestnuts"),
 		inventory_image = "ebiomes_chestnuts_roasted.png",
 		on_use = minetest.item_eat(4),
 		groups = {food_bread = 1, flammable = 2},
 	})
-	
+
 	minetest.register_craft({
 		type = "cooking",
 		cooktime = 2,
 		output = "ebiomes:chestnuts_roasted",
 		recipe = "ebiomes:chestnuts_peeled",
 	})
-	
-	
+
+
 --Hornbeam
 
 	minetest.register_node("ebiomes:hornbeam_tree", {
@@ -1216,7 +1216,7 @@ end
 
 		after_place_node = default.after_place_leaves,
 	})
-	
+
 	default.register_leafdecay({
 		trunks = {"ebiomes:hornbeam_tree"},
 		leaves = {"ebiomes:hornbeam_leaves"},
@@ -1314,7 +1314,7 @@ else
 		rotation = "random",
 	})
 end
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:hornbeam_log",
 		deco_type = "schematic",
@@ -1331,7 +1331,7 @@ end
 		spawn_by = {"ebiomes:dirt_with_grass_warm"},
 		num_spawn_by = 8,
 	})
-	
+
 if minetest.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:hornbeam_sapling", grow_new_hornbeam_tree, "soil"},
@@ -1345,7 +1345,7 @@ end
 		S("Hornbeam Wood Stair"),
 		S("Hornbeam Wood Slab"),
 		default.node_sound_wood_defaults())
-		
+
 	default.register_fence("ebiomes:fence_hornbeam_wood", {
 		description = S("Hornbeam Wood Fence"),
 		texture = "ebiomes_fence_hornbeam_wood.png",
@@ -1388,7 +1388,7 @@ end
 		recipe = "ebiomes:gate_hornbeam_wood_closed",
 		burntime = 9,
 	})
-	
+
 --Loot
 
 if minetest.global_exists("dungeon_loot") then
@@ -1396,7 +1396,7 @@ if minetest.global_exists("dungeon_loot") then
 		{name = "ebiomes:chestnuts_peeled", chance = 0.3, count = {2, 8}},
 		{name = "ebiomes:pear", chance = 0.4, count = {1, 4}},
 		{name = "ebiomes:dried_quince_pieces", chance = 0.6, count = {1, 8}},
-	})	
+	})
 end
 
 --Bonemeal
@@ -1412,35 +1412,35 @@ end
 --sampled from cool_trees
 -- stairsplus/moreblocks
 if minetest.get_modpath("moreblocks") then
-	
+
 	stairsplus:register_all("pear_tree", "wood", "ebiomes:pear_wood", {
 		description = "Pear Wood",
 		tiles = {"ebiomes_pear_wood.png"},
 		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
 		sounds = default.node_sound_wood_defaults(),
 	})
-	
+
 	stairsplus:register_all("quince_tree", "wood", "ebiomes:quince_wood", {
 		description = "Quince Wood",
 		tiles = {"ebiomes_quince_wood.png"},
 		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
 		sounds = default.node_sound_wood_defaults(),
 	})
-		
+
 	stairsplus:register_all("chestnut_tree", "wood", "ebiomes:chestnut_wood", {
 		description = "Chestnut Wood",
 		tiles = {"ebiomes_chestnut_wood.png"},
 		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
 		sounds = default.node_sound_wood_defaults(),
 	})
-	
+
 	stairsplus:register_all("hornbeam_tree", "wood", "ebiomes:hornbeam_wood", {
 		description = "Hornbeam Wood",
 		tiles = {"ebiomes_hornbeam_wood.png"},
 		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
 		sounds = default.node_sound_wood_defaults(),
 	})
-	
+
 end
 
 -- Support for flowerpot
@@ -1450,8 +1450,7 @@ if minetest.global_exists("flowerpot") then
 	flowerpot.register_node("ebiomes:quince_sapling")
 	flowerpot.register_node("ebiomes:chestnut_sapling")
 	flowerpot.register_node("ebiomes:hornbeam_sapling")
-	
-	flowerpot.register_node("ebiomes:larkspur")
-	
-end
 
+	flowerpot.register_node("ebiomes:larkspur")
+
+end

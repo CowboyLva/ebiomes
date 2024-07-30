@@ -44,12 +44,12 @@
 		node_dungeon_alt = "default:mossycobble",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = -256,
-		y_min = -31000,
+		y_min = -400,
 		heat_point = 60,
 		humidity_point = 15,
 	})
-	
-	
+
+
 
 -- Cold desert Buffer
 
@@ -96,8 +96,7 @@
 		node_dungeon_alt = "default:mossycobble",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = -256,
-		y_min = -31000,
+		y_min = -400,
 		heat_point = 40,
 		humidity_point = 15,
 	})
-

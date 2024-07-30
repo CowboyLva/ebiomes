@@ -66,8 +66,8 @@ minetest.register_alias("maple_sapling", "ebiomes:maple_sapling")
 		-- Only where default:dirt is present as surface material
 		biomes = {"grassland_coldish", "deciduous_forest_fruity", "deciduous_forest_woody"}
 	})
-	
-	
+
+
 	-- Deciduous forests
 
 	-- Warmish/Fruity
@@ -133,15 +133,15 @@ minetest.register_alias("maple_sapling", "ebiomes:maple_sapling")
 		node_dungeon_alt = "default:mossycobble",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = -256,
-		y_min = -31000,
+		y_min = -400,
 		heat_point = 64,
 		humidity_point = 68,
 	})
-	
-	
-	
+
+
+
 	-- Coldish/Woody
-	
+
 	minetest.register_biome({
 		name = "deciduous_forest_woody",
 		node_top = "default:dirt_with_grass",
@@ -202,18 +202,18 @@ minetest.register_alias("maple_sapling", "ebiomes:maple_sapling")
 		node_dungeon_alt = "default:mossycobble",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = -256,
-		y_min = -31000,
+		y_min = -400,
 		heat_point = 56,
 		humidity_point = 68,
 	})
-	
-	
-	
-	
-	
+
+
+
+
+
 	-- Grasslands
-	
-	
+
+
 	-- Coldish
 
 	minetest.register_biome({
@@ -276,7 +276,7 @@ minetest.register_alias("maple_sapling", "ebiomes:maple_sapling")
 		node_dungeon_alt = "default:mossycobble",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = -256,
-		y_min = -31000,
+		y_min = -400,
 		heat_point = 42,
 		humidity_point = 35,
 	})
@@ -306,7 +306,7 @@ minetest.register_alias("maple_sapling", "ebiomes:maple_sapling")
 			decoration = "default:grass_"..length,
 		})
 	end
-	
+
 -- Flowers
 
 	--flowers
@@ -329,7 +329,7 @@ minetest.register_alias("maple_sapling", "ebiomes:maple_sapling")
 		y_min = 1,
 		decoration = "flowers:dandelion_yellow",
 	})
-		
+
 	minetest.register_decoration({
 		name = "ebiomes:dandelion_whiteext",
 		deco_type = "simple",
@@ -349,7 +349,7 @@ minetest.register_alias("maple_sapling", "ebiomes:maple_sapling")
 		decoration = "flowers:dandelion_white",
 	})
 
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:tulipext",
 		deco_type = "simple",
@@ -369,7 +369,7 @@ minetest.register_alias("maple_sapling", "ebiomes:maple_sapling")
 		decoration = "flowers:tulip",
 	})
 
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:tulip_blackext",
 		deco_type = "simple",
@@ -388,7 +388,7 @@ minetest.register_alias("maple_sapling", "ebiomes:maple_sapling")
 		y_min = 1,
 		decoration = "flowers:tulip_black",
 	})
-		
+
 	minetest.register_decoration({
 		name = "ebiomes:roseext",
 		deco_type = "simple",
@@ -407,7 +407,7 @@ minetest.register_alias("maple_sapling", "ebiomes:maple_sapling")
 		y_min = 1,
 		decoration = "flowers:rose",
 	})
-		
+
 	minetest.register_decoration({
 		name = "ebiomes:chrysanthemum_greenext",
 		deco_type = "simple",
@@ -426,7 +426,7 @@ minetest.register_alias("maple_sapling", "ebiomes:maple_sapling")
 		y_min = 1,
 		decoration = "flowers:chrysanthemum_green",
 	})
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:geraniumext",
 		deco_type = "simple",
@@ -520,7 +520,7 @@ minetest.register_alias("maple_sapling", "ebiomes:maple_sapling")
 	})
 
 	--mushrooms
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:mushroom_brownext",
 		deco_type = "simple",
@@ -539,7 +539,7 @@ minetest.register_alias("maple_sapling", "ebiomes:maple_sapling")
 		y_min = 1,
 		decoration = "flowers:mushroom_brown",
 	})
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:mushroom_redext",
 		deco_type = "simple",
@@ -602,7 +602,7 @@ minetest.register_alias("maple_sapling", "ebiomes:maple_sapling")
 		schematic = minetest.get_modpath("default") .. "/schematics/blueberry_bush.mts",
 		flags = "place_center_x, place_center_z",
 	})
-	
+
 
 -- Specifics
 
@@ -652,7 +652,7 @@ else
 		rotation = "random",
 	})
 end
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:pear_logext",
 		deco_type = "schematic",
@@ -669,7 +669,7 @@ end
 		spawn_by = {"default:dirt_with_grass"},
 		num_spawn_by = 8,
 	})
-	
+
 if minetest.settings:get_bool("light_mapgen", true) then
 	minetest.register_decoration({
 		name = "ebiomes:hornbeam_treeext",
@@ -691,7 +691,7 @@ if minetest.settings:get_bool("light_mapgen", true) then
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
-else	
+else
 	minetest.register_decoration({
 		name = "ebiomes:hornbeam_treeext",
 		deco_type = "schematic",
@@ -713,7 +713,7 @@ else
 		rotation = "random",
 	})
 end
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:hornbeam_log",
 		deco_type = "schematic",
@@ -730,10 +730,10 @@ end
 		spawn_by = {"default:dirt_with_grass"},
 		num_spawn_by = 8,
 	})
-	
-	
+
+
 	-- Coldish/Woody deciduous
-	
+
 	-- Aspen
 
 	minetest.register_decoration({
@@ -755,7 +755,7 @@ end
 		schematic = minetest.get_modpath("default") .. "/schematics/aspen_tree.mts",
 		flags = "place_center_x, place_center_z",
 	})
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:aspen_logext",
 		deco_type = "schematic",
@@ -772,9 +772,9 @@ end
 		spawn_by = {"default:dirt_with_grass"},
 		num_spawn_by = 8,
 	})
-	
+
 	-- Berries
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:blackcurrant_bushext",
 		deco_type = "schematic",
@@ -795,7 +795,7 @@ end
 		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_blackcurrant_bush.mts",
 		flags = "place_center_x, place_center_z",
 	})
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:redcurrant_bushext",
 		deco_type = "schematic",
@@ -816,8 +816,8 @@ end
 		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_redcurrant_bush.mts",
 		flags = "place_center_x, place_center_z",
 	})
-	
-	
+
+
 	minetest.register_decoration({
 		name = "ebiomes:gooseberry_bushext",
 		deco_type = "schematic",
@@ -860,7 +860,7 @@ if minetest.settings:get_bool("light_mapgen", true) then
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
-else	
+else
 	minetest.register_decoration({
 		name = "ebiomes:ash_treeext",
 		deco_type = "schematic",
@@ -882,7 +882,7 @@ else
 		rotation = "random",
 	})
 end
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:ash_logext",
 		deco_type = "schematic",
@@ -899,12 +899,12 @@ end
 		spawn_by = {"default:dirt_with_grass"},
 		num_spawn_by = 8,
 	})
-	
-	
-	
---[[	
+
+
+
+--[[
 	-- Grassland warmish
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:larkspurext",
 		deco_type = "simple",
@@ -923,9 +923,9 @@ end
 		y_min = 1,
 		decoration = "ebiomes:larkspur",
 	})
---]]	
+--]]
 	-- Grassland coldish
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:russian_irisext",
 		deco_type = "simple",
@@ -951,7 +951,7 @@ end
 --Trees
 
 --Oak
-	
+
 	minetest.register_node("ebiomes:oak_tree", {
 		description = S("Oak Tree"),
 		tiles = {"ebiomes_oak_tree_top.png", "ebiomes_oak_tree_top.png",
@@ -1001,7 +1001,7 @@ end
 
 		after_place_node = default.after_place_leaves,
 	})
-	
+
 	default.register_leafdecay({
 		trunks = {"ebiomes:oak_tree"},
 		leaves = {"ebiomes:oak_leaves"},
@@ -1074,7 +1074,7 @@ end
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:oak_log",
 		deco_type = "schematic",
@@ -1091,20 +1091,20 @@ end
 		spawn_by = {"ebiomes:dirt_with_grass_cold"},
 		num_spawn_by = 8,
 	})
-	
+
 if minetest.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:oak_sapling", grow_new_oak_tree, "soil"},
 })
 end
-	
+
 	stairs.register_stair_and_slab("oak_wood", "ebiomes:oak_wood",
 		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		{"ebiomes_oak_wood.png"},
 		S("Oak Wood Stair"),
 		S("Oak Wood Slab"),
 		default.node_sound_wood_defaults())
-		
+
 	default.register_fence("ebiomes:fence_oak_wood", {
 		description = S("Oak Wood Fence"),
 		texture = "ebiomes_fence_oak_wood.png",
@@ -1146,7 +1146,7 @@ end
 		type = "fuel",
 		recipe = "ebiomes:gate_oak_wood_closed",
 		burntime = 9,
-	})	
+	})
 
 
 -- Acorns
@@ -1261,22 +1261,22 @@ end
 --sampled from cool_trees
 -- stairsplus/moreblocks
 if minetest.get_modpath("moreblocks") then
-	
-	
+
+
 	stairsplus:register_all("oak_tree", "wood", "ebiomes:oak_wood", {
 		description = "Oak Wood",
 		tiles = {"ebiomes_oak_wood.png"},
 		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
 		sounds = default.node_sound_wood_defaults(),
 	})
-	
+
 end
 
 -- Support for flowerpot
 if minetest.global_exists("flowerpot") then
 
 	flowerpot.register_node("ebiomes:oak_sapling")
-	
+
 end
 
 
@@ -1339,7 +1339,7 @@ end
 
 		after_place_node = default.after_place_leaves,
 	})
-	
+
 	default.register_leafdecay({
 		trunks = {"ebiomes:maple_tree"},
 		leaves = {"ebiomes:maple_leaves"},
@@ -1428,7 +1428,7 @@ end
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:maple_log",
 		deco_type = "schematic",
@@ -1445,7 +1445,7 @@ end
 		spawn_by = {"ebiomes:dirt_with_grass_cold", "default:dirt_with_grass", "ebiomes:dirt_with_grass_warm"},
 		num_spawn_by = 8,
 	})
-	
+
 if minetest.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:maple_sapling", grow_new_maple_tree, "soil"},
@@ -1459,7 +1459,7 @@ end
 		S("Maple Wood Stair"),
 		S("Maple Wood Slab"),
 		default.node_sound_wood_defaults())
-		
+
 	default.register_fence("ebiomes:fence_maple_wood", {
 		description = S("Maple Wood Fence"),
 		texture = "ebiomes_fence_maple_wood.png",
@@ -1513,20 +1513,20 @@ end
 --sampled from cool_trees
 -- stairsplus/moreblocks
 if minetest.get_modpath("moreblocks") then
-	
-	
+
+
 	stairsplus:register_all("maple_tree", "wood", "ebiomes:maple_wood", {
 		description = "Maple Wood",
 		tiles = {"ebiomes_maple_wood.png"},
 		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
 		sounds = default.node_sound_wood_defaults(),
 	})
-	
+
 end
 
 -- Support for flowerpot
 if minetest.global_exists("flowerpot") then
 
 	flowerpot.register_node("ebiomes:maple_sapling")
-	
+
 end

@@ -29,7 +29,7 @@ minetest.register_alias("altai_tulip", "ebiomes:altai_tulip")
 minetest.register_alias("russian_iris", "ebiomes:russian_iris")
 minetest.register_alias("siberian_lily", "ebiomes:siberian_lily")
 minetest.register_alias("mountain_lily", "ebiomes:mountain_lily")
-	
+
 --Steppe
 
 	minetest.register_node("ebiomes:dirt_with_grass_steppe", {
@@ -183,11 +183,11 @@ end
 		node_dungeon_alt = "default:mossycobble",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = -256,
-		y_min = -31000,
+		y_min = -400,
 		heat_point = 35,
 		humidity_point = 35,
 	})
-	
+
 for length = 1, 5 do
 	minetest.register_decoration({
 		name = "ebiomes:grass_steppe_"..length,
@@ -207,7 +207,7 @@ for length = 1, 5 do
 		decoration = "ebiomes:grass_steppe_"..length,
 	})
 end
-	
+
 --Warm Steppe
 
 	minetest.register_node("ebiomes:dirt_with_grass_steppe_warm", {
@@ -361,11 +361,11 @@ end
 		node_dungeon_alt = "default:mossycobble",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = -256,
-		y_min = -31000,
+		y_min = -400,
 		heat_point = 40,
 		humidity_point = 35,
 	})
-	
+
 for length = 1, 5 do
 	minetest.register_decoration({
 		name = "ebiomes:grass_steppe_warm_"..length,
@@ -385,7 +385,7 @@ for length = 1, 5 do
 		decoration = "ebiomes:grass_steppe_warm_"..length,
 	})
 end
-	
+
 --Cold Steppe
 
 	minetest.register_node("ebiomes:dirt_with_grass_steppe_cold", {
@@ -524,11 +524,11 @@ end
 		node_dungeon_alt = "default:mossycobble",
 		node_dungeon_stair = "stairs:stair_cobble",
 		y_max = -256,
-		y_min = -31000,
+		y_min = -400,
 		heat_point = 25,
 		humidity_point = 35,
 	})
-	
+
 for length = 1, 5 do
 	minetest.register_decoration({
 		name = "ebiomes:grass_steppe_cold_"..length,
@@ -638,7 +638,7 @@ end
 		y_min = 1,
 		decoration = "ebiomes:blue_allium_purple",
 	})
-	
+
 	minetest.register_node("ebiomes:altai_tulip", {
 		description = S("Altai Tulip"),
 		tiles = {"ebiomes_altai_tulip.png"},
@@ -681,9 +681,9 @@ end
 		y_min = 1,
 		decoration = "ebiomes:altai_tulip",
 	})
-		
+
 	--warm
-	
+
 	minetest.register_node("ebiomes:russian_iris", {
 		description = S("Russian Iris"),
 		tiles = {"ebiomes_russian_iris.png"},
@@ -726,9 +726,9 @@ end
 		y_min = 1,
 		decoration = "ebiomes:russian_iris",
 	})
-		
+
 	--cold
-	
+
 	minetest.register_node("ebiomes:siberian_lily", {
 		description = S("Siberian Lily"),
 		tiles = {"ebiomes_siberian_lily.png"},
@@ -771,8 +771,8 @@ end
 		y_min = 1,
 		decoration = "ebiomes:siberian_lily",
 	})
-	
-	
+
+
 	minetest.register_node("ebiomes:mountain_lily", {
 		description = S("Mountain Lily"),
 		tiles = {"ebiomes_mountain_lily.png"},
@@ -815,7 +815,7 @@ end
 		y_min = 1,
 		decoration = "ebiomes:mountain_lily",
 	})
-		
+
 
 
 local function grow_new_peashrub(pos)
@@ -827,14 +827,14 @@ local function grow_new_peashrub(pos)
 	minetest.remove_node(pos)
 	minetest.place_schematic({x = pos.x-1, y = pos.y, z = pos.z-1}, modpath.."/schematics/ebiomes_peashrub.mts", "0", nil, false)
 end
-	
-	
+
+
 	minetest.register_craftitem("ebiomes:peashrub_peas", {
 		description = S("Peashrub Peas"),
 		inventory_image = "ebiomes_peashrub_peas.png",
 		groups = {cooking_peas = 1},
 	})
-	
+
 	minetest.register_craftitem("ebiomes:peas_cooked", {
 		description = S("Cooked Peas"),
 		inventory_image = "ebiomes_peas_cooked.png",
@@ -871,7 +871,7 @@ end
 		replacements = {{"ebiomes:bucket_peas", "bucket:bucket_empty"}},
 		cooktime = 5,
 	})
-	
+
 	minetest.register_node("ebiomes:peashrub_leaves_with_peas", {
 		description = S("Peashrub Bush Leaves with Peas"),
 		drawtype = "allfaces_optional",
@@ -887,8 +887,8 @@ end
 			minetest.get_node_timer(pos):start(math.random(300, 1500))
 		end,
 	})
-	
-	
+
+
 	minetest.register_node("ebiomes:peashrub_leaves", {
 		description = S("Peashrub Leaves"),
 		drawtype = "allfaces_optional",
@@ -914,7 +914,7 @@ end
 
 		after_place_node = default.after_place_leaves,
 	})
-	
+
 	default.register_leafdecay({
 		trunks = {"default:pine_bush_stem"},
 		leaves = {"ebiomes:peashrub_leaves", "ebiomes:peashrub_leaves_with_peas"},
@@ -955,7 +955,7 @@ end
 			return itemstack
 		end,
 	})
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:peashrub",
 		deco_type = "schematic",
@@ -976,7 +976,7 @@ end
 		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_peashrub.mts",
 		flags = "place_center_x, place_center_z",
 	})
-	
+
 if minetest.get_modpath("bonemeal") ~= nil then
 	bonemeal:add_sapling({
 		{"ebiomes:peashrub_sapling", grow_new_peashrub, "soil"},
@@ -988,7 +988,7 @@ end
 if minetest.global_exists("dungeon_loot") then
 	dungeon_loot.register ({
 		{name = "ebiomes:peashrub_peas", chance = 0.3, count = {2, 4}},
-	})	
+	})
 end
 
 --Bonemeal
@@ -1013,15 +1013,14 @@ end
 
 -- Support for flowerpot
 if minetest.global_exists("flowerpot") then
-	
+
 	flowerpot.register_node("ebiomes:peashrub_sapling")
-	
+
 	flowerpot.register_node("ebiomes:blue_allium")
 	flowerpot.register_node("ebiomes:blue_allium_purple")
 	flowerpot.register_node("ebiomes:russian_iris")
 	flowerpot.register_node("ebiomes:mountain_lily")
 	flowerpot.register_node("ebiomes:siberian_lily")
 	flowerpot.register_node("ebiomes:altai_tulip")
-	
-end
 
+end
