@@ -2,9 +2,13 @@
 ################ebiomes##################
 #########################################
 
-Version 1.5.1 - By CowboyLv
+Version 1.5.2 - By CowboyLv
 
 ## Changes
+
+1.5.2
+
+Merged changes by adikalon to eliminate conflicts with nether mods
 
 1.5.1
 
