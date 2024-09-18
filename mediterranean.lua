@@ -877,7 +877,7 @@ end
 			fixed = {-4 / 16, -4 / 16, -4 / 16, 4 / 16, 6 / 16, 4 / 16}
 		},
 		groups = {fleshy = 3, dig_immediate = 3, flammable = 2,
-			leafdecay = 3, leafdecay_drop = 1, food_apple = 1},
+			leafdecay = 3, leafdecay_drop = 1, food_apple = 1, eatable = 2},
 		on_use = minetest.item_eat(2),
 		sounds = default.node_sound_leaves_defaults(),
 

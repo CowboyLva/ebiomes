@@ -1188,7 +1188,7 @@ end
 	minetest.register_craftitem("ebiomes:tamarind_pulp", {
 		description = S("Tamarind Pulp"),
 		inventory_image = "ebiomes_tamarind_pulp.png",
-		groups = {food_pulps = 1},
+		groups = {food_pulps = 1, eatable = 3},
 		on_use = minetest.item_eat(3),
 	})
 

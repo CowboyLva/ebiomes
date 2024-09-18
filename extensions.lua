@@ -1208,7 +1208,7 @@ end
 	minetest.register_craftitem("ebiomes:acorns_cooked", {
 		description = S("Cooked Acorns"),
 		inventory_image = "ebiomes_acorns_cooked.png",
-		groups = {food_acorns = 1},
+		groups = {food_acorns = 1, eatable = 4},
 		on_use = minetest.item_eat(4),
 	})
 

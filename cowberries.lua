@@ -23,15 +23,15 @@ local function grow_new_cowberry(pos)
 	minetest.remove_node(pos)
 	minetest.place_schematic({x = pos.x, y = pos.y, z = pos.z}, modpath.."/schematics/ebiomes_cowberry_bush.mts", "0", nil, false)
 end
-	
+
 	minetest.register_craftitem("ebiomes:cowberries", {
 		description = S("Cowberries"),
 		inventory_image = "ebiomes_cowberries.png",
-		groups = {food_cowberries = 1, food_berry = 1},
+		groups = {food_cowberries = 1, food_berry = 1, eatable = 2},
 		on_use = minetest.item_eat(2),
 	})
-	
-	
+
+
 	minetest.register_node("ebiomes:cowberry_bush_leaves_with_berries", {
 		description = S("Cowberry Bush Leaves with Berries"),
 		drawtype = "allfaces_optional",
@@ -48,8 +48,8 @@ end
 			minetest.get_node_timer(pos):start(math.random(300, 1500))
 		end,
 	})
-	
-	
+
+
 	minetest.register_node("ebiomes:cowberry_bush_leaves", {
 		description = S("Cowberry Bush Leaves"),
 		drawtype = "allfaces_optional",
@@ -76,7 +76,7 @@ end
 
 		after_place_node = default.after_place_leaves,
 	})
-	
+
 
 	minetest.register_node("ebiomes:cowberry_bush_sapling", {
 		description = S("Cowberry Bush Sapling"),
@@ -112,7 +112,7 @@ end
 			return itemstack
 		end,
 	})
-	
+
 	minetest.register_decoration({
 		name = "ebiomes:cowberry_bush",
 		deco_type = "schematic",
@@ -133,7 +133,7 @@ end
 		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_cowberry_bush.mts",
 		flags = "place_center_x, place_center_z",
 	})
-	
+
 if minetest.get_modpath("bonemeal") ~= nil then
 	bonemeal:add_sapling({
 		{"ebiomes:cowberry_bush_sapling", grow_new_cowberry, "soil"},
@@ -143,4 +143,3 @@ end
 if minetest.global_exists("flowerpot") then
 	flowerpot.register_node("ebiomes:cowberry_bush_sapling")
 end
-

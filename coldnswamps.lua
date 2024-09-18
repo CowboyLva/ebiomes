@@ -1033,7 +1033,7 @@ end
 	minetest.register_craftitem("ebiomes:blackcurrants", {
 		description = S("Blackcurants"),
 		inventory_image = "ebiomes_blackcurrants.png",
-		groups = {food_blackcurrants = 1, food_berry = 1},
+		groups = {food_blackcurrants = 1, food_berry = 1, eatable = 2},
 		on_use = minetest.item_eat(2),
 	})
 
@@ -1160,7 +1160,7 @@ end
 	minetest.register_craftitem("ebiomes:redcurrants", {
 		description = S("Redcurants"),
 		inventory_image = "ebiomes_redcurrants.png",
-		groups = {food_redcurrants = 1, food_berry = 1},
+		groups = {food_redcurrants = 1, food_berry = 1, eatable = 2},
 		on_use = minetest.item_eat(2),
 	})
 
@@ -1287,7 +1287,7 @@ end
 	minetest.register_craftitem("ebiomes:gooseberries", {
 		description = S("Gooseberries"),
 		inventory_image = "ebiomes_gooseberries.png",
-		groups = {food_gooseberries = 1, food_berry = 1},
+		groups = {food_gooseberries = 1, food_berry = 1, eatable = 2},
 		on_use = minetest.item_eat(2),
 	})
 
@@ -1435,7 +1435,7 @@ end
 	minetest.register_craftitem("ebiomes:cranberries", {
 		description = S("Cranberries"),
 		inventory_image = "ebiomes_cranberries.png",
-		groups = {food_cranberries = 1, food_berry = 1},
+		groups = {food_cranberries = 1, food_berry = 1, eatable = 2},
 		on_use = minetest.item_eat(2),
 	})
 
