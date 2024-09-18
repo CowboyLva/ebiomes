@@ -476,7 +476,11 @@ end
 		{"ebiomes_beech_wood.png"},
 		S("Beech Wood Stair"),
 		S("Beech Wood Slab"),
-		default.node_sound_wood_defaults())
+		default.node_sound_wood_defaults(),
+		true,
+		S("Inner Beech Wood Stair"),
+		S("Outer Beech Wood Stair")
+	)
 
 	default.register_fence("ebiomes:fence_beech_wood", {
 		description = S("Beech Wood Fence"),

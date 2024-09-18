@@ -487,7 +487,7 @@ end
 		"ebiomes:swamp_water_flowing",
 		"ebiomes:bucket_swamp_water",
 		"ebiomes_bucket_swamp_water.png",
-		("Swamp Water Bucket"),
+		S("Swamp Water Bucket"),
 		{tool = 1, water_bucket = 1},
 		true
 	)
@@ -657,7 +657,11 @@ end
 		{"ebiomes_peat_dry.png"},
 		S("Dry Peat Stair"),
 		S("Dry Peat Slab"),
-		default.node_sound_dirt_defaults())
+		default.node_sound_dirt_defaults(),
+		true,
+		S("Inner Dry Peat Stair"),
+		S("Outer Dry Peat Stair")
+	)
 
 
 	minetest.register_craftitem("ebiomes:burning_peat", {
@@ -1760,7 +1764,11 @@ end
 		{"ebiomes_willow_wood.png"},
 		S("Willow Wood Stair"),
 		S("Willow Wood Slab"),
-		default.node_sound_wood_defaults())
+		default.node_sound_wood_defaults(),
+		true,
+		S("Inner Willow Wood Stair"),
+		S("Outer Willow Wood Stair")
+	)
 
 	default.register_fence("ebiomes:fence_willow_wood", {
 		description = S("Willow Wood Fence"),
@@ -1985,7 +1993,11 @@ end
 		{"ebiomes_alder_wood.png"},
 		S("Alder Wood Stair"),
 		S("Alder Wood Slab"),
-		default.node_sound_wood_defaults())
+		default.node_sound_wood_defaults(),
+		true,
+		S("Inner Alder Wood Stair"),
+		S("Outer Alder Wood Stair")
+	)
 
 	default.register_fence("ebiomes:fence_alder_wood", {
 		description = S("Alder Wood Fence"),
@@ -2212,7 +2224,11 @@ end
 		{"ebiomes_ash_wood.png"},
 		S("Ash Wood Stair"),
 		S("Ash Wood Slab"),
-		default.node_sound_wood_defaults())
+		default.node_sound_wood_defaults(),
+		true,
+		S("Inner Ash Wood Stair"),
+		S("Outer Ash Wood Stair")
+	)
 
 	default.register_fence("ebiomes:fence_ash_wood", {
 		description = S("Ash Wood Fence"),
@@ -2436,7 +2452,11 @@ end
 		{"ebiomes_birch_wood.png"},
 		S("Birch Wood Stair"),
 		S("Birch Wood Slab"),
-		default.node_sound_wood_defaults())
+		default.node_sound_wood_defaults(),
+		true,
+		S("Inner Birch Wood Stair"),
+		S("Outer Birch Wood Stair")
+	)
 
 	default.register_fence("ebiomes:fence_birch_wood", {
 		description = S("Birch Wood Fence"),
@@ -2681,7 +2701,11 @@ end
 		{"ebiomes_downy_birch_wood.png"},
 		S("Downy Birch Wood Stair"),
 		S("Downy Birch Wood Slab"),
-		default.node_sound_wood_defaults())
+		default.node_sound_wood_defaults(),
+		true,
+		S("Inner Downy Birch Wood Stair"),
+		S("Outer Downy Birch Wood Stair")
+	)
 
 	default.register_fence("ebiomes:fence_downy_birch_wood", {
 		description = S("Downy Birch Wood Fence"),

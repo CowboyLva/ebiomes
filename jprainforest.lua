@@ -409,7 +409,11 @@ end
 		{"ebiomes_sugi_wood.png"},
 		S("Sugi Wood Stair"),
 		S("Sugi Wood Slab"),
-		default.node_sound_wood_defaults())
+		default.node_sound_wood_defaults(),
+		true,
+		S("Inner Sugi Wood Stair"),
+		S("Outer Sugi Wood Stair")
+	)
 
 	default.register_fence("ebiomes:fence_sugi_wood", {
 		description = S("Sugi Wood Fence"),
@@ -647,7 +651,11 @@ end
 		{"ebiomes_mizunara_wood.png"},
 		S("Mizunara Wood Stair"),
 		S("Mizunara Wood Slab"),
-		default.node_sound_wood_defaults())
+		default.node_sound_wood_defaults(),
+		true,
+		S("Inner Mizunara Wood Stair"),
+		S("Outer Mizunara Wood Stair")
+	)
 
 	default.register_fence("ebiomes:fence_mizunara_wood", {
 		description = S("Mizunara Wood Fence"),
@@ -887,7 +895,11 @@ end
 		{"ebiomes_stoneoak_wood.png"},
 		S("Stone Oak Wood Stair"),
 		S("Stone Oak Wood Slab"),
-		default.node_sound_wood_defaults())
+		default.node_sound_wood_defaults(),
+		true,
+		S("Inner Stone Oak Wood Stair"),
+		S("Outer Stone Oak Wood Stair")
+	)
 
 	default.register_fence("ebiomes:fence_stoneoak_wood", {
 		description = S("Stone Oak Wood Fence"),

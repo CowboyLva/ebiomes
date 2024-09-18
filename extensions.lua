@@ -1103,7 +1103,11 @@ end
 		{"ebiomes_oak_wood.png"},
 		S("Oak Wood Stair"),
 		S("Oak Wood Slab"),
-		default.node_sound_wood_defaults())
+		default.node_sound_wood_defaults(),
+		true,
+		S("Inner Oak Wood Stair"),
+		S("Outer Oak Wood Stair")
+	)
 
 	default.register_fence("ebiomes:fence_oak_wood", {
 		description = S("Oak Wood Fence"),
@@ -1458,7 +1462,11 @@ end
 		{"ebiomes_maple_wood.png"},
 		S("Maple Wood Stair"),
 		S("Maple Wood Slab"),
-		default.node_sound_wood_defaults())
+		default.node_sound_wood_defaults(),
+		true,
+		S("Inner Maple Wood Stair"),
+		S("Outer Maple Wood Stair")
+	)
 
 	default.register_fence("ebiomes:fence_maple_wood", {
 		description = S("Maple Wood Fence"),

@@ -764,7 +764,11 @@ end
 		{"ebiomes_cypress_wood.png"},
 		S("Cypress Wood Stair"),
 		S("Cypress Wood Slab"),
-		default.node_sound_wood_defaults())
+		default.node_sound_wood_defaults(),
+		true,
+		S("Inner Cypress Wood Stair"),
+		S("Outer Cypress Wood Stair")
+	)
 
 	default.register_fence("ebiomes:fence_cypress_wood", {
 		description = S("Cypress Wood Fence"),
@@ -1018,7 +1022,11 @@ end
 		{"ebiomes_olive_wood.png"},
 		S("Olive Wood Stair"),
 		S("Olive Wood Slab"),
-		default.node_sound_wood_defaults())
+		default.node_sound_wood_defaults(),
+		true,
+		S("Inner Olive Wood Stair"),
+		S("Outer Olive Wood Stair")
+	)
 
 	default.register_fence("ebiomes:fence_olive_wood", {
 		description = S("Olive Wood Fence"),
