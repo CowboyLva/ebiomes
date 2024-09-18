@@ -30,6 +30,10 @@ reg_extensions (Register Default Biome Extensions) bool true
 #	    Toggle lighter mapgen, makes decorations more sparse in the denser biomes for increased performance
 light_mapgen (Light Mapgen) bool false
 
+supp_mobs (Support Mobs Monster, Mobs Animal, Mobs NPC, Mob Horse) bool true
+
+supp_forgotten_monsters (Support Forgotten Monsters) bool true
+
 supp_animalworld (Support Wilhelmines Animal World) bool true
 
 supp_nssm (Support Not So Simple Mobs) bool true
