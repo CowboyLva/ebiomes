@@ -838,7 +838,7 @@ end
 	minetest.register_craftitem("ebiomes:peas_cooked", {
 		description = S("Cooked Peas"),
 		inventory_image = "ebiomes_peas_cooked.png",
-		groups = {food_peas = 1},
+		groups = {food_peas = 1, eatable = 5},
 		on_use = minetest.item_eat(5),
 	})
 

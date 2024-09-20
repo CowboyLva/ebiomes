@@ -426,7 +426,11 @@ end
 		{"ebiomes_afzelia_wood.png"},
 		S("Afzelia Wood Stair"),
 		S("Afzelia Wood Slab"),
-		default.node_sound_wood_defaults())
+		default.node_sound_wood_defaults(),
+		true,
+		S("Inner Afzelia Wood Stair"),
+		S("Outer Afzelia Wood Stair")
+	)
 
 	default.register_fence("ebiomes:fence_afzelia_wood", {
 		description = S("Afzelia Wood Fence"),
@@ -659,7 +663,11 @@ end
 		{"ebiomes_limba_wood.png"},
 		S("Limba Wood Stair"),
 		S("Limba Wood Slab"),
-		default.node_sound_wood_defaults())
+		default.node_sound_wood_defaults(),
+		true,
+		S("Inner Limba Wood Stair"),
+		S("Outer Limba Wood Stair")
+	)
 
 	default.register_fence("ebiomes:fence_limba_wood", {
 		description = S("Limba Wood Fence"),
@@ -762,7 +770,11 @@ end
 		{"ebiomes_limba_black_wood.png"},
 		S("Black Limba Wood Stair"),
 		S("Black Limba Wood Slab"),
-		default.node_sound_wood_defaults())
+		default.node_sound_wood_defaults(),
+		true,
+		S("Inner Black Limba Wood Stair"),
+		S("Outer Black Limba Wood Stair")
+	)
 
 	default.register_fence("ebiomes:fence_limba_black_wood", {
 		description = S("Black Limba Wood Fence"),
@@ -986,7 +998,11 @@ end
 		{"ebiomes_siri_wood.png"},
 		S("Siri Wood Stair"),
 		S("Siri Wood Slab"),
-		default.node_sound_wood_defaults())
+		default.node_sound_wood_defaults(),
+		true,
+		S("Inner Siri Wood Stair"),
+		S("Outer Siri Wood Stair")
+	)
 
 	default.register_fence("ebiomes:fence_siri_wood", {
 		description = S("Siri Wood Fence"),
@@ -1188,7 +1204,7 @@ end
 	minetest.register_craftitem("ebiomes:tamarind_pulp", {
 		description = S("Tamarind Pulp"),
 		inventory_image = "ebiomes_tamarind_pulp.png",
-		groups = {food_pulps = 1},
+		groups = {food_pulps = 1, eatable = 3},
 		on_use = minetest.item_eat(3),
 	})
 
@@ -1301,7 +1317,11 @@ end
 		{"ebiomes_tamarind_wood.png"},
 		S("Tamarind Wood Stair"),
 		S("Tamarind Wood Slab"),
-		default.node_sound_wood_defaults())
+		default.node_sound_wood_defaults(),
+		true,
+		S("Inner Tamarind Wood Stair"),
+		S("Outer Tamarind Wood Stair")
+	)
 
 	default.register_fence("ebiomes:fence_tamarind_wood", {
 		description = S("Tamarind Wood Fence"),

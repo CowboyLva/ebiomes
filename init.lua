@@ -12,25 +12,25 @@ local mg_name = minetest.get_mapgen_setting("mg_name")
 
     dofile(path .. "/rereg.lua")
 	dofile(path .. "/cowberries.lua")
-	
+
 
 if minetest.settings:get_bool("reg_arids", true) then
 	dofile(path .. "/arids.lua")
 end
 
-if minetest.settings:get_bool("reg_buffers", true) then	
+if minetest.settings:get_bool("reg_buffers", true) then
 	dofile(path .. "/buffers.lua")
 end
 
-if minetest.settings:get_bool("reg_cswamps", true) then	
+if minetest.settings:get_bool("reg_cswamps", true) then
 	dofile(path .. "/coldnswamps.lua")
 end
 
-if minetest.settings:get_bool("reg_mediterranean", true) then	
+if minetest.settings:get_bool("reg_mediterranean", true) then
 	dofile(path .. "/mediterranean.lua")
-end	
+end
 
-if minetest.settings:get_bool("reg_steppes", true) then	
+if minetest.settings:get_bool("reg_steppes", true) then
 	dofile(path .. "/steppes.lua")
 end
 
@@ -39,14 +39,14 @@ if minetest.settings:get_bool("reg_warms", true) then
 end
 
 
-if minetest.settings:get_bool("reg_hsavanna", true) then	
+if minetest.settings:get_bool("reg_hsavanna", true) then
 	dofile(path .. "/savanna.lua")
 end
 
 if minetest.settings:get_bool("reg_jprainforest", true) then
 	dofile(path .. "/jprainforest.lua")
 end
-	
+
 if minetest.settings:get_bool("reg_bamboo", true) then
 	dofile(path .. "/bamboo.lua")
 end
@@ -55,10 +55,17 @@ end
 
 	dofile(path .. "/globals.lua")
 	dofile(path .. "/bugs.lua")
+
+-- Extended support
+
+if minetest.settings:get_bool("supp_mobs", true) then
 	dofile(path .. "/mobs.lua")
-	
-if minetest.get_modpath("forgotten_monsters") then
-	dofile(path .. "/forgotten_monsters.lua")
+end
+
+if minetest.settings:get_bool("supp_forgotten_monsters", true) then
+	if minetest.get_modpath("forgotten_monsters") then
+		dofile(path .. "/forgotten_monsters.lua")
+	end
 end
 
 -- Extended support
@@ -89,5 +96,3 @@ end
 if minetest.settings:get_bool("reg_cswamps", true) and minetest.settings:get_bool("reg_warms", true) and minetest.settings:get_bool("reg_steppes", true) and minetest.settings:get_bool("reg_extensions", true) then
 	dofile(path .. "/extensions.lua")
 end
-
-

@@ -764,7 +764,11 @@ end
 		{"ebiomes_cypress_wood.png"},
 		S("Cypress Wood Stair"),
 		S("Cypress Wood Slab"),
-		default.node_sound_wood_defaults())
+		default.node_sound_wood_defaults(),
+		true,
+		S("Inner Cypress Wood Stair"),
+		S("Outer Cypress Wood Stair")
+	)
 
 	default.register_fence("ebiomes:fence_cypress_wood", {
 		description = S("Cypress Wood Fence"),
@@ -877,7 +881,7 @@ end
 			fixed = {-4 / 16, -4 / 16, -4 / 16, 4 / 16, 6 / 16, 4 / 16}
 		},
 		groups = {fleshy = 3, dig_immediate = 3, flammable = 2,
-			leafdecay = 3, leafdecay_drop = 1, food_apple = 1},
+			leafdecay = 3, leafdecay_drop = 1, food_apple = 1, eatable = 2},
 		on_use = minetest.item_eat(2),
 		sounds = default.node_sound_leaves_defaults(),
 
@@ -1018,7 +1022,11 @@ end
 		{"ebiomes_olive_wood.png"},
 		S("Olive Wood Stair"),
 		S("Olive Wood Slab"),
-		default.node_sound_wood_defaults())
+		default.node_sound_wood_defaults(),
+		true,
+		S("Inner Olive Wood Stair"),
+		S("Outer Olive Wood Stair")
+	)
 
 	default.register_fence("ebiomes:fence_olive_wood", {
 		description = S("Olive Wood Fence"),

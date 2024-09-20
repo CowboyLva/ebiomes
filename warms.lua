@@ -507,7 +507,11 @@ end
 		{"ebiomes_pear_wood.png"},
 		S("Pear Wood Stair"),
 		S("Pear Wood Slab"),
-		default.node_sound_wood_defaults())
+		default.node_sound_wood_defaults(),
+		true,
+		S("Inner Pear Wood Stair"),
+		S("Outer Pear Wood Stair")
+	)
 
 	default.register_fence("ebiomes:fence_pear_wood", {
 		description = S("Pear Wood Fence"),
@@ -567,7 +571,7 @@ end
 			fixed = {-3 / 16, -7 / 16, -3 / 16, 3 / 16, 4 / 16, 3 / 16}
 		},
 		groups = {fleshy = 3, dig_immediate = 3, flammable = 2,
-			leafdecay = 3, leafdecay_drop = 1, food_apple = 1},
+			leafdecay = 3, leafdecay_drop = 1, food_apple = 1, eatable = 2},
 		on_use = minetest.item_eat(2),
 		sounds = default.node_sound_leaves_defaults(),
 
@@ -763,7 +767,11 @@ end
 		{"ebiomes_quince_wood.png"},
 		S("Quince Wood Stair"),
 		S("Quince Wood Slab"),
-		default.node_sound_wood_defaults())
+		default.node_sound_wood_defaults(),
+		true,
+		S("Inner Quince Wood Stair"),
+		S("Outer Quince Wood Stair")
+	)
 
 	default.register_fence("ebiomes:fence_quince_wood", {
 		description = S("Quince Wood Fence"),
@@ -823,7 +831,7 @@ end
 			fixed = {-3 / 16, -7 / 16, -3 / 16, 3 / 16, 4 / 16, 3 / 16}
 		},
 		groups = {fleshy = 3, dig_immediate = 3, flammable = 2,
-			leafdecay = 3, leafdecay_drop = 1, food_apple = 1},
+			leafdecay = 3, leafdecay_drop = 1, food_apple = 1, eatable = 1},
 		on_use = minetest.item_eat(1),
 		sounds = default.node_sound_leaves_defaults(),
 
@@ -869,7 +877,7 @@ end
 		description = S("Dried Quince Pieces"),
 		inventory_image = "ebiomes_dried_quince_pieces.png",
 		on_use = minetest.item_eat(4),
-		groups = {food_bread = 1, flammable = 2},
+		groups = {food_bread = 1, flammable = 2, eatable = 4},
 	})
 
 	minetest.register_craft({
@@ -1037,7 +1045,11 @@ end
 		{"ebiomes_chestnut_wood.png"},
 		S("Chestnut Wood Stair"),
 		S("Chestnut Wood Slab"),
-		default.node_sound_wood_defaults())
+		default.node_sound_wood_defaults(),
+		true,
+		S("Inner Chestnut Wood Stair"),
+		S("Outer Chestnut Wood Stair")
+	)
 
 	default.register_fence("ebiomes:fence_chestnut_wood", {
 		description = S("Chestnut Wood Fence"),
@@ -1155,7 +1167,7 @@ end
 		description = S("Roasted Chestnuts"),
 		inventory_image = "ebiomes_chestnuts_roasted.png",
 		on_use = minetest.item_eat(4),
-		groups = {food_bread = 1, flammable = 2},
+		groups = {food_bread = 1, flammable = 2, eatable = 4},
 	})
 
 	minetest.register_craft({
@@ -1344,7 +1356,11 @@ end
 		{"ebiomes_hornbeam_wood.png"},
 		S("Hornbeam Wood Stair"),
 		S("Hornbeam Wood Slab"),
-		default.node_sound_wood_defaults())
+		default.node_sound_wood_defaults(),
+		true,
+		S("Inner Hornbeam Wood Stair"),
+		S("Outer Hornbeam Wood Stair")
+	)
 
 	default.register_fence("ebiomes:fence_hornbeam_wood", {
 		description = S("Hornbeam Wood Fence"),
