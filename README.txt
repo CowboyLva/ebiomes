@@ -2,9 +2,15 @@
 ################ebiomes##################
 #########################################
 
-Version 1.5.2 - By CowboyLv
+Version 1.5.3 - By CowboyLv
 
 ## Changes
+
+1.5.3
+
+Toggles for disabling mobs (mobs, forgotten_monsters)
+Addition of eatable group
+Russian and Latvian translations
 
 1.5.2
 
