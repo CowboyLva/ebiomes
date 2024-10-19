@@ -78,7 +78,20 @@ mobs:spawn({
 })
 end
 
---spoky
+--berserker
+mobs:spawn({
+	name = "forgotten_monsters:skull_berserker",
+	nodes = fmeb,
+	neighbors = "air",
+	min_light = 0,
+	max_light = max_light_skull,
+	chance = 7000,
+	--min_height = 0,
+	--max_height = 200,
+	max_height = 200,
+})
+--[[
+--spoky (old version monster)
 if not mobs.custom_spawn_monster then
 mobs:spawn({
 	name = "spoky:spoky",
@@ -93,7 +106,7 @@ mobs:spawn({
 
 })
 end
-
+--]]
 
 
 
