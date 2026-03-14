@@ -1,37 +1,37 @@
-local S = minetest.get_translator("ebiomes")
+local S = core.get_translator("ebiomes")
 
 --from runs cooltrees
 local modname = "ebiomes"
-local modpath = minetest.get_modpath(modname)
-local mg_name = minetest.get_mapgen_setting("mg_name")
+local modpath = core.get_modpath(modname)
+local mg_name = core.get_mapgen_setting("mg_name")
 
 -- Aliases
 
-minetest.register_alias("dry_dirt_humid_savanna_grass", "ebiomes:dry_dirt_with_humid_savanna_grass")
-minetest.register_alias("dry_dirt_humid_savanna_grass_footsteps", "ebiomes:dry_dirt_with_humid_savanna_grass_footsteps")
-minetest.register_alias("afzelia_tree", "ebiomes:afzelia_tree")
-minetest.register_alias("afzelia_wood", "ebiomes:afzelia_wood")
-minetest.register_alias("afzelia_leaves", "ebiomes:afzelia_leaves")
-minetest.register_alias("afzelia_sapling", "ebiomes:afzelia_sapling")
-minetest.register_alias("limba_tree", "ebiomes:limba_tree")
-minetest.register_alias("limba_wood", "ebiomes:limba_wood")
-minetest.register_alias("limba_leaves", "ebiomes:limba_leaves")
-minetest.register_alias("limba_sapling", "ebiomes:limba_sapling")
-minetest.register_alias("siri_tree", "ebiomes:siri_tree")
-minetest.register_alias("siri_wood", "ebiomes:siri_wood")
-minetest.register_alias("siri_leaves", "ebiomes:siri_leaves")
-minetest.register_alias("siri_sapling", "ebiomes:siri_sapling")
-minetest.register_alias("tamarind_tree", "ebiomes:tamarind_tree")
-minetest.register_alias("tamarind_wood", "ebiomes:tamarind_wood")
-minetest.register_alias("tamarind_leaves", "ebiomes:tamarind_leaves")
-minetest.register_alias("tamarind_sapling", "ebiomes:tamarind_sapling")
-minetest.register_alias("tamarind_pods", "ebiomes:tamarind_pods")
-minetest.register_alias("tamarind_pulp", "ebiomes:tamarind_pulp")
+core.register_alias("dry_dirt_humid_savanna_grass", "ebiomes:dry_dirt_with_humid_savanna_grass")
+core.register_alias("dry_dirt_humid_savanna_grass_footsteps", "ebiomes:dry_dirt_with_humid_savanna_grass_footsteps")
+core.register_alias("afzelia_tree", "ebiomes:afzelia_tree")
+core.register_alias("afzelia_wood", "ebiomes:afzelia_wood")
+core.register_alias("afzelia_leaves", "ebiomes:afzelia_leaves")
+core.register_alias("afzelia_sapling", "ebiomes:afzelia_sapling")
+core.register_alias("limba_tree", "ebiomes:limba_tree")
+core.register_alias("limba_wood", "ebiomes:limba_wood")
+core.register_alias("limba_leaves", "ebiomes:limba_leaves")
+core.register_alias("limba_sapling", "ebiomes:limba_sapling")
+core.register_alias("siri_tree", "ebiomes:siri_tree")
+core.register_alias("siri_wood", "ebiomes:siri_wood")
+core.register_alias("siri_leaves", "ebiomes:siri_leaves")
+core.register_alias("siri_sapling", "ebiomes:siri_sapling")
+core.register_alias("tamarind_tree", "ebiomes:tamarind_tree")
+core.register_alias("tamarind_wood", "ebiomes:tamarind_wood")
+core.register_alias("tamarind_leaves", "ebiomes:tamarind_leaves")
+core.register_alias("tamarind_sapling", "ebiomes:tamarind_sapling")
+core.register_alias("tamarind_pods", "ebiomes:tamarind_pods")
+core.register_alias("tamarind_pulp", "ebiomes:tamarind_pulp")
 
 
 -- Humid Savanna
 
-	minetest.register_node("ebiomes:dry_dirt_with_humid_savanna_grass", {
+	core.register_node("ebiomes:dry_dirt_with_humid_savanna_grass", {
 		description = S("Dry Dirt with Humid Savanna Grass"),
 		tiles = {"ebiomes_humid_savanna_grass.png", "default_dry_dirt.png",
 			{name = "default_dry_dirt.png^ebiomes_humid_savanna_grass_side.png",
@@ -48,7 +48,7 @@ minetest.register_alias("tamarind_pulp", "ebiomes:tamarind_pulp")
 		}
 	})
 
-	minetest.register_node("ebiomes:dry_dirt_with_humid_savanna_grass_footsteps", {
+	core.register_node("ebiomes:dry_dirt_with_humid_savanna_grass_footsteps", {
 		description = S("Dry Dirt with Humid Savanna Grass and Footsteps"),
 		tiles = {"ebiomes_humid_savanna_grass.png^default_footprint.png", "default_dry_dirt.png",
 			{name = "default_dry_dirt.png^ebiomes_humid_savanna_grass_side.png",
@@ -65,7 +65,7 @@ minetest.register_alias("tamarind_pulp", "ebiomes:tamarind_pulp")
 		}
 	})
 
-	minetest.register_node("ebiomes:humid_savanna_grass_1", {
+	core.register_node("ebiomes:humid_savanna_grass_1", {
 		description = S("Humid Savanna Grass"),
 		drawtype = "plantlike",
 		waving = 1,
@@ -93,14 +93,14 @@ minetest.register_alias("tamarind_pulp", "ebiomes:tamarind_pulp")
 		on_place = function(itemstack, placer, pointed_thing)
 			-- place a random grass node
 			local stack = ItemStack("ebiomes:humid_savanna_grass_" .. math.random(1,5))
-			local ret = minetest.item_place(stack, placer, pointed_thing)
+			local ret = core.item_place(stack, placer, pointed_thing)
 			return ItemStack("ebiomes:humid_savanna_grass_1 " ..
 				itemstack:get_count() - (1 - ret:get_count()))
 		end,
 	})
 
 for i = 2, 5 do
-	minetest.register_node("ebiomes:humid_savanna_grass_" .. i, {
+	core.register_node("ebiomes:humid_savanna_grass_" .. i, {
 		description = S("Humid Savanna Grass"),
 		drawtype = "plantlike",
 		waving = 1,
@@ -127,7 +127,7 @@ for i = 2, 5 do
 	})
 end
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "humid_savanna",
 		node_top = "ebiomes:dry_dirt_with_humid_savanna_grass",
 		depth_top = 1,
@@ -144,7 +144,7 @@ end
 		humidity_point = 54,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "humid_savanna_shore",
 		node_top = "default:sand",
 		depth_top = 1,
@@ -161,7 +161,7 @@ end
 		humidity_point = 54,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "humid_savanna_ocean",
 		node_top = "default:sand",
 		depth_top = 1,
@@ -180,7 +180,7 @@ end
 		humidity_point = 54,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "humid_savanna_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
@@ -193,7 +193,7 @@ end
 	})
 
 for length = 1, 5 do
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:humid_savanna_grass_"..length,
 		deco_type = "simple",
 		place_on = {"ebiomes:dry_dirt_with_humid_savanna_grass"},
@@ -216,7 +216,7 @@ end
 --Grasses
 
 
-	minetest.register_node("ebiomes:jaragua_grass", {
+	core.register_node("ebiomes:jaragua_grass", {
 		description = S("Jaragua Grass"),
 		drawtype = "plantlike",
 --		drawtype = "firelike",
@@ -236,7 +236,7 @@ end
 		sounds = default.node_sound_leaves_defaults(),
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:jaragua_grass",
 		deco_type = "simple",
 		place_on = {"ebiomes:dry_dirt_with_humid_savanna_grass"},
@@ -263,7 +263,7 @@ end
 
 --Afzelia
 
-	minetest.register_node("ebiomes:afzelia_tree", {
+	core.register_node("ebiomes:afzelia_tree", {
 		description = S("Afzelia Tree"),
 		tiles = {"ebiomes_afzelia_tree_top.png", "ebiomes_afzelia_tree_top.png",
 			"ebiomes_afzelia_tree.png"},
@@ -272,10 +272,10 @@ end
 		groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
 		sounds = default.node_sound_wood_defaults(),
 
-		on_place = minetest.rotate_node
+		on_place = core.rotate_node
 	})
 
-	minetest.register_node("ebiomes:afzelia_wood", {
+	core.register_node("ebiomes:afzelia_wood", {
 		description = S("Afzelia Wood Planks"),
 		paramtype2 = "facedir",
 		place_param2 = 0,
@@ -285,14 +285,14 @@ end
 		sounds = default.node_sound_wood_defaults(),
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		output = "ebiomes:afzelia_wood 4",
 		recipe = {
 			{"ebiomes:afzelia_tree"},
 		}
 	})
 
-	minetest.register_node("ebiomes:afzelia_leaves", {
+	core.register_node("ebiomes:afzelia_leaves", {
 		description = S("Afzelia Tree Leaves"),
 		drawtype = "allfaces_optional",
 		tiles = {"ebiomes_afzelia_leaves.png"},
@@ -323,27 +323,27 @@ end
 local function grow_new_baldcypress_tree(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(240, 600))
+		core.get_node_timer(pos):start(math.random(240, 600))
 		return
 	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-4, y = pos.y, z = pos.z-4}, modpath.."/schematics/baldcypress.mts", "0", nil, false)
+	core.remove_node(pos)
+	core.place_schematic({x = pos.x-4, y = pos.y, z = pos.z-4}, modpath.."/schematics/baldcypress.mts", "0", nil, false)
 end
 --]]
 
 local function grow_new_afzelia_tree(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(150, 300))
+		core.get_node_timer(pos):start(math.random(150, 300))
 		return
 	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-6, y = pos.y, z = pos.z-6}, modpath.."/schematics/ebiomes_afzelia_tree.mts", "0", nil, false)
+	core.remove_node(pos)
+	core.place_schematic({x = pos.x-6, y = pos.y, z = pos.z-6}, modpath.."/schematics/ebiomes_afzelia_tree.mts", "0", nil, false)
 end
 
---schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_afzelia_tree.mts"
+--schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_afzelia_tree.mts"
 
-	minetest.register_node("ebiomes:afzelia_sapling", {
+	core.register_node("ebiomes:afzelia_sapling", {
 		description = S("Afzelia Tree Sapling"),
 		drawtype = "plantlike",
 		tiles = {"ebiomes_afzelia_sapling.png"},
@@ -362,7 +362,7 @@ end
 		sounds = default.node_sound_leaves_defaults(),
 
 		on_construct = function(pos)
-			minetest.get_node_timer(pos):start(math.random(300, 1500))
+			core.get_node_timer(pos):start(math.random(300, 1500))
 		end,
 
 		on_place = function(itemstack, placer, pointed_thing)
@@ -379,7 +379,7 @@ end
 		end,
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:afzelia_tree",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dry_dirt_with_humid_savanna_grass"},
@@ -395,12 +395,12 @@ end
 		biomes = {"humid_savanna"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_afzelia_tree.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_afzelia_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:afzelia_log",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dry_dirt_with_humid_savanna_grass"},
@@ -410,12 +410,12 @@ end
 		biomes = {"humid_savanna"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_afzelia_log.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_afzelia_log.mts",
 		flags = "place_center_x",
 		rotation = "random"
 	})
 
-if minetest.get_modpath("bonemeal") ~= nil then
+if core.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:afzelia_sapling", grow_new_afzelia_tree, "soil"},
 })
@@ -469,7 +469,7 @@ end
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		type = "fuel",
 		recipe = "ebiomes:gate_afzelia_wood_closed",
 		burntime = 9,
@@ -477,7 +477,7 @@ end
 
 --Extras
 
-if minetest.get_modpath("moreblocks") then
+if core.get_modpath("moreblocks") then
 
 
 	stairsplus:register_all("afzelia_tree", "wood", "ebiomes:afzelia_wood", {
@@ -491,7 +491,7 @@ if minetest.get_modpath("moreblocks") then
 end
 
 -- Support for flowerpot
-if minetest.global_exists("flowerpot") then
+if core.global_exists("flowerpot") then
 
 	flowerpot.register_node("ebiomes:afzelia_sapling")
 
@@ -500,7 +500,7 @@ end
 
 --Limba
 
-	minetest.register_node("ebiomes:limba_tree", {
+	core.register_node("ebiomes:limba_tree", {
 		description = S("Limba Tree"),
 		tiles = {"ebiomes_limba_tree_top.png", "ebiomes_limba_tree_top.png",
 			"ebiomes_limba_tree.png"},
@@ -509,10 +509,10 @@ end
 		groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
 		sounds = default.node_sound_wood_defaults(),
 
-		on_place = minetest.rotate_node
+		on_place = core.rotate_node
 	})
 
-	minetest.register_node("ebiomes:limba_wood", {
+	core.register_node("ebiomes:limba_wood", {
 		description = S("Limba Wood Planks"),
 		paramtype2 = "facedir",
 		place_param2 = 0,
@@ -522,14 +522,14 @@ end
 		sounds = default.node_sound_wood_defaults(),
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		output = "ebiomes:limba_wood 4",
 		recipe = {
 			{"ebiomes:limba_tree"},
 		}
 	})
 
-	minetest.register_node("ebiomes:limba_leaves", {
+	core.register_node("ebiomes:limba_leaves", {
 		description = S("Limba Tree Leaves"),
 		drawtype = "allfaces_optional",
 		tiles = {"ebiomes_limba_leaves.png"},
@@ -560,27 +560,27 @@ end
 local function grow_new_baldcypress_tree(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(240, 600))
+		core.get_node_timer(pos):start(math.random(240, 600))
 		return
 	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-4, y = pos.y, z = pos.z-4}, modpath.."/schematics/baldcypress.mts", "0", nil, false)
+	core.remove_node(pos)
+	core.place_schematic({x = pos.x-4, y = pos.y, z = pos.z-4}, modpath.."/schematics/baldcypress.mts", "0", nil, false)
 end
 --]]
 
 local function grow_new_limba_tree(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(150, 300))
+		core.get_node_timer(pos):start(math.random(150, 300))
 		return
 	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-4, y = pos.y, z = pos.z-4}, modpath.."/schematics/ebiomes_limba_tree.mts", "0", nil, false)
+	core.remove_node(pos)
+	core.place_schematic({x = pos.x-4, y = pos.y, z = pos.z-4}, modpath.."/schematics/ebiomes_limba_tree.mts", "0", nil, false)
 end
 
---schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_limba_tree.mts"
+--schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_limba_tree.mts"
 
-	minetest.register_node("ebiomes:limba_sapling", {
+	core.register_node("ebiomes:limba_sapling", {
 		description = S("Limba Tree Sapling"),
 		drawtype = "plantlike",
 		tiles = {"ebiomes_limba_sapling.png"},
@@ -599,7 +599,7 @@ end
 		sounds = default.node_sound_leaves_defaults(),
 
 		on_construct = function(pos)
-			minetest.get_node_timer(pos):start(math.random(300, 1500))
+			core.get_node_timer(pos):start(math.random(300, 1500))
 		end,
 
 		on_place = function(itemstack, placer, pointed_thing)
@@ -616,7 +616,7 @@ end
 		end,
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:limba_tree",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dry_dirt_with_humid_savanna_grass"},
@@ -632,12 +632,12 @@ end
 		biomes = {"humid_savanna"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_limba_tree.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_limba_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:limba_log",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dry_dirt_with_humid_savanna_grass"},
@@ -647,12 +647,12 @@ end
 		biomes = {"humid_savanna"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_limba_log.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_limba_log.mts",
 		flags = "place_center_x",
 		rotation = "random"
 	})
 
-if minetest.get_modpath("bonemeal") ~= nil then
+if core.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:limba_sapling", grow_new_limba_tree, "soil"},
 })
@@ -706,7 +706,7 @@ end
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		type = "fuel",
 		recipe = "ebiomes:gate_limba_wood_closed",
 		burntime = 9,
@@ -714,7 +714,7 @@ end
 
 --Extras
 
-if minetest.get_modpath("moreblocks") then
+if core.get_modpath("moreblocks") then
 
 
 	stairsplus:register_all("limba_tree", "wood", "ebiomes:limba_wood", {
@@ -728,7 +728,7 @@ if minetest.get_modpath("moreblocks") then
 end
 
 -- Support for flowerpot
-if minetest.global_exists("flowerpot") then
+if core.global_exists("flowerpot") then
 
 	flowerpot.register_node("ebiomes:limba_sapling")
 
@@ -736,7 +736,7 @@ end
 
 --Black Limba wood
 
-	minetest.register_node("ebiomes:limba_black_wood", {
+	core.register_node("ebiomes:limba_black_wood", {
 		description = S("Black Limba Wood Planks"),
 		paramtype2 = "facedir",
 		place_param2 = 0,
@@ -746,7 +746,7 @@ end
 		sounds = default.node_sound_wood_defaults(),
 	})
 --have to do this because a singular item craft is supposed to craft sticks
-	minetest.register_craft({
+	core.register_craft({
 		output = "ebiomes:limba_black_wood 5",
 		recipe = {
 			{"ebiomes:limba_wood", "", "ebiomes:limba_wood"},
@@ -755,7 +755,7 @@ end
 		}
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		output = "ebiomes:limba_wood 5",
 		recipe = {
 			{"ebiomes:limba_black_wood", "", "ebiomes:limba_black_wood"},
@@ -813,7 +813,7 @@ end
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		type = "fuel",
 		recipe = "ebiomes:gate_limba_black_wood_closed",
 		burntime = 9,
@@ -821,7 +821,7 @@ end
 
 --Extras
 
-if minetest.get_modpath("moreblocks") then
+if core.get_modpath("moreblocks") then
 
 
 	stairsplus:register_all("" , "wood", "ebiomes:limba_black_wood", {
@@ -835,7 +835,7 @@ end
 
 --Siri
 
-	minetest.register_node("ebiomes:siri_tree", {
+	core.register_node("ebiomes:siri_tree", {
 		description = S("Siri Tree"),
 		tiles = {"ebiomes_siri_tree_top.png", "ebiomes_siri_tree_top.png",
 			"ebiomes_siri_tree.png"},
@@ -844,10 +844,10 @@ end
 		groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
 		sounds = default.node_sound_wood_defaults(),
 
-		on_place = minetest.rotate_node
+		on_place = core.rotate_node
 	})
 
-	minetest.register_node("ebiomes:siri_wood", {
+	core.register_node("ebiomes:siri_wood", {
 		description = S("Siri Wood Planks"),
 		paramtype2 = "facedir",
 		place_param2 = 0,
@@ -857,14 +857,14 @@ end
 		sounds = default.node_sound_wood_defaults(),
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		output = "ebiomes:siri_wood 4",
 		recipe = {
 			{"ebiomes:siri_tree"},
 		}
 	})
 
-	minetest.register_node("ebiomes:siri_leaves", {
+	core.register_node("ebiomes:siri_leaves", {
 		description = S("Siri Tree Leaves"),
 		drawtype = "allfaces_optional",
 		tiles = {"ebiomes_siri_leaves.png"},
@@ -895,27 +895,27 @@ end
 local function grow_new_baldcypress_tree(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(240, 600))
+		core.get_node_timer(pos):start(math.random(240, 600))
 		return
 	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-4, y = pos.y, z = pos.z-4}, modpath.."/schematics/baldcypress.mts", "0", nil, false)
+	core.remove_node(pos)
+	core.place_schematic({x = pos.x-4, y = pos.y, z = pos.z-4}, modpath.."/schematics/baldcypress.mts", "0", nil, false)
 end
 --]]
 
 local function grow_new_siri_tree(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(150, 300))
+		core.get_node_timer(pos):start(math.random(150, 300))
 		return
 	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-3, y = pos.y, z = pos.z-2}, modpath.."/schematics/ebiomes_siri_tree.mts", "0", nil, false)
+	core.remove_node(pos)
+	core.place_schematic({x = pos.x-3, y = pos.y, z = pos.z-2}, modpath.."/schematics/ebiomes_siri_tree.mts", "0", nil, false)
 end
 
---schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_siri_tree.mts"
+--schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_siri_tree.mts"
 
-	minetest.register_node("ebiomes:siri_sapling", {
+	core.register_node("ebiomes:siri_sapling", {
 		description = S("Siri Tree Sapling"),
 		drawtype = "plantlike",
 		tiles = {"ebiomes_siri_sapling.png"},
@@ -934,7 +934,7 @@ end
 		sounds = default.node_sound_leaves_defaults(),
 
 		on_construct = function(pos)
-			minetest.get_node_timer(pos):start(math.random(300, 1500))
+			core.get_node_timer(pos):start(math.random(300, 1500))
 		end,
 
 		on_place = function(itemstack, placer, pointed_thing)
@@ -951,7 +951,7 @@ end
 		end,
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:siri_tree",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dry_dirt_with_humid_savanna_grass"},
@@ -967,12 +967,12 @@ end
 		biomes = {"humid_savanna"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_siri_tree.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_siri_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:siri_log",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dry_dirt_with_humid_savanna_grass"},
@@ -982,12 +982,12 @@ end
 		biomes = {"humid_savanna"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_siri_log.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_siri_log.mts",
 		flags = "place_center_x",
 		rotation = "random"
 	})
 
-if minetest.get_modpath("bonemeal") ~= nil then
+if core.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:siri_sapling", grow_new_siri_tree, "soil"},
 })
@@ -1041,7 +1041,7 @@ end
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		type = "fuel",
 		recipe = "ebiomes:gate_siri_wood_closed",
 		burntime = 9,
@@ -1049,7 +1049,7 @@ end
 
 --Extras
 
-if minetest.get_modpath("moreblocks") then
+if core.get_modpath("moreblocks") then
 
 
 	stairsplus:register_all("siri_tree", "wood", "ebiomes:siri_wood", {
@@ -1063,7 +1063,7 @@ if minetest.get_modpath("moreblocks") then
 end
 
 -- Support for flowerpot
-if minetest.global_exists("flowerpot") then
+if core.global_exists("flowerpot") then
 
 	flowerpot.register_node("ebiomes:siri_sapling")
 
@@ -1074,7 +1074,7 @@ end
 
 --Tamarind
 
-	minetest.register_node("ebiomes:tamarind_tree", {
+	core.register_node("ebiomes:tamarind_tree", {
 		description = S("Tamarind Tree"),
 		tiles = {"ebiomes_tamarind_tree_top.png", "ebiomes_tamarind_tree_top.png",
 			"ebiomes_tamarind_tree.png"},
@@ -1083,10 +1083,10 @@ end
 		groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
 		sounds = default.node_sound_wood_defaults(),
 
-		on_place = minetest.rotate_node
+		on_place = core.rotate_node
 	})
 
-	minetest.register_node("ebiomes:tamarind_wood", {
+	core.register_node("ebiomes:tamarind_wood", {
 		description = S("Tamarind Wood Planks"),
 		paramtype2 = "facedir",
 		place_param2 = 0,
@@ -1096,14 +1096,14 @@ end
 		sounds = default.node_sound_wood_defaults(),
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		output = "ebiomes:tamarind_wood 4",
 		recipe = {
 			{"ebiomes:tamarind_tree"},
 		}
 	})
 
-	minetest.register_node("ebiomes:tamarind_leaves", {
+	core.register_node("ebiomes:tamarind_leaves", {
 		description = S("Tamarind Tree Leaves"),
 		drawtype = "allfaces_optional",
 		tiles = {"ebiomes_tamarind_leaves.png"},
@@ -1129,7 +1129,7 @@ end
 		radius = 3,
 	})
 
-	minetest.register_node("ebiomes:tamarind_pods_hanging", {
+	core.register_node("ebiomes:tamarind_pods_hanging", {
 		description = S("Hanging Tamarind Pods"),
 		drawtype = "plantlike",
 		tiles = {"ebiomes_tamarind_pods_hanging.png"},
@@ -1153,18 +1153,18 @@ end
 		sounds = default.node_sound_leaves_defaults(),
 
 		after_place_node = function(pos, placer, itemstack)
-			minetest.set_node(pos, {name = "ebiomes:tamarind_pods_hanging", param2 = 1})
+			core.set_node(pos, {name = "ebiomes:tamarind_pods_hanging", param2 = 1})
 		end,
 
 		after_dig_node = function(pos, oldnode, oldmetadata, digger)
 			if oldnode.param2 == 0 then
-				minetest.set_node(pos, {name = "ebiomes:tamarind_pods_mark"})
-				minetest.get_node_timer(pos):start(math.random(300, 1500))
+				core.set_node(pos, {name = "ebiomes:tamarind_pods_mark"})
+				core.get_node_timer(pos):start(math.random(300, 1500))
 			end
 		end,
 	})
 
-	minetest.register_node("ebiomes:tamarind_pods_hanging_mark", {
+	core.register_node("ebiomes:tamarind_pods_hanging_mark", {
 		description = S("Hanging Tamarind Pod Marker"),
 		inventory_image = "ebiomes_tamarind_pods.png^default_invisible_node_overlay.png",
 		wield_image = "ebiomes_tamarind_pods.png^default_invisible_node_overlay.png",
@@ -1178,34 +1178,34 @@ end
 		drop = "",
 		groups = {not_in_creative_inventory = 1},
 		on_timer = function(pos, elapsed)
-			if not minetest.find_node_near(pos, 1, "ebiomes:olive_leaves") then
-				minetest.remove_node(pos)
-			elseif minetest.get_node_light(pos) < 11 then
-				minetest.get_node_timer(pos):start(200)
+			if not core.find_node_near(pos, 1, "ebiomes:olive_leaves") then
+				core.remove_node(pos)
+			elseif core.get_node_light(pos) < 11 then
+				core.get_node_timer(pos):start(200)
 			else
-				minetest.set_node(pos, {name = "ebiomes:tamarind_pods"})
+				core.set_node(pos, {name = "ebiomes:tamarind_pods"})
 			end
 		end
 	})
 
-	minetest.register_craftitem("ebiomes:tamarind_pods", {
+	core.register_craftitem("ebiomes:tamarind_pods", {
 		description = S("Tamarind Pods"),
 		inventory_image = "ebiomes_tamarind_pods.png",
 		groups = {legumes = 1},
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		output = "ebiomes:tamarind_pulp 2",
 		recipe = {
 			{"ebiomes:tamarind_pods"},
 		}
 	})
 
-	minetest.register_craftitem("ebiomes:tamarind_pulp", {
+	core.register_craftitem("ebiomes:tamarind_pulp", {
 		description = S("Tamarind Pulp"),
 		inventory_image = "ebiomes_tamarind_pulp.png",
 		groups = {food_pulps = 1, eatable = 3},
-		on_use = minetest.item_eat(3),
+		on_use = core.item_eat(3),
 	})
 
 
@@ -1214,27 +1214,27 @@ end
 local function grow_new_baldcypress_tree(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(240, 600))
+		core.get_node_timer(pos):start(math.random(240, 600))
 		return
 	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-4, y = pos.y, z = pos.z-4}, modpath.."/schematics/baldcypress.mts", "0", nil, false)
+	core.remove_node(pos)
+	core.place_schematic({x = pos.x-4, y = pos.y, z = pos.z-4}, modpath.."/schematics/baldcypress.mts", "0", nil, false)
 end
 --]]
 
 local function grow_new_tamarind_tree(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(150, 300))
+		core.get_node_timer(pos):start(math.random(150, 300))
 		return
 	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-2, y = pos.y, z = pos.z-2}, modpath.."/schematics/ebiomes_tamarind_tree.mts", "0", nil, false)
+	core.remove_node(pos)
+	core.place_schematic({x = pos.x-2, y = pos.y, z = pos.z-2}, modpath.."/schematics/ebiomes_tamarind_tree.mts", "0", nil, false)
 end
 
---schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_tamarind_tree.mts"
+--schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_tamarind_tree.mts"
 
-	minetest.register_node("ebiomes:tamarind_sapling", {
+	core.register_node("ebiomes:tamarind_sapling", {
 		description = S("Tamarind Tree Sapling"),
 		drawtype = "plantlike",
 		tiles = {"ebiomes_tamarind_sapling.png"},
@@ -1253,7 +1253,7 @@ end
 		sounds = default.node_sound_leaves_defaults(),
 
 		on_construct = function(pos)
-			minetest.get_node_timer(pos):start(math.random(300, 1500))
+			core.get_node_timer(pos):start(math.random(300, 1500))
 		end,
 
 		on_place = function(itemstack, placer, pointed_thing)
@@ -1270,7 +1270,7 @@ end
 		end,
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:tamarind_tree",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dry_dirt_with_humid_savanna_grass"},
@@ -1286,12 +1286,12 @@ end
 		biomes = {"humid_savanna"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_tamarind_tree.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_tamarind_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:tamarind_log",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dry_dirt_with_humid_savanna_grass"},
@@ -1301,12 +1301,12 @@ end
 		biomes = {"humid_savanna"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_tamarind_log.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_tamarind_log.mts",
 		flags = "place_center_x",
 		rotation = "random"
 	})
 
-if minetest.get_modpath("bonemeal") ~= nil then
+if core.get_modpath("bonemeal") ~= nil then
 	bonemeal:add_sapling({
 		{"ebiomes:tamarind_sapling", grow_new_tamarind_tree, "soil"},
 	})
@@ -1360,7 +1360,7 @@ end
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		type = "fuel",
 		recipe = "ebiomes:gate_tamarind_wood_closed",
 		burntime = 9,
@@ -1368,13 +1368,13 @@ end
 
 --Extras
 
-if minetest.global_exists("dungeon_loot") then
+if core.global_exists("dungeon_loot") then
 	dungeon_loot.register ({
 		{name = "ebiomes:tamarind_pulp", chance = 0.3, count = {4, 12}},
 	})
 end
 
-if minetest.get_modpath("moreblocks") then
+if core.get_modpath("moreblocks") then
 
 
 	stairsplus:register_all("tamarind_tree", "wood", "ebiomes:tamarind_wood", {
@@ -1388,7 +1388,7 @@ if minetest.get_modpath("moreblocks") then
 end
 
 -- Support for flowerpot
-if minetest.global_exists("flowerpot") then
+if core.global_exists("flowerpot") then
 
 	flowerpot.register_node("ebiomes:tamarind_sapling")
 
@@ -1397,7 +1397,7 @@ end
 --Additionals
 
 --Ground stuff
-if minetest.get_modpath("bonemeal") ~= nil then
+if core.get_modpath("bonemeal") ~= nil then
 	bonemeal:add_deco({
 		{"ebiomes:dry_dirt_with_humid_savanna_grass", {"ebiomes:humid_savanna_grass_1", "ebiomes:humid_savanna_grass_2", "ebiomes:humid_savanna_grass_3", "ebiomes:humid_savanna_grass_4", "ebiomes:humid_savanna_grass_5"},
 			{"ebiomes:jaragua_grass"} }

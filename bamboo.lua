@@ -1,20 +1,20 @@
-local S = minetest.get_translator("ebiomes")
+local S = core.get_translator("ebiomes")
 
 --from runs cooltrees
 local modname = "ebiomes"
-local modpath = minetest.get_modpath(modname)
-local mg_name = minetest.get_mapgen_setting("mg_name")
+local modpath = core.get_modpath(modname)
+local mg_name = core.get_mapgen_setting("mg_name")
 
 --Aliases
 
-minetest.register_alias("bamboo", "ebiomes:bamboo")
-minetest.register_alias("bamboo_leaves", "ebiomes:bamboo_leaves")
-minetest.register_alias("bamboo_sprout", "ebiomes:bamboo_sprout")
+core.register_alias("bamboo", "ebiomes:bamboo")
+core.register_alias("bamboo_leaves", "ebiomes:bamboo_leaves")
+core.register_alias("bamboo_sprout", "ebiomes:bamboo_sprout")
 
 
 --Bamboo
 
-	minetest.register_node("ebiomes:bamboo", {
+	core.register_node("ebiomes:bamboo", {
 		description = S("Bamboo"),
 		drawtype = "plantlike",
 		tiles = {"ebiomes_bamboo.png"},
@@ -35,14 +35,14 @@ minetest.register_alias("bamboo_sprout", "ebiomes:bamboo_sprout")
 		end,
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		output = "default:stick 8",
 		recipe = {
 			{"ebiomes:bamboo"},
 		}
 	})
 
-	minetest.register_node("ebiomes:bamboo_leaves", {
+	core.register_node("ebiomes:bamboo_leaves", {
 		description = S("Bamboo Leaves"),
 		drawtype = "allfaces_optional",
 		tiles = {"ebiomes_bamboo_leaves.png"},
@@ -72,14 +72,14 @@ minetest.register_alias("bamboo_sprout", "ebiomes:bamboo_sprout")
 local function grow_new_bamboo(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(150, 300))
+		core.get_node_timer(pos):start(math.random(150, 300))
 		return
 	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-1, y = pos.y, z = pos.z-1}, modpath.."/schematics/ebiomes_bamboo.mts", "0", nil, false)
+	core.remove_node(pos)
+	core.place_schematic({x = pos.x-1, y = pos.y, z = pos.z-1}, modpath.."/schematics/ebiomes_bamboo.mts", "0", nil, false)
 end
 
-	minetest.register_node("ebiomes:bamboo_sprout", {
+	core.register_node("ebiomes:bamboo_sprout", {
 		description = S("Bamboo Sprout"),
 		drawtype = "plantlike",
 		tiles = {"ebiomes_bamboo_sprout.png"},
@@ -98,7 +98,7 @@ end
 		sounds = default.node_sound_leaves_defaults(),
 	
 		on_construct = function(pos)
-			minetest.get_node_timer(pos):start(math.random(300, 1500))
+			core.get_node_timer(pos):start(math.random(300, 1500))
 		end,
 	
 		on_place = function(itemstack, placer, pointed_thing)
@@ -115,9 +115,9 @@ end
 		end,
 	})
 
-if minetest.settings:get_bool("reg_jprainforest", true) then
+if core.settings:get_bool("reg_jprainforest", true) then
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:bamboo_l1",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_japanese_rainforest_litter", "default:dirt_with_rainforest_litter"},
@@ -134,12 +134,12 @@ if minetest.settings:get_bool("reg_jprainforest", true) then
 		y_max = 31000,
 		y_min = 1,
 		place_offset_y = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_bamboo.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_bamboo.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random"
 	})
 	
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:bamboo_l2",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_japanese_rainforest_litter", "default:dirt_with_rainforest_litter"},
@@ -156,14 +156,14 @@ if minetest.settings:get_bool("reg_jprainforest", true) then
 		y_max = 31000,
 		y_min = 1,
 		place_offset_y = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_bamboo.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_bamboo.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 		spawn_by = "ebiomes:bamboo",
 		num_spawn_by = 1
 	})
 	
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:bamboo_l3",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_japanese_rainforest_litter", "default:dirt_with_rainforest_litter"},
@@ -180,7 +180,7 @@ if minetest.settings:get_bool("reg_jprainforest", true) then
 		y_max = 31000,
 		y_min = 1,
 		place_offset_y = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_bamboo.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_bamboo.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 		spawn_by = "ebiomes:bamboo",
@@ -189,7 +189,7 @@ if minetest.settings:get_bool("reg_jprainforest", true) then
 	
 else
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:bamboo_l1",
 		deco_type = "schematic",
 		place_on = {"default:dirt_with_rainforest_litter"},
@@ -206,12 +206,12 @@ else
 		y_max = 31000,
 		y_min = 1,
 		place_offset_y = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_bamboo.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_bamboo.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random"
 	})
 	
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:bamboo_l2",
 		deco_type = "schematic",
 		place_on = {"default:dirt_with_rainforest_litter"},
@@ -228,14 +228,14 @@ else
 		y_max = 31000,
 		y_min = 1,
 		place_offset_y = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_bamboo.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_bamboo.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 		spawn_by = "ebiomes:bamboo",
 		num_spawn_by = 1
 	})
 	
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:bamboo_l3",
 		deco_type = "schematic",
 		place_on = {"default:dirt_with_rainforest_litter"},
@@ -252,7 +252,7 @@ else
 		y_max = 31000,
 		y_min = 1,
 		place_offset_y = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_bamboo.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_bamboo.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 		spawn_by = "ebiomes:bamboo",
@@ -262,19 +262,19 @@ else
 end
 
 
-if minetest.global_exists("dungeon_loot") then
+if core.global_exists("dungeon_loot") then
 	dungeon_loot.register ({
 		{name = "ebiomes:bamboo", chance = 0.3, count = {5, 13}},
 	})	
 end
 	
-if minetest.get_modpath("bonemeal") ~= nil then
+if core.get_modpath("bonemeal") ~= nil then
 	bonemeal:add_sapling({
 		{"ebiomes:bamboo_sprout", grow_new_bamboo, "soil"},
 	})
 end
 
-if minetest.global_exists("flowerpot") then
+if core.global_exists("flowerpot") then
 	flowerpot.register_node("ebiomes:bamboo_sprout")
 end
 

@@ -13,7 +13,7 @@ mobs:spawn({
         day_toggle = true
 })
 
-	minetest.register_decoration({
+	core.register_decoration({
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_grass_cold"},
 		sidelen = 16,
@@ -52,7 +52,7 @@ mobs:spawn({
 	max_height = 120,
 
 })
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:animalworld_beavernest",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp", "ebiomes:dirt_with_forest_litter"},
@@ -62,7 +62,7 @@ mobs:spawn({
 		biomes = {"cold_deciduous", "swamp"},
 		y_max = 1,
 		y_min = 0,
-		schematic = minetest.get_modpath("animalworld") .. "/schematics/animalworld_beavernest.mts",
+		schematic = core.get_modpath("animalworld") .. "/schematics/animalworld_beavernest.mts",
 		flags = "place_center_x",
     flags = "force_placement",
 		rotation = "random",
@@ -562,7 +562,7 @@ mobs:spawn({
 	max_height = 50,
 })
 
-	minetest.register_decoration({
+	core.register_decoration({
 		deco_type = "simple",
 		place_on = {"ebiomes:dry_dirt_with_huid_savanna_grass"},
 	        neighbors = {"ebiomes:jaragua_grass"},
@@ -656,7 +656,7 @@ mobs:spawn({
 --]]
 
 --[[
-	minetest.register_decoration({
+	core.register_decoration({
 		deco_type = "simple",
 		place_on = {"default:aspen_leaves"},
 	        neighbors = {"animalworld:waspnest"},

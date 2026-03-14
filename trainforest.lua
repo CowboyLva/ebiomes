@@ -1,18 +1,18 @@
-local S = minetest.get_translator("ebiomes")
+local S = core.get_translator("ebiomes")
 
 --from runs cooltrees
 local modname = "ebiomes"
-local modpath = minetest.get_modpath(modname)
-local mg_name = minetest.get_mapgen_setting("mg_name")
+local modpath = core.get_modpath(modname)
+local mg_name = core.get_mapgen_setting("mg_name")
 
-minetest.register_alias("beech_tree", "ebiomes:beech_tree")
-minetest.register_alias("beech_wood", "ebiomes:beech_wood")
-minetest.register_alias("beech_leaves", "ebiomes:beech_leaves")
-minetest.register_alias("beech_sapling", "ebiomes:beech_sapling")
+core.register_alias("beech_tree", "ebiomes:beech_tree")
+core.register_alias("beech_wood", "ebiomes:beech_wood")
+core.register_alias("beech_leaves", "ebiomes:beech_leaves")
+core.register_alias("beech_sapling", "ebiomes:beech_sapling")
 
 --Base
 
-	minetest.register_node("ebiomes:dirt_with_forest_litter", {
+	core.register_node("ebiomes:dirt_with_forest_litter", {
 		description = S("Dirt with Forest Litter"),
 		tiles = {"ebiomes_forest_litter.png", "default_dirt.png",
 			{name = "default_dirt.png^ebiomes_forest_litter_side.png",
@@ -29,7 +29,7 @@ minetest.register_alias("beech_sapling", "ebiomes:beech_sapling")
 		}
 	})
 
-	minetest.register_node("ebiomes:dirt_with_forest_litter_footsteps", {
+	core.register_node("ebiomes:dirt_with_forest_litter_footsteps", {
 		description = S("Dirt with Forest Litter and Footsteps"),
 		tiles = {"ebiomes_forest_litter.png^default_footprint.png", "default_dirt.png",
 			{name = "default_dirt.png^ebiomes_forest_litter_side.png",
@@ -43,7 +43,7 @@ minetest.register_alias("beech_sapling", "ebiomes:beech_sapling")
 
 
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "temperate_rainforest",
 		node_top = "ebiomes:dirt_with_forest_litter",
 		depth_top = 1,
@@ -60,7 +60,7 @@ minetest.register_alias("beech_sapling", "ebiomes:beech_sapling")
 		humidity_point = 80,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "temperate_rainforest_shore",
 		node_top = "default:sand",
 		depth_top = 1,
@@ -77,7 +77,7 @@ minetest.register_alias("beech_sapling", "ebiomes:beech_sapling")
 		humidity_point = 80,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "temperate_rainforest_ocean",
 		node_top = "default:sand",
 		depth_top = 1,
@@ -96,7 +96,7 @@ minetest.register_alias("beech_sapling", "ebiomes:beech_sapling")
 		humidity_point = 80,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "temperate_rainforest_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
@@ -116,7 +116,7 @@ minetest.register_alias("beech_sapling", "ebiomes:beech_sapling")
 
 
 	for length = 1, 5 do
-		minetest.register_decoration({
+		core.register_decoration({
 			name = "ebiomes:grass_trf_"..length,
 			deco_type = "simple",
 			place_on = {"ebiomes:dirt_with_forest_litter"},
@@ -139,7 +139,7 @@ minetest.register_alias("beech_sapling", "ebiomes:beech_sapling")
 --Non-tree decors
 
 for length = 1, 3 do
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:ferntrf_"..length,
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_forest_litter"},
@@ -152,7 +152,7 @@ for length = 1, 3 do
 	})
 end
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:bush_trf",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_forest_litter"},
@@ -168,11 +168,11 @@ end
 		biomes = {"temperate_rainforest"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/bush.mts",
+		schematic = core.get_modpath("default") .. "/schematics/bush.mts",
 		flags = "place_center_x, place_center_z",
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:pine_bush_trf",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_forest_litter"},
@@ -188,14 +188,14 @@ end
 		biomes = {"temperate_rainforest"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("default") .. "/schematics/pine_bush.mts",
+		schematic = core.get_modpath("default") .. "/schematics/pine_bush.mts",
 		flags = "place_center_x, place_center_z",
 	})
 
 
 	--flowers
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:rose_trf",
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_forest_litter"},
@@ -216,7 +216,7 @@ end
 
 	--mushrooms
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:mushroom_brown_trf",
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_forest_litter"},
@@ -235,7 +235,7 @@ end
 		decoration = "flowers:mushroom_brown",
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:mushroom_red_trf",
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_forest_litter"},
@@ -256,7 +256,7 @@ end
 
 --ebiomes bushes
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:blackcurrant_bush_trf",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_forest_litter"},
@@ -273,11 +273,11 @@ end
 		y_max = 31000,
 		y_min = 1,
 		place_offset_y = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_blackcurrant_bush.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_blackcurrant_bush.mts",
 		flags = "place_center_x, place_center_z",
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:gooseberry_bush_trf",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_forest_litter"},
@@ -294,7 +294,7 @@ end
 		y_max = 31000,
 		y_min = 1,
 		place_offset_y = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_gooseberry_bush.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_gooseberry_bush.mts",
 		flags = "place_center_x, place_center_z",
 	})
 
@@ -303,7 +303,7 @@ end
 
 --Beech
 
-	minetest.register_node("ebiomes:beech_tree", {
+	core.register_node("ebiomes:beech_tree", {
 		description = S("Beech Tree"),
 		tiles = {"ebiomes_beech_tree_top.png", "ebiomes_beech_tree_top.png",
 			"ebiomes_beech_tree.png"},
@@ -312,10 +312,10 @@ end
 		groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
 		sounds = default.node_sound_wood_defaults(),
 
-		on_place = minetest.rotate_node
+		on_place = core.rotate_node
 	})
 
-	minetest.register_node("ebiomes:beech_wood", {
+	core.register_node("ebiomes:beech_wood", {
 		description = S("Beech Wood Planks"),
 		paramtype2 = "facedir",
 		place_param2 = 0,
@@ -325,14 +325,14 @@ end
 		sounds = default.node_sound_wood_defaults(),
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		output = "ebiomes:beech_wood 4",
 		recipe = {
 			{"ebiomes:beech_tree"},
 		}
 	})
 
-	minetest.register_node("ebiomes:beech_leaves", {
+	core.register_node("ebiomes:beech_leaves", {
 		description = S("Beech Tree Leaves"),
 		drawtype = "allfaces_optional",
 		tiles = {"ebiomes_beech_leaves.png"},
@@ -361,14 +361,14 @@ end
 local function grow_new_beech_tree(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(150, 300))
+		core.get_node_timer(pos):start(math.random(150, 300))
 		return
 	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-3, y = pos.y, z = pos.z-3}, modpath.."/schematics/ebiomes_beech_tree.mts", "0", nil, false)
+	core.remove_node(pos)
+	core.place_schematic({x = pos.x-3, y = pos.y, z = pos.z-3}, modpath.."/schematics/ebiomes_beech_tree.mts", "0", nil, false)
 end
 
-	minetest.register_node("ebiomes:beech_sapling", {
+	core.register_node("ebiomes:beech_sapling", {
 		description = S("Beech Tree Sapling"),
 		drawtype = "plantlike",
 		tiles = {"ebiomes_beech_sapling.png"},
@@ -387,7 +387,7 @@ end
 		sounds = default.node_sound_leaves_defaults(),
 
 		on_construct = function(pos)
-			minetest.get_node_timer(pos):start(math.random(300, 1500))
+			core.get_node_timer(pos):start(math.random(300, 1500))
 		end,
 
 		on_place = function(itemstack, placer, pointed_thing)
@@ -404,8 +404,8 @@ end
 		end,
 	})
 
-if minetest.settings:get_bool("light_mapgen", true) then
-	minetest.register_decoration({
+if core.settings:get_bool("light_mapgen", true) then
+	core.register_decoration({
 		name = "ebiomes:beech_tree",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_forest_litter"},
@@ -421,12 +421,12 @@ if minetest.settings:get_bool("light_mapgen", true) then
 		biomes = {"temperate_rainforest"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_beech_tree.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_beech_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
 else
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:beech_tree",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_forest_litter"},
@@ -442,13 +442,13 @@ else
 		biomes = {"temperate_rainforest"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_beech_tree.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_beech_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
 end
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:beech_log",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_forest_litter"},
@@ -458,14 +458,14 @@ end
 		biomes = {"temperate_rainforest"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_beech_log.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_beech_log.mts",
 		flags = "place_center_x",
 		rotation = "random",
 		spawn_by = {"ebiomes:dirt_with_forest_litter"},
 		num_spawn_by = 8,
 	})
 
-if minetest.get_modpath("bonemeal") ~= nil then
+if core.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:beech_sapling", grow_new_beech_tree, "soil"},
 })
@@ -519,22 +519,22 @@ end
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		type = "fuel",
 		recipe = "ebiomes:gate_beech_wood_closed",
 		burntime = 9,
 	})
 
 	-- Support for flowerpot
-if minetest.global_exists("flowerpot") then
+if core.global_exists("flowerpot") then
 
 	flowerpot.register_node("ebiomes:beech_sapling")
 
 end
 
 -- Decors
-if minetest.settings:get_bool("light_mapgen", true) then
-	minetest.register_decoration({
+if core.settings:get_bool("light_mapgen", true) then
+	core.register_decoration({
 		name = "ebiomes:alder_tree_trf",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_forest_litter"},
@@ -550,12 +550,12 @@ if minetest.settings:get_bool("light_mapgen", true) then
 		biomes = {"temperate_rainforest"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_alder_tree.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_alder_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
 else
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:alder_tree_trf",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_forest_litter"},
@@ -571,13 +571,13 @@ else
 		biomes = {"temperate_rainforest"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_alder_tree.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_alder_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
 end
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:alder_log_trf",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_forest_litter"},
@@ -587,15 +587,15 @@ end
 		biomes = {"temperate_rainforest"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_alder_log.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_alder_log.mts",
 		flags = "place_center_x",
 		rotation = "random",
 		spawn_by = {"ebiomes:dirt_with_grass_cold"},
 		num_spawn_by = 8,
 	})
 
-if minetest.settings:get_bool("light_mapgen", true) then
-	minetest.register_decoration({
+if core.settings:get_bool("light_mapgen", true) then
+	core.register_decoration({
 		name = "ebiomes:hornbeam_tree_trf",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_forest_litter"},
@@ -611,12 +611,12 @@ if minetest.settings:get_bool("light_mapgen", true) then
 		biomes = {"temperate_rainforest"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_hornbeam_tree.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_hornbeam_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
 else
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:hornbeam_tree_trf",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_forest_litter"},
@@ -632,13 +632,13 @@ else
 		biomes = {"temperate_rainforest"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_hornbeam_tree.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_hornbeam_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
 end
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:hornbeam_log_trf",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_forest_litter"},
@@ -648,7 +648,7 @@ end
 		biomes = {"temperate_rainforest"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_hornbeam_log.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_hornbeam_log.mts",
 		flags = "place_center_x",
 		rotation = "random",
 		spawn_by = {"ebiomes:dirt_with_forest_litter"},
@@ -656,7 +656,7 @@ end
 	})
 
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:chestnut_tree_trf",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_forest_litter"},
@@ -672,12 +672,12 @@ end
 		biomes = {"temperate_rainforest"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_chestnut_tree.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_chestnut_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:chestnut_log_trf",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_forest_litter"},
@@ -687,15 +687,15 @@ end
 		biomes = {"temperate_rainforest"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_chestnut_log.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_chestnut_log.mts",
 		flags = "place_center_x",
 		rotation = "random",
 		spawn_by = {"ebiomes:dirt_with_forest_litter"},
 		num_spawn_by = 8,
 	})
 
-if minetest.settings:get_bool("light_mapgen", true) then
-	minetest.register_decoration({
+if core.settings:get_bool("light_mapgen", true) then
+	core.register_decoration({
 		name = "ebiomes:pine_tree_trf",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_forest_litter"},
@@ -711,11 +711,11 @@ if minetest.settings:get_bool("light_mapgen", true) then
 		biomes = {"temperate_rainforest"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("default") .. "/schematics/pine_tree.mts",
+		schematic = core.get_modpath("default") .. "/schematics/pine_tree.mts",
 		flags = "place_center_x, place_center_z",
 	})
 else
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:pine_tree_trf",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_forest_litter"},
@@ -731,13 +731,13 @@ else
 		biomes = {"temperate_rainforest"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("default") .. "/schematics/pine_tree.mts",
+		schematic = core.get_modpath("default") .. "/schematics/pine_tree.mts",
 		flags = "place_center_x, place_center_z",
 	})
 end
 
-if minetest.settings:get_bool("light_mapgen", true) then
-	minetest.register_decoration({
+if core.settings:get_bool("light_mapgen", true) then
+	core.register_decoration({
 		name = "ebiomes:small_pine_tree_trf",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_forest_litter"},
@@ -753,11 +753,11 @@ if minetest.settings:get_bool("light_mapgen", true) then
 		biomes = {"temperate_rainforest"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("default") .. "/schematics/small_pine_tree.mts",
+		schematic = core.get_modpath("default") .. "/schematics/small_pine_tree.mts",
 		flags = "place_center_x, place_center_z",
 	})
 else
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:small_pine_tree_trf",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_forest_litter"},
@@ -773,12 +773,12 @@ else
 		biomes = {"temperate_rainforest"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("default") .. "/schematics/small_pine_tree.mts",
+		schematic = core.get_modpath("default") .. "/schematics/small_pine_tree.mts",
 		flags = "place_center_x, place_center_z",
 	})
 end
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:pine_log_trf",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_forest_litter"},
@@ -788,7 +788,7 @@ end
 		biomes = {"temperate_rainforest"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_pine_log.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_pine_log.mts",
 		flags = "place_center_x",
 		rotation = "random",
 		spawn_by = {"ebiomes:dirt_with_grass_cold"},
@@ -799,7 +799,7 @@ end
 -- Mod support
 
 -- Bonemeal
-if minetest.get_modpath("bonemeal") then
+if core.get_modpath("bonemeal") then
 	bonemeal:add_deco({
 		{"ebiomes:dirt_with_forest_litter", {"default:grass_1", "default:grass_2", "default:grass_3", "default:grass_4", "default:grass_5", "default:fern_1", "default:fern_2", "default:fern_3"},
 			{"flowers:rose"} }

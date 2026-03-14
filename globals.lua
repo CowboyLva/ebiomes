@@ -1,17 +1,17 @@
-local S = minetest.get_translator("ebiomes")
+local S = core.get_translator("ebiomes")
 
 --from runs cooltrees
 local modname = "ebiomes"
-local modpath = minetest.get_modpath(modname)
-local mg_name = minetest.get_mapgen_setting("mg_name")
+local modpath = core.get_modpath(modname)
+local mg_name = core.get_mapgen_setting("mg_name")
 
 --Globals
 
 --Aliases
 
-minetest.register_alias("desert_sand_with_debris", "ebiomes:desert_sand_with_debris")
-minetest.register_alias("sand_with_debris", "ebiomes:sand_with_debris")
-minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_debris")
+core.register_alias("desert_sand_with_debris", "ebiomes:desert_sand_with_debris")
+core.register_alias("sand_with_debris", "ebiomes:sand_with_debris")
+core.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_debris")
 
 --Biome basics
 
@@ -20,7 +20,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 
 	-- Clay
 
-	minetest.register_ore({
+	core.register_ore({
 		ore_type        = "blob",
 		ore             = "default:clay",
 		wherein         = {"default:dirt"},
@@ -42,7 +42,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 
 	-- Dirt
 
-	minetest.register_ore({
+	core.register_ore({
 		ore_type        = "blob",
 		ore             = "default:dirt",
 		wherein         = {"default:stone"},
@@ -68,7 +68,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 
 -- Desert sand with debris
 
-	minetest.register_node("ebiomes:desert_sand_with_debris", {
+	core.register_node("ebiomes:desert_sand_with_debris", {
 	    description = S("Desert Sand with Debris"),
 	    tiles = {"ebiomes_desert_sand_with_debris.png"},
 	    groups = {crumbly = 3, falling_node = 1, sand = 1},
@@ -76,14 +76,14 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 	    sounds = default.node_sound_sand_defaults(),
 	})
 
-    minetest.register_craft({
+    core.register_craft({
 	    output = "ebiomes:desert_sand_with_debris",
 	    recipe = {
 	    	{"default:desert_sand"}
 	    }
     })
 
-    minetest.register_craft({
+    core.register_craft({
 	    output = "default:desert_sand",
 	    recipe = {
 	    	{"ebiomes:desert_sand_with_debris"}
@@ -91,7 +91,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
     })
 
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:desert_sand_with_debris_l1",
 		deco_type = "simple",
 		place_on = {"default:desert_sand"},
@@ -114,7 +114,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 		rotation = "random",
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:desert_sand_with_debris_l1_low",
 		deco_type = "simple",
 		place_on = {"default:desert_sand"},
@@ -137,7 +137,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 		rotation = "random",
 	})
 	
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:desert_sand_with_debris_l2",
 		deco_type = "simple",
 		place_on = {"default:desert_sand"},
@@ -165,7 +165,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 
 -- Sand with debris
 
-	minetest.register_node("ebiomes:sand_with_debris", {
+	core.register_node("ebiomes:sand_with_debris", {
 	    description = S("Sand with Debris"),
 	    tiles = {"ebiomes_sand_with_debris.png"},
 	    groups = {crumbly = 3, falling_node = 1, sand = 1},
@@ -173,21 +173,21 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 	    sounds = default.node_sound_sand_defaults(),
 	})
 
-    minetest.register_craft({
+    core.register_craft({
 	    output = "ebiomes:sand_with_debris",
 	    recipe = {
 	    	{"default:sand"}
 	    }
     })
 
-    minetest.register_craft({
+    core.register_craft({
 	    output = "default:sand",
 	    recipe = {
 	    	{"ebiomes:sand_with_debris"}
 	    }
     })
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:sand_with_debris_l1",
 		deco_type = "simple",
 		place_on = {"default:sand"},
@@ -210,7 +210,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 		rotation = "random",
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:sand_with_debris_l1_low",
 		deco_type = "simple",
 		place_on = {"default:sand"},
@@ -233,7 +233,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 		rotation = "random",
 	})
 	
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:sand_with_debris_l2",
 		deco_type = "simple",
 		place_on = {"default_sand"},
@@ -261,7 +261,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 
 -- Silver sand with debris
 
-	minetest.register_node("ebiomes:silder_sand_with_debris", {
+	core.register_node("ebiomes:silder_sand_with_debris", {
 	    description = S("Silver Sand with Debris"),
 	    tiles = {"ebiomes_desert_sand_with_debris.png"},
 	    groups = {crumbly = 3, falling_node = 1, sand = 1},
@@ -269,14 +269,14 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 	    sounds = default.node_sound_sand_defaults(),
 	})
 
-    minetest.register_craft({
+    core.register_craft({
 	    output = "ebiomes:silver_sand_with_debris",
 	    recipe = {
 	    	{"default:silver_sand"}
 	    }
     })
 
-    minetest.register_craft({
+    core.register_craft({
 	    output = "default:silver_sand",
 	    recipe = {
 	    	{"ebiomes:silver_sand_with_debris"}
@@ -284,7 +284,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
     })
 
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:silver_sand_with_debris_l1",
 		deco_type = "simple",
 		place_on = {"default:silver_sand"},
@@ -307,7 +307,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 		rotation = "random",
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:silver_sand_with_debris_l1_low",
 		deco_type = "simple",
 		place_on = {"default:silver_sand"},
@@ -330,7 +330,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 		rotation = "random",
 	})
 	
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:silver_sand_with_debris_l2",
 		deco_type = "simple",
 		place_on = {"default_silver_sand"},
@@ -358,7 +358,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 --[[
 --Marram grass (template)
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:marram_grass",
 		deco_type = "simple",
 		place_on = {"default:sand"},
@@ -387,7 +387,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 
 	-- Marram grass
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:marram_grass_debris",
 		deco_type = "simple",
 		place_on = {"ebiomes:sand_with_debris"},
@@ -414,7 +414,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 
 --Decors
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:coral",
 		deco_type = "simple",
 		place_on = {"default:sand"},
@@ -443,7 +443,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 	})
 
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:bush",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_warm"},
@@ -459,11 +459,11 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 		biomes = {"warm_steppe", "deciduous_forest_cold", "deciduous_forest_warm", "grassland_warm"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/bush.mts",
+		schematic = core.get_modpath("default") .. "/schematics/bush.mts",
 		flags = "place_center_x, place_center_z",
 	})
 	
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:pine_bush",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_grass_steppe", "ebiomes:dirt_with_grass_steppe_cold", "ebiomes:dirt_with_grass_cold"},
@@ -479,13 +479,13 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 		biomes = {"steppe", "cold_steppe", "deciduous_forest_cold"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("default") .. "/schematics/pine_bush.mts",
+		schematic = core.get_modpath("default") .. "/schematics/pine_bush.mts",
 		flags = "place_center_x, place_center_z",
 	})
 
 --Trees
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:aspen_tree",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_grass_cold"},
@@ -501,11 +501,11 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 		biomes = {"deciduous_forest_cold"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("default") .. "/schematics/aspen_tree.mts",
+		schematic = core.get_modpath("default") .. "/schematics/aspen_tree.mts",
 		flags = "place_center_x, place_center_z",
 	})
 	
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:aspen_log",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_grass_cold"},
@@ -515,7 +515,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 		biomes = {"deciduous_forest_cold"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_aspen_log.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_aspen_log.mts",
 		flags = "place_center_x",
 		rotation = "random",
 		spawn_by = {"ebiomes:dirt_with_grass_cold"},
@@ -524,7 +524,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 
 
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:small_pine_tree",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_grass_cold"},
@@ -540,11 +540,11 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 		biomes = {"deciduous_forest_cold"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("default") .. "/schematics/small_pine_tree.mts",
+		schematic = core.get_modpath("default") .. "/schematics/small_pine_tree.mts",
 		flags = "place_center_x, place_center_z",
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:pine_log",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_grass_cold"},
@@ -554,7 +554,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 		biomes = {"deciduous_forest_cold"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_pine_log.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_pine_log.mts",
 		flags = "place_center_x",
 		rotation = "random",
 		spawn_by = {"ebiomes:dirt_with_grass_cold"},
@@ -563,7 +563,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 	
 	--Acacia
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:acacia_tree",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dry_dirt_with_humid_savanna_grass"},
@@ -579,12 +579,12 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 		biomes = {"humid_savanna"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/acacia_tree.mts",
+		schematic = core.get_modpath("default") .. "/schematics/acacia_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:acacia_log",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dry_dirt_with_humid_savanna_grass"},
@@ -601,7 +601,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 		biomes = {"humid_savanna"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/acacia_log.mts",
+		schematic = core.get_modpath("default") .. "/schematics/acacia_log.mts",
 		flags = "place_center_x",
 		rotation = "random",
 		spawn_by = "default:dry_dirt_with_dry_grass"
@@ -610,7 +610,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 	
 	--flowers
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:dandelion",
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_warm"},
@@ -629,7 +629,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 		decoration = "flowers:dandelion_yellow",
 	})
 		
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:dandelion_white",
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_warm"},
@@ -649,7 +649,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 	})
 
 	
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:tulip",
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_warm"},
@@ -669,7 +669,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 	})
 
 	
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:tulip_black",
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_grass_cold"},
@@ -688,7 +688,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 		decoration = "flowers:tulip_black",
 	})
 		
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:rose",
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_grass_warm"},
@@ -707,7 +707,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 		decoration = "flowers:rose",
 	})
 		
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:chrysanthemum_green",
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_warm"},
@@ -726,7 +726,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 		decoration = "flowers:chrysanthemum_green",
 	})
 		
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:blueberry_bush",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_warm"},
@@ -743,11 +743,11 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 		y_max = 31000,
 		y_min = 1,
 		place_offset_y = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/blueberry_bush.mts",
+		schematic = core.get_modpath("default") .. "/schematics/blueberry_bush.mts",
 		flags = "place_center_x, place_center_z",
 	})
 		
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:waterlily",
 		deco_type = "simple",
 		place_on = {"default:dirt"},
@@ -771,7 +771,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 
 	--mushrooms
 	
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:mushroom_brown",
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_warm", "ebiomes:dirt_with_japanese_rainforest_litter"},
@@ -790,7 +790,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 		decoration = "flowers:mushroom_brown",
 	})
 	
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:mushroom_red",
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_warm", "ebiomes:dirt_with_japanese_rainforest_litter"},
@@ -811,7 +811,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 
 -- Kelp
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:kelp",
 		deco_type = "simple",
 		place_on = {"default:sand"},
@@ -843,7 +843,7 @@ minetest.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_deb
 	})
 	
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:dry_shrub",
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_grass_steppe_cold", "ebiomes:dry_dirt_with_grass_arid", "ebiomes:dry_dirt_with_grass_arid_cool", "default:desert_sand", "default:silver_sand"},

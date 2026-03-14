@@ -1,38 +1,38 @@
-local S = minetest.get_translator("ebiomes")
+local S = core.get_translator("ebiomes")
 
 --from runs cooltrees
 local modname = "ebiomes"
-local modpath = minetest.get_modpath(modname)
-local mg_name = minetest.get_mapgen_setting("mg_name")
+local modpath = core.get_modpath(modname)
+local mg_name = core.get_mapgen_setting("mg_name")
 
 --Aliases
 
-minetest.register_alias("dirt_with_steppe_grass", "ebiomes:dirt_with_grass_steppe")
-minetest.register_alias("dirt_with_steppe_grass_footsteps", "ebiomes:dirt_with_grass_steppe_footsteps")
-minetest.register_alias("dirt_with_warm_steppe_grass", "ebiomes:dirt_with_grass_steppe_warm")
-minetest.register_alias("dirt_with_warm_steppe_grass_footsteps", "ebiomes:dirt_with_grass_steppe_warm_footsteps")
-minetest.register_alias("dirt_with_cold_steppe_grass", "ebiomes:dirt_with_grass_steppe_cold")
-minetest.register_alias("dirt_with_cold_steppe_grass_footsteps", "ebiomes:dirt_with_grass_steppe_cold_footsteps")
+core.register_alias("dirt_with_steppe_grass", "ebiomes:dirt_with_grass_steppe")
+core.register_alias("dirt_with_steppe_grass_footsteps", "ebiomes:dirt_with_grass_steppe_footsteps")
+core.register_alias("dirt_with_warm_steppe_grass", "ebiomes:dirt_with_grass_steppe_warm")
+core.register_alias("dirt_with_warm_steppe_grass_footsteps", "ebiomes:dirt_with_grass_steppe_warm_footsteps")
+core.register_alias("dirt_with_cold_steppe_grass", "ebiomes:dirt_with_grass_steppe_cold")
+core.register_alias("dirt_with_cold_steppe_grass_footsteps", "ebiomes:dirt_with_grass_steppe_cold_footsteps")
 
-minetest.register_alias("peashrub_peas", "ebiomes:peashrub_peas")
-minetest.register_alias("cooked_peas", "ebiomes:peas_cooked")
-minetest.register_alias("bucket_with_peas", "ebiomes:bucket_peas")
-minetest.register_alias("cooked_peas", "ebiomes:peas_cooked")
-minetest.register_alias("peashrub_leaves_with_peas", "ebiomes:peashrub_leaves_with_peas")
-minetest.register_alias("peashrub_stem", "ebiomes:peashrub_stem")
-minetest.register_alias("peashrub_leaves", "ebiomes:peashrub_leaves")
-minetest.register_alias("peashrub_sapling", "ebiomes:peashrub_sapling")
+core.register_alias("peashrub_peas", "ebiomes:peashrub_peas")
+core.register_alias("cooked_peas", "ebiomes:peas_cooked")
+core.register_alias("bucket_with_peas", "ebiomes:bucket_peas")
+core.register_alias("cooked_peas", "ebiomes:peas_cooked")
+core.register_alias("peashrub_leaves_with_peas", "ebiomes:peashrub_leaves_with_peas")
+core.register_alias("peashrub_stem", "ebiomes:peashrub_stem")
+core.register_alias("peashrub_leaves", "ebiomes:peashrub_leaves")
+core.register_alias("peashrub_sapling", "ebiomes:peashrub_sapling")
 
-minetest.register_alias("blue_allium", "ebiomes:blue_allium")
-minetest.register_alias("purple_blue_allium", "ebiomes:blue_allium_purple")
-minetest.register_alias("altai_tulip", "ebiomes:altai_tulip")
-minetest.register_alias("russian_iris", "ebiomes:russian_iris")
-minetest.register_alias("siberian_lily", "ebiomes:siberian_lily")
-minetest.register_alias("mountain_lily", "ebiomes:mountain_lily")
+core.register_alias("blue_allium", "ebiomes:blue_allium")
+core.register_alias("purple_blue_allium", "ebiomes:blue_allium_purple")
+core.register_alias("altai_tulip", "ebiomes:altai_tulip")
+core.register_alias("russian_iris", "ebiomes:russian_iris")
+core.register_alias("siberian_lily", "ebiomes:siberian_lily")
+core.register_alias("mountain_lily", "ebiomes:mountain_lily")
 
 --Steppe
 
-	minetest.register_node("ebiomes:dirt_with_grass_steppe", {
+	core.register_node("ebiomes:dirt_with_grass_steppe", {
 		description = S("Dirt with Steppe Grass"),
 		tiles = {"ebiomes_grass_steppe.png", "default_dirt.png",
 			{name = "default_dirt.png^ebiomes_grass_steppe_side.png",
@@ -49,7 +49,7 @@ minetest.register_alias("mountain_lily", "ebiomes:mountain_lily")
 		}
 	})
 
-	minetest.register_node("ebiomes:dirt_with_grass_steppe_footsteps", {
+	core.register_node("ebiomes:dirt_with_grass_steppe_footsteps", {
 		description = S("Dirt with Steppe Grass and Footsteps"),
 		tiles = {"ebiomes_grass_steppe.png^default_footprint.png", "default_dirt.png",
 			{name = "default_dirt.png^ebiomes_grass_steppe_side.png",
@@ -61,7 +61,7 @@ minetest.register_alias("mountain_lily", "ebiomes:mountain_lily")
 		}),
 	})
 
-	minetest.register_node("ebiomes:grass_steppe_1", {
+	core.register_node("ebiomes:grass_steppe_1", {
 		description = S("Steppe Grass"),
 		drawtype = "plantlike",
 		waving = 1,
@@ -89,14 +89,14 @@ minetest.register_alias("mountain_lily", "ebiomes:mountain_lily")
 		on_place = function(itemstack, placer, pointed_thing)
 			-- place a random grass node
 			local stack = ItemStack("ebiomes:grass_steppe_" .. math.random(1,5))
-			local ret = minetest.item_place(stack, placer, pointed_thing)
+			local ret = core.item_place(stack, placer, pointed_thing)
 			return ItemStack("ebiomes:grass_steppe_1 " ..
 				itemstack:get_count() - (1 - ret:get_count()))
 		end,
 	})
 
 for i = 2, 5 do
-	minetest.register_node("ebiomes:grass_steppe_" .. i, {
+	core.register_node("ebiomes:grass_steppe_" .. i, {
 		description = S("Steppe Grass"),
 		drawtype = "plantlike",
 		waving = 1,
@@ -123,7 +123,7 @@ for i = 2, 5 do
 	})
 end
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "steppe",
 		node_top = "ebiomes:dirt_with_grass_steppe",
 		depth_top = 1,
@@ -140,7 +140,7 @@ end
 		humidity_point = 35,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "steppe_dunes",
 		node_top = "default:sand",
 		depth_top = 1,
@@ -158,7 +158,7 @@ end
 		humidity_point = 35,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "steppe_ocean",
 		node_top = "default:sand",
 		depth_top = 1,
@@ -176,7 +176,7 @@ end
 		humidity_point = 35,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "steppe_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
@@ -189,7 +189,7 @@ end
 	})
 
 for length = 1, 5 do
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:grass_steppe_"..length,
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_grass_steppe"},
@@ -210,7 +210,7 @@ end
 
 --Warm Steppe
 
-	minetest.register_node("ebiomes:dirt_with_grass_steppe_warm", {
+	core.register_node("ebiomes:dirt_with_grass_steppe_warm", {
 		description = S("Dirt with Warm Steppe Grass"),
 		tiles = {"ebiomes_grass_steppe_warm.png", "default_dirt.png",
 			{name = "default_dirt.png^ebiomes_grass_steppe_warm_side.png",
@@ -227,7 +227,7 @@ end
 		}
 	})
 
-	minetest.register_node("ebiomes:dirt_with_grass_steppe_warm_footsteps", {
+	core.register_node("ebiomes:dirt_with_grass_steppe_warm_footsteps", {
 		description = S("Dirt with steppeiterranean Grass and Footsteps"),
 		tiles = {"ebiomes_grass_steppe_warm.png^default_footprint.png", "default_dirt.png",
 			{name = "default_dirt.png^ebiomes_grass_steppe_warm_side.png",
@@ -239,7 +239,7 @@ end
 		}),
 	})
 
-	minetest.register_node("ebiomes:grass_steppe_warm_1", {
+	core.register_node("ebiomes:grass_steppe_warm_1", {
 		description = S("Warm Steppe Grass"),
 		drawtype = "plantlike",
 		waving = 1,
@@ -267,14 +267,14 @@ end
 		on_place = function(itemstack, placer, pointed_thing)
 			-- place a random grass_warm node
 			local stack = ItemStack("ebiomes:grass_steppe_warm_" .. math.random(1,5))
-			local ret = minetest.item_place(stack, placer, pointed_thing)
+			local ret = core.item_place(stack, placer, pointed_thing)
 			return ItemStack("ebiomes:grass_steppe_warm_1 " ..
 				itemstack:get_count() - (1 - ret:get_count()))
 		end,
 	})
 
 for i = 2, 5 do
-	minetest.register_node("ebiomes:grass_steppe_warm_" .. i, {
+	core.register_node("ebiomes:grass_steppe_warm_" .. i, {
 		description = S("Warm Steppe Grass"),
 		drawtype = "plantlike",
 		waving = 1,
@@ -301,7 +301,7 @@ for i = 2, 5 do
 	})
 end
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "warm_steppe",
 		node_top = "ebiomes:dirt_with_grass_steppe_warm",
 		depth_top = 1,
@@ -318,7 +318,7 @@ end
 		humidity_point = 35,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "warm_steppe_dunes",
 		node_top = "default:sand",
 		depth_top = 1,
@@ -336,7 +336,7 @@ end
 		humidity_point = 35,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "warm_steppe_ocean",
 		node_top = "default:sand",
 		depth_top = 1,
@@ -354,7 +354,7 @@ end
 		humidity_point = 35,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "warm_steppe_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
@@ -367,7 +367,7 @@ end
 	})
 
 for length = 1, 5 do
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:grass_steppe_warm_"..length,
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_grass_steppe_warm"},
@@ -388,7 +388,7 @@ end
 
 --Cold Steppe
 
-	minetest.register_node("ebiomes:dirt_with_grass_steppe_cold", {
+	core.register_node("ebiomes:dirt_with_grass_steppe_cold", {
 		description = S("Dirt with Cold Steppe Grass"),
 		tiles = {"ebiomes_grass_steppe_cold.png", "default_dirt.png",
 			{name = "default_dirt.png^ebiomes_grass_steppe_cold_side.png",
@@ -400,7 +400,7 @@ end
 		}),
 	})
 
-	minetest.register_node("ebiomes:dirt_with_grass_steppe_cold_footsteps", {
+	core.register_node("ebiomes:dirt_with_grass_steppe_cold_footsteps", {
 		description = S("Dirt with steppeiterranean Grass and Footsteps"),
 		tiles = {"ebiomes_grass_steppe_cold.png^default_footprint.png", "default_dirt.png",
 			{name = "default_dirt.png^ebiomes_grass_steppe_cold_side.png",
@@ -412,7 +412,7 @@ end
 		}),
 	})
 
-	minetest.register_node("ebiomes:grass_steppe_cold_1", {
+	core.register_node("ebiomes:grass_steppe_cold_1", {
 		description = S("Cold Steppe Grass"),
 		drawtype = "plantlike",
 		waving = 1,
@@ -435,14 +435,14 @@ end
 		on_place = function(itemstack, placer, pointed_thing)
 			-- place a random grass node
 			local stack = ItemStack("ebiomes:grass_steppe_cold_" .. math.random(1,5))
-			local ret = minetest.item_place(stack, placer, pointed_thing)
+			local ret = core.item_place(stack, placer, pointed_thing)
 			return ItemStack("ebiomes:grass_steppe_cold_1 " ..
 				itemstack:get_count() - (1 - ret:get_count()))
 		end,
 	})
 
 for i = 2, 5 do
-	minetest.register_node("ebiomes:grass_steppe_cold_" .. i, {
+	core.register_node("ebiomes:grass_steppe_cold_" .. i, {
 		description = S("Cold Steppe Grass"),
 		drawtype = "plantlike",
 		waving = 1,
@@ -464,7 +464,7 @@ for i = 2, 5 do
 	})
 end
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "cold_steppe",
 		node_top = "ebiomes:dirt_with_grass_steppe_cold",
 		depth_top = 1,
@@ -481,7 +481,7 @@ end
 		humidity_point = 35,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "cold_steppe_dunes",
 		node_top = "default:sand",
 		depth_top = 1,
@@ -499,7 +499,7 @@ end
 		humidity_point = 35,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "cold_steppe_ocean",
 		node_top = "default:sand",
 		depth_top = 1,
@@ -517,7 +517,7 @@ end
 		humidity_point = 35,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "cold_steppe_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
@@ -530,7 +530,7 @@ end
 	})
 
 for length = 1, 5 do
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:grass_steppe_cold_"..length,
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_grass_steppe_cold"},
@@ -553,7 +553,7 @@ end
 
 --Biome specific
 
-	minetest.register_node("ebiomes:blue_allium", {
+	core.register_node("ebiomes:blue_allium", {
 		description = S("Blue Allium"),
 		tiles = {"ebiomes_blue_allium.png"},
 		inventory_image = "ebiomes_blue_allium.png",
@@ -571,14 +571,14 @@ end
 		}
 	})
 
-    minetest.register_craft({
+    core.register_craft({
 		output = "dye:blue 4",
 		recipe = {
 			{"ebiomes:blue_allium"}
 		},
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:blue_allium",
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_grass_steppe"},
@@ -596,7 +596,7 @@ end
 		decoration = "ebiomes:blue_allium",
 	})
 
-	minetest.register_node("ebiomes:blue_allium_purple", {
+	core.register_node("ebiomes:blue_allium_purple", {
 		description = S("Purple Blue Allium"),
 		tiles = {"ebiomes_blue_allium_purple.png"},
 		inventory_image = "ebiomes_blue_allium_purple.png",
@@ -614,14 +614,14 @@ end
 		}
 	})
 
-    minetest.register_craft({
+    core.register_craft({
 		output = "dye:violet 4",
 		recipe = {
 			{"ebiomes:blue_allium_purple"}
 		},
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:blue_allium_purple",
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_grass_steppe"},
@@ -639,7 +639,7 @@ end
 		decoration = "ebiomes:blue_allium_purple",
 	})
 
-	minetest.register_node("ebiomes:altai_tulip", {
+	core.register_node("ebiomes:altai_tulip", {
 		description = S("Altai Tulip"),
 		tiles = {"ebiomes_altai_tulip.png"},
 		inventory_image = "ebiomes_altai_tulip.png",
@@ -657,14 +657,14 @@ end
 		}
 	})
 
-    minetest.register_craft({
+    core.register_craft({
 		output = "dye:yellow 4",
 		recipe = {
 			{"ebiomes:altai_tulip"}
 		},
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:altai_tulip",
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_grass_steppe"},
@@ -684,7 +684,7 @@ end
 
 	--warm
 
-	minetest.register_node("ebiomes:russian_iris", {
+	core.register_node("ebiomes:russian_iris", {
 		description = S("Russian Iris"),
 		tiles = {"ebiomes_russian_iris.png"},
 		inventory_image = "ebiomes_russian_iris.png",
@@ -702,14 +702,14 @@ end
 		}
 	})
 
-    minetest.register_craft({
+    core.register_craft({
 		output = "dye:blue 4",
 		recipe = {
 			{"ebiomes:russian_iris"}
 		},
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:russian_iris",
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_grass_steppe_warm"},
@@ -729,7 +729,7 @@ end
 
 	--cold
 
-	minetest.register_node("ebiomes:siberian_lily", {
+	core.register_node("ebiomes:siberian_lily", {
 		description = S("Siberian Lily"),
 		tiles = {"ebiomes_siberian_lily.png"},
 		inventory_image = "ebiomes_siberian_lily.png",
@@ -747,14 +747,14 @@ end
 		}
 	})
 
-    minetest.register_craft({
+    core.register_craft({
 		output = "dye:orange 4",
 		recipe = {
 			{"ebiomes:siberian_lily"}
 		},
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:siberian_lily",
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_grass_steppe_cold"},
@@ -773,7 +773,7 @@ end
 	})
 
 
-	minetest.register_node("ebiomes:mountain_lily", {
+	core.register_node("ebiomes:mountain_lily", {
 		description = S("Mountain Lily"),
 		tiles = {"ebiomes_mountain_lily.png"},
 		inventory_image = "ebiomes_mountain_lily.png",
@@ -791,14 +791,14 @@ end
 		}
 	})
 
-    minetest.register_craft({
+    core.register_craft({
 		output = "dye:blue 4",
 		recipe = {
 			{"ebiomes:mountain_lily"}
 		},
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:mountain_lily",
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_grass_steppe_cold"},
@@ -821,34 +821,34 @@ end
 local function grow_new_peashrub(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(150, 300))
+		core.get_node_timer(pos):start(math.random(150, 300))
 		return
 	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-1, y = pos.y, z = pos.z-1}, modpath.."/schematics/ebiomes_peashrub.mts", "0", nil, false)
+	core.remove_node(pos)
+	core.place_schematic({x = pos.x-1, y = pos.y, z = pos.z-1}, modpath.."/schematics/ebiomes_peashrub.mts", "0", nil, false)
 end
 
 
-	minetest.register_craftitem("ebiomes:peashrub_peas", {
+	core.register_craftitem("ebiomes:peashrub_peas", {
 		description = S("Peashrub Peas"),
 		inventory_image = "ebiomes_peashrub_peas.png",
 		groups = {cooking_peas = 1},
 	})
 
-	minetest.register_craftitem("ebiomes:peas_cooked", {
+	core.register_craftitem("ebiomes:peas_cooked", {
 		description = S("Cooked Peas"),
 		inventory_image = "ebiomes_peas_cooked.png",
 		groups = {food_peas = 1, eatable = 5},
-		on_use = minetest.item_eat(5),
+		on_use = core.item_eat(5),
 	})
 
-	minetest.register_craftitem("ebiomes:bucket_peas", {
+	core.register_craftitem("ebiomes:bucket_peas", {
 		description = S("Bucket of Peas"),
 		inventory_image = "ebiomes_bucket_peas.png",
 		groups = {cookables_peas = 1},
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		output = "ebiomes:bucket_peas",
 		recipe = {
             {"group:cooking_peas"},
@@ -856,7 +856,7 @@ end
 		}
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		output = "ebiomes:bucket_peas",
 		recipe = {
             {"group:cooking_peas"},
@@ -864,7 +864,7 @@ end
 		}
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		type = "cooking",
 		output = "ebiomes:peas_cooked",
 		recipe = "ebiomes:bucket_peas",
@@ -872,7 +872,7 @@ end
 		cooktime = 5,
 	})
 
-	minetest.register_node("ebiomes:peashrub_leaves_with_peas", {
+	core.register_node("ebiomes:peashrub_leaves_with_peas", {
 		description = S("Peashrub Bush Leaves with Peas"),
 		drawtype = "allfaces_optional",
 		tiles = {"ebiomes_peashrub_leaves.png^ebiomes_peashrub_overlay.png"},
@@ -883,13 +883,13 @@ end
 		node_dig_prediction = "ebiomes:peashrub_leaves",
 
 		after_dig_node = function(pos, oldnode, oldmetadata, digger)
-			minetest.set_node(pos, {name = "ebiomes:peashrub_leaves"})
-			minetest.get_node_timer(pos):start(math.random(300, 1500))
+			core.set_node(pos, {name = "ebiomes:peashrub_leaves"})
+			core.get_node_timer(pos):start(math.random(300, 1500))
 		end,
 	})
 
 
-	minetest.register_node("ebiomes:peashrub_leaves", {
+	core.register_node("ebiomes:peashrub_leaves", {
 		description = S("Peashrub Leaves"),
 		drawtype = "allfaces_optional",
 		tiles = {"ebiomes_peashrub_leaves.png"},
@@ -905,10 +905,10 @@ end
 		sounds = default.node_sound_leaves_defaults(),
 
 		on_timer = function(pos, elapsed)
-			if minetest.get_node_light(pos) < 11 then
-				minetest.get_node_timer(pos):start(200)
+			if core.get_node_light(pos) < 11 then
+				core.get_node_timer(pos):start(200)
 			else
-				minetest.set_node(pos, {name = "ebiomes:peashrub_leaves_with_peas"})
+				core.set_node(pos, {name = "ebiomes:peashrub_leaves_with_peas"})
 			end
 		end,
 
@@ -921,7 +921,7 @@ end
 		radius = 3,
 	})
 
-	minetest.register_node("ebiomes:peashrub_sapling", {
+	core.register_node("ebiomes:peashrub_sapling", {
 		description = S("Peashrub Sapling"),
 		drawtype = "plantlike",
 		tiles = {"ebiomes_peashrub_sapling.png"},
@@ -940,7 +940,7 @@ end
 		sounds = default.node_sound_leaves_defaults(),
 
 		on_construct = function(pos)
-			minetest.get_node_timer(pos):start(math.random(300, 1500))
+			core.get_node_timer(pos):start(math.random(300, 1500))
 		end,
 
 		on_place = function(itemstack, placer, pointed_thing)
@@ -956,7 +956,7 @@ end
 		end,
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:peashrub",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_grass_steppe", "ebiomes:dirt_with_grass_steppe_cold"},
@@ -973,11 +973,11 @@ end
 		y_max = 31000,
 		y_min = 1,
 		place_offset_y = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_peashrub.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_peashrub.mts",
 		flags = "place_center_x, place_center_z",
 	})
 
-if minetest.get_modpath("bonemeal") ~= nil then
+if core.get_modpath("bonemeal") ~= nil then
 	bonemeal:add_sapling({
 		{"ebiomes:peashrub_sapling", grow_new_peashrub, "soil"},
 	})
@@ -985,14 +985,14 @@ end
 
 --Dungeon loot
 
-if minetest.global_exists("dungeon_loot") then
+if core.global_exists("dungeon_loot") then
 	dungeon_loot.register ({
 		{name = "ebiomes:peashrub_peas", chance = 0.3, count = {2, 4}},
 	})
 end
 
 --Bonemeal
-if minetest.get_modpath("bonemeal") then
+if core.get_modpath("bonemeal") then
 	bonemeal:add_deco({
 		{"ebiomes:dirt_with_grass_steppe", {"ebiomes:grass_steppe_1", "ebiomes:grass_steppe_2", "ebiomes:grass_steppe_3", "ebiomes:grass_steppe_4", "ebiomes:grass_steppe_5"},
 			{"ebiomes:altai_tulip", "ebiomes:blue_allium", "ebiomes:blue_allium_purple"} }
@@ -1012,7 +1012,7 @@ end
 --Peripheral mod support
 
 -- Support for flowerpot
-if minetest.global_exists("flowerpot") then
+if core.global_exists("flowerpot") then
 
 	flowerpot.register_node("ebiomes:peashrub_sapling")
 

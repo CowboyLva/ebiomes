@@ -2,9 +2,9 @@ local mm = nssm.multimobs
 
 --[[
 nssm = {
-	mymapgenis = tonumber(minetest.settings:get("mymapgenis")) or 7,
-	multimobs = tonumber(minetest.settings:get("multimobs")) or 1000,
-	spiders_litter_web = minetest.settings:get_bool("spiders_litter_web", true)
+	mymapgenis = tonumber(core.settings:get("mymapgenis")) or 7,
+	multimobs = tonumber(core.settings:get("multimobs")) or 1000,
+	spiders_litter_web = core.settings:get_bool("spiders_litter_web", true)
 }
 --]]
 
@@ -122,7 +122,7 @@ nssm = {
 			0, 20, 80, 20000000/mm, 1, -200, 31000)
 
 --[[
-if minetest.get_modpath("nssb") then
+if core.get_modpath("nssb") then
 
 
 

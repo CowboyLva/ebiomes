@@ -1,15 +1,15 @@
-local S = minetest.get_translator("ebiomes")
+local S = core.get_translator("ebiomes")
 
 --from runs cooltrees
 local modname = "ebiomes"
-local modpath = minetest.get_modpath(modname)
-local mg_name = minetest.get_mapgen_setting("mg_name")
+local modpath = core.get_modpath(modname)
+local mg_name = core.get_mapgen_setting("mg_name")
 
 
 --Fireflies
-if minetest.get_modpath("fireflies") then
+if core.get_modpath("fireflies") then
 	
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:firefly_low",
 		deco_type = "simple",
 		place_on = {
@@ -41,7 +41,7 @@ if minetest.get_modpath("fireflies") then
 		decoration = "fireflies:hidden_firefly",
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:firefly_high",
 		deco_type = "simple",
 		place_on = {
@@ -76,7 +76,7 @@ if minetest.get_modpath("fireflies") then
 end
 
 
-minetest.register_decoration({
+core.register_decoration({
 		name = "ebiomes:butterfly",
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_grass_med", "ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_steppe", "ebiomes:dirt_with_grass_steppe_cold", "ebiomes:dirt_with_grass_warm", "ebiomes:dirt_with_grass_swamp", "ebiomes:peat_with_swamp_moss_yellow", "ebiomes:peat_wet_with_swamp_moss_green", "ebiomes:dirt_with_japanese_rainforest_litter", "ebiomes:dry_dirt_with_humid_savanna_grass", "default:dirt_with_grass"},

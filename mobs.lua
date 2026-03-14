@@ -1,5 +1,5 @@
 --monsters
-if minetest.get_modpath("mobs_monster") then
+if core.get_modpath("mobs_monster") then
 	mobs:spawn({
 		name = "mobs_monster:dirt_monster",
 		nodes = {"ebiomes:dirt_with_grass_med", "ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_steppe", "ebiomes:dirt_with_grass_steppe_cold", "ebiomes:dirt_with_grass_cold", "ebiomes:dirt_with_grass_swamp", "ebiomes:dirt_with_grass_warm", "ebiomes:dry_dirt_with_grass_arid", "ebiomes:dry_dirt_with_grass_arid_cool", "ebiomes:peat_with_swamp_moss_yellow", "ebiomes:dirt_with_japanese_rainforest_litter", "ebiomes:dry_dirt_with_humid_savanna_grass", "ebiomes:dirt_with_forest_litter", "ebiomes:dirt_with_jungle_savanna_grass"},
@@ -62,7 +62,7 @@ end
 
 
 --animals
-if minetest.get_modpath("mobs_animal") then
+if core.get_modpath("mobs_animal") then
 
 	mobs:spawn({
 		name = "mobs_animal:cow",
@@ -103,7 +103,7 @@ if minetest.get_modpath("mobs_animal") then
 end
 
 --npcs
-if minetest.get_modpath("mobs_npc") then
+if core.get_modpath("mobs_npc") then
 	mobs:spawn({
 		name = "mobs_npc:npc",
 		nodes = {"default:brick"},
@@ -117,7 +117,7 @@ if minetest.get_modpath("mobs_npc") then
 end
 
 --horse
-if minetest.get_modpath("mob_horse") then
+if core.get_modpath("mob_horse") then
 	mobs:spawn({
 		name = "mob_horse:horse",
 		nodes = {"ebiomes:dirt_with_grass_med", "ebiomes:dirt_with_grass_steppe_warm", "ebiomes:dirt_with_grass_steppe", "ebiomes:dirt_with_grass_steppe_cold"},

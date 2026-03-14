@@ -5,19 +5,19 @@ local old_decor = {}
 
 
 -- backup registered biome data
-for key, def in pairs(minetest.registered_biomes) do
+for key, def in pairs(core.registered_biomes) do
 	old_biomes[key] = def
 end
 
-for key, def in pairs(minetest.registered_decorations) do
+for key, def in pairs(core.registered_decorations) do
 	old_decor[key] = def
 end
 
 
 -- clear current biome data
-minetest.clear_registered_biomes()
-minetest.clear_registered_decorations()
--- minetest.clear_registered_ores()
+core.clear_registered_biomes()
+core.clear_registered_decorations()
+-- core.clear_registered_ores()
 
 
 -- create list of default biomes to remove
@@ -30,7 +30,7 @@ local def_biomes = {
 for key, def in pairs(old_biomes) do
 
 	if not def_biomes[key] then
-		minetest.register_biome(def)
+		core.register_biome(def)
 	end
 end
 
@@ -72,7 +72,7 @@ for key, def in pairs(old_decor) do
 
 		def.biomes = new_biomes
 
-		minetest.register_decoration(def)
+		core.register_decoration(def)
 	end
 end
 
@@ -83,7 +83,7 @@ end
 
 	-- Snowy grassland
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "snowy_grassland",
 		node_dust = "default:snow",
 		node_top = "default:dirt_with_snow",
@@ -101,7 +101,7 @@ end
 		humidity_point = 35,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "snowy_grassland_ocean",
 		node_dust = "default:snow",
 		node_top = "default:sand",
@@ -121,7 +121,7 @@ end
 		humidity_point = 35,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "snowy_grassland_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
@@ -135,7 +135,7 @@ end
 
 	-- Dirt
 
-	minetest.register_ore({
+	core.register_ore({
 		ore_type        = "blob",
 		ore             = "default:dirt",
 		wherein         = {"default:stone"},
@@ -158,7 +158,7 @@ end
 
     -- Pine bush
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:pine_bush_sg",
 		deco_type = "schematic",
 		place_on = {"default:dirt_with_snow"},
@@ -174,6 +174,6 @@ end
 		biomes = {"snowy_grassland"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("default") .. "/schematics/pine_bush.mts",
+		schematic = core.get_modpath("default") .. "/schematics/pine_bush.mts",
 		flags = "place_center_x, place_center_z",
 	})

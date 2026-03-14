@@ -1,70 +1,70 @@
-local S = minetest.get_translator("ebiomes")
+local S = core.get_translator("ebiomes")
 
 --from runs cooltrees
 local modname = "ebiomes"
-local modpath = minetest.get_modpath(modname)
-local mg_name = minetest.get_mapgen_setting("mg_name")
+local modpath = core.get_modpath(modname)
+local mg_name = core.get_mapgen_setting("mg_name")
 
 --Aliases
 
-minetest.register_alias("dirt_cold_grass", "ebiomes:dirt_with_grass_cold")
-minetest.register_alias("dirt_with_cold_grass_footsteps", "ebiomes:dirt_with_grass_cold_footsteps")
-minetest.register_alias("dirt_with_swamp_grass", "ebiomes:dirt_with_grass_swamp")
-minetest.register_alias("dirt_with_swamp_grass_footsteps", "ebiomes:dirt_with_grass_swamp_footsteps")
-minetest.register_alias("swamp_water", "ebiomes:swamp_water_source")
-minetest.register_alias("wet_peat_with_green_swamp_moss", "ebiomes:peat_wet_with_swamp_moss_green")
-minetest.register_alias("wet_peat_with_green_swamp_moss_footsteps", "ebiomes:peat_wet_with_swamp_moss_green_footsteps")
-minetest.register_alias("peat_with_yellow_swamp_moss", "ebiomes:peat_with_swamp_moss_yellow")
-minetest.register_alias("peat_with_yellow_swamp_moss_footsteps", "ebiomes:peat_with_swamp_moss_yellow_footsteps")
+core.register_alias("dirt_cold_grass", "ebiomes:dirt_with_grass_cold")
+core.register_alias("dirt_with_cold_grass_footsteps", "ebiomes:dirt_with_grass_cold_footsteps")
+core.register_alias("dirt_with_swamp_grass", "ebiomes:dirt_with_grass_swamp")
+core.register_alias("dirt_with_swamp_grass_footsteps", "ebiomes:dirt_with_grass_swamp_footsteps")
+core.register_alias("swamp_water", "ebiomes:swamp_water_source")
+core.register_alias("wet_peat_with_green_swamp_moss", "ebiomes:peat_wet_with_swamp_moss_green")
+core.register_alias("wet_peat_with_green_swamp_moss_footsteps", "ebiomes:peat_wet_with_swamp_moss_green_footsteps")
+core.register_alias("peat_with_yellow_swamp_moss", "ebiomes:peat_with_swamp_moss_yellow")
+core.register_alias("peat_with_yellow_swamp_moss_footsteps", "ebiomes:peat_with_swamp_moss_yellow_footsteps")
 
-minetest.register_alias("reeds", "ebiomes:reeds")
-minetest.register_alias("green_marsh_grass", "ebiomes:marsh_grass_green")
-minetest.register_alias("yellow_marsh_grass", "ebiomes:marsh_grass_yellow")
+core.register_alias("reeds", "ebiomes:reeds")
+core.register_alias("green_marsh_grass", "ebiomes:marsh_grass_green")
+core.register_alias("yellow_marsh_grass", "ebiomes:marsh_grass_yellow")
 
-minetest.register_alias("blackcurrant_bush_leaves", "ebiomes:blackcurrant_bush_leaves")
-minetest.register_alias("blackcurrant_bush_leaves", "ebiomes:blackcurrant_bush_leaves_with_berries")
-minetest.register_alias("blackcurrant_bush_sapling", "ebiomes:blackcurrant_bush_sapling")
-minetest.register_alias("blackcurrants", "ebiomes:blackcurrants")
-minetest.register_alias("redcurrant_bush_leaves", "ebiomes:redcurrant_bush_leaves")
-minetest.register_alias("redcurrant_bush_leaves", "ebiomes:redcurrant_bush_leaves_with_berries")
-minetest.register_alias("redcurrant_bush_sapling", "ebiomes:redcurrant_bush_sapling")
-minetest.register_alias("redcurrants", "ebiomes:redcurrants")
-minetest.register_alias("gooseberry_bush_leaves", "ebiomes:gooseberry_bush_leaves")
-minetest.register_alias("gooseberry_bush_leaves", "ebiomes:gooseberry_bush_leaves_with_berries")
-minetest.register_alias("gooseberry_bush_sapling", "ebiomes:gooseberry_bush_sapling")
-minetest.register_alias("gooseberries", "ebiomes:gooseberries")
+core.register_alias("blackcurrant_bush_leaves", "ebiomes:blackcurrant_bush_leaves")
+core.register_alias("blackcurrant_bush_leaves", "ebiomes:blackcurrant_bush_leaves_with_berries")
+core.register_alias("blackcurrant_bush_sapling", "ebiomes:blackcurrant_bush_sapling")
+core.register_alias("blackcurrants", "ebiomes:blackcurrants")
+core.register_alias("redcurrant_bush_leaves", "ebiomes:redcurrant_bush_leaves")
+core.register_alias("redcurrant_bush_leaves", "ebiomes:redcurrant_bush_leaves_with_berries")
+core.register_alias("redcurrant_bush_sapling", "ebiomes:redcurrant_bush_sapling")
+core.register_alias("redcurrants", "ebiomes:redcurrants")
+core.register_alias("gooseberry_bush_leaves", "ebiomes:gooseberry_bush_leaves")
+core.register_alias("gooseberry_bush_leaves", "ebiomes:gooseberry_bush_leaves_with_berries")
+core.register_alias("gooseberry_bush_sapling", "ebiomes:gooseberry_bush_sapling")
+core.register_alias("gooseberries", "ebiomes:gooseberries")
 
-minetest.register_alias("cranberry_patch", "ebiomes:cranberry_patch")
-minetest.register_alias("cranberries", "ebiomes:cranberries")
-minetest.register_alias("sundew", "ebiomes:sundew")
-minetest.register_alias("marigold", "ebiomes:marigold")
-minetest.register_alias("marsh_stitchwort", "ebiomes:marsh_stitchwort")
+core.register_alias("cranberry_patch", "ebiomes:cranberry_patch")
+core.register_alias("cranberries", "ebiomes:cranberries")
+core.register_alias("sundew", "ebiomes:sundew")
+core.register_alias("marigold", "ebiomes:marigold")
+core.register_alias("marsh_stitchwort", "ebiomes:marsh_stitchwort")
 
-minetest.register_alias("alder_tree", "ebiomes:alder_tree")
-minetest.register_alias("alder_wood", "ebiomes:alder_wood")
-minetest.register_alias("alder_leaves", "ebiomes:alder_leaves")
-minetest.register_alias("alder_sapling", "ebiomes:alder_sapling")
-minetest.register_alias("ash_tree", "ebiomes:ash_tree")
-minetest.register_alias("ash_wood", "ebiomes:ash_wood")
-minetest.register_alias("ash_leaves", "ebiomes:ash_leaves")
-minetest.register_alias("ash_sapling", "ebiomes:ash_sapling")
-minetest.register_alias("birch_tree", "ebiomes:birch_tree")
-minetest.register_alias("birch_wood", "ebiomes:birch_wood")
-minetest.register_alias("birch_leaves", "ebiomes:birch_leaves")
-minetest.register_alias("birch_sapling", "ebiomes:birch_sapling")
-minetest.register_alias("willow_tree", "ebiomes:willow_tree")
-minetest.register_alias("willow_wood", "ebiomes:willow_wood")
-minetest.register_alias("willow_leaves", "ebiomes:willow_leaves")
-minetest.register_alias("willow_sapling", "ebiomes:willow_sapling")
+core.register_alias("alder_tree", "ebiomes:alder_tree")
+core.register_alias("alder_wood", "ebiomes:alder_wood")
+core.register_alias("alder_leaves", "ebiomes:alder_leaves")
+core.register_alias("alder_sapling", "ebiomes:alder_sapling")
+core.register_alias("ash_tree", "ebiomes:ash_tree")
+core.register_alias("ash_wood", "ebiomes:ash_wood")
+core.register_alias("ash_leaves", "ebiomes:ash_leaves")
+core.register_alias("ash_sapling", "ebiomes:ash_sapling")
+core.register_alias("birch_tree", "ebiomes:birch_tree")
+core.register_alias("birch_wood", "ebiomes:birch_wood")
+core.register_alias("birch_leaves", "ebiomes:birch_leaves")
+core.register_alias("birch_sapling", "ebiomes:birch_sapling")
+core.register_alias("willow_tree", "ebiomes:willow_tree")
+core.register_alias("willow_wood", "ebiomes:willow_wood")
+core.register_alias("willow_leaves", "ebiomes:willow_leaves")
+core.register_alias("willow_sapling", "ebiomes:willow_sapling")
 
-minetest.register_alias("downy_birch_tree", "ebiomes:downy_birch_tree")
-minetest.register_alias("downy_birch_wood", "ebiomes:downy_birch_wood")
-minetest.register_alias("downy_birch_leaves", "ebiomes:downy_birch_leaves")
-minetest.register_alias("downy_birch_sapling", "ebiomes:downy_birch_sapling")
+core.register_alias("downy_birch_tree", "ebiomes:downy_birch_tree")
+core.register_alias("downy_birch_wood", "ebiomes:downy_birch_wood")
+core.register_alias("downy_birch_leaves", "ebiomes:downy_birch_leaves")
+core.register_alias("downy_birch_sapling", "ebiomes:downy_birch_sapling")
 
 --Cold deciduous
 
-	minetest.register_node("ebiomes:dirt_with_grass_cold", {
+	core.register_node("ebiomes:dirt_with_grass_cold", {
 		description = S("Dirt with Cold Grass"),
 		tiles = {"ebiomes_grass_cold.png", "default_dirt.png",
 			{name = "default_dirt.png^ebiomes_grass_cold_side.png",
@@ -81,7 +81,7 @@ minetest.register_alias("downy_birch_sapling", "ebiomes:downy_birch_sapling")
 		}
 	})
 
-	minetest.register_node("ebiomes:dirt_with_grass_cold_footsteps", {
+	core.register_node("ebiomes:dirt_with_grass_cold_footsteps", {
 		description = S("Dirt with Cold Grass and Footsteps"),
 		tiles = {"ebiomes_grass_cold.png^default_footprint.png", "default_dirt.png",
 			{name = "default_dirt.png^ebiomes_grass_cold_side.png",
@@ -93,7 +93,7 @@ minetest.register_alias("downy_birch_sapling", "ebiomes:downy_birch_sapling")
 		}),
 	})
 
-	minetest.register_node("ebiomes:grass_cold_1", {
+	core.register_node("ebiomes:grass_cold_1", {
 		description = S("Cold Grass"),
 		drawtype = "plantlike",
 		waving = 1,
@@ -121,14 +121,14 @@ minetest.register_alias("downy_birch_sapling", "ebiomes:downy_birch_sapling")
 		on_place = function(itemstack, placer, pointed_thing)
 			-- place a random grass node
 			local stack = ItemStack("ebiomes:grass_cold_" .. math.random(1,5))
-			local ret = minetest.item_place(stack, placer, pointed_thing)
+			local ret = core.item_place(stack, placer, pointed_thing)
 			return ItemStack("ebiomes:grass_cold_1 " ..
 				itemstack:get_count() - (1 - ret:get_count()))
 		end,
 	})
 
 for i = 2, 5 do
-	minetest.register_node("ebiomes:grass_cold_" .. i, {
+	core.register_node("ebiomes:grass_cold_" .. i, {
 		description = S("Cold Grass"),
 		drawtype = "plantlike",
 		waving = 1,
@@ -155,7 +155,7 @@ for i = 2, 5 do
 	})
 end
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "deciduous_forest_cold",
 		node_top = "ebiomes:dirt_with_grass_cold",
 		depth_top = 1,
@@ -172,7 +172,7 @@ end
 		humidity_point = 75,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "deciduous_forest_cold_shore",
 		node_top = "default:sand",
 		depth_top = 1,
@@ -189,7 +189,7 @@ end
 		humidity_point = 75,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "deciduous_forest_cold_ocean",
 		node_top = "default:sand",
 		depth_top = 1,
@@ -208,7 +208,7 @@ end
 		humidity_point = 75,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "deciduous_forest_cold_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
@@ -221,7 +221,7 @@ end
 	})
 
 for length = 1, 5 do
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:grass_cold_"..length,
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_grass_cold"},
@@ -242,7 +242,7 @@ end
 
 --Swamp
 
-	minetest.register_node("ebiomes:dirt_with_grass_swamp", {
+	core.register_node("ebiomes:dirt_with_grass_swamp", {
 		description = S("Dirt with Swamp Grass"),
 		tiles = {"ebiomes_grass_swamp.png", "default_dirt.png",
 			{name = "default_dirt.png^ebiomes_grass_swamp_side.png",
@@ -254,7 +254,7 @@ end
 		}),
 	})
 
-	minetest.register_node("ebiomes:dirt_with_grass_swamp_footsteps", {
+	core.register_node("ebiomes:dirt_with_grass_swamp_footsteps", {
 		description = S("Dirt with Swamp Grass and Footsteps"),
 		tiles = {"ebiomes_grass_swamp.png^default_footprint.png", "default_dirt.png",
 			{name = "default_dirt.png^ebiomes_grass_swamp_side.png",
@@ -266,7 +266,7 @@ end
 		}),
 	})
 
-	minetest.register_node("ebiomes:grass_swamp_1", {
+	core.register_node("ebiomes:grass_swamp_1", {
 		description = S("Swamp Grass"),
 		drawtype = "plantlike",
 		waving = 1,
@@ -289,14 +289,14 @@ end
 		on_place = function(itemstack, placer, pointed_thing)
 			-- place a random grass node
 			local stack = ItemStack("ebiomes:grass_swamp_" .. math.random(1,5))
-			local ret = minetest.item_place(stack, placer, pointed_thing)
+			local ret = core.item_place(stack, placer, pointed_thing)
 			return ItemStack("ebiomes:grass_swamp_1 " ..
 				itemstack:get_count() - (1 - ret:get_count()))
 		end,
 	})
 
 for i = 2, 5 do
-	minetest.register_node("ebiomes:grass_swamp_" .. i, {
+	core.register_node("ebiomes:grass_swamp_" .. i, {
 		description = S("Swamp Grass"),
 		drawtype = "plantlike",
 		waving = 1,
@@ -318,7 +318,7 @@ for i = 2, 5 do
 	})
 end
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "swamp",
 		node_top = "ebiomes:dirt_with_grass_swamp",
 		depth_top = 1,
@@ -335,7 +335,7 @@ end
 		humidity_point = 85,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "swamp_shore",
 		node_top = "default:dirt",
 		depth_top = 1,
@@ -352,7 +352,7 @@ end
 		humidity_point = 85,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "swamp_ocean",
 		node_top = "default:sand",
 		depth_top = 1,
@@ -371,7 +371,7 @@ end
 		humidity_point = 85,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "swamp_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
@@ -384,7 +384,7 @@ end
 	})
 
 
-	minetest.register_node("ebiomes:swamp_water_source", {
+	core.register_node("ebiomes:swamp_water_source", {
 		description = S("Swamp Water Source"),
 		drawtype = "liquid",
 		tiles = {
@@ -428,12 +428,12 @@ end
 		-- option used in the 'bucket' mod by the river water bucket.
 		liquid_renewable = false,
 		liquid_range = 2,
-		post_effect_color = {a = 128, r = 30, g = 80, b = 39},
+		post_effect_color = {a = 128, r = 24, g = 20, b = 16},
 		groups = {water = 3, liquid = 3, cools_lava = 1},
 		sounds = default.node_sound_water_defaults(),
 	})
 
-	minetest.register_node("ebiomes:swamp_water_flowing", {
+	core.register_node("ebiomes:swamp_water_flowing", {
 		description = S("Swamp Water"),
 		drawtype = "flowingliquid",
 		tiles = {"ebiomes_swamp_water.png"},
@@ -475,7 +475,7 @@ end
 		liquid_viscosity = 1,
 		liquid_renewable = false,
 		liquid_range = 2,
-		post_effect_color = {a = 128, r = 30, g = 80, b = 39},
+		post_effect_color = {a = 128, r = 24, g = 20, b = 16},
 		groups = {water = 3, liquid = 3, not_in_creative_inventory = 1,
 			cools_lava = 1},
 		sounds = default.node_sound_water_defaults(),
@@ -494,7 +494,7 @@ end
 
 
 for length = 1, 5 do
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:grass_swamp_"..length,
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_grass_swamp"},
@@ -519,14 +519,14 @@ end
 
 --Peats
 
-	minetest.register_node("ebiomes:peat", {
+	core.register_node("ebiomes:peat", {
 		description = S("Peat"),
 		tiles = {"ebiomes_peat.png"},
 		groups = {crumbly = 3, soil = 1},
 		sounds = default.node_sound_dirt_defaults(),
 	})
 
-	minetest.register_node("ebiomes:peat_with_swamp_moss_yellow", {
+	core.register_node("ebiomes:peat_with_swamp_moss_yellow", {
 		description = S("Peat with Yellow Swamp Moss"),
 		tiles = {"ebiomes_swamp_moss_yellow.png", "ebiomes_peat.png",
 			{name = "ebiomes_peat.png^ebiomes_swamp_moss_yellow_side.png",
@@ -538,7 +538,7 @@ end
 		}),
 	})
 
-	minetest.register_node("ebiomes:peat_with_swamp_moss_yellow_footsteps", {
+	core.register_node("ebiomes:peat_with_swamp_moss_yellow_footsteps", {
 		description = S("Peat with Yellow Swamp Moss and Footsteps"),
 		tiles = {"ebiomes_swamp_moss_yellow.png^default_footprint.png", "ebiomes_peat.png",
 			{name = "ebiomes_peat.png^ebiomes_swamp_moss_yellow_side.png",
@@ -550,14 +550,14 @@ end
 		}),
 	})
 
-	minetest.register_node("ebiomes:peat_dry", {
+	core.register_node("ebiomes:peat_dry", {
 		description = S("Dry Peat"),
 		tiles = {"ebiomes_peat_dry.png"},
 		groups = {crumbly = 3, soil = 1},
 		sounds = default.node_sound_dirt_defaults(),
 	})
 
-	minetest.register_node("ebiomes:peat_wet", {
+	core.register_node("ebiomes:peat_wet", {
 		description = S("Wet Peat"),
 		tiles = {"ebiomes_peat_wet.png"},
 		drop = "ebiomes:peat_wet",
@@ -579,7 +579,7 @@ end
 --peat
 --Wet peat made from a code saple of ethereal quicksand
 
-	minetest.register_node("ebiomes:peat_wet_with_swamp_moss_green", {
+	core.register_node("ebiomes:peat_wet_with_swamp_moss_green", {
 		description = S("Wet Peat with Green Swamp Moss"),
 		tiles = {"ebiomes_swamp_moss_green.png", "ebiomes_peat_wet.png",
 			{name = "ebiomes_peat_wet.png^ebiomes_swamp_moss_green_side.png",
@@ -600,7 +600,7 @@ end
 		}),
 	})
 
-	minetest.register_node("ebiomes:peat_wet_with_swamp_moss_green_footsteps", {
+	core.register_node("ebiomes:peat_wet_with_swamp_moss_green_footsteps", {
 		description = S("Wet Peat with Green Swamp Moss and Footsteps"),
 		tiles = {"ebiomes_swamp_moss_green.png^default_footprint.png", "ebiomes_peat_wet.png",
 			{name = "ebiomes_peat_wet.png^ebiomes_swamp_moss_green_side.png",
@@ -623,28 +623,28 @@ end
 
 --crafts
 
-	minetest.register_craft({
+	core.register_craft({
 		output = "ebiomes:peat",
 		recipe = {
 			{"ebiomes:peat_wet"},
 		}
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		type = "shapeless",
 		output = "ebiomes:peat_wet",
 		recipe = {"ebiomes:peat", "group:water_bucket"},
 		replacements = {{"group:water_bucket", "bucket:bucket_empty"}}
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		type = "cooking",
 		output = "ebiomes:peat_dry",
 		recipe = "ebiomes:peat",
 		burntime = 4
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		type = "shapeless",
 		output = "ebiomes:peat",
 		recipe = {"ebiomes:peat_dry", "group:water_bucket"},
@@ -664,19 +664,19 @@ end
 	)
 
 
-	minetest.register_craftitem("ebiomes:burning_peat", {
+	core.register_craftitem("ebiomes:burning_peat", {
 		description = S("Burning Peat"),
 		inventory_image = "ebiomes_burning_peat.png"
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		type = "shapeless",
 		output = "ebiomes:burning_peat 2",
 		recipe = {"ebiomes:peat_dry", "group:wood"},
 		replacements = {{"group:water_bucket", "bucket:bucket_empty"}}
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 	type = "fuel",
 	recipe = "ebiomes:burning_peat",
 	burntime = 30,
@@ -684,8 +684,8 @@ end
 
 
 
-if minetest.get_modpath("bonemeal") ~= nil then
-	minetest.register_craft({
+if core.get_modpath("bonemeal") ~= nil then
+	core.register_craft({
 --		type = "shapeless",
 		output = "bonemeal:mulch 9",
 		recipe = {
@@ -695,7 +695,7 @@ if minetest.get_modpath("bonemeal") ~= nil then
 end
 
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "bog",
 		node_water = "ebiomes:swamp_water_source",
 		node_top = "ebiomes:peat_with_swamp_moss_yellow",
@@ -713,7 +713,7 @@ end
 		humidity_point = 100,
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:peat_l1",
 		deco_type = "simple",
 		place_on = {"ebiomes:peat_with_swamp_moss_yellow"},
@@ -737,9 +737,9 @@ end
 	})
 
 
-if minetest.settings:get_bool("pl_quagmires", true) then
+if core.settings:get_bool("pl_quagmires", true) then
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:quagmire_small",
 		deco_type = "schematic",
 		place_on = {"ebiomes:peat_with_swamp_moss_yellow"},
@@ -757,12 +757,12 @@ if minetest.settings:get_bool("pl_quagmires", true) then
 		y_min = 1,
 		y_max = 31000,
 		place_offset_y = -3,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_quagmire_small_np.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_quagmire_small_np.mts",
 		flags = "place_center_x, place_center_z, force_placement",
 		rotation = "random",
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:quagmire_vsmall",
 		deco_type = "schematic",
 		place_on = {"ebiomes:peat_with_swamp_moss_yellow"},
@@ -780,7 +780,7 @@ if minetest.settings:get_bool("pl_quagmires", true) then
 		y_min = 1,
 		y_max = 31000,
 		place_offset_y = -3,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_quagmire_vsmall_np.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_quagmire_vsmall_np.mts",
 		flags = "place_center_x, place_center_z, force_placement",
 		rotation = "random",
 	})
@@ -788,7 +788,7 @@ if minetest.settings:get_bool("pl_quagmires", true) then
 
 else
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:quagmire_small",
 		deco_type = "schematic",
 		place_on = {"ebiomes:peat_with_swamp_moss_yellow"},
@@ -806,12 +806,12 @@ else
 		y_min = 1,
 		y_max = 31000,
 		place_offset_y = -3,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_quagmire_small.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_quagmire_small.mts",
 		flags = "place_center_x, place_center_z, force_placement",
 		rotation = "random",
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:quagmire_vsmall",
 		deco_type = "schematic",
 		place_on = {"ebiomes:peat_with_swamp_moss_yellow"},
@@ -829,7 +829,7 @@ else
 		y_min = 1,
 		y_max = 31000,
 		place_offset_y = -3,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_quagmire_vsmall.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_quagmire_vsmall.mts",
 		flags = "place_center_x, place_center_z, force_placement",
 		rotation = "random",
 	})
@@ -837,7 +837,7 @@ else
 end
 
 
-	minetest.register_node("ebiomes:reeds", {
+	core.register_node("ebiomes:reeds", {
 		description = S("Reeds"),
 		drawtype = "plantlike",
 --		drawtype = "firelike",
@@ -855,7 +855,7 @@ end
 		sounds = default.node_sound_leaves_defaults(),
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:reeds",
 		deco_type = "simple",
 		place_on = {"ebiomes:peat_wet_with_swamp_moss_green", "ebiomes:peat_with_swamp_moss_yellow"},
@@ -873,7 +873,7 @@ end
 		decoration = "ebiomes:reeds",
 	})
 
-	minetest.register_node("ebiomes:marsh_grass_green", {
+	core.register_node("ebiomes:marsh_grass_green", {
 		description = S("Green Marsh Grass"),
 		tiles = {"ebiomes_marsh_grass_green.png"},
 		inventory_image = "ebiomes_marsh_grass_green.png",
@@ -891,7 +891,7 @@ end
 		}
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:marsh_grass_green",
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_grass_swamp", "ebiomes:peat_with_swamp_moss_yellow"},
@@ -909,7 +909,7 @@ end
 		decoration = "ebiomes:marsh_grass_green",
 	})
 
-	minetest.register_node("ebiomes:marsh_grass_yellow", {
+	core.register_node("ebiomes:marsh_grass_yellow", {
 		description = S("Yellow Marsh Grass"),
 		tiles = {"ebiomes_marsh_grass_yellow.png"},
 		inventory_image = "ebiomes_marsh_grass_yellow.png",
@@ -927,7 +927,7 @@ end
 		}
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:marsh_grass_yellow",
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_grass_swamp", "ebiomes:peat_with_swamp_moss_yellow"},
@@ -946,7 +946,7 @@ end
 	})
 
 
-	minetest.register_node("ebiomes:grass_bog_1", {
+	core.register_node("ebiomes:grass_bog_1", {
 		description = S("Bog Grass"),
 		drawtype = "plantlike",
 		waving = 1,
@@ -969,14 +969,14 @@ end
 		on_place = function(itemstack, placer, pointed_thing)
 			-- place a random grass node
 			local stack = ItemStack("ebiomes:grass_bog_" .. math.random(1,5))
-			local ret = minetest.item_place(stack, placer, pointed_thing)
+			local ret = core.item_place(stack, placer, pointed_thing)
 			return ItemStack("ebiomes:grass_bog_1 " ..
 				itemstack:get_count() - (1 - ret:get_count()))
 		end,
 	})
 
 for i = 2, 5 do
-	minetest.register_node("ebiomes:grass_bog_" .. i, {
+	core.register_node("ebiomes:grass_bog_" .. i, {
 		description = S("Bog Grass"),
 		drawtype = "plantlike",
 		waving = 1,
@@ -999,7 +999,7 @@ for i = 2, 5 do
 end
 
 for length = 1, 5 do
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:grass_bog_"..length,
 		deco_type = "simple",
 		place_on = {"ebiomes:peat_with_swamp_moss_yellow"},
@@ -1027,22 +1027,22 @@ end
 local function grow_new_blackcurrant(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(150, 300))
+		core.get_node_timer(pos):start(math.random(150, 300))
 		return
 	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-2, y = pos.y, z = pos.z-2}, modpath.."/schematics/ebiomes_blackcurrant_bush.mts", "0", nil, false)
+	core.remove_node(pos)
+	core.place_schematic({x = pos.x-2, y = pos.y, z = pos.z-2}, modpath.."/schematics/ebiomes_blackcurrant_bush.mts", "0", nil, false)
 end
 
-	minetest.register_craftitem("ebiomes:blackcurrants", {
+	core.register_craftitem("ebiomes:blackcurrants", {
 		description = S("Blackcurants"),
 		inventory_image = "ebiomes_blackcurrants.png",
 		groups = {food_blackcurrants = 1, food_berry = 1, eatable = 2},
-		on_use = minetest.item_eat(2),
+		on_use = core.item_eat(2),
 	})
 
 
-	minetest.register_node("ebiomes:blackcurrant_bush_leaves_with_berries", {
+	core.register_node("ebiomes:blackcurrant_bush_leaves_with_berries", {
 		description = S("Blackcurrant Bush Leaves with Berries"),
 		drawtype = "allfaces_optional",
 		tiles = {"ebiomes_blackcurrant_bush_leaves.png^ebiomes_blackcurrant_overlay.png"},
@@ -1054,13 +1054,13 @@ end
 		node_dig_prediction = "ebiomes:blackcurrant_bush_leaves",
 
 		after_dig_node = function(pos, oldnode, oldmetadata, digger)
-			minetest.set_node(pos, {name = "ebiomes:blackcurrant_bush_leaves"})
-			minetest.get_node_timer(pos):start(math.random(300, 1500))
+			core.set_node(pos, {name = "ebiomes:blackcurrant_bush_leaves"})
+			core.get_node_timer(pos):start(math.random(300, 1500))
 		end,
 	})
 
 
-	minetest.register_node("ebiomes:blackcurrant_bush_leaves", {
+	core.register_node("ebiomes:blackcurrant_bush_leaves", {
 		description = S("Blackcurrant Bush Leaves"),
 		drawtype = "allfaces_optional",
 		tiles = {"ebiomes_blackcurrant_bush_leaves.png"},
@@ -1077,17 +1077,17 @@ end
 		sounds = default.node_sound_leaves_defaults(),
 
 		on_timer = function(pos, elapsed)
-			if minetest.get_node_light(pos) < 11 then
-				minetest.get_node_timer(pos):start(200)
+			if core.get_node_light(pos) < 11 then
+				core.get_node_timer(pos):start(200)
 			else
-				minetest.set_node(pos, {name = "ebiomes:blackcurrant_bush_leaves_with_berries"})
+				core.set_node(pos, {name = "ebiomes:blackcurrant_bush_leaves_with_berries"})
 			end
 		end,
 
 		after_place_node = default.after_place_leaves,
 	})
 
-	minetest.register_node("ebiomes:blackcurrant_bush_sapling", {
+	core.register_node("ebiomes:blackcurrant_bush_sapling", {
 		description = S("Blackcurrant Bush Sapling"),
 		drawtype = "plantlike",
 		tiles = {"ebiomes_blackcurrant_bush_sapling.png"},
@@ -1106,7 +1106,7 @@ end
 		sounds = default.node_sound_leaves_defaults(),
 
 		on_construct = function(pos)
-			minetest.get_node_timer(pos):start(math.random(300, 1500))
+			core.get_node_timer(pos):start(math.random(300, 1500))
 		end,
 
 		on_place = function(itemstack, placer, pointed_thing)
@@ -1122,7 +1122,7 @@ end
 		end,
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:blackcurrant_bush",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_grass_cold"},
@@ -1139,11 +1139,11 @@ end
 		y_max = 31000,
 		y_min = 1,
 		place_offset_y = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_blackcurrant_bush.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_blackcurrant_bush.mts",
 		flags = "place_center_x, place_center_z",
 	})
 
-if minetest.get_modpath("bonemeal") ~= nil then
+if core.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:blackcurrant_bush_sapling", grow_new_blackcurrant, "soil"},
 })
@@ -1154,22 +1154,22 @@ end
 local function grow_new_redcurrant(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(150, 300))
+		core.get_node_timer(pos):start(math.random(150, 300))
 		return
 	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-1, y = pos.y, z = pos.z-1}, modpath.."/schematics/ebiomes_redcurrant_bush.mts", "0", nil, false)
+	core.remove_node(pos)
+	core.place_schematic({x = pos.x-1, y = pos.y, z = pos.z-1}, modpath.."/schematics/ebiomes_redcurrant_bush.mts", "0", nil, false)
 end
 
-	minetest.register_craftitem("ebiomes:redcurrants", {
+	core.register_craftitem("ebiomes:redcurrants", {
 		description = S("Redcurants"),
 		inventory_image = "ebiomes_redcurrants.png",
 		groups = {food_redcurrants = 1, food_berry = 1, eatable = 2},
-		on_use = minetest.item_eat(2),
+		on_use = core.item_eat(2),
 	})
 
 
-	minetest.register_node("ebiomes:redcurrant_bush_leaves_with_berries", {
+	core.register_node("ebiomes:redcurrant_bush_leaves_with_berries", {
 		description = S("Redcurrant Bush Leaves with Berries"),
 		drawtype = "allfaces_optional",
 		tiles = {"ebiomes_redcurrant_bush_leaves.png^ebiomes_redcurrant_overlay.png"},
@@ -1181,13 +1181,13 @@ end
 		node_dig_prediction = "ebiomes:redcurrant_bush_leaves",
 
 		after_dig_node = function(pos, oldnode, oldmetadata, digger)
-			minetest.set_node(pos, {name = "ebiomes:redcurrant_bush_leaves"})
-			minetest.get_node_timer(pos):start(math.random(300, 1500))
+			core.set_node(pos, {name = "ebiomes:redcurrant_bush_leaves"})
+			core.get_node_timer(pos):start(math.random(300, 1500))
 		end,
 	})
 
 
-	minetest.register_node("ebiomes:redcurrant_bush_leaves", {
+	core.register_node("ebiomes:redcurrant_bush_leaves", {
 		description = S("Redcurrant Bush Leaves"),
 		drawtype = "allfaces_optional",
 		tiles = {"ebiomes_redcurrant_bush_leaves.png"},
@@ -1204,17 +1204,17 @@ end
 		sounds = default.node_sound_leaves_defaults(),
 
 		on_timer = function(pos, elapsed)
-			if minetest.get_node_light(pos) < 11 then
-				minetest.get_node_timer(pos):start(200)
+			if core.get_node_light(pos) < 11 then
+				core.get_node_timer(pos):start(200)
 			else
-				minetest.set_node(pos, {name = "ebiomes:redcurrant_bush_leaves_with_berries"})
+				core.set_node(pos, {name = "ebiomes:redcurrant_bush_leaves_with_berries"})
 			end
 		end,
 
 		after_place_node = default.after_place_leaves,
 	})
 
-	minetest.register_node("ebiomes:redcurrant_bush_sapling", {
+	core.register_node("ebiomes:redcurrant_bush_sapling", {
 		description = S("Redcurrant Bush Sapling"),
 		drawtype = "plantlike",
 		tiles = {"ebiomes_redcurrant_bush_sapling.png"},
@@ -1233,7 +1233,7 @@ end
 		sounds = default.node_sound_leaves_defaults(),
 
 		on_construct = function(pos)
-			minetest.get_node_timer(pos):start(math.random(300, 1500))
+			core.get_node_timer(pos):start(math.random(300, 1500))
 		end,
 
 		on_place = function(itemstack, placer, pointed_thing)
@@ -1249,7 +1249,7 @@ end
 		end,
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:redcurrant_bush",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_grass_cold"},
@@ -1266,11 +1266,11 @@ end
 		y_max = 31000,
 		y_min = 1,
 		place_offset_y = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_redcurrant_bush.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_redcurrant_bush.mts",
 		flags = "place_center_x, place_center_z",
 	})
 
-if minetest.get_modpath("bonemeal") ~= nil then
+if core.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:redcurrant_bush_sapling", grow_new_redcurrant, "soil"},
 })
@@ -1281,22 +1281,22 @@ end
 local function grow_new_gooseberry(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(150, 300))
+		core.get_node_timer(pos):start(math.random(150, 300))
 		return
 	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-1, y = pos.y, z = pos.z-1}, modpath.."/schematics/ebiomes_gooseberry_bush.mts", "0", nil, false)
+	core.remove_node(pos)
+	core.place_schematic({x = pos.x-1, y = pos.y, z = pos.z-1}, modpath.."/schematics/ebiomes_gooseberry_bush.mts", "0", nil, false)
 end
 
-	minetest.register_craftitem("ebiomes:gooseberries", {
+	core.register_craftitem("ebiomes:gooseberries", {
 		description = S("Gooseberries"),
 		inventory_image = "ebiomes_gooseberries.png",
 		groups = {food_gooseberries = 1, food_berry = 1, eatable = 2},
-		on_use = minetest.item_eat(2),
+		on_use = core.item_eat(2),
 	})
 
 
-	minetest.register_node("ebiomes:gooseberry_bush_leaves_with_berries", {
+	core.register_node("ebiomes:gooseberry_bush_leaves_with_berries", {
 		description = S("Gooseberry Bush Leaves with Berries"),
 		drawtype = "allfaces_optional",
 		tiles = {"ebiomes_gooseberry_bush_leaves.png^ebiomes_gooseberry_overlay.png"},
@@ -1309,13 +1309,13 @@ end
 		node_dig_prediction = "ebiomes:gooseberry_bush_leaves",
 
 		after_dig_node = function(pos, oldnode, oldmetadata, digger)
-			minetest.set_node(pos, {name = "ebiomes:gooseberry_bush_leaves"})
-			minetest.get_node_timer(pos):start(math.random(300, 1500))
+			core.set_node(pos, {name = "ebiomes:gooseberry_bush_leaves"})
+			core.get_node_timer(pos):start(math.random(300, 1500))
 		end,
 	})
 
 
-	minetest.register_node("ebiomes:gooseberry_bush_leaves", {
+	core.register_node("ebiomes:gooseberry_bush_leaves", {
 		description = S("Gooseberry Bush Leaves"),
 		drawtype = "allfaces_optional",
 		tiles = {"ebiomes_gooseberry_bush_leaves.png"},
@@ -1333,17 +1333,17 @@ end
 		sounds = default.node_sound_leaves_defaults(),
 
 		on_timer = function(pos, elapsed)
-			if minetest.get_node_light(pos) < 11 then
-				minetest.get_node_timer(pos):start(200)
+			if core.get_node_light(pos) < 11 then
+				core.get_node_timer(pos):start(200)
 			else
-				minetest.set_node(pos, {name = "ebiomes:gooseberry_bush_leaves_with_berries"})
+				core.set_node(pos, {name = "ebiomes:gooseberry_bush_leaves_with_berries"})
 			end
 		end,
 
 		after_place_node = default.after_place_leaves,
 	})
 
-	minetest.register_node("ebiomes:gooseberry_bush_sapling", {
+	core.register_node("ebiomes:gooseberry_bush_sapling", {
 		description = S("Gooseberry Bush Sapling"),
 		drawtype = "plantlike",
 		tiles = {"ebiomes_gooseberry_bush_sapling.png"},
@@ -1362,7 +1362,7 @@ end
 		sounds = default.node_sound_leaves_defaults(),
 
 		on_construct = function(pos)
-			minetest.get_node_timer(pos):start(math.random(300, 1500))
+			core.get_node_timer(pos):start(math.random(300, 1500))
 		end,
 
 		on_place = function(itemstack, placer, pointed_thing)
@@ -1378,7 +1378,7 @@ end
 		end,
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:gooseberry_bush",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_grass_cold"},
@@ -1395,11 +1395,11 @@ end
 		y_max = 31000,
 		y_min = 1,
 		place_offset_y = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_gooseberry_bush.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_gooseberry_bush.mts",
 		flags = "place_center_x, place_center_z",
 	})
 
-if minetest.get_modpath("bonemeal") ~= nil then
+if core.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:gooseberry_bush_sapling", grow_new_gooseberry, "soil"},
 })
@@ -1409,7 +1409,7 @@ end
 
 --Bog
 
-	minetest.register_node("ebiomes:cranberry_patch", {
+	core.register_node("ebiomes:cranberry_patch", {
 		description = S("Cranberry Patch"),
 		tiles = {"ebiomes_cranberry_patch.png"},
 		inventory_image = "ebiomes_cranberry_patch.png",
@@ -1428,7 +1428,7 @@ end
 		},
 		sounds = default.node_sound_leaves_defaults(),
 		after_place_node = function(pos, placer, itemstack)
-			minetest.set_node(pos, {name = "ebiomes:cranberry_patch", param2 = 1})
+			core.set_node(pos, {name = "ebiomes:cranberry_patch", param2 = 1})
 		end,
 		selection_box = {
 			type = "fixed",
@@ -1436,15 +1436,15 @@ end
 		}
 	})
 
-	minetest.register_craftitem("ebiomes:cranberries", {
+	core.register_craftitem("ebiomes:cranberries", {
 		description = S("Cranberries"),
 		inventory_image = "ebiomes_cranberries.png",
 		groups = {food_cranberries = 1, food_berry = 1, eatable = 2},
-		on_use = minetest.item_eat(2),
+		on_use = core.item_eat(2),
 	})
 
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:cranberry",
 		deco_type = "simple",
 		place_on = {"ebiomes:peat_wet_with_swamp_moss_green", "ebiomes:peat_with_swamp_moss_yellow"},
@@ -1463,7 +1463,7 @@ end
 	})
 
 
-	minetest.register_node("ebiomes:sundew", {
+	core.register_node("ebiomes:sundew", {
 		description = S("Sundew"),
 		tiles = {"ebiomes_sundew.png"},
 		inventory_image = "ebiomes_sundew.png",
@@ -1481,14 +1481,14 @@ end
 		}
 	})
 
-    minetest.register_craft({
+    core.register_craft({
 		output = "dye:red",
 		recipe = {
 			{"ebiomes:sundew"}
 		},
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:sundew",
 		deco_type = "simple",
 		place_on = {"ebiomes:peat_wet_with_swamp_moss_green", "ebiomes:peat_with_swamp_moss_yellow"},
@@ -1506,7 +1506,7 @@ end
 		decoration = "ebiomes:sundew",
 	})
 
-	minetest.register_node("ebiomes:marigold", {
+	core.register_node("ebiomes:marigold", {
 		description = S("Marsh Marigold"),
 		tiles = {"ebiomes_marigold.png"},
 		inventory_image = "ebiomes_marigold.png",
@@ -1524,14 +1524,14 @@ end
 		}
 	})
 
-    minetest.register_craft({
+    core.register_craft({
 		output = "dye:yellow 4",
 		recipe = {
 			{"ebiomes:marigold"}
 		},
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:marigold",
 		deco_type = "simple",
 		place_on = {"ebiomes:peat_wet_with_swamp_moss_green", "ebiomes:peat_with_swamp_moss_yellow"},
@@ -1549,7 +1549,7 @@ end
 		decoration = "ebiomes:marigold",
 	})
 
-	minetest.register_node("ebiomes:marsh_stitchwort", {
+	core.register_node("ebiomes:marsh_stitchwort", {
 		description = S("Marsh Stitchwort"),
 		tiles = {"ebiomes_marsh_stitchwort.png"},
 		inventory_image = "ebiomes_marsh_stitchwort.png",
@@ -1567,14 +1567,14 @@ end
 		}
 	})
 
-    minetest.register_craft({
+    core.register_craft({
 		output = "dye:white 4",
 		recipe = {
 			{"ebiomes:marsh_stitchwort"}
 		},
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:marsh_stitchwort",
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_grass_swamp", "ebiomes:peat_wet_with_swamp_moss_green", "ebiomes:peat_with_swamp_moss_yellow"},
@@ -1596,7 +1596,7 @@ end
 
 --Willow
 
-	minetest.register_node("ebiomes:willow_tree", {
+	core.register_node("ebiomes:willow_tree", {
 		description = S("Willow Tree"),
 		tiles = {"ebiomes_willow_tree_top.png", "ebiomes_willow_tree_top.png",
 			"ebiomes_willow_tree.png"},
@@ -1605,10 +1605,10 @@ end
 		groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
 		sounds = default.node_sound_wood_defaults(),
 
-		on_place = minetest.rotate_node
+		on_place = core.rotate_node
 	})
 
-	minetest.register_node("ebiomes:willow_wood", {
+	core.register_node("ebiomes:willow_wood", {
 		description = S("Willow Wood Planks"),
 		paramtype2 = "facedir",
 		place_param2 = 0,
@@ -1618,14 +1618,14 @@ end
 		sounds = default.node_sound_wood_defaults(),
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		output = "ebiomes:willow_wood 4",
 		recipe = {
 			{"ebiomes:willow_tree"},
 		}
 	})
 
-	minetest.register_node("ebiomes:willow_leaves", {
+	core.register_node("ebiomes:willow_leaves", {
 		description = S("Willow Tree Leaves"),
 		drawtype = "allfaces_optional",
 		tiles = {"ebiomes_willow_leaves.png"},
@@ -1658,27 +1658,27 @@ end
 local function grow_new_baldcypress_tree(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(240, 600))
+		core.get_node_timer(pos):start(math.random(240, 600))
 		return
 	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-4, y = pos.y, z = pos.z-4}, modpath.."/schematics/baldcypress.mts", "0", nil, false)
+	core.remove_node(pos)
+	core.place_schematic({x = pos.x-4, y = pos.y, z = pos.z-4}, modpath.."/schematics/baldcypress.mts", "0", nil, false)
 end
 --]]
 
 local function grow_new_willow_tree(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(150, 300))
+		core.get_node_timer(pos):start(math.random(150, 300))
 		return
 	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-3, y = pos.y, z = pos.z-3}, modpath.."/schematics/ebiomes_willow_tree.mts", "0", nil, false)
+	core.remove_node(pos)
+	core.place_schematic({x = pos.x-3, y = pos.y, z = pos.z-3}, modpath.."/schematics/ebiomes_willow_tree.mts", "0", nil, false)
 end
 
---schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_willow.mts"
+--schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_willow.mts"
 
-	minetest.register_node("ebiomes:willow_sapling", {
+	core.register_node("ebiomes:willow_sapling", {
 		description = S("Willow Tree Sapling"),
 		drawtype = "plantlike",
 		tiles = {"ebiomes_willow_sapling.png"},
@@ -1697,7 +1697,7 @@ end
 		sounds = default.node_sound_leaves_defaults(),
 
 		on_construct = function(pos)
-			minetest.get_node_timer(pos):start(math.random(300, 1500))
+			core.get_node_timer(pos):start(math.random(300, 1500))
 		end,
 
 		on_place = function(itemstack, placer, pointed_thing)
@@ -1714,7 +1714,7 @@ end
 		end,
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:willow_tree",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_grass_cold"},
@@ -1730,12 +1730,12 @@ end
 		biomes = {"deciduous_forest_cold"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_willow_tree.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_willow_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:willow_log",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_grass_cold"},
@@ -1745,14 +1745,14 @@ end
 		biomes = {"deciduous_forest_cold"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_willow_log.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_willow_log.mts",
 		flags = "place_center_x",
 		rotation = "random",
 		spawn_by = {"ebiomes:dirt_with_grass_cold"},
 		num_spawn_by = 8,
 	})
 
-if minetest.get_modpath("bonemeal") ~= nil then
+if core.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:willow_sapling", grow_new_willow_tree, "soil"},
 })
@@ -1807,7 +1807,7 @@ end
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		type = "fuel",
 		recipe = "ebiomes:gate_willow_wood_closed",
 		burntime = 9,
@@ -1817,7 +1817,7 @@ end
 
 --Alder
 
-	minetest.register_node("ebiomes:alder_tree", {
+	core.register_node("ebiomes:alder_tree", {
 		description = S("Alder Tree"),
 		tiles = {"ebiomes_alder_tree_top.png", "ebiomes_alder_tree_top.png",
 			"ebiomes_alder_tree.png"},
@@ -1826,10 +1826,10 @@ end
 		groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
 		sounds = default.node_sound_wood_defaults(),
 
-		on_place = minetest.rotate_node
+		on_place = core.rotate_node
 	})
 
-	minetest.register_node("ebiomes:alder_wood", {
+	core.register_node("ebiomes:alder_wood", {
 		description = S("Alder Wood Planks"),
 		paramtype2 = "facedir",
 		place_param2 = 0,
@@ -1839,14 +1839,14 @@ end
 		sounds = default.node_sound_wood_defaults(),
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		output = "ebiomes:alder_wood 4",
 		recipe = {
 			{"ebiomes:alder_tree"},
 		}
 	})
 
-	minetest.register_node("ebiomes:alder_leaves", {
+	core.register_node("ebiomes:alder_leaves", {
 		description = S("Alder Tree Leaves"),
 		drawtype = "allfaces_optional",
 		tiles = {"ebiomes_alder_leaves.png"},
@@ -1876,14 +1876,14 @@ end
 local function grow_new_alder_tree(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(150, 300))
+		core.get_node_timer(pos):start(math.random(150, 300))
 		return
 	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-3, y = pos.y, z = pos.z-3}, modpath.."/schematics/ebiomes_alder_tree.mts", "0", nil, false)
+	core.remove_node(pos)
+	core.place_schematic({x = pos.x-3, y = pos.y, z = pos.z-3}, modpath.."/schematics/ebiomes_alder_tree.mts", "0", nil, false)
 end
 
-	minetest.register_node("ebiomes:alder_sapling", {
+	core.register_node("ebiomes:alder_sapling", {
 		description = S("Alder Tree Sapling"),
 		drawtype = "plantlike",
 		tiles = {"ebiomes_alder_sapling.png"},
@@ -1902,7 +1902,7 @@ end
 		sounds = default.node_sound_leaves_defaults(),
 
 		on_construct = function(pos)
-			minetest.get_node_timer(pos):start(math.random(300, 1500))
+			core.get_node_timer(pos):start(math.random(300, 1500))
 		end,
 
 		on_place = function(itemstack, placer, pointed_thing)
@@ -1920,8 +1920,8 @@ end
 	})
 
 
-if minetest.settings:get_bool("light_mapgen", true) then
-	minetest.register_decoration({
+if core.settings:get_bool("light_mapgen", true) then
+	core.register_decoration({
 		name = "ebiomes:alder_tree",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_grass_cold"},
@@ -1937,13 +1937,13 @@ if minetest.settings:get_bool("light_mapgen", true) then
 		biomes = {"deciduous_forest_cold"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_alder_tree.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_alder_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
 
 else
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:alder_tree",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_grass_cold"},
@@ -1959,13 +1959,13 @@ else
 		biomes = {"deciduous_forest_cold"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_alder_tree.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_alder_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
 end
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:alder_log",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_grass_cold"},
@@ -1975,14 +1975,14 @@ end
 		biomes = {"deciduous_forest_cold"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_alder_log.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_alder_log.mts",
 		flags = "place_center_x",
 		rotation = "random",
 		spawn_by = {"ebiomes:dirt_with_grass_cold"},
 		num_spawn_by = 8,
 	})
 
-if minetest.get_modpath("bonemeal") ~= nil then
+if core.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:alder_sapling", grow_new_alder_tree, "soil"},
 })
@@ -2036,7 +2036,7 @@ end
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		type = "fuel",
 		recipe = "ebiomes:gate_alder_wood_closed",
 		burntime = 9,
@@ -2046,7 +2046,7 @@ end
 --Ash
 
 
-	minetest.register_node("ebiomes:ash_tree", {
+	core.register_node("ebiomes:ash_tree", {
 		description = S("Ash Tree"),
 		tiles = {"ebiomes_ash_tree_top.png", "ebiomes_ash_tree_top.png",
 			"ebiomes_ash_tree.png"},
@@ -2055,10 +2055,10 @@ end
 		groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
 		sounds = default.node_sound_wood_defaults(),
 
-		on_place = minetest.rotate_node
+		on_place = core.rotate_node
 	})
 
-	minetest.register_node("ebiomes:ash_wood", {
+	core.register_node("ebiomes:ash_wood", {
 		description = S("Ash Wood Planks"),
 		paramtype2 = "facedir",
 		place_param2 = 0,
@@ -2068,14 +2068,14 @@ end
 		sounds = default.node_sound_wood_defaults(),
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		output = "ebiomes:ash_wood 4",
 		recipe = {
 			{"ebiomes:ash_tree"},
 		}
 	})
 
-	minetest.register_node("ebiomes:ash_leaves", {
+	core.register_node("ebiomes:ash_leaves", {
 		description = S("Ash Tree Leaves"),
 		drawtype = "allfaces_optional",
 		tiles = {"ebiomes_ash_leaves.png"},
@@ -2105,14 +2105,14 @@ end
 local function grow_new_ash_tree(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(150, 300))
+		core.get_node_timer(pos):start(math.random(150, 300))
 		return
 	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-4, y = pos.y, z = pos.z-4}, modpath.."/schematics/ebiomes_ash_tree.mts", "0", nil, false)
+	core.remove_node(pos)
+	core.place_schematic({x = pos.x-4, y = pos.y, z = pos.z-4}, modpath.."/schematics/ebiomes_ash_tree.mts", "0", nil, false)
 end
 
-	minetest.register_node("ebiomes:ash_sapling", {
+	core.register_node("ebiomes:ash_sapling", {
 		description = S("Ash Tree Sapling"),
 		drawtype = "plantlike",
 		tiles = {"ebiomes_ash_sapling.png"},
@@ -2131,7 +2131,7 @@ end
 		sounds = default.node_sound_leaves_defaults(),
 
 		on_construct = function(pos)
-			minetest.get_node_timer(pos):start(math.random(300, 1500))
+			core.get_node_timer(pos):start(math.random(300, 1500))
 		end,
 
 		on_place = function(itemstack, placer, pointed_thing)
@@ -2149,9 +2149,9 @@ end
 	})
 
 
-if minetest.settings:get_bool("light_mapgen", true) then
+if core.settings:get_bool("light_mapgen", true) then
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:ash_tree",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_grass_cold"},
@@ -2167,13 +2167,13 @@ if minetest.settings:get_bool("light_mapgen", true) then
 		biomes = {"deciduous_forest_cold"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_ash_tree.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_ash_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
 
 else
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:ash_tree",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_grass_cold"},
@@ -2189,13 +2189,13 @@ else
 		biomes = {"deciduous_forest_cold"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_ash_tree.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_ash_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
 end
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:ash_log",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_grass_cold"},
@@ -2205,7 +2205,7 @@ end
 		biomes = {"deciduous_forest_cold"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_ash_log.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_ash_log.mts",
 		flags = "place_center_x",
 		rotation = "random",
 		spawn_by = {"ebiomes:dirt_with_grass_cold"},
@@ -2213,7 +2213,7 @@ end
 	})
 
 
-if minetest.get_modpath("bonemeal") ~= nil then
+if core.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:ash_sapling", grow_new_ash_tree, "soil"},
 })
@@ -2267,7 +2267,7 @@ end
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		type = "fuel",
 		recipe = "ebiomes:gate_ash_wood_closed",
 		burntime = 8,
@@ -2276,7 +2276,7 @@ end
 --Birch
 
 
-	minetest.register_node("ebiomes:birch_tree", {
+	core.register_node("ebiomes:birch_tree", {
 		description = S("Birch Tree"),
 		tiles = {"ebiomes_birch_tree_top.png", "ebiomes_birch_tree_top.png",
 			"ebiomes_birch_tree.png"},
@@ -2285,10 +2285,10 @@ end
 		groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
 		sounds = default.node_sound_wood_defaults(),
 
-		on_place = minetest.rotate_node
+		on_place = core.rotate_node
 	})
 
-	minetest.register_node("ebiomes:birch_wood", {
+	core.register_node("ebiomes:birch_wood", {
 		description = S("Birch Wood Planks"),
 		paramtype2 = "facedir",
 		place_param2 = 0,
@@ -2298,14 +2298,14 @@ end
 		sounds = default.node_sound_wood_defaults(),
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		output = "ebiomes:birch_wood 4",
 		recipe = {
 			{"ebiomes:birch_tree"},
 		}
 	})
 
-	minetest.register_node("ebiomes:birch_leaves", {
+	core.register_node("ebiomes:birch_leaves", {
 		description = S("Birch Tree Leaves"),
 		drawtype = "allfaces_optional",
 		tiles = {"ebiomes_birch_leaves.png"},
@@ -2335,14 +2335,14 @@ end
 local function grow_new_birch_tree(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(150, 300))
+		core.get_node_timer(pos):start(math.random(150, 300))
 		return
 	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-2, y = pos.y, z = pos.z-2}, modpath.."/schematics/ebiomes_birch_tree.mts", "0", nil, false)
+	core.remove_node(pos)
+	core.place_schematic({x = pos.x-2, y = pos.y, z = pos.z-2}, modpath.."/schematics/ebiomes_birch_tree.mts", "0", nil, false)
 end
 
-	minetest.register_node("ebiomes:birch_sapling", {
+	core.register_node("ebiomes:birch_sapling", {
 		description = S("Birch Tree Sapling"),
 		drawtype = "plantlike",
 		tiles = {"ebiomes_birch_sapling.png"},
@@ -2361,7 +2361,7 @@ end
 		sounds = default.node_sound_leaves_defaults(),
 
 		on_construct = function(pos)
-			minetest.get_node_timer(pos):start(math.random(300, 1500))
+			core.get_node_timer(pos):start(math.random(300, 1500))
 		end,
 
 		on_place = function(itemstack, placer, pointed_thing)
@@ -2379,8 +2379,8 @@ end
 	})
 
 
-if minetest.settings:get_bool("light_mapgen", true) then
-	minetest.register_decoration({
+if core.settings:get_bool("light_mapgen", true) then
+	core.register_decoration({
 		name = "ebiomes:birch_tree",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_grass_cold"},
@@ -2396,12 +2396,12 @@ if minetest.settings:get_bool("light_mapgen", true) then
 		biomes = {"deciduous_forest_cold"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_birch_tree.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_birch_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
 else
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:birch_tree",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_grass_cold"},
@@ -2417,14 +2417,14 @@ else
 		biomes = {"deciduous_forest_cold"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_birch_tree.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_birch_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
 end
 
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:birch_log",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_grass_cold"},
@@ -2434,14 +2434,14 @@ end
 		biomes = {"deciduous_forest_cold"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_birch_log.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_birch_log.mts",
 		flags = "place_center_x",
 		rotation = "random",
 		spawn_by = {"ebiomes:dirt_with_grass_cold"},
 		num_spawn_by = 8,
 	})
 
-if minetest.get_modpath("bonemeal") ~= nil then
+if core.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:birch_sapling", grow_new_birch_tree, "soil"},
 })
@@ -2495,7 +2495,7 @@ end
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		type = "fuel",
 		recipe = "ebiomes:gate_birch_wood_closed",
 		burntime = 6,
@@ -2504,7 +2504,7 @@ end
 
 --Swamp
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:willow_tree_sw",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_grass_swamp"},
@@ -2520,12 +2520,12 @@ end
 		biomes = {"swamp", "swamp_shore"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_willow_tree.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_willow_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:ash_tree_sw",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_grass_swamp"},
@@ -2541,7 +2541,7 @@ end
 		biomes = {"swamp", "swamp_shore"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_ash_tree.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_ash_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
@@ -2550,7 +2550,7 @@ end
 --Downy Birch
 
 
-	minetest.register_node("ebiomes:downy_birch_tree", {
+	core.register_node("ebiomes:downy_birch_tree", {
 		description = S("Downy Birch Tree"),
 		tiles = {"ebiomes_downy_birch_tree_top.png", "ebiomes_downy_birch_tree_top.png",
 			"ebiomes_downy_birch_tree.png"},
@@ -2559,10 +2559,10 @@ end
 		groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
 		sounds = default.node_sound_wood_defaults(),
 
-		on_place = minetest.rotate_node
+		on_place = core.rotate_node
 	})
 
-	minetest.register_node("ebiomes:downy_birch_wood", {
+	core.register_node("ebiomes:downy_birch_wood", {
 		description = S("Downy Birch Wood Planks"),
 		paramtype2 = "facedir",
 		place_param2 = 0,
@@ -2572,14 +2572,14 @@ end
 		sounds = default.node_sound_wood_defaults(),
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		output = "ebiomes:downy_birch_wood 4",
 		recipe = {
 			{"ebiomes:downy_birch_tree"},
 		}
 	})
 
-	minetest.register_node("ebiomes:downy_birch_leaves", {
+	core.register_node("ebiomes:downy_birch_leaves", {
 		description = S("Downy Birch Tree Leaves"),
 		drawtype = "allfaces_optional",
 		tiles = {"ebiomes_downy_birch_leaves.png"},
@@ -2609,14 +2609,14 @@ end
 local function grow_new_downy_birch_tree(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(150, 300))
+		core.get_node_timer(pos):start(math.random(150, 300))
 		return
 	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-1, y = pos.y, z = pos.z-1}, modpath.."/schematics/ebiomes_downy_birch_tree.mts", "0", nil, false)
+	core.remove_node(pos)
+	core.place_schematic({x = pos.x-1, y = pos.y, z = pos.z-1}, modpath.."/schematics/ebiomes_downy_birch_tree.mts", "0", nil, false)
 end
 
-	minetest.register_node("ebiomes:downy_birch_sapling", {
+	core.register_node("ebiomes:downy_birch_sapling", {
 		description = S("Downy Birch Tree Sapling"),
 		drawtype = "plantlike",
 		tiles = {"ebiomes_downy_birch_sapling.png"},
@@ -2635,7 +2635,7 @@ end
 		sounds = default.node_sound_leaves_defaults(),
 
 		on_construct = function(pos)
-			minetest.get_node_timer(pos):start(math.random(300, 1500))
+			core.get_node_timer(pos):start(math.random(300, 1500))
 		end,
 
 		on_place = function(itemstack, placer, pointed_thing)
@@ -2652,7 +2652,7 @@ end
 		end,
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:downy_birch_tree",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_grass_swamp"},
@@ -2668,12 +2668,12 @@ end
 		biomes = {"swamp"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_downy_birch_tree.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_downy_birch_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:downy_birch_log",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_grass_swamp"},
@@ -2683,14 +2683,14 @@ end
 		biomes = {"swamp"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_downy_birch_log.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_downy_birch_log.mts",
 		flags = "place_center_x",
 		rotation = "random",
 		spawn_by = {"ebiomes:dirt_with_grass_swamp"},
 		num_spawn_by = 8,
 	})
 
-if minetest.get_modpath("bonemeal") ~= nil then
+if core.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:downy_birch_sapling", grow_new_downy_birch_tree, "soil"},
 })
@@ -2744,7 +2744,7 @@ end
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		type = "fuel",
 		recipe = "ebiomes:gate_downy_birch_wood_closed",
 		burntime = 6,
@@ -2752,7 +2752,7 @@ end
 
 --Loot
 
-if minetest.global_exists("dungeon_loot") then
+if core.global_exists("dungeon_loot") then
 	dungeon_loot.register ({
 		{name = "ebiomes:redcurrants", chance = 0.3, count = {1, 4}},
 		{name = "ebiomes:blackcurrants", chance = 0.3, count = {1, 4}},
@@ -2762,7 +2762,7 @@ if minetest.global_exists("dungeon_loot") then
 end
 
 --Bonemeal
-if minetest.get_modpath("bonemeal") then
+if core.get_modpath("bonemeal") then
 	bonemeal:add_deco({
 		{"ebiomes:dirt_with_grass_cold", {"ebiomes:grass_cold_1", "ebiomes:grass_cold_2", "ebiomes:grass_cold_3", "ebiomes:grass_cold_4", "ebiomes:grass_cold_5"},
 			{"flowers:dandelion_yellow", "flowers:dandelion_white", "flowers:tulip", "flowers:tulip_black", "flowers:chrysanthemum_green"} }
@@ -2793,7 +2793,7 @@ end
 
 --sampled from cool_trees
 -- stairsplus/moreblocks
-if minetest.get_modpath("moreblocks") then
+if core.get_modpath("moreblocks") then
 
 
 	stairsplus:register_all("alder_tree", "wood", "ebiomes:alder_wood", {
@@ -2844,7 +2844,7 @@ if minetest.get_modpath("moreblocks") then
 end
 
 -- Support for flowerpot
-if minetest.global_exists("flowerpot") then
+if core.global_exists("flowerpot") then
 
 	flowerpot.register_node("ebiomes:ash_sapling")
 	flowerpot.register_node("ebiomes:alder_sapling")

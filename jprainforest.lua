@@ -1,32 +1,32 @@
-local S = minetest.get_translator("ebiomes")
+local S = core.get_translator("ebiomes")
 
 --from runs cooltrees
 local modname = "ebiomes"
-local modpath = minetest.get_modpath(modname)
-local mg_name = minetest.get_mapgen_setting("mg_name")
+local modpath = core.get_modpath(modname)
+local mg_name = core.get_mapgen_setting("mg_name")
 
 --Aliases
-minetest.register_alias("dirt_japanese_rainforest_litter", "ebiomes:dirt_with_japanese_rainforest_litter")
-minetest.register_alias("dirt_japanese_rainforest_litter_footsteps", "ebiomes:dirt_with_japanese_rainforest_litter_footsteps")
-minetest.register_alias("sugi_tree", "ebiomes:sugi_tree")
-minetest.register_alias("sugi_wood", "ebiomes:sugi_wood")
-minetest.register_alias("sugi_leaves", "ebiomes:sugi_leaves")
-minetest.register_alias("sugi_sapling", "ebiomes:sugi_sapling")
-minetest.register_alias("mizunara_tree", "ebiomes:mizunara_tree")
-minetest.register_alias("mizunara_wood", "ebiomes:mizunara_wood")
-minetest.register_alias("mizunara_leaves", "ebiomes:mizunara_leaves")
-minetest.register_alias("mizunara_sapling", "ebiomes:mizunara_sapling")
-minetest.register_alias("stoneoak_tree", "ebiomes:stoneoak_tree")
-minetest.register_alias("stoneoak_wood", "ebiomes:stoneoak_wood")
-minetest.register_alias("stoneoak_leaves", "ebiomes:stoneoak_leaves")
-minetest.register_alias("stoneoak_sapling", "ebiomes:stoneoak_sapling")
-minetest.register_alias("forestgrowth", "ebiomes:forestgrowth")
+core.register_alias("dirt_japanese_rainforest_litter", "ebiomes:dirt_with_japanese_rainforest_litter")
+core.register_alias("dirt_japanese_rainforest_litter_footsteps", "ebiomes:dirt_with_japanese_rainforest_litter_footsteps")
+core.register_alias("sugi_tree", "ebiomes:sugi_tree")
+core.register_alias("sugi_wood", "ebiomes:sugi_wood")
+core.register_alias("sugi_leaves", "ebiomes:sugi_leaves")
+core.register_alias("sugi_sapling", "ebiomes:sugi_sapling")
+core.register_alias("mizunara_tree", "ebiomes:mizunara_tree")
+core.register_alias("mizunara_wood", "ebiomes:mizunara_wood")
+core.register_alias("mizunara_leaves", "ebiomes:mizunara_leaves")
+core.register_alias("mizunara_sapling", "ebiomes:mizunara_sapling")
+core.register_alias("stoneoak_tree", "ebiomes:stoneoak_tree")
+core.register_alias("stoneoak_wood", "ebiomes:stoneoak_wood")
+core.register_alias("stoneoak_leaves", "ebiomes:stoneoak_leaves")
+core.register_alias("stoneoak_sapling", "ebiomes:stoneoak_sapling")
+core.register_alias("forestgrowth", "ebiomes:forestgrowth")
 
 
 
 -- Japanese rainforest
 
-	minetest.register_node("ebiomes:dirt_with_japanese_rainforest_litter", {
+	core.register_node("ebiomes:dirt_with_japanese_rainforest_litter", {
 		description = S("Dirt with Japanese Rainforest Litter"),
 		tiles = {"ebiomes_japanese_rainforest_litter.png", "default_dirt.png",
 			{name = "default_dirt.png^ebiomes_japanese_rainforest_litter_side.png",
@@ -43,7 +43,7 @@ minetest.register_alias("forestgrowth", "ebiomes:forestgrowth")
 		}
 	})
 
-	minetest.register_node("ebiomes:dirt_with_japanese_rainforest_litter_footsteps", {
+	core.register_node("ebiomes:dirt_with_japanese_rainforest_litter_footsteps", {
 		description = S("Dirt with Japanese Rainforest Litter and Footsteps"),
 		tiles = {"ebiomes_japanese_rainforest_litter.png^default_footprint.png", "default_dirt.png",
 			{name = "default_dirt.png^ebiomes_japanese_rainforest_litter_side.png",
@@ -60,7 +60,7 @@ minetest.register_alias("forestgrowth", "ebiomes:forestgrowth")
 		}
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "japanese_rainforest",
 		node_top = "ebiomes:dirt_with_japanese_rainforest_litter",
 		depth_top = 1,
@@ -77,7 +77,7 @@ minetest.register_alias("forestgrowth", "ebiomes:forestgrowth")
 		humidity_point = 80,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "japanese_rainforest_shore",
 		node_top = "default:sand",
 		depth_top = 1,
@@ -94,7 +94,7 @@ minetest.register_alias("forestgrowth", "ebiomes:forestgrowth")
 		humidity_point = 80,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "japanese_rainforest_ocean",
 		node_top = "default:sand",
 		depth_top = 1,
@@ -113,7 +113,7 @@ minetest.register_alias("forestgrowth", "ebiomes:forestgrowth")
 		humidity_point = 80,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "japanese_rainforest_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
@@ -127,7 +127,7 @@ minetest.register_alias("forestgrowth", "ebiomes:forestgrowth")
 
 --moss
 
-	minetest.register_node("ebiomes:moss", {
+	core.register_node("ebiomes:moss", {
 		description = S("Moss"),
 		tiles = {"ebiomes_moss.png"},
 		inventory_image = "ebiomes_moss_clump.png",
@@ -152,7 +152,7 @@ minetest.register_alias("forestgrowth", "ebiomes:forestgrowth")
 		sounds = default.node_sound_leaves_defaults(),
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:moss_l1",
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_japanese_rainforest_litter"},
@@ -175,7 +175,7 @@ minetest.register_alias("forestgrowth", "ebiomes:forestgrowth")
 		rotation = "random",
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:moss_l2",
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_japanese_rainforest_litter"},
@@ -201,7 +201,7 @@ minetest.register_alias("forestgrowth", "ebiomes:forestgrowth")
 	})
 
 
-	minetest.register_craft({
+	core.register_craft({
 		output = "default:mossycobble 8",
 		recipe = {
 			{"default:cobble", "default:cobble", "default:cobble"},
@@ -218,7 +218,7 @@ minetest.register_alias("forestgrowth", "ebiomes:forestgrowth")
 
 --Sugi
 
-	minetest.register_node("ebiomes:sugi_tree", {
+	core.register_node("ebiomes:sugi_tree", {
 		description = S("Sugi Tree"),
 		tiles = {"ebiomes_sugi_tree_top.png", "ebiomes_sugi_tree_top.png",
 			"ebiomes_sugi_tree.png"},
@@ -227,10 +227,10 @@ minetest.register_alias("forestgrowth", "ebiomes:forestgrowth")
 		groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
 		sounds = default.node_sound_wood_defaults(),
 
-		on_place = minetest.rotate_node
+		on_place = core.rotate_node
 	})
 
-	minetest.register_node("ebiomes:sugi_wood", {
+	core.register_node("ebiomes:sugi_wood", {
 		description = S("Sugi Wood Planks"),
 		paramtype2 = "facedir",
 		place_param2 = 0,
@@ -240,14 +240,14 @@ minetest.register_alias("forestgrowth", "ebiomes:forestgrowth")
 		sounds = default.node_sound_wood_defaults(),
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		output = "ebiomes:sugi_wood 4",
 		recipe = {
 			{"ebiomes:sugi_tree"},
 		}
 	})
 
-	minetest.register_node("ebiomes:sugi_leaves", {
+	core.register_node("ebiomes:sugi_leaves", {
 		description = S("Sugi Tree Leaves"),
 		drawtype = "allfaces_optional",
 		tiles = {"ebiomes_sugi_leaves.png"},
@@ -278,27 +278,27 @@ minetest.register_alias("forestgrowth", "ebiomes:forestgrowth")
 local function grow_new_baldcypress_tree(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(240, 600))
+		core.get_node_timer(pos):start(math.random(240, 600))
 		return
 	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-4, y = pos.y, z = pos.z-4}, modpath.."/schematics/baldcypress.mts", "0", nil, false)
+	core.remove_node(pos)
+	core.place_schematic({x = pos.x-4, y = pos.y, z = pos.z-4}, modpath.."/schematics/baldcypress.mts", "0", nil, false)
 end
 --]]
 
 local function grow_new_sugi_tree(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(150, 300))
+		core.get_node_timer(pos):start(math.random(150, 300))
 		return
 	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-3, y = pos.y, z = pos.z-2}, modpath.."/schematics/ebiomes_sugi_tree.mts", "0", nil, false)
+	core.remove_node(pos)
+	core.place_schematic({x = pos.x-3, y = pos.y, z = pos.z-2}, modpath.."/schematics/ebiomes_sugi_tree.mts", "0", nil, false)
 end
 
---schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_sugi_tree.mts"
+--schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_sugi_tree.mts"
 
-	minetest.register_node("ebiomes:sugi_sapling", {
+	core.register_node("ebiomes:sugi_sapling", {
 		description = S("Sugi Tree Sapling"),
 		drawtype = "plantlike",
 		tiles = {"ebiomes_sugi_sapling.png"},
@@ -317,7 +317,7 @@ end
 		sounds = default.node_sound_leaves_defaults(),
 
 		on_construct = function(pos)
-			minetest.get_node_timer(pos):start(math.random(300, 1500))
+			core.get_node_timer(pos):start(math.random(300, 1500))
 		end,
 
 		on_place = function(itemstack, placer, pointed_thing)
@@ -334,9 +334,9 @@ end
 		end,
 	})
 
-if minetest.settings:get_bool("light_mapgen", true) then
+if core.settings:get_bool("light_mapgen", true) then
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:sugi_tree",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_japanese_rainforest_litter"},
@@ -352,7 +352,7 @@ if minetest.settings:get_bool("light_mapgen", true) then
 		biomes = {"japanese_rainforest"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_sugi_tree.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_sugi_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random"
 	})
@@ -360,7 +360,7 @@ if minetest.settings:get_bool("light_mapgen", true) then
 
 else
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:sugi_tree",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_japanese_rainforest_litter"},
@@ -376,14 +376,14 @@ else
 		biomes = {"japanese_rainforest"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_sugi_tree.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_sugi_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random"
 	})
 
 end
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:sugi_log",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_japanese_rainforest_litter"},
@@ -393,12 +393,12 @@ end
 		biomes = {"japanese_rainforest"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_sugi_log.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_sugi_log.mts",
 		flags = "place_center_x",
 		rotation = "random"
 	})
 
-if minetest.get_modpath("bonemeal") ~= nil then
+if core.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:sugi_sapling", grow_new_sugi_tree, "soil"},
 })
@@ -452,7 +452,7 @@ end
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		type = "fuel",
 		recipe = "ebiomes:gate_sugi_wood_closed",
 		burntime = 9,
@@ -461,7 +461,7 @@ end
 
 --Mizunara
 
-	minetest.register_node("ebiomes:mizunara_tree", {
+	core.register_node("ebiomes:mizunara_tree", {
 		description = S("Mizunara Tree"),
 		tiles = {"ebiomes_mizunara_tree_top.png", "ebiomes_mizunara_tree_top.png",
 			"ebiomes_mizunara_tree.png"},
@@ -470,10 +470,10 @@ end
 		groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
 		sounds = default.node_sound_wood_defaults(),
 
-		on_place = minetest.rotate_node
+		on_place = core.rotate_node
 	})
 
-	minetest.register_node("ebiomes:mizunara_wood", {
+	core.register_node("ebiomes:mizunara_wood", {
 		description = S("Mizunara Wood Planks"),
 		paramtype2 = "facedir",
 		place_param2 = 0,
@@ -483,14 +483,14 @@ end
 		sounds = default.node_sound_wood_defaults(),
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		output = "ebiomes:mizunara_wood 4",
 		recipe = {
 			{"ebiomes:mizunara_tree"},
 		}
 	})
 
-	minetest.register_node("ebiomes:mizunara_leaves", {
+	core.register_node("ebiomes:mizunara_leaves", {
 		description = S("Mizunara Tree Leaves"),
 		drawtype = "allfaces_optional",
 		tiles = {"ebiomes_mizunara_leaves.png"},
@@ -521,27 +521,27 @@ end
 local function grow_new_baldcypress_tree(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(240, 600))
+		core.get_node_timer(pos):start(math.random(240, 600))
 		return
 	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-4, y = pos.y, z = pos.z-4}, modpath.."/schematics/baldcypress.mts", "0", nil, false)
+	core.remove_node(pos)
+	core.place_schematic({x = pos.x-4, y = pos.y, z = pos.z-4}, modpath.."/schematics/baldcypress.mts", "0", nil, false)
 end
 --]]
 
 local function grow_new_mizunara_tree(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(150, 300))
+		core.get_node_timer(pos):start(math.random(150, 300))
 		return
 	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-3, y = pos.y, z = pos.z-3}, modpath.."/schematics/ebiomes_mizunara_tree.mts", "0", nil, false)
+	core.remove_node(pos)
+	core.place_schematic({x = pos.x-3, y = pos.y, z = pos.z-3}, modpath.."/schematics/ebiomes_mizunara_tree.mts", "0", nil, false)
 end
 
---schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_mizunara.mts"
+--schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_mizunara.mts"
 
-	minetest.register_node("ebiomes:mizunara_sapling", {
+	core.register_node("ebiomes:mizunara_sapling", {
 		description = S("Mizunara Tree Sapling"),
 		drawtype = "plantlike",
 		tiles = {"ebiomes_mizunara_sapling.png"},
@@ -560,7 +560,7 @@ end
 		sounds = default.node_sound_leaves_defaults(),
 
 		on_construct = function(pos)
-			minetest.get_node_timer(pos):start(math.random(300, 1500))
+			core.get_node_timer(pos):start(math.random(300, 1500))
 		end,
 
 		on_place = function(itemstack, placer, pointed_thing)
@@ -577,9 +577,9 @@ end
 		end,
 	})
 
-if minetest.settings:get_bool("light_mapgen", true) then
+if core.settings:get_bool("light_mapgen", true) then
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:mizunara_tree",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_japanese_rainforest_litter"},
@@ -595,14 +595,14 @@ if minetest.settings:get_bool("light_mapgen", true) then
 		biomes = {"japanese_rainforest"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_mizunara_tree.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_mizunara_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random"
 	})
 
 else
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:mizunara_tree",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_japanese_rainforest_litter"},
@@ -618,14 +618,14 @@ else
 		biomes = {"japanese_rainforest"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_mizunara_tree.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_mizunara_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random"
 	})
 
 end
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:mizunara_log",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_japanese_rainforest_litter"},
@@ -635,12 +635,12 @@ end
 		biomes = {"japanese_rainforest"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_mizunara_log.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_mizunara_log.mts",
 		flags = "place_center_x",
 		rotation = "random"
 	})
 
-if minetest.get_modpath("bonemeal") ~= nil then
+if core.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:mizunara_sapling", grow_new_mizunara_tree, "soil"},
 })
@@ -694,7 +694,7 @@ end
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		type = "fuel",
 		recipe = "ebiomes:gate_mizunara_wood_closed",
 		burntime = 9,
@@ -704,7 +704,7 @@ end
 
 --Stone Oak
 
-	minetest.register_node("ebiomes:stoneoak_tree", {
+	core.register_node("ebiomes:stoneoak_tree", {
 		description = S("Stone Oak Tree"),
 		tiles = {"ebiomes_stoneoak_tree_top.png", "ebiomes_stoneoak_tree_top.png",
 			"ebiomes_stoneoak_tree.png"},
@@ -713,10 +713,10 @@ end
 		groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
 		sounds = default.node_sound_wood_defaults(),
 
-		on_place = minetest.rotate_node
+		on_place = core.rotate_node
 	})
 
-	minetest.register_node("ebiomes:stoneoak_wood", {
+	core.register_node("ebiomes:stoneoak_wood", {
 		description = S("Stone Oak Wood Planks"),
 		paramtype2 = "facedir",
 		place_param2 = 0,
@@ -726,14 +726,14 @@ end
 		sounds = default.node_sound_wood_defaults(),
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		output = "ebiomes:stoneoak_wood 4",
 		recipe = {
 			{"ebiomes:stoneoak_tree"},
 		}
 	})
 
-	minetest.register_node("ebiomes:stoneoak_leaves", {
+	core.register_node("ebiomes:stoneoak_leaves", {
 		description = S("Stone Oak Tree Leaves"),
 		drawtype = "allfaces_optional",
 		tiles = {"ebiomes_stoneoak_leaves.png"},
@@ -764,27 +764,27 @@ end
 local function grow_new_baldcypress_tree(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(240, 600))
+		core.get_node_timer(pos):start(math.random(240, 600))
 		return
 	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-4, y = pos.y, z = pos.z-4}, modpath.."/schematics/baldcypress.mts", "0", nil, false)
+	core.remove_node(pos)
+	core.place_schematic({x = pos.x-4, y = pos.y, z = pos.z-4}, modpath.."/schematics/baldcypress.mts", "0", nil, false)
 end
 --]]
 
 local function grow_new_stoneoak_tree(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(150, 300))
+		core.get_node_timer(pos):start(math.random(150, 300))
 		return
 	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-3, y = pos.y, z = pos.z-3}, modpath.."/schematics/ebiomes_stoneoak_tree.mts", "0", nil, false)
+	core.remove_node(pos)
+	core.place_schematic({x = pos.x-3, y = pos.y, z = pos.z-3}, modpath.."/schematics/ebiomes_stoneoak_tree.mts", "0", nil, false)
 end
 
---schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_stoneoak.mts"
+--schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_stoneoak.mts"
 
-	minetest.register_node("ebiomes:stoneoak_sapling", {
+	core.register_node("ebiomes:stoneoak_sapling", {
 		description = S("Stone Oak Tree Sapling"),
 		drawtype = "plantlike",
 		tiles = {"ebiomes_stoneoak_sapling.png"},
@@ -803,7 +803,7 @@ end
 		sounds = default.node_sound_leaves_defaults(),
 
 		on_construct = function(pos)
-			minetest.get_node_timer(pos):start(math.random(300, 1500))
+			core.get_node_timer(pos):start(math.random(300, 1500))
 		end,
 
 		on_place = function(itemstack, placer, pointed_thing)
@@ -820,9 +820,9 @@ end
 		end,
 	})
 
-if minetest.settings:get_bool("light_mapgen", true) then
+if core.settings:get_bool("light_mapgen", true) then
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:stoneoak_tree",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_japanese_rainforest_litter"},
@@ -838,7 +838,7 @@ if minetest.settings:get_bool("light_mapgen", true) then
 		biomes = {"japanese_rainforest"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_stoneoak_tree.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_stoneoak_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random"
 	})
@@ -846,7 +846,7 @@ if minetest.settings:get_bool("light_mapgen", true) then
 
 else
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:stoneoak_tree",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_japanese_rainforest_litter"},
@@ -862,14 +862,14 @@ else
 		biomes = {"japanese_rainforest"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_stoneoak_tree.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_stoneoak_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random"
 	})
 
 end
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:stoneoak_log",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_japanese_rainforest_litter"},
@@ -879,12 +879,12 @@ end
 		biomes = {"japanese_rainforest"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_stoneoak_log.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_stoneoak_log.mts",
 		flags = "place_center_x",
 		rotation = "random"
 	})
 
-if minetest.get_modpath("bonemeal") ~= nil then
+if core.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:stoneoak_sapling", grow_new_stoneoak_tree, "soil"},
 })
@@ -938,14 +938,14 @@ end
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		type = "fuel",
 		recipe = "ebiomes:gate_stoneoak_wood_closed",
 		burntime = 9,
 	})
 
 for length = 1, 3 do
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:fernjp_"..length,
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_japanese_rainforest_litter"},
@@ -959,7 +959,7 @@ for length = 1, 3 do
 end
 
 --[[
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:junglegrass_jrf",
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_japanese_rainforest_litter"},
@@ -972,7 +972,7 @@ end
 	})
 --]]
 
-	minetest.register_node("ebiomes:forestgrowth", {
+	core.register_node("ebiomes:forestgrowth", {
 		description = S("Forest Growth"),
 		drawtype = "plantlike",
 		waving = 1,
@@ -993,7 +993,7 @@ end
 	})
 
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:forestgrowth",
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_japanese_rainforest_litter"},
@@ -1005,7 +1005,7 @@ end
 		decoration = "ebiomes:forestgrowth",
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		output = "default:stick",
 		recipe = {
 			{"ebiomes:forestgrowth", "ebiomes:forestgrowth"},
@@ -1017,7 +1017,7 @@ end
 
 --Misc
 
-if minetest.get_modpath("moreblocks") then
+if core.get_modpath("moreblocks") then
 
 
 	stairsplus:register_all("sugi_tree", "wood", "ebiomes:sugi_wood", {
@@ -1044,7 +1044,7 @@ if minetest.get_modpath("moreblocks") then
 end
 
 -- Support for flowerpot
-if minetest.global_exists("flowerpot") then
+if core.global_exists("flowerpot") then
 
 	flowerpot.register_node("ebiomes:sugi_sapling")
 	flowerpot.register_node("ebiomes:mizunara_sapling")
@@ -1053,7 +1053,7 @@ if minetest.global_exists("flowerpot") then
 end
 
 --Ground stuff
-if minetest.get_modpath("bonemeal") ~= nil then
+if core.get_modpath("bonemeal") ~= nil then
 	bonemeal:add_deco({
 		{"ebiomes:dirt_with_japanese_rainforest_litter", {"default:fern_1", "default:fern_2", "default:fern_3"},
 			{"ebiomes:forestgrowth", "ebiomes:moss"} }

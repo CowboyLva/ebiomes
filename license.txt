@@ -1,6 +1,6 @@
 ########Code########
 
-Copyright (C) 2021-2024: CowboyLv - GPLv3 (GNU GENERAL PUBLIC LICENSE)
+Copyright (C) 2021-2026: CowboyLv - GPLv3 (GNU GENERAL PUBLIC LICENSE)
 
 runs - cool_trees, swaz (code used as a template for sapling functions)
 License: GPLv3

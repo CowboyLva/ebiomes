@@ -1,16 +1,16 @@
-local S = minetest.get_translator("ebiomes")
+local S = core.get_translator("ebiomes")
 
 --from runs cooltrees
 local modname = "ebiomes"
-local modpath = minetest.get_modpath(modname)
-local mg_name = minetest.get_mapgen_setting("mg_name")
+local modpath = core.get_modpath(modname)
+local mg_name = core.get_mapgen_setting("mg_name")
 
 -- Jungle Savanna
 
-minetest.register_alias("dirt_jungle_savanna_grass", "ebiomes:dirt_with_jungle_savanna_grass")
-minetest.register_alias("dirt_jungle_savanna_grass_footsteps", "ebiomes:dirt_with_jungle_savanna_grass_footsteps")
+core.register_alias("dirt_jungle_savanna_grass", "ebiomes:dirt_with_jungle_savanna_grass")
+core.register_alias("dirt_jungle_savanna_grass_footsteps", "ebiomes:dirt_with_jungle_savanna_grass_footsteps")
 
-	minetest.register_node("ebiomes:dirt_with_jungle_savanna_grass", {
+	core.register_node("ebiomes:dirt_with_jungle_savanna_grass", {
 		description = S("Dirt with Jungle Savanna Grass"),
 		tiles = {"ebiomes_jungle_savanna_grass.png", "default_dirt.png",
 			{name = "default_dirt.png^ebiomes_jungle_savanna_grass_side.png",
@@ -27,7 +27,7 @@ minetest.register_alias("dirt_jungle_savanna_grass_footsteps", "ebiomes:dirt_wit
 		}
 	})
 
-	minetest.register_node("ebiomes:dirt_with_jungle_savanna_grass_footsteps", {
+	core.register_node("ebiomes:dirt_with_jungle_savanna_grass_footsteps", {
 		description = S("Dirt with Jungle Savanna Grass and Footsteps"),
 		tiles = {"ebiomes_jungle_savanna_grass.png^default_footprint.png", "default_dirt.png",
 			{name = "default_dirt.png^ebiomes_jungle_savanna_grass_side.png",
@@ -53,9 +53,9 @@ minetest.register_alias("dirt_jungle_savanna_grass_footsteps", "ebiomes:dirt_wit
 
 
 
-if minetest.settings:get_bool("reg_hsavanna", true) then
+if core.settings:get_bool("reg_hsavanna", true) then
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "jungle_savanna",
 		node_top = "ebiomes:dirt_with_jungle_savanna_grass",
 		depth_top = 1,
@@ -72,7 +72,7 @@ if minetest.settings:get_bool("reg_hsavanna", true) then
 		humidity_point = 62,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "jungle_savanna_shore",
 		node_top = "default:sand",
 		depth_top = 1,
@@ -89,7 +89,7 @@ if minetest.settings:get_bool("reg_hsavanna", true) then
 		humidity_point = 62,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "jungle_savanna_ocean",
 		node_top = "default:sand",
 		depth_top = 1,
@@ -108,7 +108,7 @@ if minetest.settings:get_bool("reg_hsavanna", true) then
 		humidity_point = 62,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "jungle_savanna_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
@@ -122,7 +122,7 @@ if minetest.settings:get_bool("reg_hsavanna", true) then
 
 -- Coral
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:coral_jsv",
 		deco_type = "simple",
 		place_on = {"default:sand"},
@@ -152,7 +152,7 @@ if minetest.settings:get_bool("reg_hsavanna", true) then
 
 -- Grass
 
-	minetest.register_node("ebiomes:jungle_savanna_grass_1", {
+	core.register_node("ebiomes:jungle_savanna_grass_1", {
 		description = S("Jungle Savanna Grass"),
 		drawtype = "plantlike",
 		waving = 1,
@@ -180,14 +180,14 @@ if minetest.settings:get_bool("reg_hsavanna", true) then
 		on_place = function(itemstack, placer, pointed_thing)
 			-- place a random grass node
 			local stack = ItemStack("ebiomes:jungle_savanna_grass_" .. math.random(1,5))
-			local ret = minetest.item_place(stack, placer, pointed_thing)
+			local ret = core.item_place(stack, placer, pointed_thing)
 			return ItemStack("ebiomes:jungle_savanna_grass_1 " ..
 				itemstack:get_count() - (1 - ret:get_count()))
 		end,
 	})
 
 for i = 2, 5 do
-	minetest.register_node("ebiomes:jungle_savanna_grass_" .. i, {
+	core.register_node("ebiomes:jungle_savanna_grass_" .. i, {
 		description = S("Jungle Savanna Grass"),
 		drawtype = "plantlike",
 		waving = 1,
@@ -214,7 +214,7 @@ for i = 2, 5 do
 	})
 end
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:junglegrass_jsv",
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_jungle_savanna_grass"},
@@ -228,7 +228,7 @@ end
 
 
 for length = 1, 5 do
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:jungle_savanna_grass_"..length,
 		deco_type = "simple",
 		place_on = {"ebiomes:dirt_with_jungle_savanna_grass"},
@@ -250,7 +250,7 @@ end
 
 --Trees
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:afzelia_tree_jsv",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_jungle_savanna_grass"},
@@ -266,12 +266,12 @@ end
 		biomes = {"jungle_savanna"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_afzelia_tree.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_afzelia_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:afzelia_log_jsv",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_jungle_savanna_grass"},
@@ -281,13 +281,13 @@ end
 		biomes = {"jungle_savanna"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_afzelia_log.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_afzelia_log.mts",
 		flags = "place_center_x",
 		rotation = "random"
 	})
 
-if minetest.settings:get_bool("light_mapgen", true) then
-	minetest.register_decoration({
+if core.settings:get_bool("light_mapgen", true) then
+	core.register_decoration({
 		name = "ebiomes:limba_tree_jsv",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_jungle_savanna_grass"},
@@ -303,12 +303,12 @@ if minetest.settings:get_bool("light_mapgen", true) then
 		biomes = {"jungle_savanna"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_limba_tree.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_limba_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
 else
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:limba_tree_jsv",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_jungle_savanna_grass"},
@@ -324,13 +324,13 @@ else
 		biomes = {"jungle_savanna"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_limba_tree.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_limba_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
 end
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:limba_log_jsv",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_jungle_savanna_grass"},
@@ -340,12 +340,12 @@ end
 		biomes = {"jungle_savanna"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_limba_log.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_limba_log.mts",
 		flags = "place_center_x",
 		rotation = "random"
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:tamarind_tree_jsv",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_jungle_savanna_grass"},
@@ -361,12 +361,12 @@ end
 		biomes = {"jungle_savanna"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_tamarind_tree.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_tamarind_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:tamarind_log_jsv",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_jungle_savanna_grass"},
@@ -376,7 +376,7 @@ end
 		biomes = {"jungle_savanna"},
 		y_max = 31000,
 		y_min = 4,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_tamarind_log.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_tamarind_log.mts",
 		flags = "place_center_x",
 		rotation = "random"
 	})
@@ -384,7 +384,7 @@ end
 
 
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:jungle_tree_jsv",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dirt_with_jungle_savanna_grass"},
@@ -393,7 +393,7 @@ end
 		biomes = {"jungle_savanna"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("default") .. "/schematics/jungle_tree.mts",
+		schematic = core.get_modpath("default") .. "/schematics/jungle_tree.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
@@ -403,7 +403,7 @@ end
 --Additionals
 
 --Ground stuff
-if minetest.get_modpath("bonemeal") ~= nil then
+if core.get_modpath("bonemeal") ~= nil then
 	bonemeal:add_deco({
 		{"ebiomes:dirt_with_jungle_savanna_grass", {"ebiomes:jungle_savanna_grass_1", "ebiomes:jungle_savanna_grass_2", "ebiomes:jungle_savanna_grass_3", "ebiomes:jungle_savanna_grass_4", "ebiomes:jungle_savanna_grass_5"},
 			{"default:junglegrass"} }

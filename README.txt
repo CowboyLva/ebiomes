@@ -2,15 +2,22 @@
 ################ebiomes##################
 #########################################
 
-Version 1.5.3 - By CowboyLv
+Version 1.5.4 - By CowboyLv
 
 ## Changes
+
+1.5.4
+
+Updated swamp water
+Minor Latvian translation fixes
+Removal of depends.txt
+Namespace update (minetest.thing is now core.thing)
 
 1.5.3
 
 Toggles for disabling mobs (mobs, forgotten_monsters)
 Addition of eatable group
-Russian and Latvian translations
+Russian (by adikalon) and Latvian translations
 
 1.5.2
 
@@ -159,3 +166,6 @@ Things lacking - Fireflies on the mods biomes(a bug on mtg end as of July 13th 2
 To remove blackberry from snowy_grassland the default mods snowy grassland biome has been reregistered. So far there is no method(dev term, look up the minetest modding wiki or doc folder in install/build minetest directory(not .minetest)) designed to remove or change a single decoration.
 
 Fireflies are bugged outside of mtg. Has been tested in Ethereal as well.
+
+
+Support for nssm is included but currently not listed in mod.conf because it greatly slows down mapgen as of march 2026. (Some players may be inclined to get all optional mods for something)

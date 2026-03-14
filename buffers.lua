@@ -2,7 +2,7 @@
 
 -- Sandstone desert Buffer
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "sandstone_desert_buffer",
 		node_top = "default:sand",
 		depth_top = 1,
@@ -19,7 +19,7 @@
 		humidity_point = 15,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "sandstone_desert_ocean_buffer",
 		node_top = "default:sand",
 		depth_top = 1,
@@ -37,7 +37,7 @@
 		humidity_point = 15,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "sandstone_desert_under_buffer",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
@@ -53,7 +53,7 @@
 
 -- Cold desert Buffer
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "cold_desert_buffer",
 		node_top = "default:silver_sand",
 		depth_top = 1,
@@ -70,7 +70,7 @@
 		humidity_point = 15,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "cold_desert_ocean_buffer",
 		node_top = "default:sand",
 		depth_top = 1,
@@ -89,7 +89,7 @@
 		humidity_point = 15,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "cold_desert_under_buffer",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",

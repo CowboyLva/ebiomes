@@ -1,29 +1,29 @@
-local S = minetest.get_translator("ebiomes")
+local S = core.get_translator("ebiomes")
 
 --from runs cooltrees
 local modname = "ebiomes"
-local modpath = minetest.get_modpath(modname)
-local mg_name = minetest.get_mapgen_setting("mg_name")
+local modpath = core.get_modpath(modname)
+local mg_name = core.get_mapgen_setting("mg_name")
 
 -- Aliases
 
-minetest.register_alias("dry_dirt_with_grass", "ebiomes:dry_dirt_with_grass_arid")
-minetest.register_alias("dry_dirt_with_grass_footsteps", "ebiomes:dry_dirt_with_grass_arid_footsteps")
-minetest.register_alias("cool_dry_dirt_with_grass", "ebiomes:dry_dirt_with_grass_arid_cool")
-minetest.register_alias("cool_dry_dirt_with_grass_footsteps", "ebiomes:dry_dirt_with_grass_arid_cool_footsteps")
+core.register_alias("dry_dirt_with_grass", "ebiomes:dry_dirt_with_grass_arid")
+core.register_alias("dry_dirt_with_grass_footsteps", "ebiomes:dry_dirt_with_grass_arid_footsteps")
+core.register_alias("cool_dry_dirt_with_grass", "ebiomes:dry_dirt_with_grass_arid_cool")
+core.register_alias("cool_dry_dirt_with_grass_footsteps", "ebiomes:dry_dirt_with_grass_arid_cool_footsteps")
 
-minetest.register_alias("hardy_bush_stem", "ebiomes:hardy_bush_stem")
-minetest.register_alias("hardy_bush_leaves", "ebiomes:hardy_bush_leaves")
-minetest.register_alias("hardy_bush_sapling", "ebiomes:hardy_bush_sapling")
-minetest.register_alias("thorn_bush_leaves", "ebiomes:thorn_bush_leaves")
-minetest.register_alias("thorn_bush_sapling", "ebiomes:thorn_bush_sapling")
+core.register_alias("hardy_bush_stem", "ebiomes:hardy_bush_stem")
+core.register_alias("hardy_bush_leaves", "ebiomes:hardy_bush_leaves")
+core.register_alias("hardy_bush_sapling", "ebiomes:hardy_bush_sapling")
+core.register_alias("thorn_bush_leaves", "ebiomes:thorn_bush_leaves")
+core.register_alias("thorn_bush_sapling", "ebiomes:thorn_bush_sapling")
 
 
 -- Biome bases
 
 -- Arid grassland
 
-	minetest.register_node("ebiomes:dry_dirt_with_grass_arid", {
+	core.register_node("ebiomes:dry_dirt_with_grass_arid", {
 		description = S("Dry Dirt with Arid Grass"),
 		tiles = {"ebiomes_grass_arid.png", "default_dry_dirt.png",
 			{name = "default_dry_dirt.png^ebiomes_grass_arid_side.png",
@@ -35,7 +35,7 @@ minetest.register_alias("thorn_bush_sapling", "ebiomes:thorn_bush_sapling")
 		}),
 	})
 
-	minetest.register_node("ebiomes:dry_dirt_with_grass_arid_footsteps", {
+	core.register_node("ebiomes:dry_dirt_with_grass_arid_footsteps", {
 		description = S("Dry Dirt with Arid Grass and Footsteps"),
 		tiles = {"ebiomes_grass_arid.png^default_footprint.png", "default_dry_dirt.png",
 			{name = "default_dry_dirt.png^ebiomes_grass_arid_side.png",
@@ -47,7 +47,7 @@ minetest.register_alias("thorn_bush_sapling", "ebiomes:thorn_bush_sapling")
 		}),
 	})
 
-	minetest.register_node("ebiomes:grass_arid_1", {
+	core.register_node("ebiomes:grass_arid_1", {
 		description = S("Arid Grass"),
 		drawtype = "plantlike",
 		waving = 1,
@@ -75,14 +75,14 @@ minetest.register_alias("thorn_bush_sapling", "ebiomes:thorn_bush_sapling")
 		on_place = function(itemstack, placer, pointed_thing)
 			-- place a random grass node
 			local stack = ItemStack("ebiomes:grass_arid_" .. math.random(1,5))
-			local ret = minetest.item_place(stack, placer, pointed_thing)
+			local ret = core.item_place(stack, placer, pointed_thing)
 			return ItemStack("ebiomes:grass_arid_1 " ..
 				itemstack:get_count() - (1 - ret:get_count()))
 		end,
 	})
 
 for i = 2, 5 do
-	minetest.register_node("ebiomes:grass_arid_" .. i, {
+	core.register_node("ebiomes:grass_arid_" .. i, {
 		description = S("Arid Grass"),
 		drawtype = "plantlike",
 		waving = 1,
@@ -109,7 +109,7 @@ for i = 2, 5 do
 	})
 end
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "grassland_arid",
 		node_top = "ebiomes:dry_dirt_with_grass_arid",
 		depth_top = 1,
@@ -126,7 +126,7 @@ end
 		humidity_point = 20,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "grassland_arid_shore",
 		node_top = "default:sand",
 		depth_top = 1,
@@ -143,7 +143,7 @@ end
 		humidity_point = 20,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "grassland_arid_ocean",
 		node_top = "default:sand",
 		depth_top = 1,
@@ -162,7 +162,7 @@ end
 		humidity_point = 20,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "grassland_arid_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
@@ -175,7 +175,7 @@ end
 	})
 
 for length = 1, 5 do
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:grass_arid_"..length,
 		deco_type = "simple",
 		place_on = {"ebiomes:dry_dirt_with_grass_arid"},
@@ -196,7 +196,7 @@ end
 
 -- Arid grassland Cool
 
-	minetest.register_node("ebiomes:dry_dirt_with_grass_arid_cool", {
+	core.register_node("ebiomes:dry_dirt_with_grass_arid_cool", {
 		description = S("Dry Dirt with Cool Arid Grass"),
 		tiles = {"ebiomes_grass_arid_cool.png", "default_dry_dirt.png",
 			{name = "default_dry_dirt.png^ebiomes_grass_arid_cool_side.png",
@@ -208,7 +208,7 @@ end
 		}),
 	})
 
-	minetest.register_node("ebiomes:dry_dirt_with_grass_arid_cool_footsteps", {
+	core.register_node("ebiomes:dry_dirt_with_grass_arid_cool_footsteps", {
 		description = S("Dry Dirt with Cool Arid Grass and Footsteps"),
 		tiles = {"ebiomes_grass_arid_cool.png^default_footprint.png", "default_dry_dirt.png",
 			{name = "default_dry_dirt.png^ebiomes_grass_arid_cool_side.png",
@@ -220,7 +220,7 @@ end
 		}),
 	})
 
-	minetest.register_node("ebiomes:grass_arid_cool_1", {
+	core.register_node("ebiomes:grass_arid_cool_1", {
 		description = S("Cool Arid Grass"),
 		drawtype = "plantlike",
 		waving = 1,
@@ -248,14 +248,14 @@ end
 		on_place = function(itemstack, placer, pointed_thing)
 			-- place a random grass node
 			local stack = ItemStack("ebiomes:grass_arid_cool_" .. math.random(1,5))
-			local ret = minetest.item_place(stack, placer, pointed_thing)
+			local ret = core.item_place(stack, placer, pointed_thing)
 			return ItemStack("ebiomes:grass_arid_cool_1 " ..
 				itemstack:get_count() - (1 - ret:get_count()))
 		end,
 	})
 
 for i = 2, 5 do
-	minetest.register_node("ebiomes:grass_arid_cool_" .. i, {
+	core.register_node("ebiomes:grass_arid_cool_" .. i, {
 		description = S("Cool Arid Grass"),
 		drawtype = "plantlike",
 		waving = 1,
@@ -282,7 +282,7 @@ for i = 2, 5 do
 	})
 end
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "grassland_arid_cool",
 		node_top = "ebiomes:dry_dirt_with_grass_arid_cool",
 		depth_top = 1,
@@ -299,7 +299,7 @@ end
 		humidity_point = 20,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "grassland_arid_cool_shore",
 		node_top = "default:sand",
 		depth_top = 1,
@@ -316,7 +316,7 @@ end
 		humidity_point = 20,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "grassland_arid_cool_ocean",
 		node_top = "default:sand",
 		depth_top = 1,
@@ -335,7 +335,7 @@ end
 		humidity_point = 20,
 	})
 
-	minetest.register_biome({
+	core.register_biome({
 		name = "grassland_arid_cool_under",
 		node_cave_liquid = {"default:water_source", "default:lava_source"},
 		node_dungeon = "default:cobble",
@@ -348,7 +348,7 @@ end
 	})
 
 for length = 1, 5 do
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:grass_arid_cool_"..length,
 		deco_type = "simple",
 		place_on = {"ebiomes:dry_dirt_with_grass_arid_cool"},
@@ -376,14 +376,14 @@ end
 local function grow_new_hardy_bush(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(150, 300))
+		core.get_node_timer(pos):start(math.random(150, 300))
 		return
 	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-1, y = pos.y-1, z = pos.z-1}, modpath.."/schematics/ebiomes_hardy_bush.mts", "0", nil, false)
+	core.remove_node(pos)
+	core.place_schematic({x = pos.x-1, y = pos.y-1, z = pos.z-1}, modpath.."/schematics/ebiomes_hardy_bush.mts", "0", nil, false)
 end
 
-	minetest.register_node("ebiomes:hardy_bush_stem", {
+	core.register_node("ebiomes:hardy_bush_stem", {
 		description = S("Hardy Bush Stem"),
 		drawtype = "plantlike",
 		visual_scale = 1.41,
@@ -400,7 +400,7 @@ end
 		},
 	})
 
-	minetest.register_node("ebiomes:hardy_bush_leaves", {
+	core.register_node("ebiomes:hardy_bush_leaves", {
 		description = S("Hardy Bush Leaves"),
 		drawtype = "allfaces_optional",
 		tiles = {"ebiomes_hardy_bush_leaves.png"},
@@ -418,7 +418,7 @@ end
 		after_place_node = default.after_place_leaves,
 	})
 
-	minetest.register_node("ebiomes:hardy_bush_sapling", {
+	core.register_node("ebiomes:hardy_bush_sapling", {
 		description = S("Hardy Bush Sapling"),
 		drawtype = "plantlike",
 		tiles = {"ebiomes_hardy_bush_sapling.png"},
@@ -437,7 +437,7 @@ end
 		sounds = default.node_sound_leaves_defaults(),
 
 		on_construct = function(pos)
-			minetest.get_node_timer(pos):start(math.random(300, 1500))
+			core.get_node_timer(pos):start(math.random(300, 1500))
 		end,
 
 		on_place = function(itemstack, placer, pointed_thing)
@@ -460,7 +460,7 @@ end
 		radius = 1,
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:hardy_bush",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dry_dirt_with_grass_arid", "ebiomes:dry_dirt_with_grass_arid_cool"},
@@ -476,24 +476,24 @@ end
 		biomes = {"grassland_arid", "grassland_arid_cool"},
 		y_max = 31000,
 		y_min = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_hardy_bush.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_hardy_bush.mts",
 		flags = "place_center_x, place_center_z",
 	})
 
-if minetest.get_modpath("bonemeal") ~= nil then
+if core.get_modpath("bonemeal") ~= nil then
 	bonemeal:add_sapling({
 		{"ebiomes:hardy_bush_sapling", grow_new_hardy_bush, "soil"},
 	})
 end
 
-	minetest.register_craft({
+	core.register_craft({
 		output = "default:wood",
 		recipe = {
 			{"ebiomes:hardy_bush_stem"},
 		}
 	})
 
-	minetest.register_craft({
+	core.register_craft({
 		type = "fuel",
 		recipe = "ebiomes:hardy_bush_stem",
 		burntime = 8,
@@ -505,14 +505,14 @@ end
 local function grow_new_thorn_bush(pos)
 	if not default.can_grow(pos) then
 		-- try a bit later again
-		minetest.get_node_timer(pos):start(math.random(150, 300))
+		core.get_node_timer(pos):start(math.random(150, 300))
 		return
 	end
-	minetest.remove_node(pos)
-	minetest.place_schematic({x = pos.x-1, y = pos.y, z = pos.z-1}, modpath.."/schematics/ebiomes_thorn_bush.mts", "0", nil, false)
+	core.remove_node(pos)
+	core.place_schematic({x = pos.x-1, y = pos.y, z = pos.z-1}, modpath.."/schematics/ebiomes_thorn_bush.mts", "0", nil, false)
 end
 
-	minetest.register_node("ebiomes:thorn_bush_leaves", {
+	core.register_node("ebiomes:thorn_bush_leaves", {
 		description = S("Thorn Bush Leaves"),
 		drawtype = "allfaces_optional",
 		tiles = {"ebiomes_thorn_bush_leaves.png"},
@@ -532,7 +532,7 @@ end
 		after_place_node = default.after_place_leaves,
 	})
 
-	minetest.register_node("ebiomes:thorn_bush_sapling", {
+	core.register_node("ebiomes:thorn_bush_sapling", {
 		description = S("Thorn Bush Sapling"),
 		drawtype = "plantlike",
 		tiles = {"ebiomes_thorn_bush_sapling.png"},
@@ -551,7 +551,7 @@ end
 		sounds = default.node_sound_leaves_defaults(),
 
 		on_construct = function(pos)
-			minetest.get_node_timer(pos):start(math.random(300, 1500))
+			core.get_node_timer(pos):start(math.random(300, 1500))
 		end,
 
 		on_place = function(itemstack, placer, pointed_thing)
@@ -567,7 +567,7 @@ end
 		end,
 	})
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "ebiomes:thorn_bush",
 		deco_type = "schematic",
 		place_on = {"ebiomes:dry_dirt_with_grass_arid", "ebiomes:dry_dirt_with_grass_arid_cool"},
@@ -584,18 +584,18 @@ end
 		y_max = 31000,
 		y_min = 1,
 		place_offset_y = 1,
-		schematic = minetest.get_modpath("ebiomes") .. "/schematics/ebiomes_thorn_bush.mts",
+		schematic = core.get_modpath("ebiomes") .. "/schematics/ebiomes_thorn_bush.mts",
 		flags = "place_center_x, place_center_z",
 	})
 
-if minetest.get_modpath("bonemeal") ~= nil then
+if core.get_modpath("bonemeal") ~= nil then
 bonemeal:add_sapling({
 	{"ebiomes:thorn_bush_sapling", grow_new_thorn_bush, "soil"},
 })
 end
 
 --Bonemeal
-if minetest.get_modpath("bonemeal") then
+if core.get_modpath("bonemeal") then
 	bonemeal:add_deco({
 		{"ebiomes:dry_dirt_with_grass_arid", {"ebiomes:grass_arid_1", "ebiomes:grass_arid_2", "ebiomes:grass_arid_3", "ebiomes:grass_arid_4", "ebiomes:grass_arid_5"},
 			{"default:dry_shrub"} }
@@ -611,7 +611,7 @@ end
 -- Peripheral mod support
 
 -- Support for flowerpot
-if minetest.global_exists("flowerpot") then
+if core.global_exists("flowerpot") then
 	flowerpot.register_node("ebiomes:hardy_bush_sapling")
 	flowerpot.register_node("ebiomes:thorn_bush_sapling")
 end
