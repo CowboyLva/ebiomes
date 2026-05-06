@@ -2,9 +2,14 @@
 ################ebiomes##################
 #########################################
 
-Version 1.5.4 - By CowboyLv
+Version 1.5.5 - By CowboyLv
 
 ## Changes
+
+1.5.5
+
+Minor fixes
+Better moreblocks support
 
 1.5.4
 

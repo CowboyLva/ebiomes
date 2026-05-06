@@ -501,18 +501,6 @@ bonemeal:add_sapling({
 })
 end
 
-	--forms sampled from pigiron mod
-	stairs.register_stair_and_slab("pear_wood", "ebiomes:pear_wood",
-		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-		{"ebiomes_pear_wood.png"},
-		S("Pear Wood Stair"),
-		S("Pear Wood Slab"),
-		default.node_sound_wood_defaults(),
-		true,
-		S("Inner Pear Wood Stair"),
-		S("Outer Pear Wood Stair")
-	)
-
 	default.register_fence("ebiomes:fence_pear_wood", {
 		description = S("Pear Wood Fence"),
 		texture = "ebiomes_fence_pear_wood.png",
@@ -760,18 +748,6 @@ bonemeal:add_sapling({
 	{"ebiomes:quince_sapling", grow_new_quince_tree, "soil"},
 })
 end
-
-	--forms sampled from pigiron mod
-	stairs.register_stair_and_slab("quince_wood", "ebiomes:quince_wood",
-		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-		{"ebiomes_quince_wood.png"},
-		S("Quince Wood Stair"),
-		S("Quince Wood Slab"),
-		default.node_sound_wood_defaults(),
-		true,
-		S("Inner Quince Wood Stair"),
-		S("Outer Quince Wood Stair")
-	)
 
 	default.register_fence("ebiomes:fence_quince_wood", {
 		description = S("Quince Wood Fence"),
@@ -1038,18 +1014,6 @@ bonemeal:add_sapling({
 	{"ebiomes:chestnut_sapling", grow_new_chestnut_tree, "soil"},
 })
 end
-
-	--forms sampled from pigiron mod
-	stairs.register_stair_and_slab("chestnut_wood", "ebiomes:chestnut_wood",
-		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-		{"ebiomes_chestnut_wood.png"},
-		S("Chestnut Wood Stair"),
-		S("Chestnut Wood Slab"),
-		default.node_sound_wood_defaults(),
-		true,
-		S("Inner Chestnut Wood Stair"),
-		S("Outer Chestnut Wood Stair")
-	)
 
 	default.register_fence("ebiomes:fence_chestnut_wood", {
 		description = S("Chestnut Wood Fence"),
@@ -1350,18 +1314,6 @@ bonemeal:add_sapling({
 })
 end
 
-	--forms sampled from pigiron mod
-	stairs.register_stair_and_slab("hornbeam_wood", "ebiomes:hornbeam_wood",
-		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-		{"ebiomes_hornbeam_wood.png"},
-		S("Hornbeam Wood Stair"),
-		S("Hornbeam Wood Slab"),
-		default.node_sound_wood_defaults(),
-		true,
-		S("Inner Hornbeam Wood Stair"),
-		S("Outer Hornbeam Wood Stair")
-	)
-
 	default.register_fence("ebiomes:fence_hornbeam_wood", {
 		description = S("Hornbeam Wood Fence"),
 		texture = "ebiomes_fence_hornbeam_wood.png",
@@ -1424,40 +1376,6 @@ if core.get_modpath("bonemeal") then
 end
 
 --Peripheral mod support
-
---sampled from cool_trees
--- stairsplus/moreblocks
-if core.get_modpath("moreblocks") then
-
-	stairsplus:register_all("pear_tree", "wood", "ebiomes:pear_wood", {
-		description = "Pear Wood",
-		tiles = {"ebiomes_pear_wood.png"},
-		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-		sounds = default.node_sound_wood_defaults(),
-	})
-
-	stairsplus:register_all("quince_tree", "wood", "ebiomes:quince_wood", {
-		description = "Quince Wood",
-		tiles = {"ebiomes_quince_wood.png"},
-		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-		sounds = default.node_sound_wood_defaults(),
-	})
-
-	stairsplus:register_all("chestnut_tree", "wood", "ebiomes:chestnut_wood", {
-		description = "Chestnut Wood",
-		tiles = {"ebiomes_chestnut_wood.png"},
-		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-		sounds = default.node_sound_wood_defaults(),
-	})
-
-	stairsplus:register_all("hornbeam_tree", "wood", "ebiomes:hornbeam_wood", {
-		description = "Hornbeam Wood",
-		tiles = {"ebiomes_hornbeam_wood.png"},
-		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-		sounds = default.node_sound_wood_defaults(),
-	})
-
-end
 
 -- Support for flowerpot
 if core.global_exists("flowerpot") then

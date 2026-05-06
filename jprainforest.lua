@@ -403,17 +403,6 @@ bonemeal:add_sapling({
 	{"ebiomes:sugi_sapling", grow_new_sugi_tree, "soil"},
 })
 end
---forms sampled from pigiron mod
-	stairs.register_stair_and_slab("sugi_wood", "ebiomes:sugi_wood",
-		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-		{"ebiomes_sugi_wood.png"},
-		S("Sugi Wood Stair"),
-		S("Sugi Wood Slab"),
-		default.node_sound_wood_defaults(),
-		true,
-		S("Inner Sugi Wood Stair"),
-		S("Outer Sugi Wood Stair")
-	)
 
 	default.register_fence("ebiomes:fence_sugi_wood", {
 		description = S("Sugi Wood Fence"),
@@ -645,17 +634,6 @@ bonemeal:add_sapling({
 	{"ebiomes:mizunara_sapling", grow_new_mizunara_tree, "soil"},
 })
 end
---forms sampled from pigiron mod
-	stairs.register_stair_and_slab("mizunara_wood", "ebiomes:mizunara_wood",
-		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-		{"ebiomes_mizunara_wood.png"},
-		S("Mizunara Wood Stair"),
-		S("Mizunara Wood Slab"),
-		default.node_sound_wood_defaults(),
-		true,
-		S("Inner Mizunara Wood Stair"),
-		S("Outer Mizunara Wood Stair")
-	)
 
 	default.register_fence("ebiomes:fence_mizunara_wood", {
 		description = S("Mizunara Wood Fence"),
@@ -889,17 +867,6 @@ bonemeal:add_sapling({
 	{"ebiomes:stoneoak_sapling", grow_new_stoneoak_tree, "soil"},
 })
 end
---forms sampled from pigiron mod
-	stairs.register_stair_and_slab("stoneoak_wood", "ebiomes:stoneoak_wood",
-		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-		{"ebiomes_stoneoak_wood.png"},
-		S("Stone Oak Wood Stair"),
-		S("Stone Oak Wood Slab"),
-		default.node_sound_wood_defaults(),
-		true,
-		S("Inner Stone Oak Wood Stair"),
-		S("Outer Stone Oak Wood Stair")
-	)
 
 	default.register_fence("ebiomes:fence_stoneoak_wood", {
 		description = S("Stone Oak Wood Fence"),
@@ -1014,34 +981,6 @@ end
 	})
 
 --Other mods
-
---Misc
-
-if core.get_modpath("moreblocks") then
-
-
-	stairsplus:register_all("sugi_tree", "wood", "ebiomes:sugi_wood", {
-		description = "Sugi Wood",
-		tiles = {"ebiomes_sugi_wood.png"},
-		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-		sounds = default.node_sound_wood_defaults(),
-	})
-
-	stairsplus:register_all("mizunara_tree", "wood", "ebiomes:mizunara_wood", {
-		description = "Mizunara Wood",
-		tiles = {"ebiomes_mizunara_wood.png"},
-		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-		sounds = default.node_sound_wood_defaults(),
-	})
-
-	stairsplus:register_all("stoneoak_tree", "wood", "ebiomes:stoneoak_wood", {
-		description = "Stone Oak Wood",
-		tiles = {"ebiomes_stoneoak_wood.png"},
-		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-		sounds = default.node_sound_wood_defaults(),
-	})
-
-end
 
 -- Support for flowerpot
 if core.global_exists("flowerpot") then

@@ -758,18 +758,6 @@ bonemeal:add_sapling({
 })
 end
 
-
-	stairs.register_stair_and_slab("cypress_wood", "ebiomes:cypress_wood",
-		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-		{"ebiomes_cypress_wood.png"},
-		S("Cypress Wood Stair"),
-		S("Cypress Wood Slab"),
-		default.node_sound_wood_defaults(),
-		true,
-		S("Inner Cypress Wood Stair"),
-		S("Outer Cypress Wood Stair")
-	)
-
 	default.register_fence("ebiomes:fence_cypress_wood", {
 		description = S("Cypress Wood Fence"),
 		texture = "ebiomes_fence_cypress_wood.png",
@@ -1017,17 +1005,6 @@ bonemeal:add_sapling({
 })
 end
 
-	stairs.register_stair_and_slab("olive_wood", "ebiomes:olive_wood",
-		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-		{"ebiomes_olive_wood.png"},
-		S("Olive Wood Stair"),
-		S("Olive Wood Slab"),
-		default.node_sound_wood_defaults(),
-		true,
-		S("Inner Olive Wood Stair"),
-		S("Outer Olive Wood Stair")
-	)
-
 	default.register_fence("ebiomes:fence_olive_wood", {
 		description = S("Olive Wood Fence"),
 		texture = "ebiomes_fence_olive_wood.png",
@@ -1120,26 +1097,6 @@ end
 
 
 --Peripheral mod support
-
---Moreblocks
-
-if core.get_modpath("moreblocks") then
-
-	stairsplus:register_all("cypress_tree", "wood", "ebiomes:cypress_wood", {
-		description = "Cypress Wood",
-		tiles = {"ebiomes_cypress_wood.png"},
-		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-		sounds = default.node_sound_wood_defaults(),
-	})
-
-	stairsplus:register_all("olive_tree", "wood", "ebiomes:olive_wood", {
-		description = "Olive Wood",
-		tiles = {"ebiomes_olive_wood.png"},
-		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-		sounds = default.node_sound_wood_defaults(),
-	})
-
-end
 
 -- Support for flowerpot
 if core.global_exists("flowerpot") then

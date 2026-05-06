@@ -1098,17 +1098,6 @@ bonemeal:add_sapling({
 })
 end
 
-	stairs.register_stair_and_slab("oak_wood", "ebiomes:oak_wood",
-		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-		{"ebiomes_oak_wood.png"},
-		S("Oak Wood Stair"),
-		S("Oak Wood Slab"),
-		default.node_sound_wood_defaults(),
-		true,
-		S("Inner Oak Wood Stair"),
-		S("Outer Oak Wood Stair")
-	)
-
 	default.register_fence("ebiomes:fence_oak_wood", {
 		description = S("Oak Wood Fence"),
 		texture = "ebiomes_fence_oak_wood.png",
@@ -1259,35 +1248,12 @@ end
 
 --Peripheral mod support
 
-
---Moreblocks
-
---sampled from cool_trees
--- stairsplus/moreblocks
-if core.get_modpath("moreblocks") then
-
-
-	stairsplus:register_all("oak_tree", "wood", "ebiomes:oak_wood", {
-		description = "Oak Wood",
-		tiles = {"ebiomes_oak_wood.png"},
-		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-		sounds = default.node_sound_wood_defaults(),
-	})
-
-end
-
 -- Support for flowerpot
 if core.global_exists("flowerpot") then
 
 	flowerpot.register_node("ebiomes:oak_sapling")
 
 end
-
-
-
-
-
-
 
 
 
@@ -1456,18 +1422,6 @@ bonemeal:add_sapling({
 })
 end
 
-	--forms sampled from pigiron mod
-	stairs.register_stair_and_slab("maple_wood", "ebiomes:maple_wood",
-		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-		{"ebiomes_maple_wood.png"},
-		S("Maple Wood Stair"),
-		S("Maple Wood Slab"),
-		default.node_sound_wood_defaults(),
-		true,
-		S("Inner Maple Wood Stair"),
-		S("Outer Maple Wood Stair")
-	)
-
 	default.register_fence("ebiomes:fence_maple_wood", {
 		description = S("Maple Wood Fence"),
 		texture = "ebiomes_fence_maple_wood.png",
@@ -1514,23 +1468,6 @@ end
 
 
 --Peripheral mod support
-
-
---Moreblocks
-
---sampled from cool_trees
--- stairsplus/moreblocks
-if core.get_modpath("moreblocks") then
-
-
-	stairsplus:register_all("maple_tree", "wood", "ebiomes:maple_wood", {
-		description = "Maple Wood",
-		tiles = {"ebiomes_maple_wood.png"},
-		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-		sounds = default.node_sound_wood_defaults(),
-	})
-
-end
 
 -- Support for flowerpot
 if core.global_exists("flowerpot") then

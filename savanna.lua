@@ -420,17 +420,6 @@ bonemeal:add_sapling({
 	{"ebiomes:afzelia_sapling", grow_new_afzelia_tree, "soil"},
 })
 end
---forms sampled from pigiron mod
-	stairs.register_stair_and_slab("afzelia_wood", "ebiomes:afzelia_wood",
-		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-		{"ebiomes_afzelia_wood.png"},
-		S("Afzelia Wood Stair"),
-		S("Afzelia Wood Slab"),
-		default.node_sound_wood_defaults(),
-		true,
-		S("Inner Afzelia Wood Stair"),
-		S("Outer Afzelia Wood Stair")
-	)
 
 	default.register_fence("ebiomes:fence_afzelia_wood", {
 		description = S("Afzelia Wood Fence"),
@@ -476,19 +465,6 @@ end
 	})
 
 --Extras
-
-if core.get_modpath("moreblocks") then
-
-
-	stairsplus:register_all("afzelia_tree", "wood", "ebiomes:afzelia_wood", {
-		description = "Afzelia Wood",
-		tiles = {"ebiomes_afzelia_wood.png"},
-		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-		sounds = default.node_sound_wood_defaults(),
-	})
-
-
-end
 
 -- Support for flowerpot
 if core.global_exists("flowerpot") then
@@ -657,17 +633,6 @@ bonemeal:add_sapling({
 	{"ebiomes:limba_sapling", grow_new_limba_tree, "soil"},
 })
 end
---forms sampled from pigiron mod
-	stairs.register_stair_and_slab("limba_wood", "ebiomes:limba_wood",
-		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-		{"ebiomes_limba_wood.png"},
-		S("Limba Wood Stair"),
-		S("Limba Wood Slab"),
-		default.node_sound_wood_defaults(),
-		true,
-		S("Inner Limba Wood Stair"),
-		S("Outer Limba Wood Stair")
-	)
 
 	default.register_fence("ebiomes:fence_limba_wood", {
 		description = S("Limba Wood Fence"),
@@ -714,19 +679,6 @@ end
 
 --Extras
 
-if core.get_modpath("moreblocks") then
-
-
-	stairsplus:register_all("limba_tree", "wood", "ebiomes:limba_wood", {
-		description = "Limba Wood",
-		tiles = {"ebiomes_limba_wood.png"},
-		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-		sounds = default.node_sound_wood_defaults(),
-	})
-
-
-end
-
 -- Support for flowerpot
 if core.global_exists("flowerpot") then
 
@@ -763,18 +715,6 @@ end
 			{"ebiomes:limba_black_wood", "", "ebiomes:limba_black_wood"},
 		}
 	})
-
---forms sampled from pigiron mod
-	stairs.register_stair_and_slab("limba_black_wood", "ebiomes:limba_black_wood",
-		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-		{"ebiomes_limba_black_wood.png"},
-		S("Black Limba Wood Stair"),
-		S("Black Limba Wood Slab"),
-		default.node_sound_wood_defaults(),
-		true,
-		S("Inner Black Limba Wood Stair"),
-		S("Outer Black Limba Wood Stair")
-	)
 
 	default.register_fence("ebiomes:fence_limba_black_wood", {
 		description = S("Black Limba Wood Fence"),
@@ -820,18 +760,6 @@ end
 	})
 
 --Extras
-
-if core.get_modpath("moreblocks") then
-
-
-	stairsplus:register_all("" , "wood", "ebiomes:limba_black_wood", {
-		description = "Black Limba Wood",
-		tiles = {"ebiomes_limba_black_wood.png"},
-		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-		sounds = default.node_sound_wood_defaults(),
-	})
-
-end
 
 --Siri
 
@@ -992,17 +920,6 @@ bonemeal:add_sapling({
 	{"ebiomes:siri_sapling", grow_new_siri_tree, "soil"},
 })
 end
---forms sampled from pigiron mod
-	stairs.register_stair_and_slab("siri_wood", "ebiomes:siri_wood",
-		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-		{"ebiomes_siri_wood.png"},
-		S("Siri Wood Stair"),
-		S("Siri Wood Slab"),
-		default.node_sound_wood_defaults(),
-		true,
-		S("Inner Siri Wood Stair"),
-		S("Outer Siri Wood Stair")
-	)
 
 	default.register_fence("ebiomes:fence_siri_wood", {
 		description = S("Siri Wood Fence"),
@@ -1048,19 +965,6 @@ end
 	})
 
 --Extras
-
-if core.get_modpath("moreblocks") then
-
-
-	stairsplus:register_all("siri_tree", "wood", "ebiomes:siri_wood", {
-		description = "Siri Wood",
-		tiles = {"ebiomes_siri_wood.png"},
-		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-		sounds = default.node_sound_wood_defaults(),
-	})
-
-
-end
 
 -- Support for flowerpot
 if core.global_exists("flowerpot") then
@@ -1311,17 +1215,6 @@ if core.get_modpath("bonemeal") ~= nil then
 		{"ebiomes:tamarind_sapling", grow_new_tamarind_tree, "soil"},
 	})
 end
---forms sampled from pigiron mod
-	stairs.register_stair_and_slab("tamarind_wood", "ebiomes:tamarind_wood",
-		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-		{"ebiomes_tamarind_wood.png"},
-		S("Tamarind Wood Stair"),
-		S("Tamarind Wood Slab"),
-		default.node_sound_wood_defaults(),
-		true,
-		S("Inner Tamarind Wood Stair"),
-		S("Outer Tamarind Wood Stair")
-	)
 
 	default.register_fence("ebiomes:fence_tamarind_wood", {
 		description = S("Tamarind Wood Fence"),
@@ -1372,19 +1265,6 @@ if core.global_exists("dungeon_loot") then
 	dungeon_loot.register ({
 		{name = "ebiomes:tamarind_pulp", chance = 0.3, count = {4, 12}},
 	})
-end
-
-if core.get_modpath("moreblocks") then
-
-
-	stairsplus:register_all("tamarind_tree", "wood", "ebiomes:tamarind_wood", {
-		description = "Tamarind Wood",
-		tiles = {"ebiomes_tamarind_wood.png"},
-		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-		sounds = default.node_sound_wood_defaults(),
-	})
-
-
 end
 
 -- Support for flowerpot

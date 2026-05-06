@@ -1758,18 +1758,6 @@ bonemeal:add_sapling({
 })
 end
 
-	--forms sampled from pigiron mod
-	stairs.register_stair_and_slab("willow_wood", "ebiomes:willow_wood",
-		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-		{"ebiomes_willow_wood.png"},
-		S("Willow Wood Stair"),
-		S("Willow Wood Slab"),
-		default.node_sound_wood_defaults(),
-		true,
-		S("Inner Willow Wood Stair"),
-		S("Outer Willow Wood Stair")
-	)
-
 	default.register_fence("ebiomes:fence_willow_wood", {
 		description = S("Willow Wood Fence"),
 		texture = "ebiomes_fence_willow_wood.png",
@@ -1987,17 +1975,6 @@ bonemeal:add_sapling({
 	{"ebiomes:alder_sapling", grow_new_alder_tree, "soil"},
 })
 end
-
-	stairs.register_stair_and_slab("alder_wood", "ebiomes:alder_wood",
-		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-		{"ebiomes_alder_wood.png"},
-		S("Alder Wood Stair"),
-		S("Alder Wood Slab"),
-		default.node_sound_wood_defaults(),
-		true,
-		S("Inner Alder Wood Stair"),
-		S("Outer Alder Wood Stair")
-	)
 
 	default.register_fence("ebiomes:fence_alder_wood", {
 		description = S("Alder Wood Fence"),
@@ -2219,17 +2196,6 @@ bonemeal:add_sapling({
 })
 end
 
-	stairs.register_stair_and_slab("ash_wood", "ebiomes:ash_wood",
-		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-		{"ebiomes_ash_wood.png"},
-		S("Ash Wood Stair"),
-		S("Ash Wood Slab"),
-		default.node_sound_wood_defaults(),
-		true,
-		S("Inner Ash Wood Stair"),
-		S("Outer Ash Wood Stair")
-	)
-
 	default.register_fence("ebiomes:fence_ash_wood", {
 		description = S("Ash Wood Fence"),
 		texture = "ebiomes_fence_ash_wood.png",
@@ -2446,17 +2412,6 @@ bonemeal:add_sapling({
 	{"ebiomes:birch_sapling", grow_new_birch_tree, "soil"},
 })
 end
-
-	stairs.register_stair_and_slab("birch_wood", "ebiomes:birch_wood",
-		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-		{"ebiomes_birch_wood.png"},
-		S("Birch Wood Stair"),
-		S("Birch Wood Slab"),
-		default.node_sound_wood_defaults(),
-		true,
-		S("Inner Birch Wood Stair"),
-		S("Outer Birch Wood Stair")
-	)
 
 	default.register_fence("ebiomes:fence_birch_wood", {
 		description = S("Birch Wood Fence"),
@@ -2696,17 +2651,6 @@ bonemeal:add_sapling({
 })
 end
 
-	stairs.register_stair_and_slab("downy_birch_wood", "ebiomes:downy_birch_wood",
-		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-		{"ebiomes_downy_birch_wood.png"},
-		S("Downy Birch Wood Stair"),
-		S("Downy Birch Wood Slab"),
-		default.node_sound_wood_defaults(),
-		true,
-		S("Inner Downy Birch Wood Stair"),
-		S("Outer Downy Birch Wood Stair")
-	)
-
 	default.register_fence("ebiomes:fence_downy_birch_wood", {
 		description = S("Downy Birch Wood Fence"),
 		texture = "ebiomes_fence_downy_birch_wood.png",
@@ -2787,61 +2731,6 @@ end
 
 
 --Peripheral mod support
-
-
---Moreblocks
-
---sampled from cool_trees
--- stairsplus/moreblocks
-if core.get_modpath("moreblocks") then
-
-
-	stairsplus:register_all("alder_tree", "wood", "ebiomes:alder_wood", {
-		description = "Alder Wood",
-		tiles = {"ebiomes_alder_wood.png"},
-		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-		sounds = default.node_sound_wood_defaults(),
-	})
-
-	stairsplus:register_all("ash_tree", "wood", "ebiomes:ash_wood", {
-		description = "Ash Wood",
-		tiles = {"ebiomes_ash_wood.png"},
-		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-		sounds = default.node_sound_wood_defaults(),
-	})
-
-	stairsplus:register_all("birch_tree", "wood", "ebiomes:birch_wood", {
-		description = "Birch Wood",
-		tiles = {"ebiomes_birch_wood.png"},
-		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-		sounds = default.node_sound_wood_defaults(),
-	})
-
-	stairsplus:register_all("downy_birch_tree", "wood", "ebiomes:downy_birch_wood", {
-		description = "Downy Birch Wood",
-		tiles = {"ebiomes_downy_birch_wood.png"},
-		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-		sounds = default.node_sound_wood_defaults(),
-	})
-
-	stairsplus:register_all("willow_tree", "wood", "ebiomes:willow_wood", {
-		description = "Willow Wood",
-		tiles = {"ebiomes_willow_wood.png"},
-		groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-		sounds = default.node_sound_wood_defaults(),
-	})
-
---If someone wants glorious peat stuff they may uncomment this. Whether this works righ out of bat, no idea.
---[[
-	stairsplus:register_all("peat_dry", "soil", "ebiomes:peat_dry", {
-		description = "Dry Peat",
-		tiles = {"ebiomes_peat_dry.png"},
-		groups = {crumbly = 2, oddly_breakable_by_hand = 1},
-		sounds = default.node_sound_wood_defaults(),
-	})
---]]
-
-end
 
 -- Support for flowerpot
 if core.global_exists("flowerpot") then

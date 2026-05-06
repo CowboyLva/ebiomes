@@ -58,6 +58,8 @@ end
 
 -- Extended support
 
+dofile(path .. "/stairs.lua")  --moreblocks is also in there
+
 if core.settings:get_bool("supp_mobs", true) then
 	dofile(path .. "/mobs.lua")
 end
@@ -67,8 +69,6 @@ if core.settings:get_bool("supp_forgotten_monsters", true) then
 		dofile(path .. "/forgotten_monsters.lua")
 	end
 end
-
--- Extended support
 
 if core.settings:get_bool("supp_animalworld", true) then
 	if core.get_modpath("animalworld") then
@@ -82,7 +82,9 @@ if core.settings:get_bool("supp_nssm", true) then
 	end
 end
 
-
+if core.global_exists("moreblocks") then
+    dofile(path .. "/moreblocksold.lua")  --this is for older world support that ran moreblocks and ebiomes
+end
 
 
 if core.settings:get_bool("reg_hsavanna", true) and core.settings:get_bool("reg_jsavanna", true) then

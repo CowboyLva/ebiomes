@@ -60,7 +60,7 @@ core.register_alias("silver_sand_with_debris", "ebiomes:silver_sand_with_debris"
 			persist = 0.0
 		},
 		-- Only where default:dirt is present as surface material
-		biomes = {"deciduous_forest_cold", "meditarranean", "warm_steppe", "steppe", "cold_steppe", "deciduous_forest_warm", "japanese_rainforest", "temperate_rainforest", "jungle_savanna"}
+		biomes = {"deciduous_forest_cold", "mediterranean", "warm_steppe", "steppe", "cold_steppe", "deciduous_forest_warm", "japanese_rainforest", "temperate_rainforest", "jungle_savanna"}
 	})
 
 
