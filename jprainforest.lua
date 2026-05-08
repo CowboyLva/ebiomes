@@ -224,7 +224,7 @@ core.register_alias("forestgrowth", "ebiomes:forestgrowth")
 			"ebiomes_sugi_tree.png"},
 		paramtype2 = "facedir",
 		is_ground_content = false,
-		groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
+		groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 		sounds = default.node_sound_wood_defaults(),
 
 		on_place = core.rotate_node
@@ -236,7 +236,7 @@ core.register_alias("forestgrowth", "ebiomes:forestgrowth")
 		place_param2 = 0,
 		tiles = {"ebiomes_sugi_wood.png"},
 		is_ground_content = false,
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
 		sounds = default.node_sound_wood_defaults(),
 	})
 
@@ -312,7 +312,7 @@ end
 			type = "fixed",
 			fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 2 / 16, 4 / 16}
 		},
-		groups = {snappy = 2, dig_immediate = 3, flammable = 3,
+		groups = {snappy = 2, dig_immediate = 3, flammable = 2,
 			attached_node = 1, sapling = 1},
 		sounds = default.node_sound_leaves_defaults(),
 
@@ -412,7 +412,7 @@ end
 		wield_image = "default_fence_overlay.png^ebiomes_fence_sugi_wood.png^" ..
 					"default_fence_overlay.png^[makealpha:255,126,126",
 		material = "ebiomes:sugi_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		sounds = default.node_sound_wood_defaults()
 		})
 
@@ -424,7 +424,7 @@ end
 		wield_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_sugi_wood.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
 		material = "ebiomes:sugi_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		sounds = default.node_sound_wood_defaults()
 	})
 
@@ -438,7 +438,7 @@ end
 		description = S("Sugi Wood Fence Gate"),
 		texture = "ebiomes_sugi_wood.png",
 		material = "ebiomes:sugi_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 	})
 
 	core.register_craft({
@@ -456,7 +456,7 @@ end
 			"ebiomes_mizunara_tree.png"},
 		paramtype2 = "facedir",
 		is_ground_content = false,
-		groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
+		groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 		sounds = default.node_sound_wood_defaults(),
 
 		on_place = core.rotate_node
@@ -468,7 +468,7 @@ end
 		place_param2 = 0,
 		tiles = {"ebiomes_mizunara_wood.png"},
 		is_ground_content = false,
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
 		sounds = default.node_sound_wood_defaults(),
 	})
 
@@ -544,7 +544,7 @@ end
 			type = "fixed",
 			fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 2 / 16, 4 / 16}
 		},
-		groups = {snappy = 2, dig_immediate = 3, flammable = 3,
+		groups = {snappy = 2, dig_immediate = 3, flammable = 2,
 			attached_node = 1, sapling = 1},
 		sounds = default.node_sound_leaves_defaults(),
 
@@ -643,7 +643,7 @@ end
 		wield_image = "default_fence_overlay.png^ebiomes_fence_mizunara_wood.png^" ..
 					"default_fence_overlay.png^[makealpha:255,126,126",
 		material = "ebiomes:mizunara_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		sounds = default.node_sound_wood_defaults()
 	})
 
@@ -655,7 +655,7 @@ end
 		wield_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_mizunara_wood.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
 		material = "ebiomes:mizunara_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		sounds = default.node_sound_wood_defaults()
 	})
 
@@ -669,7 +669,7 @@ end
 		description = S("Mizunara Wood Fence Gate"),
 		texture = "ebiomes_mizunara_wood.png",
 		material = "ebiomes:mizunara_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 	})
 
 	core.register_craft({
@@ -688,7 +688,7 @@ end
 			"ebiomes_stoneoak_tree.png"},
 		paramtype2 = "facedir",
 		is_ground_content = false,
-		groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
+		groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 		sounds = default.node_sound_wood_defaults(),
 
 		on_place = core.rotate_node
@@ -700,7 +700,7 @@ end
 		place_param2 = 0,
 		tiles = {"ebiomes_stoneoak_wood.png"},
 		is_ground_content = false,
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
 		sounds = default.node_sound_wood_defaults(),
 	})
 
@@ -776,7 +776,7 @@ end
 			type = "fixed",
 			fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 2 / 16, 4 / 16}
 		},
-		groups = {snappy = 2, dig_immediate = 3, flammable = 3,
+		groups = {snappy = 2, dig_immediate = 3, flammable = 2,
 			attached_node = 1, sapling = 1},
 		sounds = default.node_sound_leaves_defaults(),
 
@@ -876,7 +876,7 @@ end
 		wield_image = "default_fence_overlay.png^ebiomes_fence_stoneoak_wood.png^" ..
 					"default_fence_overlay.png^[makealpha:255,126,126",
 		material = "ebiomes:stoneoak_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		sounds = default.node_sound_wood_defaults()
 	})
 
@@ -888,7 +888,7 @@ end
 		wield_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_stoneoak_wood.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
 		material = "ebiomes:stoneoak_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		sounds = default.node_sound_wood_defaults()
 	})
 
@@ -902,7 +902,7 @@ end
 		description = S("Stone Oak Wood Fence Gate"),
 		texture = "ebiomes_stoneoak_wood.png",
 		material = "ebiomes:stoneoak_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 	})
 
 	core.register_craft({
@@ -951,7 +951,7 @@ end
 		sunlight_propagates = true,
 		walkable = false,
 		buildable_to = true,
-		groups = {snappy = 3, flammable = 3, attached_node = 1},
+		groups = {snappy = 3, flammable = 2, attached_node = 1},
 		sounds = default.node_sound_leaves_defaults(),
 		selection_box = {
 			type = "fixed",

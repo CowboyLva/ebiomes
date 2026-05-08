@@ -6,14 +6,14 @@ if core.settings:get_bool("reg_cswamps", true) then
 			description = "Alder Tree",
 			tiles = {"ebiomes_alder_tree_top.png", "ebiomes_alder_tree_top.png",
 				"ebiomes_alder_tree.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
 		stairsplus:register_all("ebiomes", "alder_wood", "ebiomes:alder_wood", {
 			description = "Alder Wood",
 			tiles = {"ebiomes_alder_wood.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
@@ -21,14 +21,14 @@ if core.settings:get_bool("reg_cswamps", true) then
 			description = "Ash Tree",
 			tiles = {"ebiomes_ash_tree_top.png", "ebiomes_ash_tree_top.png",
 				"ebiomes_ash_tree.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
 		stairsplus:register_all("ebiomes", "ash_wood", "ebiomes:ash_wood", {
 			description = "Ash Wood",
 			tiles = {"ebiomes_ash_wood.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
@@ -43,7 +43,7 @@ if core.settings:get_bool("reg_cswamps", true) then
 		stairsplus:register_all("ebiomes", "birch_wood", "ebiomes:birch_wood", {
 			description = "Birch Wood",
 			tiles = {"ebiomes_birch_wood.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
@@ -58,7 +58,7 @@ if core.settings:get_bool("reg_cswamps", true) then
 		stairsplus:register_all("ebiomes", "downy_birch_wood", "ebiomes:downy_birch_wood", {
 			description = "Downy Birch Wood",
 			tiles = {"ebiomes_downy_birch_wood.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
@@ -66,14 +66,14 @@ if core.settings:get_bool("reg_cswamps", true) then
 			description = "Willow Tree",
 			tiles = {"ebiomes_willow_tree_top.png", "ebiomes_willow_tree_top.png",
 				"ebiomes_willow_tree.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
 		stairsplus:register_all("ebiomes", "willow_wood", "ebiomes:willow_wood", {
 			description = "Willow Wood",
 			tiles = {"ebiomes_willow_wood.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
     --against duplicate stairs
@@ -138,7 +138,7 @@ if core.settings:get_bool("reg_cswamps", true) then
     	)
 
     	stairs.register_stair_and_slab("birch_wood", "ebiomes:birch_wood",
-	    	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	    	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
 	    	{"ebiomes_birch_wood.png"},
 	    	S("Birch Wood Stair"),
 	    	S("Birch Wood Slab"),
@@ -149,7 +149,7 @@ if core.settings:get_bool("reg_cswamps", true) then
     	)
 
     	stairs.register_stair_and_slab("downy_birch_wood", "ebiomes:downy_birch_wood",
-	    	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	    	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
 	    	{"ebiomes_downy_birch_wood.png"},
 	    	S("Downy Birch Wood Stair"),
 	    	S("Downy Birch Wood Slab"),
@@ -168,7 +168,7 @@ if core.settings:get_bool("reg_cswamps", true) and core.settings:get_bool("reg_w
 			description = "Oak Tree",
 			tiles = {"ebiomes_oak_tree_top.png", "ebiomes_oak_tree_top.png",
 				"ebiomes_oak_tree.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
@@ -176,7 +176,7 @@ if core.settings:get_bool("reg_cswamps", true) and core.settings:get_bool("reg_w
 		stairsplus:register_all("ebiomes", "oak_wood", "ebiomes:oak_wood", {
 			description = "Oak Wood",
 			tiles = {"ebiomes_oak_wood.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
@@ -184,14 +184,14 @@ if core.settings:get_bool("reg_cswamps", true) and core.settings:get_bool("reg_w
 			description = "Maple Tree",
 			tiles = {"ebiomes_maple_tree_top.png", "ebiomes_maple_tree_top.png",
 				"ebiomes_maple_tree.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
 		stairsplus:register_all("ebiomes", "maple_wood", "ebiomes:maple_wood", {
 			description = "Maple Wood",
 			tiles = {"ebiomes_maple_wood.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
@@ -237,14 +237,14 @@ if core.settings:get_bool("reg_jprainforest", true) then
 			description = "Sugi Tree",
 			tiles = {"ebiomes_sugi_tree_top.png", "ebiomes_sugi_tree_top.png",
 				"ebiomes_sugi_tree.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
 		stairsplus:register_all("ebiomes", "sugi_wood", "ebiomes:sugi_wood", {
 			description = "Sugi Wood",
 			tiles = {"ebiomes_sugi_wood.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
@@ -252,14 +252,14 @@ if core.settings:get_bool("reg_jprainforest", true) then
 			description = "Mizunara Tree",
 			tiles = {"ebiomes_mizunara_tree_top.png", "ebiomes_mizunara_tree_top.png",
 				"ebiomes_mizunara_tree.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
 		stairsplus:register_all("ebiomes", "mizunara_wood", "ebiomes:mizunara_wood", {
 			description = "Mizunara Wood",
 			tiles = {"ebiomes_mizunara_wood.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
@@ -267,14 +267,14 @@ if core.settings:get_bool("reg_jprainforest", true) then
 			description = "Stone Oak Tree",
 			tiles = {"ebiomes_stoneoak_tree_top.png", "ebiomes_stoneoak_tree_top.png",
 				"ebiomes_stoneoak_tree.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
 		stairsplus:register_all("ebiomes", "stoneoak_wood", "ebiomes:stoneoak_wood", {
 			description = "Stone Oak Wood",
 			tiles = {"ebiomes_stoneoak_wood.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
@@ -336,14 +336,14 @@ if core.settings:get_bool("reg_hsavanna", true) then
 			description = "Afzelia Tree",
 			tiles = {"ebiomes_afzelia_tree_top.png", "ebiomes_afzelia_tree_top.png",
 				"ebiomes_afzelia_tree.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
 		stairsplus:register_all("ebiomes", "afzelia_wood", "ebiomes:afzelia_wood", {
 			description = "Afzelia Wood",
 			tiles = {"ebiomes_afzelia_wood.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
@@ -351,21 +351,21 @@ if core.settings:get_bool("reg_hsavanna", true) then
 			description = "Limba Tree",
 			tiles = {"ebiomes_limba_tree_top.png", "ebiomes_limba_tree_top.png",
 				"ebiomes_limba_tree.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
 		stairsplus:register_all("ebiomes", "limba_wood", "ebiomes:limba_wood", {
 			description = "Limba Wood",
 			tiles = {"ebiomes_limba_wood.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
 		stairsplus:register_all("ebiomes" , "limba_black_wood", "ebiomes:limba_black_wood", {
 			description = "Black Limba Wood",
 			tiles = {"ebiomes_limba_black_wood.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
@@ -373,14 +373,14 @@ if core.settings:get_bool("reg_hsavanna", true) then
 			description = "Siri Tree",
 			tiles = {"ebiomes_siri_tree_top.png", "ebiomes_siri_tree_top.png",
 				"ebiomes_siri_tree.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
 		stairsplus:register_all("ebiomes", "siri_wood", "ebiomes:siri_wood", {
 			description = "Siri Wood",
 			tiles = {"ebiomes_siri_wood.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
@@ -388,7 +388,7 @@ if core.settings:get_bool("reg_hsavanna", true) then
 			description = "Tamarind Tree",
 			tiles = {"ebiomes_tamarind_tree_top.png", "ebiomes_tamarind_tree_top.png",
 				"ebiomes_tamarind_tree.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
@@ -396,7 +396,7 @@ if core.settings:get_bool("reg_hsavanna", true) then
 		stairsplus:register_all("ebiomes", "tamarind_wood", "ebiomes:tamarind_wood", {
 			description = "Tamarind Wood",
 			tiles = {"ebiomes_tamarind_wood.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
@@ -490,14 +490,14 @@ if core.settings:get_bool("reg_mediterranean", true) then
 			description = "Cypress Tree",
 			tiles = {"ebiomes_cypress_tree_top.png", "ebiomes_cypress_tree_top.png",
 				"ebiomes_cypress_tree.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
 		stairsplus:register_all("ebiomes", "cypress_wood", "ebiomes:cypress_wood", {
 			description = "Cypress Wood",
 			tiles = {"ebiomes_cypress_wood.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
@@ -505,14 +505,14 @@ if core.settings:get_bool("reg_mediterranean", true) then
 			description = "Olive Tree",
 			tiles = {"ebiomes_olive_tree_top.png", "ebiomes_olive_tree_top.png",
 				"ebiomes_olive_tree.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
 		stairsplus:register_all("ebiomes", "olive_wood", "ebiomes:olive_wood", {
 			description = "Olive Wood",
 			tiles = {"ebiomes_olive_wood.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
@@ -558,14 +558,14 @@ if core.settings:get_bool("reg_cswamps", true) and core.settings:get_bool("reg_w
 			description = "Beech Tree",
 			tiles = {"ebiomes_beech_tree_top.png", "ebiomes_beech_tree_top.png",
 				"ebiomes_beech_tree.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
 		stairsplus:register_all("ebiomes", "beech_wood", "ebiomes:beech_wood", {
 			description = "Beech Wood",
 			tiles = {"ebiomes_beech_wood.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
@@ -595,14 +595,14 @@ if core.settings:get_bool("reg_warms", true) then
 			description = "Pear Tree",
 			tiles = {"ebiomes_pear_tree_top.png", "ebiomes_pear_tree_top.png",
 				"ebiomes_pear_tree.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
 		stairsplus:register_all("ebiomes", "pear_wood", "ebiomes:pear_wood", {
 			description = "Pear Wood",
 			tiles = {"ebiomes_pear_wood.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
@@ -610,14 +610,14 @@ if core.settings:get_bool("reg_warms", true) then
 			description = "Quince Tree",
 			tiles = {"ebiomes_quince_tree_top.png", "ebiomes_quince_tree_top.png",
 				"ebiomes_quince_tree.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
 		stairsplus:register_all("ebiomes", "quince_wood", "ebiomes:quince_wood", {
 			description = "Quince Wood",
 			tiles = {"ebiomes_quince_wood.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
@@ -625,14 +625,14 @@ if core.settings:get_bool("reg_warms", true) then
 			description = "Chestnut Tree",
 			tiles = {"ebiomes_chestnut_tree_top.png", "ebiomes_chestnut_tree_top.png",
 				"ebiomes_chestnut_tree.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
 		stairsplus:register_all("ebiomes", "chestnut_wood", "ebiomes:chestnut_wood", {
 			description = "Chestnut Wood",
 			tiles = {"ebiomes_chestnut_wood.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
@@ -640,14 +640,14 @@ if core.settings:get_bool("reg_warms", true) then
 			description = "Hornbeam Tree",
 			tiles = {"ebiomes_hornbeam_tree_top.png", "ebiomes_hornbeam_tree_top.png",
 				"ebiomes_hornbeam_tree.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 
 		stairsplus:register_all("ebiomes", "hornbeam_wood", "ebiomes:hornbeam_wood", {
 			description = "Hornbeam Wood",
 			tiles = {"ebiomes_hornbeam_wood.png"},
-			groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
+			groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 			sounds = default.node_sound_wood_defaults(),
 		})
 

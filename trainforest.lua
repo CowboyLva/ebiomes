@@ -309,7 +309,7 @@ end
 			"ebiomes_beech_tree.png"},
 		paramtype2 = "facedir",
 		is_ground_content = false,
-		groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
+		groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 		sounds = default.node_sound_wood_defaults(),
 
 		on_place = core.rotate_node
@@ -321,7 +321,7 @@ end
 		place_param2 = 0,
 		tiles = {"ebiomes_beech_wood.png"},
 		is_ground_content = false,
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
 		sounds = default.node_sound_wood_defaults(),
 	})
 
@@ -382,7 +382,7 @@ end
 			type = "fixed",
 			fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 5 / 16, 2 / 16}
 		},
-		groups = {snappy = 2, dig_immediate = 3, flammable = 3,
+		groups = {snappy = 2, dig_immediate = 3, flammable = 2,
 			attached_node = 1, sapling = 1},
 		sounds = default.node_sound_leaves_defaults(),
 
@@ -479,7 +479,7 @@ end
 		wield_image = "default_fence_overlay.png^ebiomes_fence_beech_wood.png^" ..
 					"default_fence_overlay.png^[makealpha:255,126,126",
 		material = "ebiomes:beech_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		sounds = default.node_sound_wood_defaults()
 	})
 
@@ -491,7 +491,7 @@ end
 		wield_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_beech_wood.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
 		material = "ebiomes:beech_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		sounds = default.node_sound_wood_defaults()
 	})
 
@@ -505,7 +505,7 @@ end
 		description = S("Beech Wood Fence Gate"),
 		texture = "ebiomes_beech_wood.png",
 		material = "ebiomes:beech_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 	})
 
 	core.register_craft({

@@ -269,7 +269,7 @@ end
 			"ebiomes_afzelia_tree.png"},
 		paramtype2 = "facedir",
 		is_ground_content = false,
-		groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
+		groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 		sounds = default.node_sound_wood_defaults(),
 
 		on_place = core.rotate_node
@@ -281,7 +281,7 @@ end
 		place_param2 = 0,
 		tiles = {"ebiomes_afzelia_wood.png"},
 		is_ground_content = false,
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
 		sounds = default.node_sound_wood_defaults(),
 	})
 
@@ -357,7 +357,7 @@ end
 			type = "fixed",
 			fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 2 / 16, 4 / 16}
 		},
-		groups = {snappy = 2, dig_immediate = 3, flammable = 3,
+		groups = {snappy = 2, dig_immediate = 3, flammable = 2,
 			attached_node = 1, sapling = 1},
 		sounds = default.node_sound_leaves_defaults(),
 
@@ -429,7 +429,7 @@ end
 		wield_image = "default_fence_overlay.png^ebiomes_fence_afzelia_wood.png^" ..
 					"default_fence_overlay.png^[makealpha:255,126,126",
 		material = "ebiomes:afzelia_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		sounds = default.node_sound_wood_defaults()
 	})
 
@@ -441,7 +441,7 @@ end
 		wield_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_afzelia_wood.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
 		material = "ebiomes:afzelia_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		sounds = default.node_sound_wood_defaults()
 	})
 
@@ -455,7 +455,7 @@ end
 		description = S("Afzelia Wood Fence Gate"),
 		texture = "ebiomes_afzelia_wood.png",
 		material = "ebiomes:afzelia_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 	})
 
 	core.register_craft({
@@ -482,7 +482,7 @@ end
 			"ebiomes_limba_tree.png"},
 		paramtype2 = "facedir",
 		is_ground_content = false,
-		groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
+		groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 		sounds = default.node_sound_wood_defaults(),
 
 		on_place = core.rotate_node
@@ -494,7 +494,7 @@ end
 		place_param2 = 0,
 		tiles = {"ebiomes_limba_wood.png"},
 		is_ground_content = false,
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
 		sounds = default.node_sound_wood_defaults(),
 	})
 
@@ -570,7 +570,7 @@ end
 			type = "fixed",
 			fixed = {-3 / 16, -0.5, -3 / 16, 3 / 16, 3 / 16, 3 / 16}
 		},
-		groups = {snappy = 2, dig_immediate = 3, flammable = 3,
+		groups = {snappy = 2, dig_immediate = 3, flammable = 2,
 			attached_node = 1, sapling = 1},
 		sounds = default.node_sound_leaves_defaults(),
 
@@ -642,7 +642,7 @@ end
 		wield_image = "default_fence_overlay.png^ebiomes_fence_limba_wood.png^" ..
 					"default_fence_overlay.png^[makealpha:255,126,126",
 		material = "ebiomes:limba_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		sounds = default.node_sound_wood_defaults()
 	})
 
@@ -654,7 +654,7 @@ end
 		wield_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_limba_wood.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
 		material = "ebiomes:limba_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		sounds = default.node_sound_wood_defaults()
 	})
 
@@ -668,7 +668,7 @@ end
 		description = S("Limba Wood Fence Gate"),
 		texture = "ebiomes_limba_wood.png",
 		material = "ebiomes:limba_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 	})
 
 	core.register_craft({
@@ -694,7 +694,7 @@ end
 		place_param2 = 0,
 		tiles = {"ebiomes_limba_black_wood.png"},
 		is_ground_content = false,
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
 		sounds = default.node_sound_wood_defaults(),
 	})
 --have to do this because a singular item craft is supposed to craft sticks
@@ -724,7 +724,7 @@ end
 		wield_image = "default_fence_overlay.png^ebiomes_fence_limba_black_wood.png^" ..
 					"default_fence_overlay.png^[makealpha:255,126,126",
 		material = "ebiomes:limba_black_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		sounds = default.node_sound_wood_defaults()
 	})
 
@@ -736,7 +736,7 @@ end
 		wield_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_limba_black_wood.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
 		material = "ebiomes:limba_black_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		sounds = default.node_sound_wood_defaults()
 	})
 
@@ -750,7 +750,7 @@ end
 		description = S("Black Limba Wood Fence Gate"),
 		texture = "ebiomes_limba_black_wood.png",
 		material = "ebiomes:limba_black_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 	})
 
 	core.register_craft({
@@ -769,7 +769,7 @@ end
 			"ebiomes_siri_tree.png"},
 		paramtype2 = "facedir",
 		is_ground_content = false,
-		groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
+		groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 		sounds = default.node_sound_wood_defaults(),
 
 		on_place = core.rotate_node
@@ -781,7 +781,7 @@ end
 		place_param2 = 0,
 		tiles = {"ebiomes_siri_wood.png"},
 		is_ground_content = false,
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
 		sounds = default.node_sound_wood_defaults(),
 	})
 
@@ -857,7 +857,7 @@ end
 			type = "fixed",
 			fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, -3 / 16, 2 / 16}
 		},
-		groups = {snappy = 2, dig_immediate = 3, flammable = 3,
+		groups = {snappy = 2, dig_immediate = 3, flammable = 2,
 			attached_node = 1, sapling = 1},
 		sounds = default.node_sound_leaves_defaults(),
 
@@ -929,7 +929,7 @@ end
 		wield_image = "default_fence_overlay.png^ebiomes_fence_siri_wood.png^" ..
 					"default_fence_overlay.png^[makealpha:255,126,126",
 		material = "ebiomes:siri_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		sounds = default.node_sound_wood_defaults()
 	})
 
@@ -941,7 +941,7 @@ end
 		wield_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_siri_wood.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
 		material = "ebiomes:siri_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		sounds = default.node_sound_wood_defaults()
 	})
 
@@ -955,7 +955,7 @@ end
 		description = S("Siri Wood Fence Gate"),
 		texture = "ebiomes_siri_wood.png",
 		material = "ebiomes:siri_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 	})
 
 	core.register_craft({
@@ -984,7 +984,7 @@ end
 			"ebiomes_tamarind_tree.png"},
 		paramtype2 = "facedir",
 		is_ground_content = false,
-		groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
+		groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 		sounds = default.node_sound_wood_defaults(),
 
 		on_place = core.rotate_node
@@ -996,7 +996,7 @@ end
 		place_param2 = 0,
 		tiles = {"ebiomes_tamarind_wood.png"},
 		is_ground_content = false,
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
 		sounds = default.node_sound_wood_defaults(),
 	})
 
@@ -1152,7 +1152,7 @@ end
 			type = "fixed",
 			fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, -2 / 16, 2 / 16}
 		},
-		groups = {snappy = 2, dig_immediate = 3, flammable = 3,
+		groups = {snappy = 2, dig_immediate = 3, flammable = 2,
 			attached_node = 1, sapling = 1},
 		sounds = default.node_sound_leaves_defaults(),
 
@@ -1224,7 +1224,7 @@ end
 		wield_image = "default_fence_overlay.png^ebiomes_fence_tamarind_wood.png^" ..
 					"default_fence_overlay.png^[makealpha:255,126,126",
 		material = "ebiomes:tamarind_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		sounds = default.node_sound_wood_defaults()
 	})
 
@@ -1236,7 +1236,7 @@ end
 		wield_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_tamarind_wood.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
 		material = "ebiomes:tamarind_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		sounds = default.node_sound_wood_defaults()
 	})
 
@@ -1250,7 +1250,7 @@ end
 		description = S("Tamarind Wood Fence Gate"),
 		texture = "ebiomes_tamarind_wood.png",
 		material = "ebiomes:tamarind_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 	})
 
 	core.register_craft({

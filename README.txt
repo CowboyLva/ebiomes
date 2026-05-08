@@ -2,9 +2,14 @@
 ################ebiomes##################
 #########################################
 
-Version 1.5.5 - By CowboyLv
+Version 1.5.6 - By CowboyLv
 
 ## Changes
+
+1.5.6
+
+Tweaked/fixed choppines and flamability for wood items
+Dry peat stairs are now of the correct tool group
 
 1.5.5
 

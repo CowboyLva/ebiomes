@@ -618,7 +618,7 @@ end
 			"ebiomes_cypress_tree.png"},
 		paramtype2 = "facedir",
 		is_ground_content = false,
-		groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
+		groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 		sounds = default.node_sound_wood_defaults(),
 
 		on_place = core.rotate_node
@@ -630,7 +630,7 @@ end
 		place_param2 = 0,
 		tiles = {"ebiomes_cypress_wood.png"},
 		is_ground_content = false,
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
 		sounds = default.node_sound_wood_defaults(),
 	})
 
@@ -691,7 +691,7 @@ end
 			type = "fixed",
 			fixed = {-3 / 16, -0.5, -3 / 16, 3 / 16, 7 / 16, 3 / 16}
 		},
-		groups = {snappy = 2, dig_immediate = 3, flammable = 3,
+		groups = {snappy = 2, dig_immediate = 3, flammable = 2,
 			attached_node = 1, sapling = 1},
 		sounds = default.node_sound_leaves_defaults(),
 
@@ -766,7 +766,7 @@ end
 		wield_image = "default_fence_overlay.png^ebiomes_fence_cypress_wood.png^" ..
 					"default_fence_overlay.png^[makealpha:255,126,126",
 		material = "ebiomes:cypress_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		sounds = default.node_sound_wood_defaults()
 	})
 
@@ -778,7 +778,7 @@ end
 		wield_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_cypress_wood.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
 		material = "ebiomes:cypress_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		sounds = default.node_sound_wood_defaults()
 	})
 
@@ -792,7 +792,7 @@ end
 		description = S("Cypress Wood Fence Gate"),
 		texture = "ebiomes_cypress_wood.png",
 		material = "ebiomes:cypress_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 	})
 
 	core.register_craft({
@@ -812,7 +812,7 @@ end
 			"ebiomes_olive_tree.png"},
 		paramtype2 = "facedir",
 		is_ground_content = false,
-		groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
+		groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 		sounds = default.node_sound_wood_defaults(),
 
 		on_place = core.rotate_node
@@ -824,7 +824,7 @@ end
 		place_param2 = 0,
 		tiles = {"ebiomes_olive_wood.png"},
 		is_ground_content = false,
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
 		sounds = default.node_sound_wood_defaults(),
 	})
 
@@ -939,7 +939,7 @@ end
 			type = "fixed",
 			fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 6 / 16, 4 / 16}
 		},
-		groups = {snappy = 2, dig_immediate = 3, flammable = 3,
+		groups = {snappy = 2, dig_immediate = 3, flammable = 2,
 			attached_node = 1, sapling = 1},
 		sounds = default.node_sound_leaves_defaults(),
 
@@ -1013,7 +1013,7 @@ end
 		wield_image = "default_fence_overlay.png^ebiomes_fence_olive_wood.png^" ..
 					"default_fence_overlay.png^[makealpha:255,126,126",
 		material = "ebiomes:olive_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		sounds = default.node_sound_wood_defaults()
 	})
 
@@ -1025,7 +1025,7 @@ end
 		wield_image = "default_fence_rail_overlay.png^ebiomes_fence_rail_olive_wood.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
 		material = "ebiomes:olive_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		sounds = default.node_sound_wood_defaults()
 	})
 
@@ -1039,7 +1039,7 @@ end
 		description = S("Olive Wood Fence Gate"),
 		texture = "ebiomes_olive_wood.png",
 		material = "ebiomes:olive_wood",
-		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 	})
 
 	core.register_craft({
